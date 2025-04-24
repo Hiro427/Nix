@@ -17,7 +17,8 @@
 		system = "x86_64-linux"; 
 		modules = [ 
 		 ./configuration.nix
-		 ./hosts/desktop.nix
+		 ./hosts/desktop/desktop.nix
+		 ./hosts/desktop/hardware-configuration.nix
 		];
 			
 	};
@@ -25,7 +26,8 @@
 		system = "x86_64-linux"; 
 		modules = [ 
 		 ./configuration.nix
-		 ./hosts/laptop.nix
+		 ./hosts/laptop/laptop.nix
+		 ./hosts/laptop/hardware-configuration.nix
 		];
 			
 	};
