@@ -10,7 +10,7 @@
 #     ./hardware-configuration.nix
 #  ];
 
-  # Bootloader.
+  #Bootloader. 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
@@ -102,6 +102,7 @@
     wget
     git 
     jq
+    catppuccin-gtk
     zip 
     unzip
     viu
@@ -155,11 +156,16 @@
     lm_sensors
     hwdata
     zoxide 
-    nerdfonts
+    presenterm 
+    lua 
+    nerd-fonts.jetbrains-mono
     yazi
     git-extras
     bat
     papirus-icon-theme
+    libnotify
+    pulseaudioFull 
+    brightnessctl
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
