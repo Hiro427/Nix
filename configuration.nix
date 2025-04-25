@@ -164,6 +164,8 @@
     bat
     papirus-icon-theme
     libnotify
+    pcmanfm
+    vesktop
     pulseaudioFull 
     brightnessctl
   ];
