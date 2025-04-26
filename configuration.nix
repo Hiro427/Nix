@@ -189,6 +189,7 @@
     whatsapp-for-linux
     pciutils
     mesa-demos
+    ghostty
     lshw
   ];
 

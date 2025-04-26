@@ -3,11 +3,12 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-    home-manager.url = "github:nix-community/home-manager/release-24.11";
+    catppuccin.url = "github:catppuccin/nix";
+    home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs }: {
+  outputs = { self, nixpkgs, home-manager, catppuccin }: {
 
 #    packages.x86_64-linux.hello = nixpkgs.legacyPackages.x86_64-linux.hello;
 
@@ -21,12 +22,15 @@
 		 ./configuration.nix
 		 ./hosts/desktop/desktop.nix
 		 ./hosts/desktop/hardware-configuration.nix
+         catppuccin.nixosModules.catppuccin
          home-manager.nixosModules.home-manager
-          {
+          ({ config, ... }: {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.jacobrambran = import ./home.nix;
-          }
+            home-manager.users.jacobrambarran = { pkgs, ... }: {
+                imports = [ catppuccin.homeModules.catppuccin ./home.nix ];
+            };
+          })
 		];
 			
 	};

@@ -1,16 +1,42 @@
-{ config, pkgs, ... }:
+{ pkgs, catppuccin, ... }:
 
 {
+# s imports = [ catppuccin.homeManagerModules.catppuccin ];
+# xdg.configFile."picom".source = "/home/jacobrambran/.dotfiles/picom";
+
   home.username = "jacobrambarran";
   home.homeDirectory = "/home/jacobrambarran";
+  catppuccin.flavor = "mocha";
 
-  programs.btop = {
+  programs.btop.enable = true;
+  catppuccin.btop.enable = true; 
+
+  programs.ghostty = {
     enable = true;
     settings = {
-      theme = "catppuccin_mocha";
+          font-family = "JetBrainsMono Nerd Font";
+          font-size = 13;
+          gtk-titlebar = false;
+          alpha-blending = "native";
+          window-padding-x = 10; 
+          window-padding-y = 5;
+          window-decoration = "client";
+          window-colorspace = "display-p3";
+
     };
-  };
-
-  home.stateVersion = "24.11"; # Set this to your current NixOS version
+    };
+  catppuccin.ghostty.enable = true;
+  programs.kitty = {
+        enable = true; 
+        font.name = "JetBrainsMono Nerd Font";
+        font.size = 12; 
+        extraConfig = ''
+            window_padding_width 10
+            cursor_shape_unfocused hollow
+            confirm_os_window_close 0
+        '';
+    };
+  catppuccin.kitty.enable = true;
+  home.stateVersion = "24.11";
 }
-
+    
