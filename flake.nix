@@ -3,6 +3,8 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    home-manager.url = "github:nix-community/home-manager/release-24.11";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = { self, nixpkgs }: {
@@ -19,6 +21,12 @@
 		 ./configuration.nix
 		 ./hosts/desktop/desktop.nix
 		 ./hosts/desktop/hardware-configuration.nix
+         home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.jacobrambran = import ./home.nix;
+          }
 		];
 			
 	};

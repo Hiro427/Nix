@@ -58,6 +58,9 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
+  services.avahi.enable = true;
+  services.avahi.nssmdns = true;
+
 
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
@@ -88,6 +91,9 @@
     #  thunderbird
     ];
   };
+   boot.extraModprobeConfig = ''
+    options hid_apple fnmode=2
+  '';
 
   # Install firefox.
   programs.firefox.enable = true;
@@ -97,6 +103,7 @@
   environment.localBinInPath = true;
   # List packages installed in system profile. To search, run:
   # $ nix search wget
+   
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
@@ -177,7 +184,12 @@
     ttyper
     is-fast
     cava
+    pavucontrol
     joplin-desktop
+    whatsapp-for-linux
+    pciutils
+    mesa-demos
+    lshw
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
