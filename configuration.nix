@@ -163,11 +163,21 @@
     git-extras
     bat
     papirus-icon-theme
+    gh
     libnotify
     pcmanfm
     vesktop
+    prismlauncher
     pulseaudioFull 
     brightnessctl
+    spotify
+    rclone
+    pokeget-rs
+    dua 
+    ttyper
+    is-fast
+    cava
+    joplin-desktop
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
