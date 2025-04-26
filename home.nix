@@ -37,6 +37,20 @@
         '';
     };
   catppuccin.kitty.enable = true;
+  gtk = {
+        enable = true;
+    };
+  catppuccin.gtk = {
+        enable = true;
+        accent = "lavender";
+    };
+  qt = {
+      enable = true;
+      platformTheme.name = "gtk"; # or "qt5ct" if you use qt5ct
+      style.name = "catppuccin-mocha"; # or "breeze-dark", "catppuccin-mocha", etc.
+    };
+  programs.cava.enable = true;
+  catppuccin.cava.enable = true;
   home.stateVersion = "24.11";
 }
     
