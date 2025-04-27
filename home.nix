@@ -3,7 +3,6 @@
 {
 # s imports = [ catppuccin.homeManagerModules.catppuccin ];
 # xdg.configFile."picom".source = "/home/jacobrambran/.dotfiles/picom";
-
   home.username = "jacobrambarran";
   home.homeDirectory = "/home/jacobrambarran";
   catppuccin.flavor = "mocha";
@@ -51,6 +50,18 @@
     };
   programs.cava.enable = true;
   catppuccin.cava.enable = true;
+  programs.vesktop = {
+        enable = true;
+        vencord.settings = {
+            autoUpdate = true;
+            autoUpdateNotification = true;
+            useQuickCss = true;
+            themeLinks = [
+                    "https://raw.githubusercontent.com/catppuccin/discord/refs/heads/main/themes/mocha.theme.css"
+                ];
+            
+        };
+    };
   home.stateVersion = "24.11";
 }
     

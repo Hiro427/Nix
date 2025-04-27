@@ -22,17 +22,17 @@
 		 ./configuration.nix
 		 ./hosts/desktop/desktop.nix
 		 ./hosts/desktop/hardware-configuration.nix
-         catppuccin.nixosModules.catppuccin
-         home-manager.nixosModules.home-manager
-          ({ config, ... }: {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.jacobrambarran = { pkgs, ... }: {
-                imports = [ catppuccin.homeModules.catppuccin ./home.nix ];
-            };
-          })
+	        catppuccin.nixosModules.catppuccin
+	        home-manager.nixosModules.home-manager
+	         ({ config, ... }: {
+	           home-manager.useGlobalPkgs = true;
+	           home-manager.useUserPackages = true;
+	           home-manager.users.jacobrambarran = { pkgs, ... }: {
+	               imports = [ catppuccin.homeModules.catppuccin ./home.nix ];
+	           };
+	         })
 		];
-			
+
 	};
 	laptop = nixpkgs.lib.nixosSystem {
 		system = "x86_64-linux"; 

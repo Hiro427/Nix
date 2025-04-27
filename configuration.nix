@@ -173,7 +173,6 @@
     gh
     libnotify
     pcmanfm
-    vesktop
     prismlauncher
     pulseaudioFull 
     brightnessctl
