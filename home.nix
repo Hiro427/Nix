@@ -2,15 +2,13 @@
 
 {
  # imports = [ catppuccin.homeManagerModules.catppuccin ];
-
   home.username = "jacobrambarran";
   home.homeDirectory = "/home/jacobrambarran";
   catppuccin.flavor = "mocha";
 
   programs.btop.enable = true;
   catppuccin.btop.enable = true; 
-
-  programs.ghostty = {
+programs.ghostty = {
     enable = true;
     settings = {
           font-family = "JetBrainsMono Nerd Font";
@@ -62,6 +60,66 @@
             
         };
     };
+
+
+
+  programs.yazi = {
+  enable = true;
+  settings = {
+  manager = {
+      sort_by = "mtime";
+      show_hidden = true;
+    };
+    open = {
+      # Define commands
+      edit = [
+        "nvim \"$@\""
+      ];
+      feh = [
+        "feh \"$@\""
+      ];
+      zathura = [
+        "zathura \"$@\""
+      ];
+      mpv = [
+        "vlc \"$@\""
+      ];
+
+      # Rules for file types
+      rules = [
+        {
+          mime = "text/*";
+          use = "edit";
+        }
+        {
+          mime = "image/*";
+          use = "feh";
+        }
+        {
+          mime = "application/pdf";
+          use = "zathura";
+        }
+        {
+          mime = "video/*";
+          use = "mpv";
+        }
+      ];
+    };
+  };
+};
+  catppuccin.yazi = {
+        enable = true;
+        accent = "lavender";
+  };
+  programs.bat.enable = true;
+  catppuccin.bat.enable = true;
+
+  programs.zathura.enable = true;
+  catppuccin.zathura.enable = true;
+
+
+ 
+
   home.stateVersion = "24.11";
 }
     

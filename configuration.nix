@@ -166,9 +166,7 @@
     presenterm 
     lua 
     nerd-fonts.jetbrains-mono
-    yazi
     git-extras
-    bat
     papirus-icon-theme
     gh
     libnotify
@@ -189,6 +187,7 @@
     pciutils
     mesa-demos
     ghostty
+    gowall
     lshw
     vlc
   ];
