@@ -1,8 +1,8 @@
 { pkgs, catppuccin, ... }:
 
 {
-# s imports = [ catppuccin.homeManagerModules.catppuccin ];
-# xdg.configFile."picom".source = "/home/jacobrambran/.dotfiles/picom";
+ # imports = [ catppuccin.homeManagerModules.catppuccin ];
+
   home.username = "jacobrambarran";
   home.homeDirectory = "/home/jacobrambarran";
   catppuccin.flavor = "mocha";
