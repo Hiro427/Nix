@@ -1,12 +1,11 @@
-{ pkgs, catppuccin, ... }:
+{ config, pkgs, catppuccin, ... }:
 
 {
  # imports = [ catppuccin.homeManagerModules.catppuccin ];
   home.username = "jacobrambarran";
   home.homeDirectory = "/home/jacobrambarran";
   catppuccin.flavor = "mocha";
-
-  programs.btop.enable = true;
+   programs.btop.enable = true;
   catppuccin.btop.enable = true; 
 programs.ghostty = {
     enable = true;
@@ -41,11 +40,11 @@ programs.ghostty = {
         enable = true;
         accent = "lavender";
     };
-  qt = {
-      enable = true;
-      platformTheme.name = "gtk"; # or "qt5ct" if you use qt5ct
-      style.name = "catppuccin-mocha"; # or "breeze-dark", "catppuccin-mocha", etc.
-    };
+  # qt = {
+  #     enable = true;
+  #     platformTheme.name = "gtk"; # or "qt5ct" if you use qt5ct
+  #     style.name = "catppuccin-mocha"; # or "breeze-dark", "catppuccin-mocha", etc.
+  #   };
   programs.cava.enable = true;
   catppuccin.cava.enable = true;
   programs.vesktop = {
@@ -116,6 +115,40 @@ programs.ghostty = {
 
   programs.zathura.enable = true;
   catppuccin.zathura.enable = true;
+  programs.zsh = {
+        dotDir = ".config/zsh";
+        enable = true;
+        syntaxHighlighting.enable = true;
+        autosuggestion.enable = true;
+        #   plugins = [
+        #     {
+        #       name = "mycustom";
+        #       src = builtins.path { path = "/home/jacobrambarran/.dotfiles/zshrc"; };
+        #     }
+        # ];
+          initContent = ''
+            # Source my original config
+              source "$HOME/.dotfiles/zshrc/PATH.zsh"
+              source "$HOME/.dotfiles/zshrc/fzf-options.zsh"
+              source "$HOME/.dotfiles/zshrc/aliases.zsh"
+              source "$HOME/.dotfiles/zshrc/fn.zsh"
+              source "$HOME/.dotfiles/zshrc/gum_settings.zsh"
+          '';
+        history = {
+            append = true;
+            share = true;
+            save = 1000;
+            size = 999;
+            expireDuplicatesFirst = true;
+            extended = true;
+        };
+    };
+  catppuccin.zsh-syntax-highlighting.enable = true;
+
+
+  xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/nvim";
+  
+
 
 
  

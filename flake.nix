@@ -22,6 +22,7 @@
 		 ./configuration.nix
 		 ./hosts/desktop/desktop.nix
 		 ./hosts/desktop/hardware-configuration.nix
+         ./hosts/desktop/homeuniq.nix
 	        catppuccin.nixosModules.catppuccin
 	        home-manager.nixosModules.home-manager
 	         ({ config, ... }: {

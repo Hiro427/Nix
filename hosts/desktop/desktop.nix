@@ -16,9 +16,9 @@
   };
 
   # Enable OpenGL and Vulkan
-  hardware.opengl.enable = true;
+  hardware.graphics.enable = true;
   # hardware.opengl.driSupport = true;
-  hardware.opengl.driSupport32Bit = true;
+  hardware.graphics.enable32Bit = true;
 
   # Optional: Enable NVIDIA power management
   hardware.nvidia.powerManagement.enable = true;
