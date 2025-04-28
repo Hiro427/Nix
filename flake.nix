@@ -43,8 +43,20 @@
 		 ./configuration.nix
 		 ./hosts/laptop/laptop.nix
 		 ./hosts/laptop/hardware-configuration.nix
+	        catppuccin.nixosModules.catppuccin
+	        home-manager.nixosModules.home-manager
+	         ({ config, ... }: {
+	           home-manager.useGlobalPkgs = true;
+	           home-manager.useUserPackages = true;
+	           home-manager.users.jacobrambarran = { pkgs, ... }: {
+	               imports = [ catppuccin.homeModules.catppuccin 
+                                ./home.nix 
+                                ./hosts/laptop/homeuniq.nix
+                            ];
+	           };
+	         })
 		];
-			
+
 	};
     };
 
