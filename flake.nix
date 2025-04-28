@@ -22,14 +22,16 @@
 		 ./configuration.nix
 		 ./hosts/desktop/desktop.nix
 		 ./hosts/desktop/hardware-configuration.nix
-         ./hosts/desktop/homeuniq.nix
 	        catppuccin.nixosModules.catppuccin
 	        home-manager.nixosModules.home-manager
 	         ({ config, ... }: {
 	           home-manager.useGlobalPkgs = true;
 	           home-manager.useUserPackages = true;
 	           home-manager.users.jacobrambarran = { pkgs, ... }: {
-	               imports = [ catppuccin.homeModules.catppuccin ./home.nix ];
+	               imports = [ catppuccin.homeModules.catppuccin 
+                                ./home.nix 
+                                ./hosts/desktop/homeuniq.nix
+                            ];
 	           };
 	         })
 		];
