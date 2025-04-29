@@ -2,13 +2,18 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
-
+{ config, pkgs, inputs, ... }:
+let
+  spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.system};
+in
 {
 #  imports =
 #    [ # Include the results of the hardware scan.
 #     ./hardware-configuration.nix
 #  ];
+
+  # ...other shared config
+
 
   #Bootloader. 
   boot.loader.systemd-boot.enable = true;
@@ -174,7 +179,6 @@
     prismlauncher
     pulseaudioFull 
     brightnessctl
-    spotify
     rclone
     pokeget-rs
     dua 
@@ -182,15 +186,26 @@
     is-fast
     cava
     pavucontrol
-    joplin-desktop
     whatsapp-for-linux
     pciutils
     mesa-demos
     ghostty
     gowall
+    spotube
+    psst
     lshw
     vlc
   ];
+  programs.spicetify = {
+    enable = true;
+    theme = spicePkgs.themes.catppuccin;
+    colorScheme = "mocha";
+    enabledExtensions = with spicePkgs.extensions; [
+       adblockify
+       hidePodcasts
+       shuffle # shuffle+ (special characters are sanitized out of extension names)
+     ];
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

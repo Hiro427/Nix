@@ -1,5 +1,4 @@
 { config, pkgs, catppuccin, ... }:
-
 {
  # imports = [ catppuccin.homeManagerModules.catppuccin ];
   home.username = "jacobrambarran";
@@ -144,7 +143,39 @@ programs.ghostty = {
         };
     };
   catppuccin.zsh-syntax-highlighting.enable = true;
+  programs.joplin-desktop = {
+        enable = true;
+        sync.target = "dropbox";
+        sync.interval = "10m";
+    };
+  programs.spotify-player = {
+        enable = true; 
+        settings = {
+            playback_window_position = "Top";
+            playback_window_height = 60;
 
+            enable_notify = false;
+            
+
+            client_id_command = {
+                command = "cat";
+                args = [
+                    "${config.home.homeDirectory}/.sptid.txt"
+                ];
+            };
+        };
+        keymaps = [
+            {
+                command = "NextTrack";
+                key_sequence = "g l";
+            }
+            {
+                command = "PreviousTrack";
+                key_sequence = "g h";
+            }
+        ];
+    };
+  catppuccin.spotify-player.enable = true;
 
   xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/nvim";
 
