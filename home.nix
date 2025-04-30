@@ -5,7 +5,7 @@
   home.homeDirectory = "/home/jacobrambarran";
   catppuccin.flavor = "mocha";
    programs.btop.enable = true;
-  catppuccin.btop.enable = true; 
+  catppuccin.btop.enable = true;
 programs.ghostty = {
     enable = true;
     settings = {
@@ -13,7 +13,7 @@ programs.ghostty = {
           font-size = 13;
           gtk-titlebar = false;
           alpha-blending = "native";
-          window-padding-x = 10; 
+          window-padding-x = 10;
           window-padding-y = 5;
           window-decoration = "client";
           window-colorspace = "display-p3";
@@ -22,9 +22,9 @@ programs.ghostty = {
     };
   catppuccin.ghostty.enable = true;
   programs.kitty = {
-        enable = true; 
+        enable = true;
         font.name = "JetBrainsMono Nerd Font";
-        font.size = 12; 
+        font.size = 12;
         extraConfig = ''
             window_padding_width 10
             cursor_shape_unfocused hollow
@@ -55,7 +55,7 @@ programs.ghostty = {
             themeLinks = [
                     "https://raw.githubusercontent.com/catppuccin/discord/refs/heads/main/themes/mocha.theme.css"
                 ];
-            
+
         };
     };
 
@@ -149,13 +149,13 @@ programs.ghostty = {
         sync.interval = "10m";
     };
   programs.spotify-player = {
-        enable = true; 
+        enable = true;
         settings = {
             playback_window_position = "Top";
             playback_window_height = 60;
 
             enable_notify = false;
-            
+
 
             client_id_command = {
                 command = "cat";
@@ -175,7 +175,141 @@ programs.ghostty = {
             }
         ];
     };
+
   catppuccin.spotify-player.enable = true;
+
+  programs.zed-editor = {
+
+        enable = true;
+        extensions = [ "catppuccin" "nix" "toml" ];
+        userSettings = {
+            features = {
+                copilot = false;
+            };
+            telemetry = {
+                metrics = false;
+                diagnostics = false;
+            };
+            vim_mode = true;
+            icon_theme = "Catppuccin Mocha";
+            ui_font_size = 16;
+            buffer_font_size = 16;
+            theme = {
+                mode = "dark";
+                light = "Catppuccin Latte";
+                dark = "Catppuccin Mocha";
+            };
+            use_auto_surround = true;
+            autosave = "on_focus_change";
+            confim_quit = true;
+            scrollbar = {
+                show = "never";
+            };
+            show_completion_documentation = true;
+            tab_bar = {
+                show = true;
+            };
+            format_on_save = "on";
+            formatter = "language_server";
+            inlay_hints = {
+                enabled = false;
+                show_parameter_hints = false;
+            };
+            file_finder = {
+                modal_max_width = "large";
+            };
+            remove_trailing_whitespace_on_save = true;
+            show_edit_predictions = true;
+            show_completion_on_input = true;
+        };
+        userKeymaps = [
+            {
+                context = "Editor && vim_mode == normal && vim_operator == none && !VimWaiting";
+                bindings = {
+                    "space space" = "file_finder::Toggle";
+                    "space t" = [
+                        "workspace::OpenTerminal"
+                        {
+                            working_directory = ".";
+                        }
+                    ];
+                    "space a" = "workspace::AddFolderToProject";
+                    "space e" = "workspace::ToggleLeftDock";
+                    "space o" = "workspace::OpenFiles";
+                    "/" = "workspace::NewSearch";
+                    ctrl-shift-k = "pane::SplitLeft";
+                    ctrl-shift-j = "pane::SplitDown";
+                    "space l" = "pane::TogglePreviewTab";
+                    ctrl-e = "project_panel::ToggleFocus";
+                    "space w" = "terminal_panel::ToggleFocus";
+                };
+            }
+        ];
+
+    };
+
+    programs.helix = {
+      enable = true;
+      package  = pkgs.evil-helix;
+      settings = {
+        theme = "catppuccin_mocha";
+        editor = {
+          line-number = "relative";
+          true-color = true;
+          preview-completion-insert = true;
+          completion-trigger-len = 1;
+          auto-format = true;
+          end-of-line-diagnostics = "hint";
+        };
+        editor.cursor-shape = {
+          insert = "bar";
+        };
+        editor.inline-diagnostics = {
+          cursor-line = "error";
+        };
+        editor.lsp = {
+          enable = true;
+          display-messages = true;
+        };
+        editor.statusline = {
+         left = ["mode" "spacer" "version-control"];
+         center = [];
+         right = ["file-base-name" "spinner" "spacer" "workspace-diagnostics" "spacer" "position" "file-modification-indicator"];
+         separator = "│";
+        };
+      };
+      extraPackages = [
+        pkgs.zls
+        pkgs.zig
+        pkgs.gopls
+        pkgs.bash-language-server
+        pkgs.golangci-lint
+        pkgs.golangci-lint-langserver
+        pkgs.typescript-language-server
+        pkgs.mesonlsp
+        pkgs.lua-language-server
+        pkgs.ruff
+        pkgs.nil
+        pkgs.cmake
+        pkgs.cmake-language-server
+        pkgs.bash-language-server
+        pkgs.vscode-langservers-extracted
+        pkgs.llvmPackages_19.clang-tools
+      ];
+      languages = {
+         language_server.gopls = with pkgs.gopls; {
+                command = "gopls";
+            };
+
+         language = [{
+                name = "go";
+                language-servers = ["gopls"];
+            }];   
+        };
+        
+
+    };
+
 
   xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/nvim";
 
@@ -189,12 +323,11 @@ programs.ghostty = {
 
 
 
-  
 
 
 
- 
+
+
 
   home.stateVersion = "24.11";
 }
-    

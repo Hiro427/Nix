@@ -5,6 +5,7 @@
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     catppuccin.url = "github:catppuccin/nix";
     spicetify-nix.url = "github:gerg-l/spicetify-nix";
+    # stylix.url = "github:danth/stylix";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
@@ -27,6 +28,7 @@
 	        catppuccin.nixosModules.catppuccin
 	        home-manager.nixosModules.home-manager
          spicetify-nix.nixosModules.default 
+         # stylix.nixosModules.stylix
 	         ({ config, ... }: {
 	           home-manager.useGlobalPkgs = true;
 	           home-manager.useUserPackages = true;
@@ -48,6 +50,7 @@
 		 ./hosts/laptop/hardware-configuration.nix
 	        catppuccin.nixosModules.catppuccin
 	        home-manager.nixosModules.home-manager
+         spicetify-nix.nixosModules.default 
 	         ({ config, ... }: {
 	           home-manager.useGlobalPkgs = true;
 	           home-manager.useUserPackages = true;

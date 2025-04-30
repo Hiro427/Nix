@@ -15,7 +15,7 @@ in
   # ...other shared config
 
 
-  #Bootloader. 
+  #Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
@@ -108,22 +108,22 @@ in
   environment.localBinInPath = true;
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-   
+
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
-    git 
+    git
     jq
     catppuccin-gtk
-    zip 
+    zip
     unzip
     viu
     file
     gum
-    firefox 
+    firefox
     neovim
-    wezterm 
-    zsh 
+    wezterm
+    zsh
     gnumake
     gcc
     starship
@@ -131,45 +131,45 @@ in
     i3
     i3status-rust
     touchegg
-    feh 
-    lxappearance 
-    lazygit 
-    sqlite 
+    feh
+    lxappearance
+    lazygit
+    sqlite
     picom
-    rofi 
-    dunst 
+    rofi
+    dunst
     brave
-    htmlq 
-    chafa 
-    btop 
-    thunderbird 
+    htmlq
+    chafa
+    btop
+    thunderbird
     ripgrep
-    dmenu 
+    dmenu
     fd
-    bruno 
-    manga-tui 
-    go 
+    bruno
+    manga-tui
+    go
     cargo
     fastfetch
-    nitch 
+    nitch
     neofetch
     rustup
     python313
     nodejs_23
     gearlever
     bitwarden-desktop
-    discord 
-    todoist-electron 
-    calcurse 
-    flameshot 
-    eza 
+    discord
+    todoist-electron
+    calcurse
+    flameshot
+    eza
     fzf
-    tldr 
+    tldr
     lm_sensors
     hwdata
-    zoxide 
-    presenterm 
-    lua 
+    zoxide
+    presenterm
+    lua
     nerd-fonts.jetbrains-mono
     git-extras
     papirus-icon-theme
@@ -177,11 +177,11 @@ in
     libnotify
     pcmanfm
     prismlauncher
-    pulseaudioFull 
+    pulseaudioFull
     brightnessctl
     rclone
     pokeget-rs
-    dua 
+    dua
     ttyper
     is-fast
     cava
@@ -190,11 +190,29 @@ in
     pciutils
     mesa-demos
     ghostty
+    ffmpeg
     gowall
-    spotube
-    psst
     lshw
     vlc
+    nixd
+    spotify-tray
+    #helix stuff
+    zig
+    zls
+    yaml-language-server
+    typescript-language-server
+    ruff
+    nil
+    mesonlsp
+    lua-language-server
+    gopls
+    golangci-lint-langserver
+    golangci-lint
+    llvmPackages_19.clang-tools
+    cmake-language-server
+    cmake
+    bash-language-server
+    vscode-langservers-extracted
   ];
   programs.spicetify = {
     enable = true;
@@ -206,6 +224,15 @@ in
        shuffle # shuffle+ (special characters are sanitized out of extension names)
      ];
   };
+ # stylix = {
+  #       enable = true;
+  #       base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+  #       targets = {
+  #           gtk.enable = true;
+  #           qt.enable = true;
+  #       };
+  #   };
+  #
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
