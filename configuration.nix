@@ -108,6 +108,17 @@ in
   environment.localBinInPath = true;
   # List packages installed in system profile. To search, run:
   # $ nix search wget
+  security.pam.services.i3lock = {
+  enable = true;
+  # Use the standard login PAM stack
+  text = ''
+    auth     include login
+    account  include login
+    password include login
+    session  include login
+  '';
+};
+
 
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
