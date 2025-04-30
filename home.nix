@@ -296,17 +296,6 @@ programs.ghostty = {
         pkgs.vscode-langservers-extracted
         pkgs.llvmPackages_19.clang-tools
       ];
-      languages = {
-         language_server.gopls = with pkgs.gopls; {
-                command = "gopls";
-            };
-
-         language = [{
-                name = "go";
-                language-servers = ["gopls"];
-            }];   
-        };
-        
 
     };
 
