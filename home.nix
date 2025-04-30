@@ -181,7 +181,32 @@ programs.ghostty = {
   programs.zed-editor = {
 
         enable = true;
-        extensions = [ "catppuccin" "nix" "toml" ];
+        extensions = [
+        "catppuccin"
+        "nix"
+        "toml"
+        "zig"
+        "java"
+        "dockerfile"
+        "sql"
+        "make"
+        "ruby"
+        "lua"
+        "xml"
+        "docker compose"
+        "catppuccin icons"
+        "csv"
+        "ruff"
+        "rainbow csv"
+        "python lsp"
+        "env"
+        "templ"
+        "meson"
+        "golangci-lint"
+        "discord presence"
+        "air"
+        
+        ];
         userSettings = {
             features = {
                 copilot = false;
@@ -219,7 +244,7 @@ programs.ghostty = {
                 modal_max_width = "large";
             };
             remove_trailing_whitespace_on_save = true;
-            show_edit_predictions = true;
+            show_edit_predictions = false;
             show_completion_on_input = true;
         };
         userKeymaps = [
