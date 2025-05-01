@@ -212,6 +212,8 @@ in
     nixd
     spotify-tray
     tty-clock
+    cudaPackages.cuda_nvcc
+    ollama
     #helix stuff
     zig
     zls

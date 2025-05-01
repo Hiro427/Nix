@@ -276,6 +276,13 @@ programs.ghostty = {
                     "space w" = "terminal_panel::ToggleFocus";
                 };
             }
+            {
+                context = "vim_mode == insert";
+                bindings = {
+                     tab = "editor::MoveRight";
+                     shift-tab = "editor::Tab";
+                };
+            }
         ];
 
     };
