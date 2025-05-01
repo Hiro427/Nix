@@ -6,6 +6,8 @@
   catppuccin.flavor = "mocha";
    programs.btop.enable = true;
   catppuccin.btop.enable = true;
+  programs.lazygit.enable = true;
+  catppuccin.lazygit.enable = true;
 programs.ghostty = {
     enable = true;
     settings = {
@@ -32,17 +34,22 @@ programs.ghostty = {
         '';
     };
   catppuccin.kitty.enable = true;
-  gtk = {
-        enable = true;
-    };
+  # gtk = {
+  #       enable = true;
+  #       # theme = {
+  #       #     name = "Catppuccin";
+  #       #     package = pkgs.colloid-gtk-theme;
+  #       # };
+  #   };
+  gtk.enable = true;
   catppuccin.gtk = {
         enable = true;
         accent = "lavender";
     };
   # qt = {
   #     enable = true;
-  #     platformTheme.name = "gtk"; # or "qt5ct" if you use qt5ct
-  #     style.name = "catppuccin-mocha"; # or "breeze-dark", "catppuccin-mocha", etc.
+  #     # platformTheme.name = "gtk"; # or "qt5ct" if you use qt5ct
+  #     style.name = "breeze-dark"; # or "breeze-dark", "catppuccin-mocha", etc.
   #   };
   programs.cava.enable = true;
   catppuccin.cava.enable = true;
@@ -323,6 +330,55 @@ programs.ghostty = {
       ];
 
     };
+
+    programs.chromium = {
+        enable = true;
+        package = pkgs.brave; 
+        extensions = [
+            {
+                id = "kekjfbackdeiabghhcdklcdoekaanoel"; #Mal-Sync
+            }
+            {
+                id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; #Ublock Origin
+            }
+            {
+                id = "nngceckbapebfimnlniiiahkandclblb"; #bitwarden
+            }
+            {
+                id = "dbfoemgnkgieejfkaddieamagdfepnff"; #2fas
+
+            }
+            {
+                id = "clngdbkpkpeebahjckkjfobafhncgmne"; #Stylus
+            }
+            {
+                id = "dbepggeogbaibhgnhhndojpepiihcmeb"; #Vimium
+            }
+            {
+                id = "fdaphilojaklgkoocegabckfanjoacjg"; #mtab
+            }
+            {
+                id = "ghkdkllgoehcklnpajjjmfoaokabfdfm"; #remove paywall
+            }
+            {
+                id = "ponfpcnoihfmfllpaingbgckeeldkhle"; #youtube enhancer
+            }
+            {
+                id = "lnjaiaapbakfhlbjenjkhffcdpoompki"; #catppuccin icons
+            }
+        ];
+    };
+
+   catppuccin.chromium.enable = true;
+    programs.freetube = {
+        enable = true;
+    };
+    catppuccin.freetube = {
+        enable = true;
+        accent = "lavender";
+        secondaryAccent = "blue";
+    };
+
 
 
   xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/nvim";

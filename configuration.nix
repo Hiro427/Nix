@@ -54,6 +54,10 @@ in
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
   services.xserver.windowManager.i3.enable = true;
+  security.pam.services.i3lock.enableGnomeKeyring = true;
+  security.pam.services.gdm.enableGnomeKeyring = true;
+  services.gnome.gnome-keyring.enable = true;
+
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -207,6 +211,7 @@ in
     vlc
     nixd
     spotify-tray
+    tty-clock
     #helix stuff
     zig
     zls
@@ -221,9 +226,14 @@ in
     golangci-lint
     llvmPackages_19.clang-tools
     cmake-language-server
+    glow
     cmake
+    frogmouth
+    mdr
     bash-language-server
     vscode-langservers-extracted
+    md-tui
+    rucola
   ];
   programs.spicetify = {
     enable = true;

@@ -16,6 +16,7 @@
 
 #    packages.x86_64-linux.default = self.packages.x86_64-linux.hello;
 
+
     nixosConfigurations = {
     	
 	desktop = nixpkgs.lib.nixosSystem {
