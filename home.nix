@@ -373,6 +373,9 @@ programs.ghostty = {
             {
                 id = "lnjaiaapbakfhlbjenjkhffcdpoompki"; #catppuccin icons
             }
+            {
+                id = "hkgfoiooedgoejojocmhlaklaeopbecg";
+            }
         ];
     };
 
