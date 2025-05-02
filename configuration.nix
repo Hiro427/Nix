@@ -211,6 +211,7 @@ in
     vlc
     nixd
     spotify-tray
+    networkmanager_dmenu
     tty-clock
     cudaPackages.cuda_nvcc
     ollama
@@ -235,7 +236,6 @@ in
     bash-language-server
     vscode-langservers-extracted
     md-tui
-    rucola
   ];
   programs.spicetify = {
     enable = true;
