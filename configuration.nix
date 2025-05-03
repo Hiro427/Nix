@@ -166,6 +166,7 @@ in
     go
     cargo
     fastfetch
+    dwt1-shell-color-scripts
     nitch
     neofetch
     rustup
