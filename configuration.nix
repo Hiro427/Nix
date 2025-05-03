@@ -215,6 +215,7 @@ in
     tty-clock
     cudaPackages.cuda_nvcc
     ollama
+    uv
     #helix stuff
     zig
     zls
