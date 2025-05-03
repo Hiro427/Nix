@@ -351,10 +351,10 @@ programs.ghostty = {
             {
                 id = "nngceckbapebfimnlniiiahkandclblb"; #bitwarden
             }
-            {
-                id = "dbfoemgnkgieejfkaddieamagdfepnff"; #2fas
-
-            }
+            # {
+            #     id = "dbfoemgnkgieejfkaddieamagdfepnff"; #2fas
+            #
+            # }
             {
                 id = "clngdbkpkpeebahjckkjfobafhncgmne"; #Stylus
             }
