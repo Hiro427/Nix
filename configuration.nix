@@ -212,6 +212,7 @@ in
     lshw
     vlc
     nixd
+    vnstat
     spotify-tray
     networkmanager_dmenu
     tty-clock
