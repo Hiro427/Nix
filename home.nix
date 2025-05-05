@@ -389,6 +389,12 @@ programs.ghostty = {
         secondaryAccent = "blue";
     };
 
+    programs.zellij = {
+        enable = true; 
+        settings = {
+            theme = "catppuccin-mocha";
+        };
+    };
 
 
   xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/nvim";
