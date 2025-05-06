@@ -65,7 +65,6 @@ in
     layout = "us";
     variant = "";
   };
-
   # Enable CUPS to print documents.
   services.printing.enable = true;
   services.avahi.enable = true;
@@ -146,6 +145,7 @@ in
     kitty
     i3
     i3status-rust
+    fusuma
     touchegg
     feh
     lxappearance
@@ -218,6 +218,7 @@ in
     spotify-tray
     networkmanager_dmenu
     tty-clock
+    xdotool
     cudaPackages.cuda_nvcc
     ollama
     uv

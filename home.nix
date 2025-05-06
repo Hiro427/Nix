@@ -35,7 +35,7 @@ programs.ghostty = {
         '';
     };
   catppuccin.kitty.enable = true;
-  # gtk = {
+    # gtk = {
   #       enable = true;
   #       # theme = {
   #       #     name = "Catppuccin";
@@ -394,6 +394,25 @@ programs.ghostty = {
         enable = true; 
         settings = {
             theme = "catppuccin-mocha";
+        };
+    };
+  services.fusuma = {
+        enable = true; 
+        settings = {
+          threshold = {
+            swipe = 0.1;
+          };
+          interval = {
+            swipe = 0.7;
+          };
+          swipe = {
+            "3" = {
+              left = {
+                # GNOME: Switch to left workspace
+                command = "xdotool key ctrl+alt+Right";
+              };
+            };
+          };
         };
     };
 
