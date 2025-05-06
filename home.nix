@@ -31,6 +31,7 @@ programs.ghostty = {
             window_padding_width 10
             cursor_shape_unfocused hollow
             confirm_os_window_close 0
+            text_composition_strategy 0.09 5
         '';
     };
   catppuccin.kitty.enable = true;

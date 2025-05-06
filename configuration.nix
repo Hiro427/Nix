@@ -198,6 +198,8 @@ in
     brightnessctl
     rclone
     pokeget-rs
+    pipes-rs 
+    desmume
     dua
     ttyper
     is-fast
