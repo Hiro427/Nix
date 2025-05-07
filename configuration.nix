@@ -197,6 +197,7 @@ in
     pulseaudioFull
     brightnessctl
     rclone
+    pulsemixer
     pokeget-rs
     pipes-rs 
     desmume
