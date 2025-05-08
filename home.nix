@@ -396,25 +396,6 @@ programs.ghostty = {
             theme = "catppuccin-mocha";
         };
     };
-  services.fusuma = {
-        enable = true; 
-        settings = {
-          threshold = {
-            swipe = 0.1;
-          };
-          interval = {
-            swipe = 0.7;
-          };
-          swipe = {
-            "3" = {
-              left = {
-                # GNOME: Switch to left workspace
-                command = "xdotool key ctrl+alt+Right";
-              };
-            };
-          };
-        };
-    };
 
   xdg.configFile."i3".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/i3";
   xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/nvim";
@@ -423,16 +404,6 @@ programs.ghostty = {
   xdg.configFile."dunst".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/dunst";
   xdg.configFile."rofi".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/rofi";
   xdg.configFile."starship.toml".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/wezterm/starship.toml";
-
-
-
-
-
-
-
-
-
-
 
 
   home.stateVersion = "24.11";

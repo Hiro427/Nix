@@ -125,7 +125,7 @@ in
 
 
   environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    # vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     git
     jq
@@ -135,6 +135,7 @@ in
     viu
     file
     gum
+    vim
     firefox
     neovim
     wezterm
