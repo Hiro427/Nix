@@ -307,6 +307,10 @@ programs.ghostty = {
         editor.inline-diagnostics = {
           cursor-line = "error";
         };
+        editor.indent-guides = {
+          render = true;
+          rainbow-option = "normal";  
+        };
         editor.lsp = {
           enable = true;
           display-messages = true;
@@ -317,25 +321,61 @@ programs.ghostty = {
          right = ["file-base-name" "spinner" "spacer" "workspace-diagnostics" "spacer" "position" "file-modification-indicator"];
          separator = "│";
         };
+        keys.normal = {
+          C-g = [":new" ":insert-output lazygit" ":buffer-close" ":redraw"];
+          C-f = [":new" ":insert-output yazi" ":buffer-close" ":redraw"];
+          C-r = [":open %sh run %val{filename}"];
+          space.y = ":clipboard-yank";
+          space.space = ":open ~/coding/";
+          a = ["append_mode" "collapse_selection"];
+          p = ["paste_clipboard_after" "collapse_selection"];
+          P = ["paste_clipboard_before" "collapse_selection"];
+        "{" = ["extend_to_line_bounds" "goto_prev_paragraph"];
+        "}" = ["extend_to_line_bounds" "goto_next_paragraph"];
+        };
+        keys.select = {
+         u = ["switch_to_lowercase" "collapse_selection" "normal_mode"];
+         U = ["switch_to_uppercase" "collapse_selection" "normal_mode"];
+
+         # Visual-mode specific muscle memory
+         i = "select_textobject_inner";
+         a = "select_textobject_around";
+        
+         # Some extra binds to allow us to insert/append in select mode because it's nice with multiple cursors
+         tab = ["insert_mode" "collapse_selection"];
+         C-a = ["append_mode" "collapse_selection"];
+        
+         # Make selecting lines in visual mode behave sensibly
+         k = ["extend_line_up" "extend_to_line_bounds"];
+         j = ["extend_line_down" "extend_to_line_bounds"];
+        
+         # Clipboards over registers ye ye
+         d = ["yank_main_selection_to_clipboard" "delete_selection"];
+         x = ["yank_main_selection_to_clipboard" "delete_selection"];
+         y = ["yank_main_selection_to_clipboard" "normal_mode" "flip_selections" "collapse_selection"];
+         Y = ["extend_to_line_bounds" "yank_main_selection_to_clipboard" "goto_line_start" "collapse_selection" "normal_mode"];
+         p = "replace_selections_with_clipboard"; # No life without this
+         P = "paste_clipboard_before";
+        };
       };
-      extraPackages = [
-        pkgs.zls
-        pkgs.zig
-        pkgs.gopls
-        pkgs.bash-language-server
-        pkgs.golangci-lint
-        pkgs.golangci-lint-langserver
-        pkgs.typescript-language-server
-        pkgs.mesonlsp
-        pkgs.lua-language-server
-        pkgs.ruff
-        pkgs.nil
-        pkgs.cmake
-        pkgs.cmake-language-server
-        pkgs.bash-language-server
-        pkgs.vscode-langservers-extracted
-        pkgs.llvmPackages_19.clang-tools
-      ];
+      # extraPackages = [
+      #   pkgs.zls
+      #   pkgs.zig
+      #   pkgs.gopls
+      #   pkgs.bash-language-server
+      #   pkgs.golangci-lint
+      #   pkgs.golangci-lint-langserver
+      #   pkgs.typescript-language-server
+      #   pkgs.mesonlsp
+      #   pkgs.lua-language-server
+      #   pkgs.ruff
+      #   pkgs.nil
+      #   pkgs.cmake
+      #   pkgs.cmake-language-server
+      #   pkgs.bash-language-server
+      #   pkgs.vscode-langservers-extracted
+      #   pkgs.llvmPackages_19.clang-tools
+      # ];
 
     };
 

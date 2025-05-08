@@ -231,6 +231,7 @@ in
     openvpn
     #helix stuff
     zig
+    taplo
     zls
     yaml-language-server
     typescript-language-server
