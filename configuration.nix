@@ -159,6 +159,9 @@ in
     htmlq
     chafa
     btop
+    wineWowPackages.stable
+    # wine 
+    # (wine.override { wineBuild = "wine64"; })
     thunderbird
     ripgrep
     dmenu
@@ -198,8 +201,9 @@ in
     pulseaudioFull
     brightnessctl
     rclone
-    pulsemixer
+    playerctl
     pokeget-rs
+    bottles 
     pipes-rs 
     desmume
     dua
