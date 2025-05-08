@@ -159,9 +159,6 @@ in
     htmlq
     chafa
     btop
-    wineWowPackages.stable
-    # wine 
-    # (wine.override { wineBuild = "wine64"; })
     thunderbird
     ripgrep
     dmenu
