@@ -205,7 +205,10 @@ in
     bottles 
     pipes-rs 
     desmume
+    retroarch
     dua
+    zellij
+    typescript
     ttyper
     is-fast
     cava
