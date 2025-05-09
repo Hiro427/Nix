@@ -174,7 +174,7 @@ in
     nitch
     neofetch
     rustup
-    python313
+    python312Full
     nodejs_23
     gearlever
     bitwarden-desktop
@@ -229,12 +229,14 @@ in
     uv
     openvpn
     #helix stuff
+    evil-helix
     zig
     taplo
     zls
     yaml-language-server
     typescript-language-server
     ruff
+    python312Packages.python-lsp-server
     nil
     mesonlsp
     lua-language-server

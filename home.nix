@@ -35,23 +35,11 @@ programs.ghostty = {
         '';
     };
   catppuccin.kitty.enable = true;
-    # gtk = {
-  #       enable = true;
-  #       # theme = {
-  #       #     name = "Catppuccin";
-  #       #     package = pkgs.colloid-gtk-theme;
-  #       # };
-  #   };
   gtk.enable = true;
   catppuccin.gtk = {
         enable = true;
         accent = "lavender";
     };
-  # qt = {
-  #     enable = true;
-  #     # platformTheme.name = "gtk"; # or "qt5ct" if you use qt5ct
-  #     style.name = "breeze-dark"; # or "breeze-dark", "catppuccin-mocha", etc.
-  #   };
   programs.cava.enable = true;
   catppuccin.cava.enable = true;
   programs.vesktop = {
@@ -66,9 +54,6 @@ programs.ghostty = {
 
         };
     };
-
-
-
   programs.yazi = {
   enable = true;
   settings = {
@@ -288,76 +273,57 @@ programs.ghostty = {
 
     };
 
-    programs.helix = {
-      enable = true;
-      package  = pkgs.evil-helix;
-      settings = {
-        theme = "catppuccin_mocha";
-        editor = {
-          line-number = "relative";
-          true-color = true;
-          preview-completion-insert = true;
-          completion-trigger-len = 1;
-          auto-format = true;
-          end-of-line-diagnostics = "hint";
-        };
-        editor.cursor-shape = {
-          insert = "bar";
-        };
-        editor.inline-diagnostics = {
-          cursor-line = "warning";
-        };
-        editor.indent-guides = {
-          render = true;
-          rainbow-option = "normal";  
-        };
-        editor.lsp = {
-          enable = true;
-          display-messages = true;
-        };
-        editor.statusline = {
-         left = ["mode" "spacer" "version-control"];
-         center = [];
-         right = ["file-base-name" "spinner" "spacer" "workspace-diagnostics" "spacer" "position" "file-modification-indicator"];
-         separator = "│";
-        };
-        keys.normal = {
-          C-g = [":new" ":insert-output lazygit" ":buffer-close" ":redraw"];
-          C-f = [":new" ":insert-output yazi" ":buffer-close" ":redraw"];
-          C-r = [":open %sh run %val{filename}"];
-          space.y = ":clipboard-yank";
-          space.space = ":open ~/coding/";
-          a = ["append_mode" "collapse_selection"];
-        "{" = ["extend_to_line_bounds" "goto_prev_paragraph"];
-        "}" = ["extend_to_line_bounds" "goto_next_paragraph"];
-        };
-        keys.select = {
-         u = ["switch_to_lowercase" "collapse_selection" "normal_mode"];
-         U = ["switch_to_uppercase" "collapse_selection" "normal_mode"];
-         p = [":clipboard-paste-after"];
-         P = [":clipboard-paste-before"];
-        };
-      };
-      # extraPackages = [
-      #   pkgs.zls
-      #   pkgs.zig
-      #   pkgs.gopls
-      #   pkgs.bash-language-server
-      #   pkgs.golangci-lint
-      #   pkgs.golangci-lint-langserver
-      #   pkgs.typescript-language-server
-      #   pkgs.mesonlsp
-      #   pkgs.lua-language-server
-      #   pkgs.ruff
-      #   pkgs.nil
-      #   pkgs.cmake
-      #   pkgs.cmake-language-server
-      #   pkgs.bash-language-server
-      #   pkgs.vscode-langservers-extracted
-      #   pkgs.llvmPackages_19.clang-tools
-      # ];
-
-    };
+    # programs.helix = {
+    #   enable = true;
+    #   package  = pkgs.evil-helix;
+    #   settings = {
+    #     theme = "catppuccin_mocha";
+    #     editor = {
+    #       line-number = "relative";
+    #       true-color = true;
+    #       preview-completion-insert = true;
+    #       completion-trigger-len = 1;
+    #       auto-format = true;
+    #       end-of-line-diagnostics = "hint";
+    #     };
+    #     editor.cursor-shape = {
+    #       insert = "bar";
+    #     };
+    #     editor.inline-diagnostics = {
+    #       cursor-line = "warning";
+    #     };
+    #     editor.indent-guides = {
+    #       render = true;
+    #       rainbow-option = "normal";  
+    #     };
+    #     editor.lsp = {
+    #       enable = true;
+    #       display-messages = true;
+    #     };
+    #     editor.statusline = {
+    #      left = ["mode" "spacer" "version-control"];
+    #      center = [];
+    #      right = ["file-base-name" "spinner" "spacer" "workspace-diagnostics" "spacer" "position" "file-modification-indicator"];
+    #      separator = "│";
+    #     };
+    #     keys.normal = {
+    #       C-g = [":new" ":insert-output lazygit" ":buffer-close" ":redraw"];
+    #       C-f = [":new" ":insert-output yazi" ":buffer-close" ":redraw"];
+    #       C-r = [":open %sh run %val{filename}"];
+    #       space.y = ":clipboard-yank";
+    #       space.space = ":open ~/coding/";
+    #       a = ["append_mode" "collapse_selection"];
+    #     "{" = ["extend_to_line_bounds" "goto_prev_paragraph"];
+    #     "}" = ["extend_to_line_bounds" "goto_next_paragraph"];
+    #     };
+    #     keys.select = {
+    #      u = ["switch_to_lowercase" "collapse_selection" "normal_mode"];
+    #      U = ["switch_to_uppercase" "collapse_selection" "normal_mode"];
+    #      p = [":clipboard-paste-after"];
+    #      P = [":clipboard-paste-before"];
+    #     };
+    #   };
+    # };
 
     programs.chromium = {
         enable = true;
@@ -424,6 +390,8 @@ programs.ghostty = {
   xdg.configFile."dunst".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/dunst";
   xdg.configFile."rofi".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/rofi";
   xdg.configFile."starship.toml".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/wezterm/starship.toml";
+  xdg.configFile."helix".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/helix";
+
 
 
   home.stateVersion = "24.11";
