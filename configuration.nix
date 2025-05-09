@@ -151,6 +151,7 @@ in
     feh
     lxappearance
     lazygit
+    sass
     sqlite
     picom
     rofi
@@ -159,6 +160,7 @@ in
     htmlq
     chafa
     btop
+    live-server
     thunderbird
     ripgrep
     dmenu

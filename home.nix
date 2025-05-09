@@ -383,7 +383,7 @@ programs.ghostty = {
                 id = "dbepggeogbaibhgnhhndojpepiihcmeb"; #Vimium
             }
             {
-                id = "fdaphilojaklgkoocegabckfanjoacjg"; #mtab
+                id = "ldjkgaaoikpmhmkelcgkgacicjfbofhh"; #instapaper
             }
             {
                 id = "ghkdkllgoehcklnpajjjmfoaokabfdfm"; #remove paywall
