@@ -101,7 +101,7 @@ in
     ];
   };
    boot.extraModprobeConfig = ''
-    options hid_apple fnmode=2
+    options hid_apple fnmode=1
   '';
 
   # Install firefox.
@@ -170,10 +170,13 @@ in
     go
     cargo
     fastfetch
+    browsh
     dwt1-shell-color-scripts
     nitch
     neofetch
     rustup
+    # component add rust-analyzer
+    # rustup default stable (probably wrong)
     python312Full
     nodejs_23
     gearlever
@@ -200,6 +203,7 @@ in
     pulseaudioFull
     brightnessctl
     rclone
+    age
     playerctl
     pokeget-rs
     bottles 
