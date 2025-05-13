@@ -35,11 +35,29 @@ programs.ghostty = {
         '';
     };
   catppuccin.kitty.enable = true;
-  gtk.enable = true;
-  catppuccin.gtk = {
-        enable = true;
-        accent = "lavender";
+  gtk = {
+    enable = true;
+    theme = {
+        name = "Catppuccin-GTK-Dark";
+        package = pkgs.magnetic-catppuccin-gtk;
     };
+    # gtk2.extraConfig = {
+    #     "gtk-application-prefer-dark-theme" = true;
+    # };
+    gtk3.extraConfig = {
+        "gtk-application-prefer-dark-theme" = true;
+    };
+    gtk4.extraConfig = {
+        "gtk-application-prefer-dark-theme" = true;
+    };
+};
+
+
+
+  # catppuccin.gtk = {
+  #       enable = true;
+  #       accent = "lavender";
+  #   };
   programs.cava.enable = true;
   catppuccin.cava.enable = true;
   programs.vesktop = {
