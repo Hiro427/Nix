@@ -174,6 +174,7 @@ in
     dwt1-shell-color-scripts
     nitch
     neofetch
+    ytmdl
     rustup
     # component add rust-analyzer
     # rustup default stable (probably wrong)
@@ -189,6 +190,7 @@ in
     fzf
     tldr
     lm_sensors
+    termusic
     hwdata
     zoxide
     presenterm
@@ -210,7 +212,6 @@ in
     bottles 
     pipes-rs 
     desmume
-    retroarch
     dua
     zellij
     typescript
@@ -227,8 +228,8 @@ in
     lshw
     vlc
     nixd
+    xclip
     vnstat
-    spotify-tray
     networkmanager_dmenu
     tty-clock
     xdotool

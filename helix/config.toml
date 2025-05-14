@@ -1,0 +1,72 @@
+theme = "catppuccin_mocha"
+
+[editor]
+line-number = "relative"
+color-modes = true
+auto-save = true
+true-color = true
+preview-completion-insert = true
+completion-trigger-len = 1
+auto-format = true
+end-of-line-diagnostics = "hint"
+text-width = 80
+
+[editor.cursor-shape]
+insert = "bar"
+
+[editor.indent-guides]
+render = true
+rainbow-option = "normal"  # supports "normal", "dim", "none"
+
+[editor.inline-diagnostics]
+cursor-line="error"
+
+[editor.lsp]
+enable = true
+# display-inlay-hints = true
+display-messages = true
+
+[editor.statusline]
+left = [ "mode","separator", "file-base-name", "separator", "spacer", "workspace-diagnostics", ]
+center = []
+right = [ "position", "separator",  "spacer", "position-percentage", "spacer", "separator", 
+    "total-line-numbers", "separator",  "file-line-ending", "separator",  "file-type", ]
+separator = "|"
+mode.normal = "NORMAL"
+mode.select = "SELECT"
+mode.insert = "INSERT"
+
+[editor.whitespace.render]
+tab = "all"
+space = "all"
+
+
+[editor.whitespace.characters]
+space = "·"
+nbsp = "⍽"
+tab = "→"
+newline = "⏎"
+tabpad = "·" # Tabs will look like "→···" (depending on tab width)
+
+[keys.normal]
+C-g = [":new", ":insert-output lazygit", ":buffer-close", ":redraw"]
+C-f = [":new", ":insert-output yazi", ":buffer-close", ":redraw"]
+a = ["append_mode", "collapse_selection"]
+"}" = ["extend_to_line_bounds", "goto_next_paragraph", "collapse_selection"]
+"{" = ["extend_to_line_bounds", "goto_prev_paragraph","move_line_up", "collapse_selection" ]
+A-r = [ ":config-reload", ]
+"U" = [ "redo", ]
+"A-j" = [ "ensure_selections_forward", "extend_to_line_bounds", "extend_char_right", "extend_char_left", "delete_selection",
+    "add_newline_below", "move_line_down", "replace_with_yanked", "goto_line_start", ]
+"A-k" = [ "ensure_selections_forward", "extend_to_line_bounds", "extend_char_right", "extend_char_left", "delete_selection",
+    "move_line_up", "add_newline_above", "move_line_up", "replace_with_yanked", "goto_line_start", ]
+
+[keys.normal.space]
+y = ":clipboard-yank"
+space = ":open ~/coding/"
+
+[keys.select] 
+A-u = ["switch_to_lowercase", "collapse_selection", "normal_mode"]
+A-U = ["switch_to_uppercase", "collapse_selection", "normal_mode"]
+
+
