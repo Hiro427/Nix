@@ -178,7 +178,7 @@ in
     # component add rust-analyzer
     # rustup default stable (probably wrong)
     python312Full
-    nodejs_23
+    nodejs_22 
     gearlever
     bitwarden-desktop
     discord
@@ -198,6 +198,7 @@ in
     papirus-icon-theme
     gh
     libnotify
+    inputs.zen-browser.packages."${system}".default
     pcmanfm
     prismlauncher
     pulseaudioFull
@@ -258,6 +259,9 @@ in
     mdr
     bash-language-server
     vscode-langservers-extracted
+    htmx-lsp
+    tailwindcss
+    tailwindcss-language-server
     md-tui
   ];
   programs.spicetify = {

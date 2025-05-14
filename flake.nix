@@ -5,12 +5,13 @@
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     catppuccin.url = "github:catppuccin/nix";
     spicetify-nix.url = "github:gerg-l/spicetify-nix";
+		zen-browser.url = "github:0xc000022070/zen-browser-flake";
     # stylix.url = "github:danth/stylix";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, home-manager, spicetify-nix, catppuccin, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, spicetify-nix, catppuccin, zen-browser, ... }@inputs: {
 
 #    packages.x86_64-linux.hello = nixpkgs.legacyPackages.x86_64-linux.hello;
 
