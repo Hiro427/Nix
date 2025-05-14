@@ -384,7 +384,6 @@ programs.ghostty = {
         ];
     };
 
-   catppuccin.chromium.enable = true;
     programs.freetube = {
         enable = true;
     };

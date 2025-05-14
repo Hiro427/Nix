@@ -255,14 +255,16 @@ in
     cmake-language-server
     glow
     cmake
-    frogmouth
-    mdr
+    sqls
+    shfmt
+    taplo
+    spectral-language-server
     bash-language-server
     vscode-langservers-extracted
     htmx-lsp
+    emmet-language-server
     tailwindcss
     tailwindcss-language-server
-    md-tui
   ];
   programs.spicetify = {
     enable = true;
