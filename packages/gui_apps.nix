@@ -3,6 +3,7 @@
     firefox
     brave 
     thunderbird 
+    pcmanfm
     bruno
     bitwarden-desktop
     lxappearance

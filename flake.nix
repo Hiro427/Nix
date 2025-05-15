@@ -25,6 +25,7 @@
         specialArgs = { inherit inputs; };
 		modules = [ 
 		 ./configuration.nix
+         ./shared.nix
 		 ./hosts/desktop/desktop.nix
 		 ./hosts/desktop/hardware-configuration.nix
 	        catppuccin.nixosModules.catppuccin
@@ -35,7 +36,8 @@
 	           home-manager.useGlobalPkgs = true;
 	           home-manager.useUserPackages = true;
 	           home-manager.users.jacobrambarran = { pkgs, ... }: {
-	               imports = [ catppuccin.homeModules.catppuccin 
+	               imports = [ 
+                                catppuccin.homeModules.catppuccin 
                                 ./home.nix 
                                 ./hosts/desktop/homeuniq.nix
                                                             ];

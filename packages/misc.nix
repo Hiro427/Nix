@@ -1,4 +1,4 @@
-{pkgs, inputs, ...}: with pkgs; 
+{config, pkgs, inputs, ...}: with pkgs; 
 [
     inputs.zen-browser.packages."${system}".default 
     xclip 

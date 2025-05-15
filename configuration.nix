@@ -107,8 +107,8 @@ environment.systemPackages =
     ++ import ./packages/i3.nix { inherit pkgs; }
     ++ import ./packages/gui_apps.nix { inherit pkgs; }
     ++ import ./packages/coding.nix { inherit pkgs; }
-    ++ import ./packages/utils.nix { inherit pkgs; }
-    ++ import ./packages/misc.nix { inherit pkgs inputs; };
+    ++ import ./packages/utils.nix { inherit pkgs; };
+    # ++ import ./packages/misc.nix { inherit pkgs inputs; };
 
   programs.spicetify = {
     enable = true;
