@@ -1,0 +1,47 @@
+{pkgs, ...}:with pkgs; 
+[
+    #languages
+    typescript
+    zig
+    go
+    gcc
+    cargo 
+    python312Full
+    nodejs_22
+    lua
+    rustup # component add rust-analyzer rustup default stable(?)
+    #lsps and formatters
+    taplo
+    zls
+    yaml-language-server
+    typescript-language-server
+    ruff
+    python312Packages.python-lsp-server
+    nil
+    nixd
+    mesonlsp
+    lua-language-server
+    gopls
+    golangci-lint-langserver
+    golangci-lint
+    llvmPackages_19.clang-tools
+    cmake-language-server
+    glow
+    cmake
+    gnumake
+    sqls
+    shfmt
+    taplo
+    spectral-language-server
+    bash-language-server
+    vscode-langservers-extracted
+    htmx-lsp
+    emmet-language-server
+    sass
+    tailwindcss
+    tailwindcss-language-server
+    #misc 
+    live-server 
+    sqlite 
+    uv
+]

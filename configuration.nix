@@ -7,13 +7,6 @@ let
   spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.system};
 in
 {
-#  imports =
-#    [ # Include the results of the hardware scan.
-#     ./hardware-configuration.nix
-#  ];
-
-  # ...other shared config
-
 
   #Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -79,16 +72,6 @@ in
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
-
-    # use the example session manager (no others are packaged yet so this is enabled by default,
-    # no need to redefine it in your config for now)
-    #media-session.enable = true;
-  };
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.jacobrambarran = {
@@ -96,9 +79,6 @@ in
     description = "Jacob Rambarran";
     shell = pkgs.zsh;
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-    #  thunderbird
-    ];
   };
    boot.extraModprobeConfig = ''
     options hid_apple fnmode=1
@@ -110,8 +90,6 @@ in
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
   environment.localBinInPath = true;
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
   security.pam.services.i3lock = {
   enable = true;
   # Use the standard login PAM stack
@@ -123,150 +101,15 @@ in
   '';
 };
 
+environment.systemPackages =
+    import ./packages/editors.nix { inherit pkgs; }
+    ++ import ./packages/terms.nix { inherit pkgs; }
+    ++ import ./packages/i3.nix { inherit pkgs; }
+    ++ import ./packages/gui_apps.nix { inherit pkgs; }
+    ++ import ./packages/coding.nix { inherit pkgs; }
+    ++ import ./packages/utils.nix { inherit pkgs; }
+    ++ import ./packages/misc.nix { inherit pkgs inputs; };
 
-  environment.systemPackages = with pkgs; [
-    # vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    wget
-    git
-    jq
-    catppuccin-gtk
-    zip
-    unzip
-    viu
-    file
-    gum
-    vim
-    firefox
-    neovim
-    wezterm
-    zsh
-    gnumake
-    gcc
-    starship
-    kitty
-    i3
-    i3status-rust
-    fusuma
-    touchegg
-    feh
-    lxappearance
-    lazygit
-    sass
-    sqlite
-    picom
-    rofi
-    dunst
-    brave
-    htmlq
-    chafa
-    btop
-    live-server
-    thunderbird
-    ripgrep
-    dmenu
-    fd
-    bruno
-    manga-tui
-    go
-    cargo
-    fastfetch
-    browsh
-    dwt1-shell-color-scripts
-    nitch
-    neofetch
-    ytmdl
-    rustup
-    # component add rust-analyzer
-    # rustup default stable (probably wrong)
-    python312Full
-    nodejs_22 
-    gearlever
-    bitwarden-desktop
-    discord
-    todoist-electron
-    calcurse
-    flameshot
-    eza
-    fzf
-    tldr
-    lm_sensors
-    termusic
-    hwdata
-    zoxide
-    presenterm
-    lua
-    nerd-fonts.jetbrains-mono
-    git-extras
-    papirus-icon-theme
-    gh
-    libnotify
-    inputs.zen-browser.packages."${system}".default
-    pcmanfm
-    prismlauncher
-    pulseaudioFull
-    brightnessctl
-    rclone
-    age
-    playerctl
-    pokeget-rs
-    bottles 
-    pipes-rs 
-    desmume
-    dua
-    zellij
-    typescript
-    ttyper
-    is-fast
-    cava
-    pavucontrol
-    whatsapp-for-linux
-    pciutils
-    mesa-demos
-    ghostty
-    ffmpeg
-    gowall
-    lshw
-    vlc
-    nixd
-    xclip
-    vnstat
-    networkmanager_dmenu
-    tty-clock
-    xdotool
-    cudaPackages.cuda_nvcc
-    ollama
-    uv
-    openvpn
-    #helix stuff
-    evil-helix
-    zig
-    taplo
-    zls
-    yaml-language-server
-    typescript-language-server
-    ruff
-    python312Packages.python-lsp-server
-    nil
-    mesonlsp
-    lua-language-server
-    gopls
-    golangci-lint-langserver
-    golangci-lint
-    llvmPackages_19.clang-tools
-    cmake-language-server
-    glow
-    cmake
-    sqls
-    shfmt
-    taplo
-    spectral-language-server
-    bash-language-server
-    vscode-langservers-extracted
-    htmx-lsp
-    emmet-language-server
-    tailwindcss
-    tailwindcss-language-server
-  ];
   programs.spicetify = {
     enable = true;
     theme = spicePkgs.themes.catppuccin;
@@ -274,7 +117,7 @@ in
     enabledExtensions = with spicePkgs.extensions; [
        adblockify
        hidePodcasts
-       shuffle # shuffle+ (special characters are sanitized out of extension names)
+       shuffle 
      ];
   };
  # stylix = {
@@ -313,5 +156,5 @@ in
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.11"; # Did you read the comment?
+    }
 
-}
