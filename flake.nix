@@ -19,7 +19,7 @@
 		system = "x86_64-linux"; 
         specialArgs = { inherit inputs; };
 		modules = [ 
-		 ./configuration.nix
+		 ./shared/configuration.nix
          ./shared/pkgs.nix
 		 ./hosts/desktop/desktop.nix
 		 ./hosts/desktop/hardware-configuration.nix
@@ -44,7 +44,7 @@
 		system = "x86_64-linux"; 
         specialArgs = { inherit inputs; };
 		modules = [ 
-		 ./configuration.nix
+		 ./shared/configuration.nix
          ./shared/pkgs.nix
 		 ./hosts/laptop/laptop.nix
 		 ./hosts/laptop/hardware-configuration.nix
