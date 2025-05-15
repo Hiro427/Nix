@@ -5,18 +5,13 @@
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     catppuccin.url = "github:catppuccin/nix";
     spicetify-nix.url = "github:gerg-l/spicetify-nix";
-		zen-browser.url = "github:0xc000022070/zen-browser-flake";
+	zen-browser.url = "github:0xc000022070/zen-browser-flake";
     # stylix.url = "github:danth/stylix";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = { self, nixpkgs, home-manager, spicetify-nix, catppuccin, zen-browser, ... }@inputs: {
-
-#    packages.x86_64-linux.hello = nixpkgs.legacyPackages.x86_64-linux.hello;
-
-#    packages.x86_64-linux.default = self.packages.x86_64-linux.hello;
-
 
     nixosConfigurations = {
     	
@@ -25,11 +20,11 @@
         specialArgs = { inherit inputs; };
 		modules = [ 
 		 ./configuration.nix
-         ./shared.nix
+         ./shared/pkgs.nix
 		 ./hosts/desktop/desktop.nix
 		 ./hosts/desktop/hardware-configuration.nix
-	        catppuccin.nixosModules.catppuccin
-	        home-manager.nixosModules.home-manager
+	     catppuccin.nixosModules.catppuccin
+	     home-manager.nixosModules.home-manager
          spicetify-nix.nixosModules.default 
          # stylix.nixosModules.stylix
 	         ({ config, ... }: {
@@ -37,10 +32,9 @@
 	           home-manager.useUserPackages = true;
 	           home-manager.users.jacobrambarran = { pkgs, ... }: {
 	               imports = [ 
-                                catppuccin.homeModules.catppuccin 
-                                ./home.nix 
-                                ./hosts/desktop/homeuniq.nix
-                                                            ];
+                        catppuccin.homeModules.catppuccin 
+                        ./shared/home.nix 
+                    ];
 	           };
 	         })
 		];
@@ -51,19 +45,20 @@
         specialArgs = { inherit inputs; };
 		modules = [ 
 		 ./configuration.nix
+         ./shared/pkgs.nix
 		 ./hosts/laptop/laptop.nix
 		 ./hosts/laptop/hardware-configuration.nix
-	        catppuccin.nixosModules.catppuccin
-	        home-manager.nixosModules.home-manager
+	     catppuccin.nixosModules.catppuccin
+	     home-manager.nixosModules.home-manager
          spicetify-nix.nixosModules.default 
 	         ({ config, ... }: {
 	           home-manager.useGlobalPkgs = true;
 	           home-manager.useUserPackages = true;
 	           home-manager.users.jacobrambarran = { pkgs, ... }: {
-	               imports = [ catppuccin.homeModules.catppuccin 
-                                ./home.nix 
-                                ./hosts/laptop/homeuniq.nix
-                            ];
+	               imports = [ 
+                        catppuccin.homeModules.catppuccin 
+                        ./shared/home.nix 
+                    ];
 	           };
 	         })
 		];

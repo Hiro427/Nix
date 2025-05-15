@@ -31,6 +31,7 @@
     gnumake
     sqls
     shfmt
+    nixpkgs-fmt
     taplo
     spectral-language-server
     bash-language-server

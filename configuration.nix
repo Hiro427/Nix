@@ -101,14 +101,6 @@ in
   '';
 };
 
-environment.systemPackages =
-    import ./packages/editors.nix { inherit pkgs; }
-    ++ import ./packages/terms.nix { inherit pkgs; }
-    ++ import ./packages/i3.nix { inherit pkgs; }
-    ++ import ./packages/gui_apps.nix { inherit pkgs; }
-    ++ import ./packages/coding.nix { inherit pkgs; }
-    ++ import ./packages/utils.nix { inherit pkgs; };
-    # ++ import ./packages/misc.nix { inherit pkgs inputs; };
 
   programs.spicetify = {
     enable = true;
@@ -155,5 +147,5 @@ environment.systemPackages =
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
+    }
   system.stateVersion = "24.11"; # Did you read the comment?
-}
