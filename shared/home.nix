@@ -3,6 +3,16 @@
  # imports = [ catppuccin.homeManagerModules.catppuccin ];
   home.username = "jacobrambarran";
   home.homeDirectory = "/home/jacobrambarran";
+  home.sessionVariables = {
+  GOPATH = "$HOME/.go";
+ };
+
+home.sessionPath = [
+  "$HOME/.nimble/bin"
+  "$HOME/.cargo/bin"
+  "$HOME/.local/bin"
+  "$HOME/.go/bin"  # This is $GOPATH/bin
+];
   catppuccin.flavor = "mocha";
    programs.btop.enable = true;
   catppuccin.btop.enable = true;
@@ -130,19 +140,11 @@ programs.ghostty = {
         enable = true;
         syntaxHighlighting.enable = true;
         autosuggestion.enable = true;
-        #   plugins = [
-        #     {
-        #       name = "mycustom";
-        #       src = builtins.path { path = "/home/jacobrambarran/.dotfiles/zshrc"; };
-        #     }
-        # ];
           initContent = ''
-            # Source my original config
-              source "$HOME/.dotfiles/zshrc/PATH.zsh"
-              source "$HOME/.dotfiles/zshrc/fzf-options.zsh"
-              source "$HOME/.dotfiles/zshrc/aliases.zsh"
-              source "$HOME/.dotfiles/zshrc/fn.zsh"
-              source "$HOME/.dotfiles/zshrc/gum_settings.zsh"
+              bindkey '^I' autosuggest-accept 
+              bindkey -s '^f' 'y\n'
+              bindkey -s '^Z' 'fg\n' 
+              eval "$(starship init zsh)"
           '';
         history = {
             append = true;
@@ -152,7 +154,47 @@ programs.ghostty = {
             expireDuplicatesFirst = true;
             extended = true;
         };
+        sessionVariables = {
+            EDITOR = "nvim";
+            REPO_FPATH = "$HOME/.dotfiles/github/repos.txt";
+            PROJ_DIR = "$HOME/coding/projects/";
+            MANGA_DL_DIR = "$HOME/Downloads/Manga/";
+            MANGA_TUI_DATA_DIR = "$HOME/Downloads/mangatui";
+            GHW_SUPPRESS_WARNINGS= 1;
+        };
+        shellAliases = {
+            ls = "eza --color=always --git --icons=auto --no-user";
+            l="eza --color=always --git --icons=auto --no-user --no-permissions --no-time --long --no-filesize";
+            c="cd ..";
+            e="exit";
+            activate="source .venv/bin/activate";
+            cs="crumbs";
+            s="cd - >> /dev/null";
+            vim="nvim";
+            # alias rofi="rofi -show drun -normal-window"
+            tsv="tmux split-pane -v";
+            tsh="tmux split-pane -h";
+            search="is-fast";
+            nvidia-offload="__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia '$@'";
+        };
+        defaultKeymap = "emacs";
     };
+  programs.zoxide = {
+        enable = true; 
+        enableZshIntegration = true;
+        options = [
+            "--cmd 'cd'"
+        ];
+    };
+  programs.fzf = {
+        enable = true; 
+        enableZshIntegration = true;
+    };
+  catppuccin.fzf = {
+        enable = true;
+        accent = "lavender";
+    };
+
   catppuccin.zsh-syntax-highlighting.enable = true;
   programs.joplin-desktop = {
         enable = true;
