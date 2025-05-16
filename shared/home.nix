@@ -171,7 +171,7 @@ programs.ghostty = {
             client_id_command = {
                 command = "cat";
                 args = [
-                    "${config.home.homeDirectory}/.sptid.txt"
+                    "${config.home.homeDirectory}/.config/spotify-id.txt"
                 ];
             };
         };
@@ -428,6 +428,9 @@ programs.ghostty = {
   xdg.configFile."starship.toml".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/starship/starship.toml";
   xdg.configFile."helix".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/helix";
   xdg.configFile."zellij".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/zellij";
+  xdg.configFile."spotify-id.txt".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/secrets/spotify-id.txt";
+
+
 
   home.stateVersion = "24.11";
 }
