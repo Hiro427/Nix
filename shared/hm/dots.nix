@@ -12,8 +12,5 @@
   xdg.configFile."starship.toml".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/Nix/dots/starship/starship.toml";
   xdg.configFile."helix".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/Nix/dots/helix";
   xdg.configFile."zellij".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/Nix/dots/zellij";
-  xdg.configFile."spotify-id.txt".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/Nix/dots/secrets/spotify-id.txt";
-
-
 
 }

@@ -9,10 +9,6 @@
             "name": "aoc"
         },
         {
-            "path": ".dotfiles",
-            "name": "dots"
-        },
-        {
             "path": "coding/resources",
             "name": "resources"
         },

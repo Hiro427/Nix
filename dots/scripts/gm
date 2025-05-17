@@ -1,0 +1,149 @@
+#!/usr/bin/env bash 
+
+PROJECT="$HOME/Nix/dots/assets/gm.json"
+REMOTE="https://github.com/Hiro427/"
+LAVENDER="#b4befe"
+GREEN="#a6e3a1"
+RED="#f38ba8"
+
+
+# TODO: Map out what features I want in this version 
+# TODO: Determine dotfiles & project locations on the system
+
+ct() {
+    local header_color="$1"
+    local header="$2"
+
+    a_r=$((16#${header_color:1:2}))
+    a_g=$((16#${header_color:3:2}))
+    a_b=$((16#${header_color:5:2}))
+
+    echo -e "\e[38;2;${a_r};${a_g};${a_b}m${header}\e[0m"
+}
+
+status() {
+    local name 
+    local path 
+    local projects 
+    local count 
+    local status
+
+    mapfile -t projects < <(jq -r '.projects[].path' "$PROJECT")
+
+    count=0
+    for i in "${projects[@]}"; do
+
+        path=$i
+        name=$(jq -r ".projects[$count].name" "$PROJECT") 
+
+        if [[ ! -d "$HOME/$path" ]]; then
+            git clone "$REMOTE/${name}.git" "$HOME/${path}"
+        fi
+
+        cd "$HOME/$path" || echo "error in path: ${path}"
+
+        status=$(git status -s)
+
+        if [[ -n "$status" ]]; then 
+            ct "$RED" "$(basename "$HOME/$path")"
+        else 
+            ct "$GREEN" "$(basename "$HOME/$path")"
+        fi
+        ((count++))
+    done
+}
+
+list() {
+    local name 
+    local projects_names
+
+    mapfile -t projects_names < <(jq -r '.projects[].name' "$PROJECT")
+
+    for i in "${projects_names[@]}"; do
+        name=$(ct "$LAVENDER" "$i")
+
+        echo "$name"
+
+        ((count++))
+    done
+}
+
+update() {
+
+    local name 
+    local path 
+    local projects 
+    local count 
+    local status
+
+    mapfile -t projects < <(jq -r '.projects[].path' "$PROJECT")
+
+    count=0
+    for i in "${projects[@]}"; do
+
+        path=$i
+        name=$(jq -r ".projects[$count].name" "$PROJECT") 
+
+        if [[ ! -d "$HOME/$path" ]]; then
+            git clone "$REMOTE/${name}.git" "$HOME/${path}"
+        fi
+
+        cd "$HOME/$path" || echo "error in path: ${path}"
+
+        status=$(git status -s)
+
+        if [[ -n "$status" ]]; then 
+            ct "$RED" "Check: $(basename "$HOME/$path")"
+        else 
+            if git pull | grep -q "Already up to date"; then 
+                ct "$LAVENDER" "Up-to-Date: ${name}" | column -t -s ":"
+            else 
+               ct "$GREEN" "Changes Pulled: ${name}" | column -t -s ":"
+            fi
+
+        fi
+        ((count++))
+    done
+}
+
+initialize_remote_repo() {
+
+    local dir
+
+    dir=$(basename "$(pwd)")
+
+    gh repo create "$dir" --private --source=. --remote=origin
+    git branch -M main
+
+}
+
+open_remote() {
+    local url 
+
+    url=$(git config --get remote.origin.url)
+    xdg-open "$url"
+}
+
+
+
+
+
+
+ARG=$1
+case "$ARG" in 
+    --update|-u)
+        update 
+        ;;
+    --status|-s)
+        status
+    ;; 
+--open-remote|-or)
+    open_remote 
+    ;;
+--initialize_remote|-ir)
+    initialize_remote_repo 
+    ;;
+--list|-l)
+    list
+    ;;
+esac

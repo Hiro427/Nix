@@ -16,7 +16,7 @@
             client_id_command = {
                 command = "cat";
                 args = [
-                    "${config.home.homeDirectory}/.config/spotify-id.txt"
+                    "${config.home.homeDirectory}/Nix/dots/secrets/spotify-id.txt"
                 ];
             };
         };

@@ -12,6 +12,11 @@ home.sessionPath = [
   "$HOME/.local/bin"
   "$HOME/.go/bin"
 ];
+home.packages = [
+    (pkgs.writeShellScriptBin "gm" (builtins.readFile ../dots/scripts/gm))
+    (pkgs.writeShellScriptBin "rw" (builtins.readFile ../dots/scripts/rw))
+    (pkgs.writeShellScriptBin "run" (builtins.readFile ../dots/scripts/run))
+  ];
 imports = [
         ./hm/freetube.nix
         ./hm/zsh.nix
@@ -29,11 +34,11 @@ imports = [
         ./hm/dots.nix
     ];
 
-    # home.file = {
-    #     ".config/nvim" = {
-    #         source = .config.lib.fileNix/nvim;
-    #     };
-    # };
+    home.file = {
+        ".wezterm.lua" = {
+            source = ../dots/wezterm/wezterm.lua;
+        };
+    };
 
   home.stateVersion = "24.11";
 }

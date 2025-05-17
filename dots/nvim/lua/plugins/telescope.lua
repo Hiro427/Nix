@@ -67,10 +67,10 @@ return {
       )
       vim.keymap.set("n", "<leader><leader>", function()
         require("telescope.builtin").find_files({
-          search_dirs = { "~/coding", "~/.dotfiles" },
+          search_dirs = { "~/coding", "~/Nix" },
           file_ignore_patterns = file_ignore_patterns,
         })
-      end, { desc = "Search ~/coding and ~/.dotfiles (Telescope)" })
+      end, { desc = "Search ~/coding and ~/Nix (Telescope)" })
     end,
   },
 }
