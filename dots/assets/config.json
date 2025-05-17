@@ -1,0 +1,57 @@
+{
+    "projects": [
+        {
+            "path": "Nix", 
+            "name": "Nix"
+        },
+        {
+            "path": "coding/aoc",
+            "name": "aoc"
+        },
+        {
+            "path": ".dotfiles",
+            "name": "dots"
+        },
+        {
+            "path": "coding/resources",
+            "name": "resources"
+        },
+        {
+            "path": "coding/projects/wip",
+            "name": "wip"
+        },
+        {
+            "path": "coding/projects/mxdownloader",
+            "name": "mxdownloader"
+        },
+        {
+            "path": "coding/projects/creader",
+            "name": "creader"
+        },
+        {
+            "path": "coding/leetcode", 
+            "name": "leetcode"
+        },
+        {
+            "path": "coding/game-dev", 
+            "name": "game-dev"
+        },
+        {
+            "path": "coding/homepage", 
+            "name": "homepage"
+        }, 
+        {
+            "path": "coding/lang",
+            "name": "lang"
+        },
+        {
+            "path": "coding/scratchpad",
+            "name": "scratchpad"
+        },
+        {
+            "path": "wallpapers",
+            "name": "wallpapers"
+        }
+
+    ]
+}

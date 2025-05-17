@@ -30,8 +30,8 @@ imports = [
     ];
 
     # home.file = {
-    #     ".config/helix" = {
-    #         source = ./dots/helix;
+    #     ".config/nvim" = {
+    #         source = .config.lib.fileNix/nvim;
     #     };
     # };
 

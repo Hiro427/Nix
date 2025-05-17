@@ -1,0 +1,65 @@
+{
+  "auto_install_extensions": {
+    "Catppuccin": true,
+    "air": true,
+    "catppuccin icons": true,
+    "csv": true,
+    "discord presence": true,
+    "docker compose": true,
+    "dockerfile": true,
+    "env": true,
+    "golangci-lint": true,
+    "java": true,
+    "lua": true,
+    "make": true,
+    "meson": true,
+    "nix": true,
+    "python lsp": true,
+    "rainbow csv": true,
+    "ruby": true,
+    "ruff": true,
+    "sql": true,
+    "templ": true,
+    "toml": true,
+    "xml": true,
+    "zig": true
+  },
+  "autosave": "on_focus_change",
+  "buffer_font_size": 16,
+  "confim_quit": true,
+  "features": {
+    "copilot": false
+  },
+  "file_finder": {
+    "modal_max_width": "large"
+  },
+  "format_on_save": "on",
+  "formatter": "language_server",
+  "icon_theme": "Catppuccin Mocha",
+  "inlay_hints": {
+    "enabled": false,
+    "show_parameter_hints": false
+  },
+  "remove_trailing_whitespace_on_save": true,
+  "scrollbar": {
+    "show": "never"
+  },
+  "show_completion_documentation": true,
+  "show_completion_on_input": true,
+  "show_edit_predictions": false,
+  "tab_bar": {
+    "show": true
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "theme": {
+    "dark": "Catppuccin Mocha",
+    "light": "Catppuccin Latte",
+    "mode": "dark"
+  },
+  "ui_font_size": 16,
+  "use_auto_surround": true,
+  "vim_mode": true
+}

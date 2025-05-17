@@ -1,0 +1,28 @@
+theme "catppuccin-mocha"
+keybinds {
+
+	normal {
+
+		unbind "Ctrl n" "Ctrl o" "Ctrl g" "Ctrl l"
+
+		bind "Alt Shift l" { SwitchToMode "locked"; }
+		bind "Ctrl t" { SwitchToMode "tab"; }
+		bind "Ctrl h" { SwitchToMode "move"; }
+        bind "Ctrl p" { SwitchToMode "pane"; }
+        bind "Ctrl s" { SwitchToMode "session"; }
+        bind "Ctrl r" { SwitchToMode "resize"; }
+
+	}
+	session {
+		bind "m" {
+			LaunchOrFocusPlugin "session-manager" {
+				floating true
+				move_to_focused_tab true
+			}
+		}
+	}
+	pane {
+		unbind "c"
+		bind "r" { SwitchToMode "renamepane"; PaneNameInput 0; }
+	}
+}
