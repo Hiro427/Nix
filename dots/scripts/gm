@@ -106,6 +106,38 @@ update() {
     done
 }
 
+use_lazygit() {
+    local name 
+    local path 
+    local projects 
+    local count 
+    local status
+
+
+    mapfile -t projects < <(jq -r '.projects[].path' "$PROJECT")
+
+    count=0
+    for i in "${projects[@]}"; do
+
+        path=$i
+        name=$(jq -r ".projects[$count].name" "$PROJECT") 
+
+        if [[ ! -d "$HOME/$path" ]]; then
+            git clone "$REMOTE/${name}.git" "$HOME/${path}"
+        fi
+
+        cd "$HOME/$path" || echo "error in path: ${path}"
+
+        status=$(git status -s)
+
+        if [[ -n "$status" ]]; then 
+            lazygit
+        fi
+        ((count++))
+    done
+
+}
+
 initialize_remote_repo() {
 
     local dir
@@ -145,5 +177,8 @@ case "$ARG" in
     ;;
 --list|-l)
     list
+    ;;
+--lazygit|-lg)
+    use_lazygit 
     ;;
 esac
