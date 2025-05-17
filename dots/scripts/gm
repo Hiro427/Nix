@@ -156,29 +156,46 @@ open_remote() {
     xdg-open "$url"
 }
 
+show_help() {
+cat <<EOF | column -t -s "="
+--update/-u=Pull Changes for every repo 
+--open-remote/-or=Opens repo on github.com
+--initialize_remote_repo/-ir=Initialize a repo on github.com using 'gh'
+--list/-l=list all tracked repos 
+--lazygit/-lg=use lazygit to update all tracked repos
+EOF
+
+}
 
 
+main() {
+    if [[ ! -f "$PROJECT" ]]; then 
+        echo "no config file found at ~/Nix/dots/assets/gm.json" && exit
+    fi
 
-
-
-ARG=$1
-case "$ARG" in 
-    --update|-u)
-        update 
+    case "$1" in 
+        --update|-u)
+            update 
+            ;;
+        --status|-s)
+            status
+        ;; 
+    --open-remote|-or)
+        open_remote 
         ;;
-    --status|-s)
-        status
-    ;; 
---open-remote|-or)
-    open_remote 
-    ;;
---initialize_remote|-ir)
-    initialize_remote_repo 
-    ;;
---list|-l)
-    list
-    ;;
---lazygit|-lg)
-    use_lazygit 
-    ;;
-esac
+    --initialize_remote|-ir)
+        initialize_remote_repo 
+        ;;
+    --list|-l)
+        list
+        ;;
+    --lazygit|-lg)
+        use_lazygit 
+        ;;
+    *)
+        show_help 
+        ;;
+    esac
+}
+
+main "$1"
