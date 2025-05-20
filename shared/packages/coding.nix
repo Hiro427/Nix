@@ -20,6 +20,7 @@
     python312Packages.python-lsp-server
     nil
     nixd
+    stylua
     mesonlsp
     lua-language-server
     gopls
