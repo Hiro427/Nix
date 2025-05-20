@@ -3,12 +3,12 @@ keybinds {
 
 	normal {
 
-		unbind "Ctrl n" "Ctrl o" "Ctrl g" "Ctrl l"
+		unbind "Ctrl n" "Ctrl o" "Ctrl g" "Ctrl l" "Ctrl p"
 
 		bind "Alt Shift l" { SwitchToMode "locked"; }
 		bind "Ctrl t" { SwitchToMode "tab"; }
 		bind "Ctrl h" { SwitchToMode "move"; }
-        bind "Ctrl p" { SwitchToMode "pane"; }
+        bind "Alt p" { SwitchToMode "pane"; }
         bind "Ctrl s" { SwitchToMode "session"; }
         bind "Ctrl r" { SwitchToMode "resize"; }
 
