@@ -16,6 +16,7 @@
     yaml-language-server
     typescript-language-server
     ruff
+    jdt-language-server
     python312Packages.python-lsp-server
     nil
     nixd

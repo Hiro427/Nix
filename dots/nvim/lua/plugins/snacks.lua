@@ -4,12 +4,12 @@ return {
     priority = 1000,
     lazy = false,
     opts = {
-      -- notifier = {
-      --   enabled = true,
-      --   timeout = 2000,
-      --   border = "rounded",
-      --   width = { min = 20, max = 0.4 },
-      -- },
+      notifier = {
+        enabled = true,
+        timeout = 2000,
+        border = "rounded",
+        width = { min = 20, max = 0.4 },
+      },
       dashboard = {
         enabled = true,
         width = 35,
@@ -49,7 +49,8 @@ return {
             padding = 1,
             ttl = 5 * 60,
             indent = 2,
-          }
+          },
+          { section = "startup" }
         },
       },
       explorer = { enabled = true, size = 0.3 },
@@ -58,6 +59,9 @@ return {
         enabled = true,
         size = 0.4,
       },
+      input = {
+        enabled = true,
+      }
     },
     keys = {
       {

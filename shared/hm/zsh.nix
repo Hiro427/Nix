@@ -14,6 +14,7 @@
               bindkey -s '^f' 'y\n'
               bindkey -s '^Z' 'fg\n' 
               eval "$(starship init zsh)"
+              export LS_COLORS="$(vivid generate catppuccin-mocha)"
           '';
         history = {
             append = true;

@@ -9,19 +9,12 @@ return {
     end,
   },
   {
-    "folke/noice.nvim",
-    event = "VeryLazy",
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-    },
-    require("noice").setup({})
-  },
-  {
     "nvim-tree/nvim-web-devicons",
     lazy = true,
   },
   {
     "norcalli/nvim-colorizer.lua",
+    lazy = true,
     config = function()
       require("colorizer").setup()
     end,
@@ -32,6 +25,10 @@ return {
       'nvim-telescope/telescope-fzf-native.nvim',
       build = 'make'
     },
+    config = function()
+      local dropbar_api = require('dropbar.api')
+      vim.keymap.set('n', '<leader>;', dropbar_api.pick, { desc = 'Pick symbols in winbar' })
+    end
   },
   {
     'kristijanhusak/vim-dadbod-ui',
