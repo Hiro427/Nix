@@ -5,6 +5,10 @@
             "name": "Nix"
         },
         {
+            "path": "coding/hackerrank",
+            "name": "hackerrank"
+        },
+        {
             "path": "coding/aoc",
             "name": "aoc"
         },
