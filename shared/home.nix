@@ -31,7 +31,9 @@ imports = [
         ./hm/helix.nix
         ./hm/extras.nix
         ./hm/cpt.nix
+        ./hm/tm.nix
         ./hm/dots.nix
+        ./hm/starship.nix
     ];
 
     home.file = {

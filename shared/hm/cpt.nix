@@ -11,6 +11,7 @@
         lazygit.enable = true;
         kitty.enable = true;
         ghostty.enable = true;
+        starship.enable = true;
         cava.enable = true; 
         bat.enable = true;
         zathura.enable = true;
