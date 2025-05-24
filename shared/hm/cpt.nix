@@ -8,6 +8,7 @@
     catppuccin = {
         flavor = "mocha"; 
         btop.enable = true;
+        helix.enable = true;
         lazygit.enable = true;
         kitty.enable = true;
         ghostty.enable = true;

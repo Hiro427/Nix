@@ -29,10 +29,12 @@ imports = [
         ./hm/vesktop.nix
         ./hm/yazi.nix
         ./hm/helix.nix
+        ./hm/picom.nix
         ./hm/extras.nix
         ./hm/cpt.nix
         ./hm/tm.nix
         ./hm/dots.nix
+        ./hm/dunst.nix
         ./hm/starship.nix
     ];
 
