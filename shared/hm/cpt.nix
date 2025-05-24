@@ -31,6 +31,10 @@
             accent = "lavender"; 
             secondaryAccent = "blue";
         };
+        mpv = {
+            enable = true; 
+            accent = "mauve";
+        };
 
     };
     

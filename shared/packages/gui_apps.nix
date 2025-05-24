@@ -2,6 +2,7 @@
 [
     firefox
     brave 
+    mpv
     thunderbird 
     pcmanfm
     bruno
