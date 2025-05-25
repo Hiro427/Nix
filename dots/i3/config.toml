@@ -29,7 +29,7 @@ format = "  $utilization"
 
 [[block]]
 block = "memory"
-interval = 5 
+interval = 5
 format = " $icon $mem_used_percents.eng(w:2) "
 
 [[block]]
@@ -43,9 +43,9 @@ if_command = "[ \"$(cat /sys/class/dmi/id/product_name)\" = \"XPS 15 9510\" ]"
 interval = 10
 format = " 󰾆 $utilization $temperature $clocks "
 
-[[block]] 
+[[block]]
 block = "custom"
-interval = 5 
+interval = 5
 command = '''echo "󰈐 $(sensors | grep fan1 | awk '{print $2; exit}')" '''
 
 # [[block]]
@@ -62,11 +62,10 @@ command = '''echo "󰈐 $(sensors | grep fan1 | awk '{print $2; exit}')" '''
 # persistent = true
 
 
-
 [[block]]
 block = "net"
 format_alt = "{󰖩 $ssid | 󰈀 }$speed_up $speed_down "
-format = "{󰖩 $ssid | 󰈀 }" 
+format = "{󰖩 $ssid | 󰈀 }"
 inactive_format = "󰖪 "
 
 
@@ -74,27 +73,30 @@ inactive_format = "󰖪 "
 block = "disk_space"
 info_type = "available"
 alert_unit = "GB"
-if_command = "[ \"$(cat /sys/class/dmi/id/product_name)\" = \"XPS 15 9510\" ]"
 alert = 100.0
 warning = 150.0
 format = " $icon $available "
-# format_alt = " $icon $available / $total "
 [[block.click]]
 button = "right"
 update = true
 
-# [[block]]
-# block = "focused_window"
-# [block.format]
-# full = " $title.str(max_w:15, rot_interval:0.4) |"
 
-# [[block]]
-# block = "uptime"
-# interval = 60
+[[block]]
+block = "uptime"
+interval = 3600
+
+[[block]]
+block = "backlight"
+if_command = "[ \"$(cat /sys/class/dmi/id/product_name)\" = \"XPS 15 9510\" ]"
+missing_format = ""
+
+[[block]]
+block = "sound"
+driver = "pulseaudio"
 
 [[block]]
 block = "custom"
-interval = 3600 
+interval = 3600
 command = "echo 󰖕 $(curl -s 'wttr.in/NYC?format=1' | awk -F'+' '{print $2}')"
 [[block.click]]
 button = "right"
@@ -103,7 +105,7 @@ update = true
 # [[block]]
 # block = "external_ip"
 # format = " $city $country_flag "
- 
+
 [[block]]
 block = "time"
 interval = 60
@@ -126,4 +128,3 @@ device = "DisplayDevice"
 driver = "upower"
 missing_format = ""
 full_format = ""
-

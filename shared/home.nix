@@ -36,6 +36,7 @@ imports = [
         ./hm/dots.nix
         ./hm/dunst.nix
         ./hm/starship.nix
+        ./hm/i3status.nix
     ];
 
     home.file = {
