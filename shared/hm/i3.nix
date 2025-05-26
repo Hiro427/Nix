@@ -4,6 +4,7 @@
     ...
 }: 
 {
+    xsession.windowManager.i3.enable = true;
     xsession.windowManager.i3.config = {
         startup = [
             { command = "--no-startup-id dex --autostart environment i3"; }
@@ -34,9 +35,9 @@
             "Mod4+Shift+b" = "bar mode toggle";
             "Mod4+Return" = "exec wezterm"; 
             "Mod4+f" = "exec nautilus";
-            "Mod1+Shift+p" = "sh ~/.config/rofi/power.sh";
-            "Mod4+space" = "dmenu_run -fn 'monospace-13' -nb '#1e1e2e' -nf '#cdd6f4' -sb '#b4befe' -sf '#1e1e2e'";
-            "Ctrl+space" = "flameshot gui"; 
+            "Mod1+Shift+p" = "exec sh ~/.config/rofi/power.sh";
+            "Mod4+space" = "exec dmenu_run -fn 'monospace-13' -nb '#1e1e2e' -nf '#cdd6f4' -sb '#b4befe' -sf '#1e1e2e'";
+            "Ctrl+space" = "exec flameshot gui"; 
             "Mod4+Shift+r" = "restart"; 
             "Mod4+Shift+c" = "reload";
             "Mod4+Shift+s" = "resize"; 
@@ -52,12 +53,12 @@
             "Mod4+Shift+4" = "move container to workspace number 4"; 
             "Mod4+Shift+5" = "move container to workspace number 5"; 
             "Mod4+Shift+6" = "move container to workspace number 5"; 
-            "Mod+Tab" = "workspace back_and_forth";
-            "XF86AudioRaiseVolume" = "pactl set-sink-volume @DEFAULT_SINK@ +1%";
-            "XF86AudioLowerVolume" = "pactl set-sink-volume @DEFAULT_SINK@ -1%";
-            "XF86AudioMute" = "pactl set-sink-mute @DEFAULT_SINK@ toggle";
-            "XF86MonBrightnessUp" = "brightnessctl set +1%";
-            "XF86MonBrightnessDown" = "brightnessctl set -1%";
+            "Mod4+Tab" = "workspace back_and_forth";
+            "XF86AudioRaiseVolume" = "exec pactl set-sink-volume @DEFAULT_SINK@ +1%";
+            "XF86AudioLowerVolume" = "exec pactl set-sink-volume @DEFAULT_SINK@ -1%";
+            "XF86AudioMute" = "exec pactl set-sink-mute @DEFAULT_SINK@ toggle";
+            "XF86MonBrightnessUp" = "exec brightnessctl set +1%";
+            "XF86MonBrightnessDown" = "exec brightnessctl set -1%";
         };
         modes = {
           resize = {
@@ -73,24 +74,34 @@
             inner = 10;
             outer = 5;
             smartBorders = "no_gaps"; 
-            smartGaps = true; 
+            smartGaps = false; 
         };
         focus.followMouse = false;
+        assigns = {
+            "2" = [{ class = "org.wezfurlong.wezterm"; }];
+            "3" = [{ class = "vesktop"; }];
+            "4" = [{ class = "Spotify"; }];
+            "6" = [{ class = "PrismLauncher"; }];
+        };
         window = {
             border = 0;
             hideEdgeBorders = "smart";
-            commands = {
-                    command = "floating disable"; 
+            commands = [
+                {
+                    command = "floating disable, move workspace 1"; 
                     criteria = {
                         class = "Brave-browser"; 
                     };
-            };
+                }
+            ];
+            titlebar = false;
         };
         floating = {
             titlebar = false; 
             modifier = "Mod4";
             border = 0; 
         };
+        defaultWorkspace = "workspace number 1";
         bars = [
             {
                 id = "mainbar";
@@ -98,14 +109,34 @@
                 trayOutput = "primary";
                 statusCommand = "i3status-rs ~/.config/i3status-rust/config-bottom.toml";
                 position = "bottom";
-                fonts = [
-                    "pango:Monospace"
-                    "JetBrainsMonoNerdFont 12"
-                ];
+                fonts = {
+                    names = [
+                        "JetBrainsMonoNerdFont"
+                    ];
+                    size = 12.0;
+                };
                 colors = {
                     separator = "#cdd6f4"; 
                     statusline = "dddddd"; 
+                    background = "#1e1e2e"; 
+                    inactiveWorkspace = {
+                       background = "#11111b";
+                       border = "#11111b";
+                       text = "#313244";
+                    };
+                    focusedWorkspace = {
+                       background = "#a6adc8";
+                       border = "#cdd6f4";
+                       text = "#11111b";
+                    };
+                    activeWorkspace = {
+                       background = "#333333";
+                       border = "#333333";
+                       text = "#ffffff";
+                    };
+
                 };
+                extraConfig = "height 25";
             }
         ];
 
