@@ -26,6 +26,7 @@ imports = [
         ./hm/ghostty.nix
         ./hm/kitty.nix
         ./hm/gtk.nix
+        # ./hm/i3.nix
         ./hm/vesktop.nix
         ./hm/yazi.nix
         ./hm/helix.nix

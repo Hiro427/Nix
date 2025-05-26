@@ -7,6 +7,9 @@
     dunst
     btop
     dmenu
+    blueman
+    networkmanagerapplet
+    autotiling
     libnotify
     xdotool
     networkmanager_dmenu
