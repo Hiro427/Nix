@@ -15,7 +15,7 @@
             { command = "--no-startup-id feh --bg-fill $(cat ~/Nix/dots/i3/cur_wall.txt)"; always = true; }
             { command = "--no-startup-id autotiling &"; }
             { command = "--no-startup-id dunst &"; }
-            { command = "--no-startup-id setxkbmap -option caps:escape"; }
+            { command = "--no-startup-id setxkbmap -option caps:escape"; always = true; }
         ];
         keybindings = {
             "Mod4+w" = "exec i3-msg kill";

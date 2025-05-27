@@ -19,10 +19,10 @@
                 height = 500; 
                 origin = "top-right"; 
                 scale = 0; 
-                frame_color = "#89b4fa"; 
-                separator_color = "frame";
-                background = "#1e1e2e";
-                foreground = "#b4befe"; 
+                # frame_color = "#89b4fa"; 
+                # separator_color = "frame";
+                # background = "#1e1e2e";
+                # foreground = "#b4befe"; 
                 notification-limit = 10;
                 progress_bar = true; 
                 progress_bar_height = 10; 
@@ -42,7 +42,7 @@
                 frame_width = 0; 
                 gap_size = 10; 
                 sort = "yes"; 
-                font = "JetBrainsMono Nerd Font 12"; 
+                # font = "JetBrainsMono Nerd Font 12"; 
                 format = "<b>%s</b>\n%b"; 
                 alignment = "center"; 
                 vertical_alignment = "center"; 

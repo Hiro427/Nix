@@ -11,6 +11,7 @@
         helix.enable = true;
         lazygit.enable = true;
         kitty.enable = true;
+        dunst.enable = true;
         ghostty.enable = true;
         starship.enable = true;
         cava.enable = true; 
