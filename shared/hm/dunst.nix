@@ -42,7 +42,7 @@
                 frame_width = 0; 
                 gap_size = 10; 
                 sort = "yes"; 
-                # font = "JetBrainsMono Nerd Font 12"; 
+                font = "JetBrainsMono Nerd Font 12"; 
                 format = "<b>%s</b>\n%b"; 
                 alignment = "center"; 
                 vertical_alignment = "center"; 
