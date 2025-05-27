@@ -6,7 +6,7 @@ local config = wezterm.config_builder()
 -- keymaps.apply_to_config(config)
 
 config.term = "xterm-256color"
-config.font_size = 12
+config.font_size = 13
 config.font = wezterm.font("JetBrainsMono Nerd Font")
 config.initial_rows = 30
 config.initial_cols = 100
@@ -16,22 +16,22 @@ config.window_close_confirmation = "NeverPrompt"
 config.enable_wayland = false
 
 config.keys = {
-  {
-    key = 'v',
-    mods = 'ALT',
-    action = wezterm.action.ActivateCopyMode,
-  },
-  {
-    key = 'b',
-    mods = 'ALT',
-    action = wezterm.action.CopyMode 'MoveToStartOfLineContent',
-  },
+	{
+		key = "v",
+		mods = "ALT",
+		action = wezterm.action.ActivateCopyMode,
+	},
+	{
+		key = "b",
+		mods = "ALT",
+		action = wezterm.action.CopyMode("MoveToStartOfLineContent"),
+	},
 }
 
 if os.getenv("XDG_CURRENT_DESKTOP") == "i3" then
-  config.window_decorations = "RESIZE"
+	config.window_decorations = "RESIZE"
 else
-  config.window_decorations = "NONE"
+	config.window_decorations = "NONE"
 end
 
 config.cursor_blink_ease_in = "Constant"

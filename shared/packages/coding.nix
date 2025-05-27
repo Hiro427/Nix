@@ -47,5 +47,6 @@
     live-server 
     sqlite 
     uv
+    sesh
     tmux
 ]

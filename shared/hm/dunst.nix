@@ -9,6 +9,7 @@
         iconTheme = {
             package = pkgs.papirus-icon-theme;
             name = "Papirus";
+            size = "128x128";
         };
         settings = {
             global = {
@@ -65,6 +66,5 @@
                 per_monitor_dpi = false;
             };
         };
-
     };
 }
