@@ -42,7 +42,7 @@ imports = [
 
     home.file = {
         ".wezterm.lua" = {
-            source = ../dots/wezterm/wezterm.lua;
+            source = ../dots/wezterm/.wezterm.lua;
         };
     };
 

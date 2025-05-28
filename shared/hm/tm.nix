@@ -1,19 +1,19 @@
 {
-    config, 
-    pkgs, 
+    config,
+    pkgs,
     ...
-}: 
+}:
 
 {
     programs.tmux = {
-        enable = true; 
-        baseIndex = 1; 
-        prefix = "C-x"; 
+        enable = true;
+        baseIndex = 1;
+        prefix = "C-a";
         mouse = true;
         terminal = "screen-256color";
         plugins = with pkgs; [
             {
-                plugin = tmuxPlugins.catppuccin; 
+                plugin = tmuxPlugins.catppuccin;
                 extraConfig = ''
                     set -g @catppuccin_flavor "mocha"
                     set -g @catppuccin_window_status_style "rounded"
@@ -39,13 +39,13 @@
 
             bind-key "t" display-popup -E "$SHELL"
 
-            unbind r 
+            unbind r
             bind r source-file ~/.config/tmux/tmux.conf
 
-            bind-key h select-pane -L
-            bind-key j select-pane -D
-            bind-key k select-pane -U
-            bind-key l select-pane -R
+            bind -n C-h select-pane -L
+            bind -n C-j select-pane -D
+            bind -n C-k select-pane -U
+            bind -n C-l select-pane -R
 
             bind -n M-h resize-pane -L 5
             bind -n M-j resize-pane -D 5
@@ -54,18 +54,16 @@
 
             bind -n C-t new-window
             bind -n C-w kill-window
-            bind -n C-n next-window 
+            bind -n C-n next-window
             bind -n C-p previous-window
-            
-            bind -n M-a swap-pane -D
-            bind -n M-f swap-pane -U
 
+            bind-key "J" swap-pane -D
+            bind-key "K" swap-pane -U
 
-            
             bind -n M-s choose-window
 
-            bind h split-window -h
-            bind v split-window -v
+            bind M-h split-window -h
+            bind M-v split-window -v
 
             bind-key "s" run-shell "sesh connect \"$(
               sesh list --icons | fzf-tmux -p 80%,70% \
