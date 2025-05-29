@@ -40,7 +40,7 @@
             "Ctrl+space" = "exec flameshot gui"; 
             "Mod4+Shift+r" = "restart"; 
             "Mod4+Shift+c" = "reload";
-            "Mod4+Shift+s" = "resize"; 
+            "Mod4+Shift+s" = "mode resize"; 
             "Mod4+1" = "workspace number 1"; 
             "Mod4+2" = "workspace number 2"; 
             "Mod4+3" = "workspace number 3"; 
