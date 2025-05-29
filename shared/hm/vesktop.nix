@@ -10,9 +10,9 @@
             autoUpdate = true;
             autoUpdateNotification = true;
             useQuickCss = true;
-            themeLinks = [
-                    "https://raw.githubusercontent.com/catppuccin/discord/refs/heads/main/themes/mocha.theme.css"
-                ];
+            # themeLinks = [
+                #     "https://raw.githubusercontent.com/catppuccin/discord/refs/heads/main/themes/mocha.theme.css"
+                # ];
 
         };
     };
