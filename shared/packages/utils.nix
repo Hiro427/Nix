@@ -51,7 +51,7 @@ with pkgs;[
     dwt1-shell-color-scripts
     fastfetch
     #fonts & icons 
-    nerd-fonts.jetbrains-mono
+    # nerd-fonts.jetbrains-mono
     papirus-icon-theme
 ]
 

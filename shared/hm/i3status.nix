@@ -93,9 +93,6 @@
                     }
                 ];
                 settings = {
-                    theme = {
-                        theme = "ctp-mocha"; 
-                    }; 
                     icons = {
                         icons = "awesome4";
                     };

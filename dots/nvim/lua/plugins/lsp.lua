@@ -46,6 +46,7 @@ return {
 				"bashls",
 				"nil",
 				"pylsp",
+				"marksman",
 				"emmet_language_server",
 				"html",
 				"spectral",

@@ -62,9 +62,8 @@
             };
             format = lib.concatStrings [
                 "$directory"
-                "$git_branch" 
-                "$git_status"
                 "$lua"
+                "$git_branch"
                 "$golang"
                 "$python"
                 "$c"

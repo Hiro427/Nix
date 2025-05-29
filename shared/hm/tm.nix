@@ -1,6 +1,6 @@
 {
-    config,
     pkgs,
+config,
     ...
 }:
 
@@ -12,22 +12,22 @@
         mouse = true;
         terminal = "screen-256color";
         plugins = with pkgs; [
-            {
-                plugin = tmuxPlugins.catppuccin;
-                extraConfig = ''
-                    set -g @catppuccin_flavor "mocha"
-                    set -g @catppuccin_window_status_style "rounded"
-                    set -g status-right-length 100
-                    set -g status-left-length 100
-                    set -g status-left ""
-                    set -g @catppuccin_window_default_text " #W"
-                    set -g @catppuccin_window_text " #W"
-                    set -g status-right "#{E:@catppuccin_status_application}"
-                    set -ag status-right "#{E:@catppuccin_status_session}"
-                    set -g @catppuccin_window_current_text " #W"
-                    set -ag status-right "#{E:@catppuccin_status_uptime}"
-                '';
-            }
+            # {
+            #     plugin = tmuxPlugins.catppuccin;
+            #     extraConfig = ''
+            #         set -g @catppuccin_flavor "mocha"
+            #         set -g @catppuccin_window_status_style "rounded"
+            #         set -g status-right-length 100
+            #         set -g status-left-length 100
+            #         set -g status-left ""
+            #         set -g @catppuccin_window_default_text " #W"
+            #         set -g @catppuccin_window_text " #W"
+            #         set -g status-right "#{E:@catppuccin_status_application}"
+            #         set -ag status-right "#{E:@catppuccin_status_session}"
+            #         set -g @catppuccin_window_current_text " #W"
+            #         set -ag status-right "#{E:@catppuccin_status_uptime}"
+            #     '';
+            # }
         ];
         extraConfig = ''
             set-option -g terminal-overrides ',xterm-256color:RGB'
@@ -54,16 +54,16 @@
 
             bind -n C-t new-window
             bind -n C-w kill-window
-            bind -n C-n next-window
-            bind -n C-p previous-window
+            bind-key n next-window
+            bind-key p previous-window
 
             bind-key "J" swap-pane -D
             bind-key "K" swap-pane -U
 
-            bind -n M-s choose-window
+            bind -n C-s choose-window
 
-            bind M-h split-window -h
-            bind M-v split-window -v
+            bind h split-window -h
+            bind v split-window -v
 
             bind-key "s" run-shell "sesh connect \"$(
               sesh list --icons | fzf-tmux -p 80%,70% \

@@ -6,18 +6,18 @@
     catppuccin.url = "github:catppuccin/nix";
     spicetify-nix.url = "github:gerg-l/spicetify-nix";
 	zen-browser.url = "github:0xc000022070/zen-browser-flake";
-    # stylix.url = "github:danth/stylix";
+    stylix.url = "github:danth/stylix";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, home-manager, spicetify-nix, catppuccin, zen-browser, ... }@inputs: {
+  outputs = { self, stylix, nixpkgs, home-manager, spicetify-nix, catppuccin, zen-browser, ... }@inputs: {
 
     nixosConfigurations = {
     	
 	desktop = nixpkgs.lib.nixosSystem {
 		system = "x86_64-linux"; 
-        specialArgs = { inherit inputs; };
+    specialArgs = { inherit inputs; };
 		modules = [ 
 		 ./shared/configuration.nix
          ./shared/pkgs.nix
@@ -26,12 +26,13 @@
 	     catppuccin.nixosModules.catppuccin
 	     home-manager.nixosModules.home-manager
          spicetify-nix.nixosModules.default 
-         # stylix.nixosModules.stylix
+         stylix.nixosModules.stylix
 	         ({ config, ... }: {
 	           home-manager.useGlobalPkgs = true;
 	           home-manager.useUserPackages = true;
 	           home-manager.users.jacobrambarran = { pkgs, ... }: {
-	               imports = [ 
+	               imports = [
+												spicetify-nix.homeManagerModules.default
                         catppuccin.homeModules.catppuccin 
                         ./shared/home.nix 
                     ];

@@ -37,6 +37,8 @@ imports = [
         ./hm/dots.nix
         ./hm/dunst.nix
         ./hm/starship.nix
+        ./hm/stylix.nix
+        ./hm/spicetify.nix
         ./hm/i3status.nix
     ];
 

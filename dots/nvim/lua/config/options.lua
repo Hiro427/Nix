@@ -21,4 +21,4 @@ vim.diagnostic.config({
 	virtual_text = true,
 	update_in_insert = true,
 })
-vim.cmd("colorscheme catppuccin")
+-- vim.cmd("colorscheme catppuccin")

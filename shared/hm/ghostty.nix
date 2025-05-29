@@ -7,8 +7,8 @@
 programs.ghostty = {
     enable = true;
     settings = {
-          font-family = "JetBrainsMono Nerd Font";
-          font-size = 13;
+          # font-family = "JetBrainsMono Nerd Font";
+          # font-size = 13;
           gtk-titlebar = false;
           alpha-blending = "native";
           window-padding-x = 10;

@@ -3,9 +3,6 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, inputs, ... }:
-let
-  spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.system};
-in
 {
 
   #Bootloader.
@@ -102,24 +99,43 @@ in
 };
 
 
-  programs.spicetify = {
-    enable = true;
-    theme = spicePkgs.themes.catppuccin;
-    colorScheme = "mocha";
-    enabledExtensions = with spicePkgs.extensions; [
-       adblockify
-       hidePodcasts
-       shuffle 
-     ];
-  };
+  # programs.spicetify = {
+  #   enable = true;
+  #   enabledExtensions = with spicePkgs.extensions; [
+  #      adblockify
+  #      hidePodcasts
+  #      shuffle 
+  #    ];
+  # };
+
+  fonts = {
+      packages = with pkgs; [
+        noto-fonts
+        noto-fonts-cjk-sans
+        noto-fonts-emoji
+        nerd-fonts.jetbrains-mono
+        # add your preferred fonts here
+      ];
+
+      fontconfig = {
+        enable = true;
+        defaultFonts = {
+          serif = [ "Noto Serif" ];
+          sansSerif = [ "Noto Sans" ];
+          monospace = [ "JetBrainsMono Nerd Font" ]; # or "JetBrainsMono Nerd Font"
+          emoji = [ "Noto Color Emoji" ];
+        };
+      };
+};
+
  # stylix = {
-  #       enable = true;
-  #       base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
-  #       targets = {
-  #           gtk.enable = true;
-  #           qt.enable = true;
-  #       };
-  #   };
+ #        enable = true;
+ #        base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+ #        targets = {
+ #            gtk.enable = true;
+ #            qt.enable = true;
+ #        };
+ #    };
   #
 
   # Some programs need SUID wrappers, can be configured further or are

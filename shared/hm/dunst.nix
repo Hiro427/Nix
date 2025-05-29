@@ -42,8 +42,10 @@
                 text_icon_padding = 0; 
                 frame_width = 0; 
                 gap_size = 10; 
+                min_icon_size = 40; 
+                max_icon_size = 128;
                 sort = "yes"; 
-                font = "JetBrainsMono Nerd Font 12"; 
+                # font = "JetBrainsMono Nerd Font 12"; #using stylix
                 format = "<b>%s</b>\n%b"; 
                 alignment = "center"; 
                 vertical_alignment = "center"; 

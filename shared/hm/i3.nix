@@ -33,10 +33,10 @@
             "Mod4+minus" = "move scratchpad";
             "Mod4+Shift+minus" = "scratchpad show";
             "Mod4+Shift+b" = "bar mode toggle";
-            "Mod4+Return" = "exec wezterm"; 
+            "Mod4+Return" = "exec ghostty"; 
             "Mod4+f" = "exec nautilus";
             "Mod1+Shift+p" = "exec sh ~/.config/rofi/power.sh";
-            "Mod4+space" = "exec dmenu_run -fn 'monospace-13' -nb '#1e1e2e' -nf '#cdd6f4' -sb '#b4befe' -sf '#1e1e2e'";
+            "Mod4+space" = "exec dmenu_run -nb '#1e1e2e' -nf '#cdd6f4' -sb '#b4befe' -sf '#1e1e2e'";
             "Ctrl+space" = "exec flameshot gui"; 
             "Mod4+Shift+r" = "restart"; 
             "Mod4+Shift+c" = "reload";
@@ -78,7 +78,8 @@
         };
         focus.followMouse = false;
         assigns = {
-            "2" = [{ class = "org.wezfurlong.wezterm"; }];
+            # "2" = [{ class = "org.wezfurlong.wezterm"; }];
+            "2" = [{ class = "com.mitchellh.ghostty"; }];
             "3" = [{ class = "vesktop"; }];
             "4" = [{ class = "Spotify"; }];
             "6" = [{ class = "PrismLauncher"; }];
@@ -115,27 +116,27 @@
                     ];
                     size = 12.0;
                 };
-                colors = {
-                    separator = "#cdd6f4"; 
-                    statusline = "dddddd"; 
-                    background = "#1e1e2e"; 
-                    inactiveWorkspace = {
-                       background = "#11111b";
-                       border = "#11111b";
-                       text = "#313244";
-                    };
-                    focusedWorkspace = {
-                       background = "#a6adc8";
-                       border = "#cdd6f4";
-                       text = "#11111b";
-                    };
-                    activeWorkspace = {
-                       background = "#333333";
-                       border = "#333333";
-                       text = "#ffffff";
-                    };
+                # colors = {
+                #     separator = "#cdd6f4"; 
+                #     statusline = "dddddd"; 
+                #     background = "#1e1e2e"; 
+                #     inactiveWorkspace = {
+                #        background = "#11111b";
+                #        border = "#11111b";
+                #        text = "#313244";
+                #     };
+                #     focusedWorkspace = {
+                #        background = "#a6adc8";
+                #        border = "#cdd6f4";
+                #        text = "#11111b";
+                #     };
+                #     activeWorkspace = {
+                #        background = "#333333";
+                #        border = "#333333";
+                #        text = "#ffffff";
+                #     };
 
-                };
+                # };
                 extraConfig = "height 25";
             }
         ];

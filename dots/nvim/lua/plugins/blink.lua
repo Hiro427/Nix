@@ -8,8 +8,8 @@ return {
 	opts = {
 		keymap = {
 			preset = "enter",
-			["<S-Tab>"] = { "select_prev", "fallback" },
-			["<Tab>"] = { "select_next", "fallback" },
+			["C-k"] = { "select_prev", "fallback" },
+			["C-j"] = { "select_next", "fallback" },
 		},
 		cmdline = {
 			keymap = { preset = "inherit" },

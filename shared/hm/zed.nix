@@ -43,13 +43,13 @@
             };
             vim_mode = true;
             icon_theme = "Catppuccin Mocha";
-            ui_font_size = 16;
-            buffer_font_size = 16;
-            theme = {
-                mode = "dark";
-                light = "Catppuccin Latte";
-                dark = "Catppuccin Mocha";
-            };
+            # ui_font_size = 16;
+            # buffer_font_size = 16;
+            # theme = {
+            #     mode = "dark";
+            #     light = "Catppuccin Latte";
+            #     dark = "Catppuccin Mocha";
+            # };
             use_auto_surround = true;
             autosave = "on_focus_change";
             confim_quit = true;

@@ -15,6 +15,7 @@
     zls
     yaml-language-server
     typescript-language-server
+    marksman
     ruff
     jdt-language-server
     python312Packages.python-lsp-server
