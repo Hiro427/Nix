@@ -11,10 +11,6 @@ return {
 					width_preview = 60,
 				},
 			})
-			local stylix_theme = dofile(vim.fn.stdpath("config") .. "/colors/base16-stylix.lua")
-
-			-- Apply it with mini.base16
-			require("mini.base16").setup({ palette = stylix_theme })
 
 			require("mini.pairs").setup({})
 			require("mini.surround").setup({})
