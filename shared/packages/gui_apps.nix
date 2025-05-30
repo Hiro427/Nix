@@ -13,5 +13,6 @@
     bottles 
     pavucontrol 
     whatsapp-for-linux
+    foliate
     vlc
 ]

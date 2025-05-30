@@ -48,6 +48,7 @@ with pkgs;[
     ttyper
     pulseaudioFull
     ytmdl
+    bemenu
     dwt1-shell-color-scripts
     fastfetch
     #fonts & icons 

@@ -13,7 +13,7 @@
             { command = "--no-startup-id sh ~/Nix/dots/i3/scripts/natscroll.sh"; }
             { command = "--no-startup-id sh ~/Nix/dots/i3/scripts/monitors.sh"; }
             { command = "--no-startup-id feh --bg-fill $(cat ~/Nix/dots/i3/cur_wall.txt)"; always = true; }
-            { command = "--no-startup-id autotiling &"; }
+            { command = "--no-startup-id autotiling"; always = true; }
             { command = "--no-startup-id dunst &"; }
             { command = "--no-startup-id setxkbmap -option caps:escape"; always = true; }
         ];
@@ -36,7 +36,8 @@
             "Mod4+Return" = "exec ghostty"; 
             "Mod4+f" = "exec nautilus";
             "Mod1+Shift+p" = "exec sh ~/.config/rofi/power.sh";
-            "Mod4+space" = "exec dmenu_run -nb '#1e1e2e' -nf '#cdd6f4' -sb '#b4befe' -sf '#1e1e2e'";
+            # "Mod4+space" = "exec dmenu_run -nb '#1e1e2e' -nf '#cdd6f4' -sb '#b4befe' -sf '#1e1e2e'";
+            "Mod4+space" = "exec bash -c bemenu-run";
             "Ctrl+space" = "exec flameshot gui"; 
             "Mod4+Shift+r" = "restart"; 
             "Mod4+Shift+c" = "reload";
@@ -116,27 +117,35 @@
                     ];
                     size = 12.0;
                 };
-                # colors = {
-                #     separator = "#cdd6f4"; 
-                #     statusline = "dddddd"; 
-                #     background = "#1e1e2e"; 
-                #     inactiveWorkspace = {
-                #        background = "#11111b";
-                #        border = "#11111b";
-                #        text = "#313244";
-                #     };
-                #     focusedWorkspace = {
-                #        background = "#a6adc8";
-                #        border = "#cdd6f4";
-                #        text = "#11111b";
-                #     };
-                #     activeWorkspace = {
-                #        background = "#333333";
-                #        border = "#333333";
-                #        text = "#ffffff";
-                #     };
+                colors = {
+                    # separator = "#cdd6f4"; 
+                    # statusline = "dddddd"; 
+                    background = "#665c54"; # "#1e1e2e" - catppuccin
+                    inactiveWorkspace = {
+                       # background = "#11111b";
+                       # border = "#11111b";
+                       # text = "#313244";
+                       background = "#1d2021";
+                       border = "#1d2021";
+                       text = "#504945";
 
-                # };
+                    };
+                    focusedWorkspace = {
+                       # background = "#a6adc8";
+                       # border = "#cdd6f4";
+                       # text = "#11111b";
+                       background = "#ebdbb2";
+                       border = "#d5c4a1";
+                       text = "#282828";
+
+                    };
+                    activeWorkspace = {
+                       background = "#333333";
+                       border = "#333333";
+                       text = "#ffffff";
+                    };
+
+                };
                 extraConfig = "height 25";
             }
         ];

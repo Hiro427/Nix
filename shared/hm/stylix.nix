@@ -7,11 +7,18 @@
 {
     stylix = {
         enable = true;
-        base16Scheme = "${pkgs.base16-schemes}/share/themes/kanagawa-dragon.yaml";
+        base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark.yaml";
+        autoEnable = true;
         targets = {
             gtk.enable = true;
+            rofi.enable = true;
             qt.enable = false;
+            foliate.enable = true;
             wezterm.enable = false;
+            bemenu = {
+                enable = true; 
+                fontSize = 12;
+            };
         };
         fonts = {
               monospace = {

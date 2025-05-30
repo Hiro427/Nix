@@ -93,6 +93,9 @@
                     }
                 ];
                 settings = {
+                    theme = {
+                        theme = "gruvbox-dark";
+                    };
                     icons = {
                         icons = "awesome4";
                     };

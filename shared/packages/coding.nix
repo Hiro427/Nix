@@ -16,6 +16,7 @@
     yaml-language-server
     typescript-language-server
     marksman
+    zulu #java
     ruff
     jdt-language-server
     python312Packages.python-lsp-server

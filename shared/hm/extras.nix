@@ -9,6 +9,9 @@
         lazygit.enable = true; 
         cava.enable = true;
         bat.enable = true;
+        bemenu.enable = true; 
+        rofi.enable = true;
+        foliate.enable = true; 
         zathura.enable = true;
         zoxide = {
             enable = true; 

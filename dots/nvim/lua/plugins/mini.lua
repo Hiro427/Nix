@@ -11,6 +11,21 @@ return {
 					width_preview = 60,
 				},
 			})
+			local Path = require("plenary.path")
+			-- local json = "/home/jacobrambarran/.config/stylix/palette.json" -- or use vim.fn.expand("~/.config/stylix/palette.json")
+			local json = vim.fn.expand("~/.config/stylix/palette.json")
+			local palette = vim.fn.json_decode(Path:new(json):read())
+
+			-- Add '#' to each color
+			for k, v in pairs(palette) do
+				if k:match("^base") and not v:match("^#") then
+					palette[k] = "#" .. v
+				end
+			end
+
+			require("mini.base16").setup({ palette = palette })
+
+			require("mini.base16").setup({ palette = palette })
 
 			require("mini.pairs").setup({})
 			require("mini.surround").setup({})
