@@ -1,4 +1,4 @@
-#!/usr/bin/env bash 
+#!/usr/bin/env bash
 
 PROJECT="$HOME/Nix/dots/assets/gm.json"
 REMOTE="https://github.com/Hiro427/"
@@ -6,8 +6,7 @@ LAVENDER="#b4befe"
 GREEN="#a6e3a1"
 RED="#f38ba8"
 
-
-# TODO: Map out what features I want in this version 
+# TODO: Map out what features I want in this version
 # TODO: Determine dotfiles & project locations on the system
 
 ct() {
@@ -22,10 +21,10 @@ ct() {
 }
 
 status() {
-    local name 
-    local path 
-    local projects 
-    local count 
+    local name
+    local path
+    local projects
+    local count
     local status
 
     mapfile -t projects < <(jq -r '.projects[].path' "$PROJECT")
@@ -34,7 +33,7 @@ status() {
     for i in "${projects[@]}"; do
 
         path=$i
-        name=$(jq -r ".projects[$count].name" "$PROJECT") 
+        name=$(jq -r ".projects[$count].name" "$PROJECT")
 
         if [[ ! -d "$HOME/$path" ]]; then
             git clone "$REMOTE/${name}.git" "$HOME/${path}"
@@ -44,9 +43,9 @@ status() {
 
         status=$(git status -s)
 
-        if [[ -n "$status" ]]; then 
+        if [[ -n "$status" ]]; then
             ct "$RED" "$(basename "$HOME/$path")"
-        else 
+        else
             ct "$GREEN" "$(basename "$HOME/$path")"
         fi
         ((count++))
@@ -54,7 +53,7 @@ status() {
 }
 
 list() {
-    local name 
+    local name
     local projects_names
 
     mapfile -t projects_names < <(jq -r '.projects[].name' "$PROJECT")
@@ -70,10 +69,10 @@ list() {
 
 update() {
 
-    local name 
-    local path 
-    local projects 
-    local count 
+    local name
+    local path
+    local projects
+    local count
     local status
 
     mapfile -t projects < <(jq -r '.projects[].path' "$PROJECT")
@@ -82,7 +81,7 @@ update() {
     for i in "${projects[@]}"; do
 
         path=$i
-        name=$(jq -r ".projects[$count].name" "$PROJECT") 
+        name=$(jq -r ".projects[$count].name" "$PROJECT")
 
         if [[ ! -d "$HOME/$path" ]]; then
             git clone "$REMOTE/${name}.git" "$HOME/${path}"
@@ -92,13 +91,13 @@ update() {
 
         status=$(git status -s)
 
-        if [[ -n "$status" ]]; then 
+        if [[ -n "$status" ]]; then
             ct "$RED" "Check: $(basename "$HOME/$path")"
-        else 
-            if git pull | grep -q "Already up to date"; then 
+        else
+            if git pull | grep -q "Already up to date"; then
                 ct "$LAVENDER" "Up-to-Date: ${name}" | column -t -s ":"
-            else 
-               ct "$GREEN" "Changes Pulled: ${name}" | column -t -s ":"
+            else
+                ct "$GREEN" "Changes Pulled: ${name}" | column -t -s ":"
             fi
 
         fi
@@ -107,12 +106,11 @@ update() {
 }
 
 use_lazygit() {
-    local name 
-    local path 
-    local projects 
-    local count 
+    local name
+    local path
+    local projects
+    local count
     local status
-
 
     mapfile -t projects < <(jq -r '.projects[].path' "$PROJECT")
 
@@ -120,7 +118,7 @@ use_lazygit() {
     for i in "${projects[@]}"; do
 
         path=$i
-        name=$(jq -r ".projects[$count].name" "$PROJECT") 
+        name=$(jq -r ".projects[$count].name" "$PROJECT")
 
         if [[ ! -d "$HOME/$path" ]]; then
             git clone "$REMOTE/${name}.git" "$HOME/${path}"
@@ -130,7 +128,7 @@ use_lazygit() {
 
         status=$(git status -s)
 
-        if [[ -n "$status" ]]; then 
+        if [[ -n "$status" ]]; then
             lazygit
         fi
         ((count++))
@@ -150,14 +148,14 @@ initialize_remote_repo() {
 }
 
 open_remote() {
-    local url 
+    local url
 
     url=$(git config --get remote.origin.url)
     xdg-open "$url"
 }
 
 show_help() {
-cat <<EOF | column -t -s "="
+    cat <<EOF | column -t -s "="
 --update/-u=Pull Changes for every repo 
 --open-remote/-or=Opens repo on github.com
 --initialize_remote_repo/-ir=Initialize a repo on github.com using 'gh'
@@ -167,14 +165,14 @@ EOF
 
 }
 
-
 editorconfig() {
     local template
     local ignores
 
-    ignores=( "build/" "target/" "release/" ".pycache" "__pycache__")
+    ignores=("build/" "target/" "release/" ".pycache" "__pycache__")
 
-   template=$(cat << EOF
+    template=$(
+        cat <<EOF
 # EditorConfig is awesome: https://editorconfig.org
 
 # top-most EditorConfig file
@@ -213,17 +211,17 @@ indent_style = tab
 # indent_style = space
 # indent_size = 2     
 EOF
-)
+    )
 
-echo "$template" > ".editorconfig"
-git init
+    echo "$template" >".editorconfig"
+    git init
 
-for i in "${ignores[@]}"; do
-    echo "$i" >> .gitignore
-done
+    for i in "${ignores[@]}"; do
+        echo "$i" >>.gitignore
+    done
 
 }
-a
+
 new_project() {
     local prompt
     local module
@@ -232,63 +230,62 @@ new_project() {
     read -r -p "Enter type of a project(rust/python/go/c/lua/java/bash)" prompt
 
     case "$prompt" in
-        rust)
-            cargo init
-            editorconfig
-            ;;
-        go)
-            read -r -p "enter go module name: " module 
-            go mod init "$module"
-            editorconfig
-            ;;
-        lua|c|java)
-            editorconfig
-            ;;
-        python)
-            uv init
-            editorconfig
-            ;;
-        npm)
-            read -r -p "enter vite app name: " viteapp
-            npm init vite "$viteapp"
-            ;;
-        *)
-            echo "not a valid option"
-            ;;
+    rust)
+        cargo init
+        editorconfig
+        ;;
+    go)
+        read -r -p "enter go module name: " module
+        go mod init "$module"
+        editorconfig
+        ;;
+    lua | c | java)
+        editorconfig
+        ;;
+    python)
+        uv init
+        editorconfig
+        ;;
+    npm)
+        read -r -p "enter vite app name: " viteapp
+        npm init vite "$viteapp"
+        ;;
+    *)
+        echo "not a valid option"
+        ;;
     esac
 
 }
 
-
 main() {
-    if [[ ! -f "$PROJECT" ]]; then 
+    if [[ ! -f "$PROJECT" ]]; then
         echo "no config file found at ~/Nix/dots/assets/gm.json" && exit
     fi
 
-    case "$1" in 
-    --update|-u)
-        update 
+    case "$1" in
+    --update | -u)
+        update
         ;;
-    --new-project|-np)
+    --new-project | -np)
         new_project
         ;;
-    --status|-s)
+    --status | -s)
         status
-        ;; 
-    --open-remote|-or)
-        open_remote 
         ;;
-    --initialize_remote|-ir)
-        initialize_remote_repo 
+    --open-remote | -or)
+        open_remote
         ;;
-    --list|-l)
+    --initialize_remote | -ir)
+        initialize_remote_repo
+        ;;
+    --list | -l)
         list
         ;;
-    --lazygit|-lg)
-        use_lazygit 
+    --lazygit | -lg)
+        use_lazygit
         ;;
     *)
-        show_help 
+        show_help
         ;;
     esac
 }
