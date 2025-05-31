@@ -7,14 +7,14 @@
 {
     stylix = {
         enable = true;
-        base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark.yaml";
+        base16Scheme = "${pkgs.base16-schemes}/share/themes/nord.yaml";
         autoEnable = true;
         targets = {
             gtk.enable = true;
             rofi.enable = true;
             qt.enable = false;
             foliate.enable = true;
-            wezterm.enable = false;
+            # wezterm.enable = false;
             bemenu = {
                 enable = true; 
                 fontSize = 12;

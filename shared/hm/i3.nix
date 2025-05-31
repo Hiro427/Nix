@@ -33,7 +33,7 @@
             "Mod4+minus" = "move scratchpad";
             "Mod4+Shift+minus" = "scratchpad show";
             "Mod4+Shift+b" = "bar mode toggle";
-            "Mod4+Return" = "exec ghostty"; 
+            "Mod4+Return" = "exec wezterm"; 
             "Mod4+f" = "exec nautilus";
             "Mod1+Shift+p" = "exec sh ~/.config/rofi/power.sh";
             # "Mod4+space" = "exec dmenu_run -nb '#1e1e2e' -nf '#cdd6f4' -sb '#b4befe' -sf '#1e1e2e'";
@@ -79,8 +79,8 @@
         };
         focus.followMouse = false;
         assigns = {
-            # "2" = [{ class = "org.wezfurlong.wezterm"; }];
-            "2" = [{ class = "com.mitchellh.ghostty"; }];
+            "2" = [{ class = "org.wezfurlong.wezterm"; }];
+            # "2" = [{ class = "com.mitchellh.ghostty"; }];
             "3" = [{ class = "vesktop"; }];
             "4" = [{ class = "Spotify"; }];
             "6" = [{ class = "PrismLauncher"; }];
@@ -120,23 +120,28 @@
                 colors = {
                     # separator = "#cdd6f4"; 
                     # statusline = "dddddd"; 
-                    background = "#665c54"; # "#1e1e2e" - catppuccin
-                    inactiveWorkspace = {
-                       # background = "#11111b";
+                    background = "#2e3440"; # "#1e1e2e" - catppuccin "#665c54" -gruv  
+                     inactiveWorkspace = {
+                       # background = "#11111b"; ctp
                        # border = "#11111b";
                        # text = "#313244";
-                       background = "#1d2021";
-                       border = "#1d2021";
-                       text = "#504945";
-
+                       # background = "#1d2021"; gruv
+                       # border = "#1d2021";
+                       # text = "#504945";
+                       background = "#2e3440"; 
+                       border = "#4c566a";
+                       text = "#eceff4";
                     };
                     focusedWorkspace = {
-                       # background = "#a6adc8";
+                       # background = "#a6adc8"; ctl
                        # border = "#cdd6f4";
                        # text = "#11111b";
-                       background = "#ebdbb2";
-                       border = "#d5c4a1";
-                       text = "#282828";
+                       # background = "#ebdbb2"; gruv
+                       # border = "#d5c4a1";
+                       # text = "#282828";
+                       background = "#eceff4"; 
+                       border = "#4c566a";
+                       text = "#2e3440";
 
                     };
                     activeWorkspace = {

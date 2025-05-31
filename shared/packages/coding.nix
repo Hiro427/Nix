@@ -6,6 +6,8 @@
     go
     gcc
     cargo 
+    php
+    intelephense
     python312Full
     nodejs_22
     lua

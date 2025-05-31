@@ -168,17 +168,112 @@ EOF
 }
 
 
+editorconfig() {
+    local template
+    local ignores
+
+    ignores=( "build/" "target/" "release/" ".pycache" "__pycache__")
+
+   template=$(cat << EOF
+# EditorConfig is awesome: https://editorconfig.org
+
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file
+[*]
+end_of_line = lf
+insert_final_newline = true
+
+# Matches multiple files with brace expansion notation
+# Set default charset
+[*.{js,py}]
+charset = utf-8
+
+# 4 space indentation
+[*.py]
+indent_style = space
+indent_size = 4
+
+[*.{c, cpp, lua}]
+indent_style = space
+indent_size = 2
+
+# Tab indentation (no size specified)
+[Makefile]
+indent_style = tab
+
+# Indentation override for all JS under lib directory
+# [lib/**.js]
+# indent_style = space
+# indent_size = 2
+
+# Matches the exact files either package.json or .travis.yml
+# [{package.json,.travis.yml}]
+# indent_style = space
+# indent_size = 2     
+EOF
+)
+
+echo "$template" > ".editorconfig"
+git init
+
+for i in "${ignores[@]}"; do
+    echo "$i" >> .gitignore
+done
+
+}
+a
+new_project() {
+    local prompt
+    local module
+    local viteapp
+
+    read -r -p "Enter type of a project(rust/python/go/c/lua/java/bash)" prompt
+
+    case "$prompt" in
+        rust)
+            cargo init
+            editorconfig
+            ;;
+        go)
+            read -r -p "enter go module name: " module 
+            go mod init "$module"
+            editorconfig
+            ;;
+        lua|c|java)
+            editorconfig
+            ;;
+        python)
+            uv init
+            editorconfig
+            ;;
+        npm)
+            read -r -p "enter vite app name: " viteapp
+            npm init vite "$viteapp"
+            ;;
+        *)
+            echo "not a valid option"
+            ;;
+    esac
+
+}
+
+
 main() {
     if [[ ! -f "$PROJECT" ]]; then 
         echo "no config file found at ~/Nix/dots/assets/gm.json" && exit
     fi
 
     case "$1" in 
-        --update|-u)
-            update 
-            ;;
-        --status|-s)
-            status
+    --update|-u)
+        update 
+        ;;
+    --new-project|-np)
+        new_project
+        ;;
+    --status|-s)
+        status
         ;; 
     --open-remote|-or)
         open_remote 

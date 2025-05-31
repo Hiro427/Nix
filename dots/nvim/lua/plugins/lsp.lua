@@ -54,6 +54,7 @@ return {
 				"sqls",
 				"taplo",
 				"jdtls",
+				"intelephense",
 			})
 			--   local lspconfig = require("lspconfig")
 			--   lspconfig.ts_ls.setup({

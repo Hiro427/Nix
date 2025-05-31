@@ -24,6 +24,7 @@ imports = [
         ./hm/zed.nix
         ./hm/brave.nix
         ./hm/ghostty.nix
+        ./hm/wezterm.nix
         ./hm/kitty.nix
         ./hm/gtk.nix
         ./hm/i3.nix
@@ -42,11 +43,11 @@ imports = [
         ./hm/i3status.nix
     ];
 
-    home.file = {
-        ".wezterm.lua" = {
-            source = ../dots/wezterm/.wezterm.lua;
-        };
-    };
+    # home.file = {
+    #     ".wezterm.lua" = {
+    #         source = ../dots/wezterm/.wezterm.lua;
+    #     };
+    # };
 
   home.stateVersion = "24.11";
 }

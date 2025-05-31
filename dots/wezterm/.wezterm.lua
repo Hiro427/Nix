@@ -6,8 +6,8 @@ local config = wezterm.config_builder()
 -- keymaps.apply_to_config(config)
 
 config.term = "xterm-256color"
-config.font_size = 13
-config.font = wezterm.font("JetBrainsMono Nerd Font")
+-- config.font_size = 13
+-- config.font = wezterm.font("JetBrainsMono Nerd Font")
 config.initial_rows = 30
 config.initial_cols = 100
 config.enable_tab_bar = false
@@ -38,7 +38,7 @@ config.cursor_blink_ease_in = "Constant"
 config.cursor_blink_ease_out = "Constant"
 config.default_cursor_style = "BlinkingBar"
 config.window_background_opacity = 1
-config.color_scheme = "Catppuccin Mocha"
+-- config.color_scheme = "Gruvbox Dark (Gogh)"
 config.pane_select_font_size = 24
 
 -- config.webgpu_preferred_adapter = {
