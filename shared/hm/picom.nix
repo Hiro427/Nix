@@ -30,12 +30,14 @@
             rounded-corners-exclude = [
                 "class_g = 'i3bar'"
                 "class_g = 'dmenu'"
+                "class_g = 'bemenu'"
             ];
         };
         opacityRules = [
             "100:class_g = 'Rofi'"
             "100:class_g = 'Dunst'"
             "100:class_g = 'dmenu'"
+            "100:class_g = 'bemenu'"
         ];
 
     }; 

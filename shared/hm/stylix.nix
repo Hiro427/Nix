@@ -15,10 +15,6 @@
             qt.enable = false;
             foliate.enable = true;
             # wezterm.enable = false;
-            bemenu = {
-                enable = true; 
-                fontSize = 12;
-            };
         };
         fonts = {
               monospace = {

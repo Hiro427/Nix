@@ -9,8 +9,19 @@
         settings = {
             playback_window_position = "Top";
             playback_window_height = 60;
+            cover_img_length = 10; 
+            cover_img_width = 5;
 
-            enable_notify = false;
+            enable_notify = true;
+            device = {
+                volume = 100;
+            };
+            layout = {
+                library = {
+                    playlist_percent = 60;
+                    album_percent = 25;
+                };
+            };
 
 
             client_id_command = {

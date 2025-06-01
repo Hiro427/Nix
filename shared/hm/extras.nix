@@ -9,7 +9,14 @@
         lazygit.enable = true; 
         cava.enable = true;
         bat.enable = true;
-        bemenu.enable = true; 
+        bemenu = {
+            enable = true;
+            settings = {
+                ignorecase = true; 
+                prompt = "NixOS  ";
+                list = 5;
+            };
+        };
         rofi.enable = true;
         foliate.enable = true; 
         zathura.enable = true;
