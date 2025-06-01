@@ -7,16 +7,15 @@
   programs.spotify-player = {
         enable = true;
         settings = {
-            playback_window_position = "Top";
-            playback_window_height = 60;
-            cover_img_length = 10; 
-            cover_img_width = 5;
+            # cover_img_length = 20; 
+            # cover_img_width = 10;
 
             enable_notify = true;
             device = {
                 volume = 100;
             };
             layout = {
+                # playback_window_height = 7;
                 library = {
                     playlist_percent = 60;
                     album_percent = 25;

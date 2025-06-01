@@ -9,6 +9,12 @@
         enable = true;
         base16Scheme = "${pkgs.base16-schemes}/share/themes/nord.yaml";
         autoEnable = true;
+        iconTheme = {
+            enable = true;
+            package = pkgs.papirus-icon-theme; # or your preferred icon theme package
+            dark = "Papirus-Dark";
+            light = "Papirus-Dark";
+        };
         targets = {
             gtk.enable = true;
             rofi.enable = true;
