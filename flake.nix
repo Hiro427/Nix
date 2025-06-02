@@ -32,7 +32,7 @@
 	           home-manager.useUserPackages = true;
 	           home-manager.users.jacobrambarran = { pkgs, ... }: {
 	               imports = [
-												spicetify-nix.homeManagerModules.default
+						spicetify-nix.homeManagerModules.default
                         catppuccin.homeModules.catppuccin 
                         ./shared/home.nix 
                     ];
@@ -52,11 +52,15 @@
 	     catppuccin.nixosModules.catppuccin
 	     home-manager.nixosModules.home-manager
          spicetify-nix.nixosModules.default 
+         stylix.nixosModules.stylix
+
 	         ({ config, ... }: {
 	           home-manager.useGlobalPkgs = true;
 	           home-manager.useUserPackages = true;
 	           home-manager.users.jacobrambarran = { pkgs, ... }: {
 	               imports = [ 
+						spicetify-nix.homeManagerModules.default
+
                         catppuccin.homeModules.catppuccin 
                         ./shared/home.nix 
                     ];
