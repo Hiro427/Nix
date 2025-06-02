@@ -161,8 +161,8 @@ show_help() {
 --initialize_remote_repo/-ir=Initialize a repo on github.com using 'gh'
 --list/-l=list all tracked repos 
 --lazygit/-lg=use lazygit to update all tracked repos
+--new-project/-np=create a new project
 EOF
-
 }
 
 editorconfig() {
@@ -227,7 +227,7 @@ new_project() {
     local module
     local viteapp
 
-    read -r -p "Enter type of a project(rust/python/go/c/lua/java/bash)" prompt
+    read -r -p "Enter type of a project(rust/python/go/c/lua/java/bash): " prompt
 
     case "$prompt" in
     rust)
