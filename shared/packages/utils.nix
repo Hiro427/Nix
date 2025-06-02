@@ -7,6 +7,7 @@ with pkgs;[
     jq 
     file 
     viu 
+    typioca
     gum
     feh 
     lazygit
@@ -15,6 +16,7 @@ with pkgs;[
     ripgrep 
     fd
     manga-tui 
+    mlocate
     fzf 
     eza 
     tldr 

@@ -11,6 +11,9 @@
     python312Full
     nodejs_22
     lua
+    lua52Packages.luafilesystem
+    luajit
+    luabind
     rustup # component add rust-analyzer rustup default stable(?)
     #lsps and formatters
     taplo
