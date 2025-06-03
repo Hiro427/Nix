@@ -74,11 +74,11 @@
                         block = "sound"; 
                         driver = "pulseaudio"; 
                     }
-                    {
-                        block = "music"; 
-                        format = " {$combo.str(max_w:20,rot_interval:0.4) |}";
-                        player = "spotify";
-                    }
+                    # {
+                    #     block = "music"; 
+                    #     format = " {$combo.str(max_w:20,rot_interval:0.4) |}";
+                    #     player = "spotify";
+                    # }
                     {
                         block = "custom";
                         interval = 3600;
