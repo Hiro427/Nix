@@ -5,6 +5,7 @@
     mpv
     thunderbird 
     pcmanfm
+    xgalagapp
     bruno
     bitwarden-desktop
     lxappearance

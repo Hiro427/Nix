@@ -26,6 +26,8 @@
                         block = "temperature"; 
                         interval = 5; 
                         format = " $icon $average"; 
+                        good = 50;
+                        idle = 55;
                     }
                     {
                         block = "custom"; 
@@ -68,17 +70,19 @@
                     }
                     {
                         block = "backlight"; 
+                        format = "󰃝  $brightness";
                         missing_format = ""; 
                     }
                     {
                         block = "sound"; 
                         driver = "pulseaudio"; 
                     }
-                    # {
-                    #     block = "music"; 
-                    #     format = " {$combo.str(max_w:20,rot_interval:0.4) |}";
-                    #     player = "spotify";
-                    # }
+                    {
+                        block = "music"; 
+                        format = "{  $combo.str(max_w:20,rot_interval:0.4) |}";
+                        player = "spotify_player";
+
+                    }
                     {
                         block = "custom";
                         interval = 3600;
@@ -121,7 +125,7 @@
                         command_state = "xset q | grep 'DPMS is Disabled'";
                         command_on = "xset q -dpms s off";
                         command_off = "xset q +dpms s on";
-                        state_on = "good";
+                        state_on = "idle";
                         state_off = "idle";
                     }
                     {
