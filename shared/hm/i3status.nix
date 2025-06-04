@@ -70,7 +70,7 @@
                     }
                     {
                         block = "backlight"; 
-                        format = "󰃝  $brightness";
+                        format = "󰃝 $brightness";
                         missing_format = ""; 
                     }
                     {
@@ -89,13 +89,19 @@
                         command = "echo 󰖕 $(curl -s 'wttr.in/NYC?format=1' | awk -F'+' '{print $2}')";
                     }
                     {
+                        block = "tea_timer"; 
+                        format = "󰔟 {$time |}";
+                        done_cmd = "notify-send 'Timer Finished'";
+                        increment = 300;
+                    }
+                    {
                         block = "time";
                         interval = 60;
                         format = "$timestamp.datetime(f:' %D %I:%M%p') ";
                     }
                     {
                         block = "menu"; 
-                        text = "  ";
+                        text = " ";
                         items = [ 
                             {
                                 display = "󰄽 󰒲 Suspend 󰄾";

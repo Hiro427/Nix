@@ -9,6 +9,26 @@
         lazygit.enable = true; 
         cava.enable = true;
         bat.enable = true;
+        mangohud = {
+            enable = true;
+            settings = {
+                fps = true;
+                gpu_list = 0;
+                  gpu_temp = true;
+                  gpu_core_clock = true;
+                  cpu_stats = false;
+                  ram = false;
+                  io_read = false;
+                  io_write = false;
+                  vram = true;
+                  position = "bottom-left";
+                frametime = false;
+                frame_timing = 0;
+                horizontal_stretch = false;
+                horizontal = true;
+                  toggle_hud = "F12";
+            };
+        };
         bemenu = {
             enable = true;
             settings = {

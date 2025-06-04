@@ -18,7 +18,7 @@
                 follow = "none"; 
                 width = 300; 
                 height = 500; 
-                origin = "top-right"; 
+                origin = "top-center"; 
                 scale = 0; 
                 # frame_color = "#89b4fa"; 
                 # separator_color = "frame";
@@ -40,7 +40,7 @@
                 padding = 8; 
                 horizontal_padding = 8; 
                 text_icon_padding = 0; 
-                frame_width = 0; 
+                frame_width = 2; 
                 gap_size = 10; 
                 min_icon_size = 40; 
                 max_icon_size = 128;
