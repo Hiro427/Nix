@@ -9,13 +9,13 @@
         enable = true;
         syntaxHighlighting.enable = true;
         autosuggestion.enable = true;
-              # export LS_COLORS="$(vivid generate gruvbox-dark)"
+              # export LS_COLORS="$(vivid generate gruvbox-dark)" nord
           initContent = ''
               bindkey '^I' autosuggest-accept 
               bindkey -s '^f' 'y\n'
               bindkey -s '^Z' 'fg\n' 
               eval "$(starship init zsh)"
-              export LS_COLORS="$(vivid generate nord)"
+              export LS_COLORS="$(vivid generate gruvbox-dark)"
 
           '';
         history = {

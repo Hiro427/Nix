@@ -120,28 +120,28 @@
                 colors = {
                     # separator = "#cdd6f4"; 
                     # statusline = "dddddd"; 
-                    background = "#2e3440"; # "#1e1e2e" - catppuccin "#665c54" -gruv  
+                    background = "#282828"; # "#1e1e2e" - catppuccin "#665c54" -gruv  "#2e3440" nord
                      inactiveWorkspace = {
-                       # background = "#11111b"; ctp
+                       # background = "#11111b"; #ctp
                        # border = "#11111b";
                        # text = "#313244";
-                       # background = "#1d2021"; gruv
-                       # border = "#1d2021";
-                       # text = "#504945";
-                       background = "#2e3440"; 
-                       border = "#4c566a";
-                       text = "#eceff4";
+                       background = "#1d2021"; #gruv
+                       border = "#1d2021";
+                       text = "#504945";
+                       # background = "#2e3440";  #nord
+                       # border = "#4c566a";
+                       # text = "#eceff4";
                     };
                     focusedWorkspace = {
-                       # background = "#a6adc8"; ctl
+                       # background = "#a6adc8"; ctp
                        # border = "#cdd6f4";
                        # text = "#11111b";
-                       # background = "#ebdbb2"; gruv
-                       # border = "#d5c4a1";
-                       # text = "#282828";
-                       background = "#eceff4"; 
-                       border = "#4c566a";
-                       text = "#2e3440";
+                       background = "#ebdbb2"; #gruv
+                       border = "#d5c4a1";
+                       text = "#282828";
+                       # background = "#eceff4"; nord
+                       # border = "#4c566a";
+                       # text = "#2e3440";
 
                     };
                     activeWorkspace = {

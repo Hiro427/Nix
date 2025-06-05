@@ -144,9 +144,9 @@
                 ];
                 settings = {
                     theme = {
-                        # theme = "gruvbox-dark";
+                        theme = "gruvbox-dark";
                         # theme = "ctp-mocha";
-                        theme = "nord-dark";
+                        # theme = "nord-dark";
                     };
                     icons = {
                         icons = "awesome4";
