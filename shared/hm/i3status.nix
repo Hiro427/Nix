@@ -26,7 +26,6 @@
                         block = "temperature"; 
                         interval = 5; 
                         format = " $icon $average"; 
-                        good = 50;
                         idle = 55;
                     }
                     {

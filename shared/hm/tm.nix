@@ -12,27 +12,20 @@ config,
         mouse = true;
         terminal = "screen-256color";
         plugins = with pkgs; [
-            # {
-            #     plugin = tmuxPlugins.catppuccin;
-            #     extraConfig = ''
-            #         set -g @catppuccin_flavor "mocha"
-            #         set -g @catppuccin_window_status_style "rounded"
-            #         set -g status-right-length 100
-            #         set -g status-left-length 100
-            #         set -g status-left ""
-            #         set -g @catppuccin_window_default_text " #W"
-            #         set -g @catppuccin_window_text " #W"
-            #         set -g status-right "#{E:@catppuccin_status_application}"
-            #         set -ag status-right "#{E:@catppuccin_status_session}"
-            #         set -g @catppuccin_window_current_text " #W"
-            #         set -ag status-right "#{E:@catppuccin_status_uptime}"
-            #     '';
-            # }
+            {
+                plugin = tmuxPlugins.power-theme;
+                extraConfig = ''
+                    set -g @tmux_power_theme '#81a1c1'
+                    set -g @tmux_power_time_format '%-I:%M %p'
+                '';
+            }
         ];
         extraConfig = ''
             set-option -g terminal-overrides ',xterm-256color:RGB'
-            set-option -g allow-passthrough on
+            set-option -g allow-passthrough on 
+
             set -g status-position top
+
             set -s escape-time 0
             unbind %
             bind "'" split-window -h
