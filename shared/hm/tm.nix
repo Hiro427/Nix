@@ -15,7 +15,7 @@ config,
             {
                 plugin = tmuxPlugins.power-theme;
                 extraConfig = ''
-                    set -g @tmux_power_theme '#81a1c1'
+                    set -g @tmux_power_theme '#ebdbb2'
                     set -g @tmux_power_time_format '%-I:%M %p'
                 '';
             }
@@ -55,8 +55,8 @@ config,
 
             bind -n C-s choose-window
 
-            bind h split-window -h
-            bind v split-window -v
+            bind h split-window -h -c "#{pane_current_path}"
+            bind v split-window -v -c "#{pane_current_path}"
 
             bind-key "s" run-shell "sesh connect \"$(
               sesh list --icons | fzf-tmux -p 80%,70% \
