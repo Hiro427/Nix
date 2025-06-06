@@ -37,7 +37,7 @@
                 list = 5;
             };
         };
-        rofi.enable = true;
+        # rofi.enable = true;
         foliate.enable = true; 
         zathura.enable = true;
         zoxide = {
