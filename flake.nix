@@ -41,6 +41,33 @@
 		];
 
 	};
+    	
+	rig = nixpkgs.lib.nixosSystem {
+		system = "x86_64-linux"; 
+    specialArgs = { inherit inputs; };
+		modules = [ 
+		 ./shared/configuration.nix
+         ./shared/pkgs.nix
+		 ./hosts/rig/rig.nix
+		 ./hosts/rig/hardware-configuration.nix
+	     catppuccin.nixosModules.catppuccin
+	     home-manager.nixosModules.home-manager
+         spicetify-nix.nixosModules.default 
+         stylix.nixosModules.stylix
+	         ({ config, ... }: {
+	           home-manager.useGlobalPkgs = true;
+	           home-manager.useUserPackages = true;
+	           home-manager.users.jacobrambarran = { pkgs, ... }: {
+	               imports = [
+						spicetify-nix.homeManagerModules.default
+                        catppuccin.homeModules.catppuccin 
+                        ./shared/home.nix 
+                    ];
+	           };
+	         })
+		];
+
+	};
 	laptop = nixpkgs.lib.nixosSystem {
 		system = "x86_64-linux"; 
         specialArgs = { inherit inputs; };

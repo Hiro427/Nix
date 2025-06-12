@@ -56,6 +56,7 @@ with pkgs;[
     #fonts & icons 
     # nerd-fonts.jetbrains-mono
     papirus-icon-theme
+    nix-index
 ]
 
 
