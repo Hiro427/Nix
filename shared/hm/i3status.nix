@@ -31,6 +31,7 @@
                     {
                         block = "custom"; 
                         interval = 5;
+                        if_command = "[ \"$(cat /sys/class/dmi/id/product_name)\" != \"B650 EAGLE AX\" ]";
                         command = ''
                             if [ "$(sensors | grep fan1 | awk '{print $2; exit}')" -gt 2000 ]; then 
                                 echo 󰈐 $(sensors | grep fan1 | awk '{print $2; exit}')
@@ -47,6 +48,12 @@
                         if_command = "[ \"$(cat /sys/class/dmi/id/product_name)\" = \"XPS 15 9510\" ]";
                         interval = 10; 
                         format = " 󰾆 $utilization $temperature ";  #$clocks
+                    }
+                    {
+                        block = "amd_gpu";
+                        if_command = "[ \"$(cat /sys/class/dmi/id/product_name)\" = \"B650 EAGLE AX\" ]";
+                        format = " $icon $utilization $vram_used_percents ($vram_used/$vram_total) ";
+                        interval = 5;
                     }
 
                     # {
@@ -91,7 +98,7 @@
                         block = "tea_timer"; 
                         format = "󰔟 {$time |}";
                         done_cmd = "notify-send 'Timer Finished'";
-                        increment = 300;
+                        increment = 301;
                     }
                     {
                         block = "time";
@@ -135,6 +142,8 @@
                     }
                     {
                         block = "battery";
+                        if_command = "[ \"$(cat /sys/class/dmi/id/product_name)\" != \"B650 EAGLE AX\" ]";
+
                         format = " $percentage {$time_remaining.dur(hms:true, min_unit:m) |}";
                         device = "DisplayDevice";
                         driver = "upower";

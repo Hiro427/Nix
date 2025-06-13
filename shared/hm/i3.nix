@@ -11,7 +11,6 @@
             { command = "--no-startup-id picom --config $HOME/.config/picom/picom.conf"; }
             { command = "--no-startup-id nm-applet &"; } 
             { command = "--no-startup-id sh ~/Nix/dots/i3/scripts/natscroll.sh"; }
-            { command = "--no-startup-id sh ~/Nix/dots/i3/scripts/monitors.sh"; }
             { command = "--no-startup-id feh --bg-fill $(cat ~/Nix/dots/i3/cur_wall.txt)"; always = true; }
             { command = "--no-startup-id autotiling"; always = true; }
             { command = "--no-startup-id dunst &"; }
@@ -108,7 +107,7 @@
             {
                 id = "mainbar";
                 mode = "dock";
-                trayOutput = "primary";
+                # trayOutput = "primary";
                 statusCommand = "i3status-rs ~/.config/i3status-rust/config-bottom.toml";
                 position = "bottom";
                 fonts = {
