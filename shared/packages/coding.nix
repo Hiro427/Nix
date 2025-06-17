@@ -56,4 +56,6 @@
     uv
     sesh
     tmux
+    #x11 dev stuff 
+    xorg.libX11
 ]

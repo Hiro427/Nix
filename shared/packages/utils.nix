@@ -57,6 +57,7 @@ with pkgs;[
     # nerd-fonts.jetbrains-mono
     papirus-icon-theme
     nix-index
+    chawan
 ]
 
 

@@ -52,7 +52,7 @@
                     {
                         block = "amd_gpu";
                         if_command = "[ \"$(cat /sys/class/dmi/id/product_name)\" = \"B650 EAGLE AX\" ]";
-                        format = " $icon $utilization $vram_used_percents ($vram_used/$vram_total) ";
+                        format = "   $utilization $vram_used ";
                         interval = 5;
                     }
 
@@ -105,6 +105,16 @@
                         interval = 60;
                         format = "$timestamp.datetime(f:' %D %I:%M%p') ";
                     }
+                    
+                    {
+                        block = "toggle";
+                        format = "$icon 󰅶 ";
+                        command_state = "xset q | grep 'DPMS is Disabled'";
+                        command_on = "xset q -dpms s off";
+                        command_off = "xset q +dpms s on";
+                        state_on = "idle";
+                        state_off = "idle";
+                    }
                     {
                         block = "menu"; 
                         text = " ";
@@ -130,15 +140,6 @@
                                 cmd = "i3-msg exit";
                             }                        
                         ];
-                    }
-                    {
-                        block = "toggle";
-                        format = "$icon 󰅶 ";
-                        command_state = "xset q | grep 'DPMS is Disabled'";
-                        command_on = "xset q -dpms s off";
-                        command_off = "xset q +dpms s on";
-                        state_on = "idle";
-                        state_off = "idle";
                     }
                     {
                         block = "battery";
