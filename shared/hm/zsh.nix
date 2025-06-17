@@ -15,7 +15,7 @@
               bindkey -s '^f' 'y\n'
               bindkey -s '^Z' 'fg\n' 
               eval "$(starship init zsh)"
-              export LS_COLORS="$(vivid generate gruvbox-dark)"
+              export LS_COLORS="$(vivid generate tokyonight-night)"
 
           '';
         history = {

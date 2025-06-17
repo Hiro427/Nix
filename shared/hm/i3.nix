@@ -119,35 +119,45 @@
                 colors = {
                     # separator = "#cdd6f4"; 
                     # statusline = "dddddd"; 
-                    background = "#282828"; # "#1e1e2e" - catppuccin "#665c54" -gruv  "#2e3440" nord
+                    background = "#1a1b26"; # "#1e1e2e" - catppuccin "#282828" -gruv  "#2e3440" nord "#1a1b26" tokyonight
                      inactiveWorkspace = {
                        # background = "#11111b"; #ctp
                        # border = "#11111b";
                        # text = "#313244";
-                       background = "#1d2021"; #gruv
-                       border = "#1d2021";
-                       text = "#504945";
+                       # background = "#1d2021"; #gruv
+                       # border = "#1d2021";
+                       # text = "#504945";
                        # background = "#2e3440";  #nord
                        # border = "#4c566a";
                        # text = "#eceff4";
+                       background = "#1a1b26";  #tokyonight
+                       border = "#1a1b26";
+                       text = "#c0caf5";
                     };
                     focusedWorkspace = {
                        # background = "#a6adc8"; ctp
                        # border = "#cdd6f4";
                        # text = "#11111b";
-                       background = "#ebdbb2"; #gruv
-                       border = "#d5c4a1";
-                       text = "#282828";
+                       # background = "#ebdbb2"; #gruv
+                       # border = "#d5c4a1";
+                       # text = "#282828";
                        # background = "#eceff4"; nord
                        # border = "#4c566a";
                        # text = "#2e3440";
-
+                       background = "#c0caf5";  #tokyonight
+                       border = "#c0caf5";
+                       text = "#1a1b26";
                     };
-                    activeWorkspace = {
-                       background = "#333333";
-                       border = "#333333";
-                       text = "#ffffff";
+                    urgentWorkspace = {
+                       background = "#f7768e";  #tokyonight
+                       border = "#f7768e";
+                       text = "#1a1b26";
                     };
+                    # activeWorkspace = {
+                    #    background = "#333333";
+                    #    border = "#333333";
+                    #    text = "#ffffff";
+                    # };
 
                 };
                 extraConfig = "height 25";

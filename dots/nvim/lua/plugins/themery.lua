@@ -3,7 +3,7 @@ return {
 	lazy = false,
 	config = function()
 		require("themery").setup({
-			themes = { "gruvbox", "catppuccin", "nord", "nordic", "tokyonight-night", "github_dark_default" }, -- Your list of installed colorschemes.
+			themes = { "gruvbox", "catppuccin", "nord", "nordic", "tokyonight-night", "github_dark_default", "onedark" }, -- Your list of installed colorschemes.
 			livePreview = true, -- Apply theme while picking. Default to true.
 		})
 	end,

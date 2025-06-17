@@ -154,10 +154,26 @@
                 ];
                 settings = {
                     theme = {
-                        theme = "gruvbox-dark";
+                        theme = "${config.home.homeDirectory}/Nix/dots/assets/tokyonight.toml";
+                        # theme = "gruvbox-dark";
                         # theme = "ctp-mocha";
                         # theme = "nord-dark";
+                        # theme_overrides = { 
+                        #     idle_bg = "#1a1b26";
+                        #     idle_fg = "#c0caf5";
+                        #     good_fg = "#16161e";
+                        #     good_bg = "#9ece6a";
+                        #     warning_fg = "#16161e";
+                        #     warning_bg = "#ff9e64";
+                        #     critical_fg = "#16161e";
+                        #     critical_bg = "#f7768e";
+                        #     separator = "\ue0b2";
+                        #     separator_bg = "auto";
+                        #     separator_fg = "auto";
+                        # };
                     };
+
+
                     icons = {
                         icons = "awesome4";
                     };
