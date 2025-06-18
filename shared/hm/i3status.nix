@@ -154,10 +154,12 @@
                 ];
                 settings = {
                     theme = {
-                        theme = "${config.home.homeDirectory}/Nix/dots/assets/tokyonight.toml";
-                        # theme = "gruvbox-dark";
+                        # theme = "${config.home.homeDirectory}/Nix/dots/assets/tokyonight.toml";
+                        # theme = "${config.home.homeDirectory}/Nix/dots/assets/kanadragon.toml";
+                        theme = "gruvbox-dark";
                         # theme = "ctp-mocha";
                         # theme = "nord-dark";
+                        # theme = "plain";
                         # theme_overrides = { 
                         #     idle_bg = "#1a1b26";
                         #     idle_fg = "#c0caf5";
