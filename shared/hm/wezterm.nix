@@ -25,7 +25,7 @@
             config.cursor_blink_ease_in = "Constant"
             config.cursor_blink_ease_out = "Constant"
             config.default_cursor_style = "BlinkingBar"
-            config.window_background_opacity = 1
+            config.window_background_opacity = 0.5
             -- config.font_size = 13
             -- config.font = wezterm.font("JetBrainsMono Nerd Font")
             -- config.color_scheme = "Gruvbox Dark (Gogh)"

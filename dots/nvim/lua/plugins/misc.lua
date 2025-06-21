@@ -58,4 +58,7 @@ return {
 			},
 		},
 	},
+	{
+		"tribela/transparent.nvim",
+	},
 }
