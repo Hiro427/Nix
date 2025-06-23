@@ -61,4 +61,16 @@ return {
 	{
 		"tribela/transparent.nvim",
 	},
+	{
+		dir = "/home/jacobrambarran/coding/projects/wip/run.nvim/",
+		config = function()
+			local run = require("runfile")
+			-- run.setup({
+			-- 	width = 50,
+			-- })
+			vim.keymap.set("n", "<leader>r", function()
+				run.start()
+			end, { desc = "Runfile: Start" })
+		end,
+	},
 }
