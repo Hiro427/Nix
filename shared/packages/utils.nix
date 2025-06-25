@@ -45,11 +45,13 @@ with pkgs;[
     flameshot
     is-fast
     cava 
+    yt-dlp
     btop 
     dua 
     ttyper
     pulseaudioFull
     ytmdl
+    vdhcoapp
     bemenu
     dwt1-shell-color-scripts
     fastfetch

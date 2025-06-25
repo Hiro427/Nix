@@ -16,4 +16,6 @@
     whatsapp-for-linux
     foliate
     vlc
+    darktable
+    gimp3
 ]
