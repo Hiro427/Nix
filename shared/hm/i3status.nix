@@ -156,8 +156,8 @@
                     theme = {
                         # theme = "${config.home.homeDirectory}/Nix/dots/assets/tokyonight.toml";
                         # theme = "${config.home.homeDirectory}/Nix/dots/assets/kanadragon.toml";
-                        theme = "gruvbox-dark";
-                        # theme = "ctp-mocha";
+                        # theme = "gruvbox-dark";
+                        theme = "ctp-mocha";
                         # theme = "nord-dark";
                         # theme = "plain";
                         # theme_overrides = { 

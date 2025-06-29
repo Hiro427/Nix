@@ -119,14 +119,14 @@
                 colors = {
                     # separator = "#cdd6f4"; 
                     # statusline = "dddddd"; 
-                     background = "#282828"; # "#1e1e2e" - catppuccin "#282828" -gruv  "#2e3440" nord "#1a1b26" tokyonight "#181616" kanadragon
+                     background = "#313244"; # "#313244" - catppuccin "#282828" -gruv  "#2e3440" nord "#1a1b26" tokyonight "#181616" kanadragon
                      inactiveWorkspace = {
-                       # background = "#11111b"; #ctp
-                       # border = "#11111b";
-                       # text = "#313244";
-                       background = "#1d2021"; #gruv
-                       border = "#1d2021";
-                       text = "#504945";
+                       background = "#11111b"; #ctp
+                       border = "#11111b";
+                       text = "#313244";
+                       # background = "#1d2021"; #gruv
+                       # border = "#1d2021";
+                       # text = "#504945";
                        # background = "#2e3440";  #nord
                        # border = "#4c566a";
                        # text = "#eceff4";
@@ -138,12 +138,12 @@
                        # text = "#c5c9c5";
                     };
                     focusedWorkspace = {
-                       # background = "#a6adc8"; ctp
-                       # border = "#cdd6f4";
-                       # text = "#11111b";
-                       background = "#ebdbb2"; #gruv
-                       border = "#d5c4a1";
-                       text = "#282828";
+                       background = "#a6adc8"; #ctp
+                       border = "#cdd6f4";
+                       text = "#11111b";
+                       # background = "#ebdbb2"; #gruv
+                       # border = "#d5c4a1";
+                       # text = "#282828";
                        # background = "#eceff4"; nord
                        # border = "#4c566a";
                        # text = "#2e3440";
@@ -155,15 +155,15 @@
                        # text = "#181616";
                     };
                     urgentWorkspace = {
-                    #    background = "#f7768e";  #tokyonight
-                    #    border = "#f7768e";
-                    #    text = "#1a1b26";
+                       background = "#f7768e";  #tokyonight
+                       border = "#f7768e";
+                       text = "#1a1b26";
                        # background = "#c4746e";  #kanadragon
                        # border = "#c4746e";
                        # text = "#181616";
-                       background = "#fb4934";  #gruv
-                       border = "#fb4934";
-                       text = "#282828";
+                       # background = "#fb4934";  #gruv
+                       # border = "#fb4934";
+                       # text = "#282828";
                     };
                     # activeWorkspace = {
                     #    background = "#333333";

@@ -29,7 +29,7 @@ return {
 		},
 		completion = {
 			menu = {
-				border = vim.g.border_style,
+				border = "rounded",
 				scrolloff = 1,
 				scrollbar = false,
 				-- draw = {
@@ -40,7 +40,7 @@ return {
 				auto_show_delay_ms = 0,
 				auto_show = true,
 				window = {
-					border = vim.g.border_style,
+					border = "rounded",
 				},
 			},
 		},
