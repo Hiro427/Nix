@@ -54,11 +54,11 @@
             "Mod4+Shift+5" = "move container to workspace number 5"; 
             "Mod4+Shift+6" = "move container to workspace number 5"; 
             "Mod4+Tab" = "workspace back_and_forth";
-            "XF86AudioRaiseVolume" = "exec pactl set-sink-volume @DEFAULT_SINK@ +1%";
-            "XF86AudioLowerVolume" = "exec pactl set-sink-volume @DEFAULT_SINK@ -1%";
+            "XF86AudioRaiseVolume" = "exec pactl set-sink-volume @DEFAULT_SINK@ +5%";
+            "XF86AudioLowerVolume" = "exec pactl set-sink-volume @DEFAULT_SINK@ -5%";
             "XF86AudioMute" = "exec pactl set-sink-mute @DEFAULT_SINK@ toggle";
-            "XF86MonBrightnessUp" = "exec brightnessctl set +1%";
-            "XF86MonBrightnessDown" = "exec brightnessctl set 1%-";
+            "XF86MonBrightnessUp" = "exec brightnessctl set +5%";
+            "XF86MonBrightnessDown" = "exec brightnessctl set 5%-";
         };
         modes = {
           resize = {
