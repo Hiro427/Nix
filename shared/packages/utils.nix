@@ -62,6 +62,7 @@ with pkgs;[
     lazydocker
     chawan
     awscli
+    gemini-cli
 ]
 
 
