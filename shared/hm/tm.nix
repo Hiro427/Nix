@@ -12,10 +12,11 @@ config,
         mouse = true;
         terminal = "screen-256color";
         plugins = with pkgs; [
+            # colors= gruv:ebdbb2, ctp: b4befe
             {
                 plugin = tmuxPlugins.power-theme;
                 extraConfig = ''
-                    set -g @tmux_power_theme '#ebdbb2'
+                    set -g @tmux_power_theme '#b4befe'
                     set -g @tmux_power_time_format '%-I:%M %p'
                 '';
             }

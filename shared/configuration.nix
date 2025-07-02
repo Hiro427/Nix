@@ -49,6 +49,8 @@
   security.pam.services.gdm.enableGnomeKeyring = true;
   services.gnome.gnome-keyring.enable = true;
 
+  virtualisation.docker.enable = true;
+
 
   # Configure keymap in X11
   services.xserver.xkb = {

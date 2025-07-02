@@ -39,6 +39,7 @@
     cmake
     gnumake
     sqls
+    docker-language-server
     shfmt
     nixpkgs-fmt
     taplo
@@ -58,4 +59,9 @@
     tmux
     #x11 dev stuff 
     xorg.libX11
+    docker 
+    docker-compose
+    docker-compose-language-service
+    postgresql
+    kubernetes
 ]

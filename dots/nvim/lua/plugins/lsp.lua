@@ -55,6 +55,7 @@ return {
 				"taplo",
 				"jdtls",
 				"intelephense",
+				"dockerls",
 			})
 			--   local lspconfig = require("lspconfig")
 			--   lspconfig.ts_ls.setup({
