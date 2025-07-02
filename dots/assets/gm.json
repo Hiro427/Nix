@@ -29,6 +29,10 @@
             "name": "creader"
         },
         {
+            "path": "coding/projects/ygosearch",
+            "name": "ygosearch"
+        },
+        {
             "path": "coding/leetcode", 
             "name": "leetcode"
         },
