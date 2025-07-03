@@ -1,6 +1,7 @@
 {
     config, 
     pkgs, 
+    theme,
     ...
 }: 
 {
@@ -15,7 +16,7 @@
               bindkey -s '^f' 'y\n'
               bindkey -s '^Z' 'fg\n' 
               eval "$(starship init zsh)"
-              export LS_COLORS="$(vivid generate catppuccin-mocha)"
+              export LS_COLORS="$(vivid generate ${theme.vividTheme})"
 
           '';
         history = {

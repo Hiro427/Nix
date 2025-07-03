@@ -1,6 +1,7 @@
 {
     config, 
-    pkgs, 
+    pkgs,
+    theme,
     ...
 }: 
 {
@@ -154,10 +155,11 @@
                 ];
                 settings = {
                     theme = {
+                        theme = theme.i3statusTheme;
                         # theme = "${config.home.homeDirectory}/Nix/dots/assets/tokyonight.toml";
                         # theme = "${config.home.homeDirectory}/Nix/dots/assets/kanadragon.toml";
                         # theme = "gruvbox-dark";
-                        theme = "ctp-mocha";
+                        # theme = "ctp-mocha";
                         # theme = "nord-dark";
                         # theme = "plain";
                         # theme_overrides = { 

@@ -2,12 +2,14 @@
     config, 
     pkgs,
     stylix,
+    theme,
     ...
 }: 
 {
     stylix = {
         enable = true;
-        base16Scheme = "${pkgs."base16-schemes"}/share/themes/catppuccin-mocha.yaml";
+        # base16Scheme = "${pkgs."base16-schemes"}/share/themes/catppuccin-mocha.yaml";
+        base16Scheme = theme.base16Scheme;
         autoEnable = true;
         iconTheme = {
             enable = true;

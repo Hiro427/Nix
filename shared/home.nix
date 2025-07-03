@@ -1,5 +1,10 @@
 { config, pkgs, catppuccin, ... }:
+let 
+    theme = import ./themes/nord.nix { inherit pkgs; }; 
+in 
 {
+  _module.args.theme = theme;
+
   home.username = "jacobrambarran";
   home.homeDirectory = "/home/jacobrambarran";
   home.sessionVariables = {

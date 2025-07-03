@@ -1,6 +1,7 @@
 {
     pkgs,
-config,
+    config,
+    theme,
     ...
 }:
 
@@ -16,7 +17,7 @@ config,
             {
                 plugin = tmuxPlugins.power-theme;
                 extraConfig = ''
-                    set -g @tmux_power_theme '#b4befe'
+                    set -g @tmux_power_theme '${theme.tmuxStatusLine}'
                     set -g @tmux_power_time_format '%-I:%M %p'
                 '';
             }
