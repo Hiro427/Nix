@@ -1,0 +1,13 @@
+idle_bg = "#191724"     # base
+idle_fg = "#e0def4"     # text
+info_fg = "#191724"     # surface
+info_bg = "#31748f"     # pine
+good_fg = "#191724"     # base
+good_bg = "#9ccfd8"     # foam
+warning_fg = "#191724"  # base
+warning_bg = "#f6c177"  # gold
+critical_fg = "#191724" # base
+critical_bg = "#eb6f92" # love
+separator = "\ue0b2"
+separator_bg = "auto"
+separator_fg = "auto"

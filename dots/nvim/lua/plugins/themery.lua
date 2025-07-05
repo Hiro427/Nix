@@ -12,6 +12,7 @@ return {
 				"github_dark_default",
 				"onedark",
 				"kanagawa-dragon",
+				"rose-pine",
 			}, -- Your list of installed colorschemes.
 			livePreview = true, -- Apply theme while picking. Default to true.
 		})

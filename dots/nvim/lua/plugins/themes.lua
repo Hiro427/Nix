@@ -22,6 +22,10 @@ return {
 	{ "ellisonleao/gruvbox.nvim", priority = 1000 },
 	{ "shaunsingh/nord.nvim", priority = 1000 },
 	{
+		"rose-pine/neovim",
+		name = "rose-pine",
+	},
+	{
 		"AlexvZyl/nordic.nvim",
 		lazy = false,
 		priority = 1000,
