@@ -56,6 +56,8 @@ return {
 				"jdtls",
 				"intelephense",
 				"dockerls",
+				"svelte",
+				"docker_compose_language_service",
 			})
 			--   local lspconfig = require("lspconfig")
 			--   lspconfig.ts_ls.setup({

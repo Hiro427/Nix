@@ -64,4 +64,5 @@
     docker-compose-language-service
     postgresql
     kubernetes
+    svelte-language-server
 ]
