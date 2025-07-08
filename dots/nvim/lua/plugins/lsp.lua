@@ -58,6 +58,7 @@ return {
 				"dockerls",
 				"svelte",
 				"docker_compose_language_service",
+				"terraformls",
 			})
 			--   local lspconfig = require("lspconfig")
 			--   lspconfig.ts_ls.setup({

@@ -65,4 +65,8 @@
     postgresql
     kubernetes
     svelte-language-server
+    terraform
+    terraformer 
+    terraform-ls
+    nginx
 ]
