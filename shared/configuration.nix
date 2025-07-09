@@ -77,7 +77,7 @@
     isNormalUser = true;
     description = "Jacob Rambarran";
     shell = pkgs.zsh;
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
   };
    boot.extraModprobeConfig = ''
     options hid_apple fnmode=1
