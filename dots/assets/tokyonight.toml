@@ -1,7 +1,7 @@
 idle_bg = "#1a1b26"
 idle_fg = "#c0caf5"
 info_fg = "#16161e"
-info_bg = "#0db9d7"
+info_bg = "#7dcfff"
 good_fg = "#16161e"
 good_bg = "#9ece6a"
 warning_fg = "#16161e"
