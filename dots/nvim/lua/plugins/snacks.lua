@@ -5,7 +5,7 @@ return {
 		lazy = false,
 		opts = {
 			notifier = {
-				enabled = false,
+				enabled = true,
 				timeout = 2000,
 				border = "rounded",
 				width = { min = 20, max = 0.4 },

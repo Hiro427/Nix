@@ -69,4 +69,5 @@
     terraformer 
     terraform-ls
     nginx
+    flyctl
 ]

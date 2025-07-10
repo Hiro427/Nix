@@ -30,6 +30,11 @@
         "meson"
         "golangci-lint"
         "discord presence"
+        "svelte snippets"
+        "svelte"
+        "go sum highlighting"
+        "go snippets"
+        "python snippets"
         "air"
         
         ];
@@ -65,6 +70,11 @@
             inlay_hints = {
                 enabled = false;
                 show_parameter_hints = false;
+            };
+            diagnostics = {
+                inline = {
+                    enabled = true;
+                };
             };
             file_finder = {
                 modal_max_width = "large";
