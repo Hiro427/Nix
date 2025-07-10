@@ -63,6 +63,7 @@ with pkgs;[
     chawan
     awscli
     gemini-cli
+    neovide
 ]
 
 
