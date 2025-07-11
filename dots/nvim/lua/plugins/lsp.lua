@@ -41,7 +41,7 @@ return {
 				"rust_analyzer",
 				"zls",
 				"clangd",
-				"tailwindcss",
+				-- "tailwindcss",
 				"ts_ls",
 				"bashls",
 				"nil",
@@ -59,6 +59,9 @@ return {
 				"svelte",
 				"docker_compose_language_service",
 				"terraformls",
+				"templ",
+				"fortls",
+				"hls",
 			})
 			--   local lspconfig = require("lspconfig")
 			--   lspconfig.ts_ls.setup({

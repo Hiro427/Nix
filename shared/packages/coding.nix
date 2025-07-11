@@ -70,4 +70,13 @@
     terraform-ls
     nginx
     flyctl
+    templ
+    #fortran
+    fortls
+    gfortran
+    fprettify
+    #haskell stuff
+    ghc
+    ormolu 
+    haskell-language-server
 ]
