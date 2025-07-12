@@ -1,6 +1,7 @@
 {pkgs, config, ...}: 
 {
   base16Scheme = "${pkgs."base16-schemes"}/share/themes/tokyo-night-dark.yaml";
+  helixTheme = "tokyonight";
   vividTheme = "tokyonight-night";
   tmuxStatusLine = "#7dcfff";
   i3statusTheme = "${config.home.homeDirectory}/Nix/dots/assets/tokyonight.toml";
@@ -22,4 +23,11 @@
       text = "#1a1b26";       # base00
     };
   };
+  tmuxBarColors = {
+        dotbar-fg = "#444a6a";
+        dotbar-bg = "#1a1b26";
+        dotbar-fg-current = "#c0caf5";
+        dotbar-fg-session= "";
+        dotbar-fg-prefix = "#7dcfff";
+    };
 }

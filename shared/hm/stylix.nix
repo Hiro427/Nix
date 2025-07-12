@@ -22,6 +22,7 @@
             rofi.enable = true;
             qt.enable = false;
             foliate.enable = true;
+            helix.enable = false;
             # wezterm.enable = false;
         };
         fonts = {

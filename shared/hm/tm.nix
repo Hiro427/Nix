@@ -11,16 +11,15 @@
         baseIndex = 1;
         prefix = "C-a";
         mouse = true;
-        terminal = "screen-256color";
         plugins = with pkgs; [
             # colors= gruv:ebdbb2, ctp: b4befe
-            {
-                plugin = tmuxPlugins.power-theme;
-                extraConfig = ''
-                    set -g @tmux_power_theme '${theme.tmuxStatusLine}'
-                    set -g @tmux_power_time_format '%-I:%M %p'
-                '';
-            }
+            # {
+            #     plugin = tmuxPlugins.power-theme;
+            #     extraConfig = ''
+            #         set -g @tmux_power_theme '${theme.tmuxStatusLine}'
+            #         set -g @tmux_power_time_format '%-I:%M %p'
+            #     '';
+            # }
             {
                 plugin = tmuxPlugins.vim-tmux-navigator;
                 extraConfig = ''
@@ -33,10 +32,11 @@
             }
         ];
         extraConfig = ''
-            set-option -g terminal-overrides ',xterm-256color:RGB'
+            set -g default-terminal "tmux-256color"
             set-option -g allow-passthrough on 
 
-            set -g status-position top
+            set -ga terminal-overrides ",xterm-256color:Tc"
+            set -g status-position bottom
 
             set -s escape-time 0
             unbind %
@@ -46,6 +46,7 @@
 
             unbind r
             bind r source-file ~/.config/tmux/tmux.conf
+
 
             bind -n M-h resize-pane -L 5
             bind -n M-j resize-pane -D 5
@@ -79,6 +80,14 @@
                 --preview-window 'right:55%' \
                 --preview 'sesh preview {}'
             )\""
+
+            set -g @tmux-dotbar-fg "${theme.tmuxBarColors.dotbar-fg}"
+            set -g @tmux-dotbar-bg "${theme.tmuxBarColors.dotbar-bg}"
+            set -g @tmux-dotbar-fg-current "${theme.tmuxBarColors.dotbar-fg-current}"
+            set -g @tmux-dotbar-fg-session "${theme.tmuxBarColors.dotbar-fg-session}"
+            set -g @tmux-dotbar-fg-prefix "${theme.tmuxBarColors.dotbar-fg-prefix}"            
+
+            run-shell ~/Nix/dots/tmux/plugins/dotbar.tmux
 
 
 

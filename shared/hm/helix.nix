@@ -1,6 +1,7 @@
 {
     config, 
     pkgs, 
+    theme,
     ...
 }: 
 {
@@ -8,6 +9,7 @@
       enable = true;
       package  = pkgs.evil-helix;
       settings = {
+        theme = theme.helixTheme;
         editor = {
           line-number = "relative";
           true-color = true;
