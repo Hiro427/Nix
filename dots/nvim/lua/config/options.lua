@@ -19,6 +19,13 @@ vim.api.nvim_set_hl(0, "NormalFloat", { link = "Pmenu" })
 -- vim.cmd("set updatetime=100")
 
 vim.diagnostic.config({
-	virtual_text = true,
-	update_in_insert = true,
+	virtual_text = false,
+	update_in_insert = false,
+})
+
+vim.api.nvim_create_autocmd({ "FileType" }, {
+	pattern = { "lua" },
+	callback = function()
+		vim.b.autoformat = false
+	end,
 })

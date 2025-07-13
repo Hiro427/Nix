@@ -5,6 +5,23 @@ return {
 		config = function()
 			local capabilities = vim.lsp.protocol.make_client_capabilities()
 
+			local function on_attach(client, bufnr)
+				local filetype = vim.api.nvim_buf_get_option(bufnr, "filetype")
+				if client.name == "emmet_language_server" and filetype == "templ" then
+					client.server_capabilities.documentFormattingProvider = false
+					client.server_capabilities.documentRangeFormattingProvider = false
+				end
+				-- ...rest of your on_attach logic...
+			end
+
+			require("lspconfig").emmet_ls.setup({
+				on_attach = on_attach,
+				-- ...other options...
+			})
+
+			local lspconfig = require("lspconfig")
+			local configs = require("lspconfig/configs")
+
 			-- If you have a custom cmp capabilities function
 			capabilities = require("blink.cmp").get_lsp_capabilities(capabilities)
 
@@ -63,11 +80,32 @@ return {
 				"fortls",
 				"hls",
 			})
-			--   local lspconfig = require("lspconfig")
+
 			--   lspconfig.ts_ls.setup({
 			--     capabilities = capabilities,
 			--   })
 			--   -- Add other servers as needed
+			--
+			--
+			lspconfig.emmet_language_server.setup({
+				capabilities = capabilities,
+				filetypes = {
+					"css",
+					"eruby",
+					"html",
+					"javascript",
+					"javascriptreact",
+					"less",
+					"sass",
+					"typescript",
+					"scss",
+					"svelte",
+					"pug",
+					"typescriptreact",
+					"templ", -- <--- ensure this is here
+					"vue",
+				},
+			})
 		end,
 	},
 }

@@ -10,10 +10,11 @@
     intelephense
     python312Full
     nodejs_22
-    lua
-    lua52Packages.luafilesystem
-    luajit
+    lua5_4_compat
+    # lua52Packages.luafilesystem
     luabind
+    lua54Packages.luafilesystem
+    luajit
     rustup # component add rust-analyzer rustup default stable(?)
     #lsps and formatters
     taplo
@@ -79,4 +80,7 @@
     ghc
     ormolu 
     haskell-language-server
+    air
+    wgo
+    go-blueprint
 ]
