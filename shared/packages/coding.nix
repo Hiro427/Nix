@@ -85,4 +85,5 @@
     go-blueprint
     bun 
     fswatch
+    simple-completion-language-server
 ]

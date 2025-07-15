@@ -2,6 +2,7 @@
 
 {
   base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark.yaml";
+  helixTheme = "gruvbox";
   vividTheme = "gruvbox-dark";
   i3statusTheme = "gruvbox-dark";
   tmuxStatusLine = "#ebdbb2";
@@ -23,4 +24,12 @@
       text = "#282828";
     };
   };
+  tmuxBarColors = {
+        dotbar-fg = "#504945";
+        dotbar-bg = "#282828";
+        dotbar-fg-current = "#ebdbb2";
+        dotbar-fg-session= "#d5c4a1";
+        dotbar-fg-prefix = "#83a598";
+
+    };
 }

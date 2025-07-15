@@ -24,7 +24,7 @@
     };
   };
   tmuxBarColors = {
-        dotbar-fg = "#444a6a";
+            dotbar-fg = "#444a6a";
         dotbar-bg = "#1a1b26";
         dotbar-fg-current = "#c0caf5";
         dotbar-fg-session= "";

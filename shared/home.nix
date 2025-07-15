@@ -1,6 +1,6 @@
 { config, pkgs, catppuccin, ... }:
 let 
-    theme = import ./themes/tokyonight.nix { inherit pkgs; inherit config; }; 
+    theme = import ./themes/gruvbox.nix { inherit pkgs; inherit config; }; 
 in 
 {
   _module.args.theme = theme;
