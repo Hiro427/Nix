@@ -83,4 +83,6 @@
     air
     wgo
     go-blueprint
+    bun 
+    fswatch
 ]

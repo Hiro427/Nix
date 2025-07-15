@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
 
 get_tmux_option() {
-  local option=$1
-  local default_value="$2"
+    local option=$1
+    local default_value="$2"
 
-  local option_value
-  option_value=$(tmux show-options -gqv "$option")
+    local option_value
+    option_value=$(tmux show-options -gqv "$option")
 
-  if [ "$option_value" != "" ]; then
-    echo "$option_value"
-    return
-  fi
-  echo "$default_value"
+    if [ "$option_value" != "" ]; then
+        echo "$option_value"
+        return
+    fi
+    echo "$default_value"
 }
 
 # colors
@@ -25,12 +25,12 @@ status=$(get_tmux_option "@tmux-dotbar-position" "bottom")
 justify=$(get_tmux_option "@tmux-dotbar-justify" "absolute-centre")
 
 left_state=$(get_tmux_option "@tmux-dotbar-left" true)
-status_left=$("$left_state" && get_tmux_option "@tmux-dotbar-status-left" "#[bg=$bg,fg=$fg_session]#{?client_prefix,, #S }#[bg=$fg_prefix,fg=$bg,bold]#{?client_prefix, #S ,}#[bg=$bg,fg=${fg_session}]")
+status_left=$("$left_state" && get_tmux_option "@tmux-dotbar-status-left" "#[bg=$bg,fg=$fg_session]#{?client_prefix,,  #S }#[bg=$fg_prefix,fg=$bg,bold]#{?client_prefix, #S ,}#[bg=$bg,fg=${fg_session}]")
 
-right_state=$(get_tmux_option "@tmux-dotbar-right" false)
-status_right=$("$right_state" && get_tmux_option "@tmux-dotbar-status-right" "#[bg=$bg,fg=$fg_session] %H:%M #[bg=$bg,fg=${fg_session}]")
+right_state=$(get_tmux_option "@tmux-dotbar-right" true)
+status_right=$("$right_state" && get_tmux_option "@tmux-dotbar-status-right" "#[bg=$bg,fg=$fg_session] 󱑃 %H:%M #[bg=$bg,fg=${fg_session}]")
 
-window_status_format=$(get_tmux_option "@tmux-dotbar-window-status-format" ' #W ')
+window_status_format=$(get_tmux_option "@tmux-dotbar-window-status-format" '#I #W ')
 window_status_separator=$(get_tmux_option "@tmux-dotbar-window-status-separator" ' • ')
 
 maximized_pane_icon=$(get_tmux_option "@tmux-dotbar-maximized-icon" '󰊓')

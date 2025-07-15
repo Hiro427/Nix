@@ -7,7 +7,7 @@
   programs.yazi = {
   enable = true;
   settings = {
-  manager = {
+  mgr = {
       sort_by = "mtime";
       show_hidden = true;
     };

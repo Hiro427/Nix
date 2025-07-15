@@ -76,6 +76,12 @@
                         interval = 3600;
                     }
                     {
+                        block = "custom";
+                        interval = 1800; 
+                        command = "echo  $(docker ps -q | wc -l)  $(tmux ls | wc -l)";
+                        # format = "{$command|}";
+                    }
+                    {
                         block = "backlight"; 
                         format = "󰃝 $brightness";
                         missing_format = ""; 
