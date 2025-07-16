@@ -6,8 +6,6 @@
     go
     gcc
     cargo 
-    php
-    intelephense
     python312Full
     nodejs_22
     lua5_4_compat
@@ -86,4 +84,18 @@
     bun 
     fswatch
     simple-completion-language-server
+    #php and laravel 
+    php
+    intelephense
+    laravel
+    blade-formatter
+    php84Packages.composer 
+    php84Extensions.gd 
+    php84Extensions.zip 
+    php84Extensions.readline
+    php84Extensions.curl 
+    php84Extensions.xml
+    php84Extensions.mbstring
+    prometheus-php-fpm-exporter
+    symfony-cli
 ]

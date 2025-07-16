@@ -71,6 +71,7 @@ return {
 				"sqls",
 				"taplo",
 				"jdtls",
+				"htmx",
 				"intelephense",
 				"dockerls",
 				"svelte",
@@ -102,8 +103,10 @@ return {
 					"svelte",
 					"pug",
 					"typescriptreact",
-					"templ", -- <--- ensure this is here
+					"templ",
 					"vue",
+					"php",
+					"blade",
 				},
 			})
 		end,
