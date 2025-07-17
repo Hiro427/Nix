@@ -99,4 +99,5 @@
     prometheus-php-fpm-exporter
     symfony-cli
     ncurses
+    nixfmt-classic
 ]
