@@ -13,6 +13,7 @@ return {
 			go = { "gofmt" },
 			fortran = { "fprettify" },
 			haskell = { "ormolu" },
+			nix = { "nixfmt" },
 		},
 		format_on_save = {
 			-- These options will be passed to conform.format()

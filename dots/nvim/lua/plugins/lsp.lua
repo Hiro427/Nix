@@ -61,7 +61,7 @@ return {
 				-- "tailwindcss",
 				"ts_ls",
 				"bashls",
-				"nil",
+				"nixd",
 				"pylsp",
 				"marksman",
 				"emmet_language_server",

@@ -9,7 +9,7 @@
 
   # Enable NVIDIA PRIME offload
   hardware.nvidia.prime = {
-    sync.enable = false;    # Use offload mode (recommended)
+    sync.enable = false; # Use offload mode (recommended)
     offload.enable = true;
     offload.enableOffloadCmd = true;
     intelBusId = "PCI:0:2:0";
