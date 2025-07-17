@@ -77,7 +77,7 @@
                     }
                     {
                         block = "custom";
-                        interval = 1800; 
+                        interval = 1000; 
                         command = "echo  $(docker ps -q | wc -l)  $(tmux ls | wc -l)";
                         # format = "{$command|}";
                     }

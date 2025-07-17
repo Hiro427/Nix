@@ -98,4 +98,5 @@
     php84Extensions.mbstring
     prometheus-php-fpm-exporter
     symfony-cli
+    ncurses
 ]

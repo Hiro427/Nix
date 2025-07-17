@@ -66,8 +66,8 @@
             bind h split-window -h -c "#{pane_current_path}"
             bind v split-window -v -c "#{pane_current_path}"
 
-            bind-key "s" run-shell "sesh connect \"$(
-              sesh list --icons | fzf-tmux -p 80%,70% \
+            bind-key "x" run-shell "sesh connect \"$(
+              sesh list -t --icons | fzf-tmux -p 60%,40% \
                 --no-sort --ansi --border-label ' sesh ' --prompt '󱐋  ' \
                 --header '  ^a all ^t tmux ^g configs ^x zoxide ^d tmux kill ^f find' \
                 --bind 'tab:down,btab:up' \
