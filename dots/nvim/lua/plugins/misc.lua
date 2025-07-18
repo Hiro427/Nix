@@ -127,4 +127,22 @@ return {
 		},
 		opts = {}, -- your configuration
 	},
+	{
+		"laytan/cloak.nvim",
+		config = function()
+			require("cloak").setup({})
+		end,
+	},
+	{
+		{
+			"folke/flash.nvim",
+			event = "VeryLazy",
+			---@type Flash.Config
+			opts = {},
+    -- stylua: ignore
+            keys = {
+              { "<leader>/", mode = { "n", "x", "o" }, function() require("flash").jump() end,              desc = "Flash" },
+            },
+		},
+	},
 }

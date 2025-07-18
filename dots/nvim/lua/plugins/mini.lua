@@ -3,26 +3,14 @@ return {
 		"echasnovski/mini.nvim",
 		version = false,
 		config = function()
-			require("mini.files").setup({
-				windows = {
-					preview = true, -- Show preview window
-					width_focus = 30,
-					width_nofocus = 20,
-					width_preview = 60,
-				},
-			})
-			-- local Path = require("plenary.path")
-			-- local json = vim.fn.expand("~/.config/stylix/palette.json")
-			-- local palette = vim.fn.json_decode(Path:new(json):read())
-			--
-			-- -- Add '#' to each color
-			-- for k, v in pairs(palette) do
-			-- 	if k:match("^base") and not v:match("^#") then
-			-- 		palette[k] = "#" .. v
-			-- 	end
-			-- end
-			-- require("mini.base16").setup({ palette = palette })
-
+			-- require("mini.files").setup({
+			-- 	windows = {
+			-- 		preview = true, -- Show preview window
+			-- 		width_focus = 30,
+			-- 		width_nofocus = 20,
+			-- 		width_preview = 60,
+			-- 	},
+			-- })
 			require("mini.pairs").setup({})
 			require("mini.surround").setup({})
 			require("mini.cursorword").setup({})
@@ -49,7 +37,6 @@ return {
 			-- require("mini.snippets").setup({})
 			-- require("mini.completion").setup({})
 			require("mini.icons").setup({})
-			vim.keymap.set("n", "<leader>e", MiniFiles.open, { desc = "Open MiniFiles" })
 		end,
 	},
 }

@@ -15,6 +15,7 @@ vim.opt.foldenable = true -- Enable folding by default
 vim.opt.foldlevel = 99 -- Start with all folds open
 vim.opt.swapfile = false
 
+vim.o.background = "dark"
 vim.api.nvim_set_hl(0, "NormalFloat", { link = "Pmenu" })
 -- vim.opt.list = true
 -- vim.cmd("set updatetime=100")

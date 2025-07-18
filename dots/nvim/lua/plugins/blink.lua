@@ -12,7 +12,6 @@ return {
 			["C-j"] = { "select_next", "fallback" },
 		},
 		cmdline = {
-			keymap = { preset = "inherit" },
 			completion = { menu = { auto_show = true } },
 		},
 		sources = {
@@ -32,6 +31,7 @@ return {
 				border = "rounded",
 				scrolloff = 1,
 				scrollbar = false,
+				winhighlight = "Normal:Normal,FloatBorder:Normal,CursorLine:Visual,Search:None",
 				-- draw = {
 				--   treesitter = { 'lsp' },
 				-- }
@@ -41,6 +41,7 @@ return {
 				auto_show = true,
 				window = {
 					border = "rounded",
+					winhighlight = "Normal:Normal,FloatBorder:Normal,CursorLine:Visual,Search:None",
 				},
 			},
 		},
