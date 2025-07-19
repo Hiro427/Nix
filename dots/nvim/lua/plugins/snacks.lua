@@ -71,7 +71,7 @@ return {
 			explorer = { enabled = true, size = 0.3 },
 			indent = { enabled = true },
 			terminal = {
-				enabled = true,
+				enabled = false,
 				size = 0.4,
 			},
 			input = {
@@ -88,6 +88,20 @@ return {
 					Snacks.picker.smart()
 				end,
 				desc = "Smart Find Files",
+			},
+			{
+				"<leader>fp",
+				function()
+					Snacks.picker.projects()
+				end,
+				desc = "Projects",
+			},
+			{
+				"<leader>fr",
+				function()
+					Snacks.picker.recent()
+				end,
+				desc = "Recent",
 			},
 			{
 				"<leader>fb",
@@ -161,11 +175,19 @@ return {
 				desc = "LSP Symbols",
 			},
 			{
-				"<leader>fb",
+				"<leader>fl",
 				function()
 					Snacks.picker.lines()
 				end,
 				desc = "Buffer Lines",
+			},
+			{
+				"<leader>ff",
+				function()
+					local path = os.getenv("HOME") .. "/coding/"
+					Snacks.picker.files({ cwd = path })
+				end,
+				desc = "Find Config File",
 			},
 			{
 				"<leader>fB",
@@ -223,13 +245,13 @@ return {
 				end,
 				desc = "Lazygit",
 			},
-			{
-				"<leader>t",
-				function()
-					Snacks.terminal.toggle()
-				end,
-				desc = "Terminal",
-			},
+			-- {
+			-- 	"<leader>t",
+			-- 	function()
+			-- 		Snacks.terminal.toggle()
+			-- 	end,
+			-- 	desc = "Terminal",
+			-- },
 			{
 				"<leader>e",
 				function()

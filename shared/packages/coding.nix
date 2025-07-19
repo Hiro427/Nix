@@ -1,103 +1,104 @@
-{pkgs, ...}:with pkgs; 
-[
-    #languages
-    typescript
-    zig
-    go
-    gcc
-    cargo 
-    python312Full
-    nodejs_22
-    lua5_4_compat
-    # lua52Packages.luafilesystem
-    luabind
-    lua54Packages.luafilesystem
-    luajit
-    rustup # component add rust-analyzer rustup default stable(?)
-    #lsps and formatters
-    taplo
-    zls
-    yaml-language-server
-    typescript-language-server
-    marksman
-    zulu #java
-    ruff
-    jdt-language-server
-    python312Packages.python-lsp-server
-    nil
-    nixd
-    stylua
-    mesonlsp
-    lua-language-server
-    gopls
-    golangci-lint-langserver
-    golangci-lint
-    llvmPackages_19.clang-tools
-    cmake-language-server
-    glow
-    cmake
-    gnumake
-    sqls
-    docker-language-server
-    shfmt
-    nixpkgs-fmt
-    taplo
-    spectral-language-server
-    bash-language-server
-    vscode-langservers-extracted
-    htmx-lsp
-    emmet-language-server
-    sass
-    tailwindcss
-    tailwindcss-language-server
-    #misc 
-    live-server 
-    sqlite 
-    uv
-    sesh
-    tmux
-    #x11 dev stuff 
-    xorg.libX11
-    docker 
-    docker-compose
-    docker-compose-language-service
-    postgresql
-    kubernetes
-    svelte-language-server
-    terraform
-    terraformer 
-    terraform-ls
-    nginx
-    flyctl
-    templ
-    #fortran
-    fortls
-    gfortran
-    fprettify
-    #haskell stuff
-    ghc
-    ormolu 
-    haskell-language-server
-    air
-    wgo
-    go-blueprint
-    bun 
-    fswatch
-    simple-completion-language-server
-    #php and laravel 
-    php
-    intelephense
-    laravel
-    blade-formatter
-    php84Packages.composer 
-    php84Extensions.gd 
-    php84Extensions.zip 
-    php84Extensions.readline
-    php84Extensions.curl 
-    php84Extensions.xml
-    php84Extensions.mbstring
-    prometheus-php-fpm-exporter
-    symfony-cli
-    ncurses
-    nixfmt-classic
+{ pkgs, ... }:
+with pkgs; [
+  #languages
+  typescript
+  zig
+  go
+  gcc
+  cargo
+  python312Full
+  nodejs_22
+  lua5_4_compat
+  # lua52Packages.luafilesystem
+  luabind
+  lua54Packages.luafilesystem
+  luajit
+  rustup # component add rust-analyzer rustup default stable(?)
+  #lsps and formatters
+  taplo
+  zls
+  yaml-language-server
+  typescript-language-server
+  marksman
+  zulu # java
+  ruff
+  jdt-language-server
+  python312Packages.python-lsp-server
+  nil
+  nixd
+  stylua
+  mesonlsp
+  lua-language-server
+  gopls
+  golangci-lint-langserver
+  golangci-lint
+  llvmPackages_19.clang-tools
+  cmake-language-server
+  glow
+  cmake
+  gnumake
+  sqls
+  docker-language-server
+  shfmt
+  nixpkgs-fmt
+  taplo
+  spectral-language-server
+  bash-language-server
+  vscode-langservers-extracted
+  htmx-lsp
+  emmet-language-server
+  sass
+  tailwindcss
+  tailwindcss-language-server
+  #misc 
+  live-server
+  sqlite
+  uv
+  sesh
+  tmux
+  #x11 dev stuff 
+  xorg.libX11
+  docker
+  docker-compose
+  docker-compose-language-service
+  postgresql
+  kubernetes
+  svelte-language-server
+  terraform
+  terraformer
+  terraform-ls
+  nginx
+  flyctl
+  templ
+  #fortran
+  fortls
+  gfortran
+  fprettify
+  #haskell stuff
+  ghc
+  ormolu
+  haskell-language-server
+  air
+  wgo
+  go-blueprint
+  bun
+  fswatch
+  simple-completion-language-server
+  #php and laravel 
+  php
+  intelephense
+  laravel
+  blade-formatter
+  php84Packages.composer
+  php84Extensions.gd
+  php84Extensions.zip
+  php84Extensions.readline
+  php84Extensions.curl
+  php84Extensions.xml
+  php84Extensions.mbstring
+  prometheus-php-fpm-exporter
+  symfony-cli
+  ncurses
+  nixfmt-classic
+  prettierd
 ]
