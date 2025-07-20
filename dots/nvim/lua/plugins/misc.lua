@@ -12,19 +12,19 @@ return {
 		"nvim-tree/nvim-web-devicons",
 		lazy = true,
 	},
-	{
-		"norcalli/nvim-colorizer.lua",
-		config = function()
-			require("colorizer").setup({
-				"css",
-				"javascript",
-				"html",
-				"templ",
-				"yaml",
-				"toml",
-			})
-		end,
-	},
+	-- {
+	-- 	"norcalli/nvim-colorizer.lua",
+	-- 	config = function()
+	-- 		require("colorizer").setup({
+	-- 			"css",
+	-- 			"javascript",
+	-- 			"html",
+	-- 			"templ",
+	-- 			"yaml",
+	-- 			"toml",
+	-- 		})
+	-- 	end,
+	-- },
 	{
 		"Bekaboo/dropbar.nvim",
 		dependencies = {
@@ -80,23 +80,23 @@ return {
 			end, { desc = "Runfile: Start" })
 		end,
 	},
-	{
-		"romgrk/barbar.nvim",
-		dependencies = {
-			"lewis6991/gitsigns.nvim", -- OPTIONAL: for git status
-			"nvim-tree/nvim-web-devicons", -- OPTIONAL: for file icons
-		},
-		init = function()
-			vim.g.barbar_auto_setup = false
-		end,
-		opts = {
-			-- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
-			-- animation = true,
-			-- insert_at_start = true,
-			-- …etc.
-		},
-		version = "^1.0.0", -- optional: only update when a new 1.x version is released
-	},
+	-- {
+	-- 	"romgrk/barbar.nvim",
+	-- 	dependencies = {
+	-- 		"lewis6991/gitsigns.nvim", -- OPTIONAL: for git status
+	-- 		"nvim-tree/nvim-web-devicons", -- OPTIONAL: for file icons
+	-- 	},
+	-- 	init = function()
+	-- 		vim.g.barbar_auto_setup = false
+	-- 	end,
+	-- 	opts = {
+	-- 		-- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
+	-- 		-- animation = true,
+	-- 		-- insert_at_start = true,
+	-- 		-- …etc.
+	-- 	},
+	-- 	version = "^1.0.0", -- optional: only update when a new 1.x version is released
+	-- },
 	{
 		"christoomey/vim-tmux-navigator",
 		cmd = {
@@ -158,5 +158,42 @@ return {
 		end,
 		vim.keymap.set("n", "<leader>t", '<CMD>lua require("FTerm").toggle()<CR>'),
 		vim.keymap.set("t", "<leader>t", '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>'),
+	},
+	{
+		"nvim-lualine/lualine.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		config = function()
+			local auto_theme_custom = require("lualine.themes.auto")
+			auto_theme_custom.normal.c.bg = "none"
+			require("lualine").setup({
+				options = {
+					component_separators = "",
+					section_separators = { left = "", right = "" },
+					theme = auto_theme_custom,
+				},
+				sections = {
+					lualine_a = { { "mode", separator = { left = "" }, right_padding = 2 } },
+					lualine_b = { "filename", "branch" },
+					lualine_c = {
+						"%=", --[[ add your center components here in place of this comment ]]
+					},
+					lualine_x = {},
+					lualine_y = { "filetype", "progress" },
+					lualine_z = {
+						{ "location", separator = { right = "" }, left_padding = 2 },
+					},
+				},
+				inactive_sections = {
+					lualine_a = { "filename" },
+					lualine_b = {},
+					lualine_c = {},
+					lualine_x = {},
+					lualine_y = {},
+					lualine_z = { "location" },
+				},
+				tabline = {},
+				extensions = {},
+			})
+		end,
 	},
 }

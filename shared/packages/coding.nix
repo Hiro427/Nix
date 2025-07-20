@@ -8,7 +8,8 @@ with pkgs; [
   cargo
   python312Full
   nodejs_22
-  lua5_4_compat
+  lua
+  love
   # lua52Packages.luafilesystem
   luabind
   lua54Packages.luafilesystem
@@ -101,4 +102,7 @@ with pkgs; [
   ncurses
   nixfmt-classic
   prettierd
+  nim
+  nimble
+  nimlangserver
 ]

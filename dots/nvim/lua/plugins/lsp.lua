@@ -107,6 +107,7 @@ return {
 					"vue",
 					"php",
 					"blade",
+					"nim_langserver",
 				},
 			})
 		end,
