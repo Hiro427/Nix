@@ -1,0 +1,125 @@
+colors:
+  # Everforest Dark Hard palette
+  # https://github.com/sainnhe/everforest  
+  #
+  # AI generated for vivid cause I'm lazy
+
+  red: 'e67e80'     # base08
+  orange: 'e69875'  # base09
+  yellow: 'dbbc7f'  # base0A
+  green: 'a7c080'   # base0B
+  aqua: '83c092'    # base0C
+  blue: '7fbbb3'    # base0D
+  purple: 'd699b6'  # base0E
+
+  # Grey tones and backgrounds
+  fg: 'd3c6aa'      # base05 - Foreground
+  grey2: '9da9a0'    # base04
+  grey1: '859289'    # base03
+  bg3: '414b50'     # base02
+  bg1: '2e383c'     # base01
+  bg0: '272e33'     # base00 - Background
+
+core:
+  normal_text: {}
+  regular_file: {}
+  reset_to_normal: {}
+
+  directory:
+    foreground: blue # Mapping 'blue' to Everforest's base0D
+
+  symlink:
+    foreground: purple # Mapping 'pink' to Everforest's base0E (Purple)
+
+  multi_hard_link: {}
+
+  fifo:
+    foreground: bg0 # Mapping 'crust' to Everforest's base00
+    background: blue
+
+  socket:
+    foreground: bg0
+    background: purple
+
+  door:
+    foreground: bg0
+    background: purple
+
+  block_device:
+    foreground: aqua # Mapping 'sapphire' to Everforest's base0C (Aqua)
+    background: bg3 # Mapping 'surface0' to Everforest's base02
+
+  character_device:
+    foreground: purple
+    background: bg3
+
+  broken_symlink:
+    foreground: bg0
+    background: red # Mapping 'red' to Everforest's base08
+
+  missing_symlink_target:
+    foreground: bg0
+    background: red
+
+  setuid: {}
+
+  setgid: {}
+
+  file_with_capability: {}
+
+  sticky_other_writable: {}
+
+  other_writable: {}
+
+  sticky: {}
+
+  executable_file:
+    foreground: green # Using Everforest's green for executables, as red is for critical/broken
+    font-style: bold
+
+text:
+  special:
+    foreground: bg0 # Mapping 'base' to Everforest's base00
+    background: yellow # Mapping 'yellow' to Everforest's base0A
+
+  todo:
+    font-style: bold
+
+  licenses:
+    foreground: grey2 # Mapping 'overlay2' to Everforest's base04
+
+  configuration:
+    foreground: yellow
+
+  other:
+    foreground: yellow
+
+markup:
+  foreground: yellow
+
+programming:
+  source:
+    foreground: green # Mapping 'green' to Everforest's base0B
+
+  tooling:
+    foreground: aqua # Mapping 'teal' to Everforest's base0C (Aqua)
+
+    continuous-integration:
+      foreground: green
+
+media:
+  foreground: orange # Mapping 'flamingo' to Everforest's base09 (Orange)
+
+office:
+  foreground: red # Mapping 'red' to Everforest's base08
+
+archives:
+  foreground: aqua # Mapping 'sapphire' to Everforest's base0C (Aqua)
+  font-style: underline
+
+executable:
+  foreground: green # Keeping consistency with executable_file
+  font-style: bold
+
+unimportant:
+  foreground: grey1 # Mapping 'surface2' to Everforest's base03

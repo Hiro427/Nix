@@ -1,0 +1,14 @@
+idle_bg = "#272e33" # base00
+# idle_fg = "#7fbb3b"     # base0D (Blue) 
+idle_fg = "#d3c6aa"     # base0D (Blue)
+info_fg = "#2e383c"     # base01
+info_bg = "#7fbbb3"     # base0C (Aqua)
+good_fg = "#2e383c"     # base01
+good_bg = "#a7c080"     # base0B (Green)
+warning_fg = "#2e383c"  # base01
+warning_bg = "#dbbc7f"  # base09 (Yellow)
+critical_fg = "#2e383c" # base01
+critical_bg = "#e67e80" # base08 (Red)
+separator = "\ue0b2"    # This is a Powerline symbol
+separator_bg = "auto"
+separator_fg = "auto"
