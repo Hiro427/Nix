@@ -105,4 +105,5 @@ with pkgs; [
   nim
   nimble
   nimlangserver
+  deno
 ]

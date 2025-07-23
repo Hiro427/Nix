@@ -10,6 +10,7 @@ return {
 				border = "rounded",
 				width = { min = 20, max = 0.4 },
 			},
+			terminal = { enabled = true, win = { style = "terminal" }, show_cwd = false },
 			dashboard = {
 				enabled = true,
 				width = 35,
@@ -70,10 +71,6 @@ return {
 			},
 			explorer = { enabled = true, size = 0.3 },
 			indent = { enabled = true },
-			terminal = {
-				enabled = false,
-				size = 0.4,
-			},
 			input = {
 				enabled = true,
 			},
@@ -245,13 +242,6 @@ return {
 				end,
 				desc = "Lazygit",
 			},
-			-- {
-			-- 	"<leader>t",
-			-- 	function()
-			-- 		Snacks.terminal.toggle()
-			-- 	end,
-			-- 	desc = "Terminal",
-			-- },
 			{
 				"<leader>e",
 				function()
