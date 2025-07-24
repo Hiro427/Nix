@@ -16,6 +16,7 @@ return {
 			require("mini.surround").setup({})
 			require("mini.cursorword").setup({})
 			require("mini.tabline").setup({})
+			require("mini.diff").setup({})
 			hipatterns.setup({
 				highlighters = {
 					-- Highlight standalone 'FIXME', 'HACK', 'TODO', 'NOTE'

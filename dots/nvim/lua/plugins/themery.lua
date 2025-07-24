@@ -44,7 +44,9 @@ return {
 	{
 		"ellisonleao/gruvbox.nvim",
 		config = function()
-			require("gruvbox").setup({})
+			require("gruvbox").setup({
+				transparent_mode = true,
+			})
 		end,
 	},
 	{ "shaunsingh/nord.nvim", priority = 1000 },
@@ -65,6 +67,14 @@ return {
 		lazy = false,
 		priority = 1000,
 		opts = {},
+		config = function()
+			require("tokyonight").setup({
+				transparent = true,
+				styles = {
+					sidebars = "transparent",
+				},
+			})
+		end,
 	},
 	{
 		"projekt0n/github-nvim-theme",

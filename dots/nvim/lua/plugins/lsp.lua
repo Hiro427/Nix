@@ -110,27 +110,6 @@ return {
 					"blade",
 				},
 			})
-			lspconfig.ts_ls.setup({
-				capabilities = capabilities,
-				filetypes = {
-					"css",
-					"eruby",
-					"html",
-					"javascript",
-					"javascriptreact",
-					"less",
-					"sass",
-					"typescript",
-					"scss",
-					"svelte",
-					"pug",
-					"typescriptreact",
-					"templ",
-					"vue",
-					"php",
-					"blade",
-				},
-			})
 		end,
 	},
 }

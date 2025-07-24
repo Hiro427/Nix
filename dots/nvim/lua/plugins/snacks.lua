@@ -4,6 +4,9 @@ return {
 		priority = 1000,
 		lazy = false,
 		opts = {
+			statuscolumn = {
+				enabled = true,
+			},
 			notifier = {
 				enabled = true,
 				timeout = 2000,
@@ -69,7 +72,7 @@ return {
 					{ section = "startup" },
 				},
 			},
-			explorer = { enabled = true, size = 0.3 },
+			-- explorer = { enabled = true, size = 0.3 },
 			indent = { enabled = true },
 			input = {
 				enabled = true,
@@ -222,19 +225,26 @@ return {
 				desc = "Buffer Diagnostics",
 			},
 			{
-				"<leader>st",
+				"<leader>fm",
+				function()
+					Snacks.picker.marks()
+				end,
+				desc = "Marks",
+			},
+			{
+				"<leader>ft",
 				function()
 					Snacks.picker.todo_comments()
 				end,
 				desc = "Todo",
 			},
-			{
-				"<leader>e",
-				function()
-					Snacks.explorer()
-				end,
-				desc = "File Explorer",
-			},
+			-- {
+			-- 	"<leader>e",
+			-- 	function()
+			-- 		Snacks.explorer()
+			-- 	end,
+			-- 	desc = "File Explorer",
+			-- },
 			{
 				"<leader>g",
 				function()
@@ -242,12 +252,14 @@ return {
 				end,
 				desc = "Lazygit",
 			},
-			{
-				"<leader>e",
-				function()
-					Snacks.explorer()
-				end,
-			},
+			-- {
+			--
+			-- 	"<leader>sG",
+			-- 	function()
+			-- 		Snacks.statuscolumn.click_fold()
+			-- 	end,
+			-- 	desc = "statusCOlumn",
+			-- },
 		},
 	},
 }

@@ -64,6 +64,9 @@ return {
 	{
 		"folke/which-key.nvim",
 		event = "VeryLazy",
+		opts = {
+			preset = "helix",
+		},
 		keys = {
 			{
 				"<leader>?",
@@ -74,9 +77,9 @@ return {
 			},
 		},
 	},
-	{
-		"tribela/transparent.nvim",
-	},
+	-- {
+	-- 	"tribela/transparent.nvim",
+	-- },
 	{
 		"christoomey/vim-tmux-navigator",
 		cmd = {
@@ -123,6 +126,50 @@ return {
             keys = {
               { "<leader>/", mode = { "n", "x", "o" }, function() require("flash").jump() end,              desc = "Flash" },
             },
+		},
+	},
+	{
+		{
+			"sphamba/smear-cursor.nvim",
+			opts = {},
+			config = function()
+				require("smear_cursor").setup({})
+			end,
+		},
+	},
+	{
+		{
+			"karb94/neoscroll.nvim",
+			opts = {},
+			config = function()
+				require("neoscroll").setup({})
+			end,
+		},
+	},
+	{
+		{
+			"nvim-neo-tree/neo-tree.nvim",
+			branch = "v3.x",
+			dependencies = {
+				"nvim-lua/plenary.nvim",
+				"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+				"MunifTanjim/nui.nvim",
+				-- Optional image support for file preview: See `# Preview Mode` for more information.
+				-- {"3rd/image.nvim", opts = {}},
+				-- OR use snacks.nvim's image module:
+				-- "folke/snacks.nvim",
+			},
+			lazy = false, -- neo-tree will lazily load itself
+			---@module "neo-tree"
+			---@type neotree.Config?
+			opts = {
+				window = {
+					width = 25,
+					position = "left",
+				},
+				-- add options here
+			},
+			vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>", { desc = "Neo-Tree" }),
 		},
 	},
 }
