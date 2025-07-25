@@ -108,7 +108,8 @@ return {
 			"nvim-telescope/telescope.nvim", -- optional
 			"neovim/nvim-lspconfig", -- optional
 		},
-		opts = {}, -- your configuration
+		opts = { conceal = { enabled = true } }, -- your configuration
+		vim.keymap.set("n", "<leader>tt", ":TailwindConcealToggle<CR>", { desc = "Tailwind Conceal Toggle" }),
 	},
 	{
 		"laytan/cloak.nvim",
