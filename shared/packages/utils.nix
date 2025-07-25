@@ -1,73 +1,70 @@
 { pkgs, ... }:
-with pkgs;[
-    wget 
-    git 
-    zip 
-    unzip 
-    jq 
-    file 
-    viu 
-    typioca
-    gum
-    feh 
-    lazygit
-    htmlq 
-    chafa 
-    ripgrep 
-    fd
-    manga-tui 
-    mlocate
-    fzf 
-    eza 
-    tldr 
-    calcurse 
-    lm_sensors 
-    hwdata 
-    zoxide 
-    presenterm 
-    git-extras 
-    gh 
-    rclone 
-    age
-    brightnessctl 
-    playerctl 
-    pokeget-rs 
-    pipes-rs 
-    pciutils 
-    ffmpeg 
-    gowall
-    mesa-demos 
-    lshw 
-    vnstat 
-    ollama 
-    openvpn
-    tty-clock
-    flameshot
-    is-fast
-    cava 
-    yt-dlp
-    btop 
-    dua 
-    ttyper
-    pulseaudioFull
-    ytmdl
-    vdhcoapp
-    bemenu
-    dwt1-shell-color-scripts
-    fastfetch
-    #fonts & icons 
-    # nerd-fonts.jetbrains-mono
-    papirus-icon-theme
-    nix-index
-    lazydocker
-    chawan
-    awscli
-    gemini-cli
-    neovide
+with pkgs; [
+  wget
+  git
+  zip
+  unzip
+  jq
+  file
+  viu
+  typioca
+  gum
+  feh
+  lazygit
+  htmlq
+  chafa
+  ripgrep
+  fd
+  manga-tui
+  mlocate
+  fzf
+  eza
+  tldr
+  calcurse
+  lm_sensors
+  hwdata
+  zoxide
+  presenterm
+  git-extras
+  gh
+  rclone
+  age
+  brightnessctl
+  playerctl
+  pokeget-rs
+  pipes-rs
+  pciutils
+  ffmpeg
+  gowall
+  mesa-demos
+  lshw
+  vnstat
+  ollama
+  openvpn
+  tty-clock
+  flameshot
+  is-fast
+  cava
+  yt-dlp
+  btop
+  dua
+  ttyper
+  pulseaudioFull
+  ytmdl
+  vdhcoapp
+  bemenu
+  dwt1-shell-color-scripts
+  fastfetch
+  #fonts & icons 
+  # nerd-fonts.jetbrains-mono
+  papirus-icon-theme
+  nix-index
+  lazydocker
+  chawan
+  awscli
+  gemini-cli
+  neovide
+  fum
+  micro
 ]
-
-
-
-
-
 
