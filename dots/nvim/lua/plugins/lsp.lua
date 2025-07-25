@@ -111,5 +111,8 @@ return {
 				},
 			})
 		end,
+		-- In your init.lua or a file sourced by it
+		vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "LSP Rename Symbol" }),
+		vim.keymap.set("n", "<leader>d", vim.lsp.buf.hover, { desc = "LSP Hover/Show Docs" }),
 	},
 }
