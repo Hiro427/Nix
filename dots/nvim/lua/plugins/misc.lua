@@ -167,8 +167,17 @@ return {
 				window = {
 					width = 25,
 					position = "left",
+					winbar = false,
 				},
 				-- add options here
+				filesystem = {
+					filtered_items = {
+						visible = true, -- This is what you want: If you set this to `true`, all "hide" just mean "dimmed out"
+						hide_dotfiles = false,
+						hide_gitignored = true,
+						never_show = { ".git", ".venv", "node_modules" },
+					},
+				},
 			},
 			vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>", { desc = "Neo-Tree" }),
 		},

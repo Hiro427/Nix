@@ -15,7 +15,7 @@ return {
 			require("mini.pairs").setup({})
 			require("mini.surround").setup({})
 			require("mini.cursorword").setup({})
-			require("mini.tabline").setup({})
+			-- require("mini.tabline").setup({})
 			require("mini.diff").setup({})
 			hipatterns.setup({
 				highlighters = {

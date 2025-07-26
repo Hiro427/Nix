@@ -63,11 +63,11 @@ lib, ... }: {
       format = lib.concatStrings [
         "$directory"
         "$git_branch"
-        "$golang"
-        "$lua"
-        "$python"
-        "$c"
-        "$rust"
+        " $golang"
+        " $lua"
+        " $python"
+        " $c"
+        " $rust"
         "$line_break"
         "$character"
       ];

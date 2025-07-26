@@ -3,7 +3,7 @@ vim.cmd("set tabstop=4")
 vim.cmd("set softtabstop=4")
 vim.cmd("set shiftwidth=4")
 vim.cmd("set cursorline")
-
+vim.opt.showmode = false
 vim.o.number = true
 vim.o.relativenumber = true
 vim.g.mapleader = " "

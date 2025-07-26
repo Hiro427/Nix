@@ -2,36 +2,46 @@ return {
 	"nvim-lualine/lualine.nvim",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	config = function()
-		local auto_theme_custom = require("lualine.themes.auto")
-		auto_theme_custom.normal.c.bg = "none"
 		require("lualine").setup({
 			options = {
-				component_separators = "",
-				section_separators = { left = "", right = "" },
-				theme = auto_theme_custom,
+				icons_enabled = true,
+				theme = "auto",
+				component_separators = { left = "", right = "" },
+				section_separators = { left = "", right = "" },
+				disabled_filetypes = {},
+				globalstatus = true,
 			},
 			sections = {
-				lualine_a = { { "mode", separator = { left = "" }, right_padding = 2 } },
-				lualine_b = { "filename", "branch" },
+				lualine_a = {
+					"mode",
+				},
+				lualine_b = {
+					{
+						"branch",
+						colored = false,
+						icon_only = false,
+						icon = false,
+						color = { bg = "NONE" },
+					},
+				},
 				lualine_c = {
-					"%=", --[[ add your center components here in place of this comment ]]
+					"%=", --[[ add your center compoentnts here in place of this comment ]]
 				},
 				lualine_x = {},
-				lualine_y = { "filetype", "progress" },
+				lualine_y = {},
 				lualine_z = {
-					{ "location", separator = { right = "" }, left_padding = 2 },
+					{ "diff", colored = true, color = { bg = "NONE" } },
+					{ "filetype", icon_only = false, icon = true, colored = false },
 				},
 			},
 			inactive_sections = {
-				lualine_a = { "filename" },
-				lualine_b = {},
+				lualine_a = {},
+				lualine_b = { "filetype" },
 				lualine_c = {},
 				lualine_x = {},
 				lualine_y = {},
-				lualine_z = { "location" },
+				lualine_z = {},
 			},
-			tabline = {},
-			extensions = {},
 		})
 	end,
 }
