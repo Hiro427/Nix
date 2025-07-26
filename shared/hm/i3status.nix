@@ -89,7 +89,7 @@
           }
           {
             block = "music";
-            format = "{ $combo.str(max_w:20,rot_interval:0.4) |}";
+            format = "{ $combo.str(max_w:20,rot_interval:0.4) |}";
             player = [ "spotify_player" "spotify" ];
 
           }
