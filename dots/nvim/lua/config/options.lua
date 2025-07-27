@@ -9,6 +9,14 @@ vim.o.relativenumber = true
 vim.g.mapleader = " "
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 
+-- GUI Settings
+
+vim.g.gui_font_default_size = 12
+vim.g.gui_font_size = vim.g.gui_font_default_size
+vim.g.neovim_window_blurred = true
+vim.g.neovide_opacity = 0.5
+vim.g.neovide_normal_opacity = 0.5
+
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.foldenable = true -- Enable folding by default
