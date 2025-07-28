@@ -4,6 +4,7 @@ return {
 		priority = 1000,
 		lazy = false,
 		opts = {
+
 			statuscolumn = {
 				enabled = true,
 			},
@@ -238,13 +239,13 @@ return {
 				end,
 				desc = "Todo",
 			},
-			-- {
-			-- 	"<leader>e",
-			-- 	function()
-			-- 		Snacks.explorer()
-			-- 	end,
-			-- 	desc = "File Explorer",
-			-- },
+			{
+				"<leader>t",
+				function()
+					Snacks.terminal.toggle()
+				end,
+				desc = "launch terminal",
+			},
 			{
 				"<leader>g",
 				function()

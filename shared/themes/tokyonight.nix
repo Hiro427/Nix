@@ -2,7 +2,6 @@
   base16Scheme = "${pkgs."base16-schemes"}/share/themes/tokyo-night-dark.yaml";
   helixTheme = "tokyonight";
   vividTheme = "tokyonight-night";
-  tmuxStatusLine = "#7dcfff";
   i3statusTheme =
     "${config.home.homeDirectory}/Nix/dots/assets/tokyonight.toml";
   i3Colors = {

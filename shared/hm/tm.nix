@@ -4,7 +4,7 @@
   programs.tmux = {
     enable = true;
     baseIndex = 1;
-    prefix = "C-x";
+    prefix = "C-a";
     mouse = true;
     plugins = with pkgs;
       [
@@ -38,7 +38,7 @@
       unbind %
       bind "'" split-window -h
 
-      bind -n C-t display-popup -E "$SHELL"
+      bind-key "t" display-popup -E "$SHELL"
 
       unbind r
       bind r source-file ~/.config/tmux/tmux.conf
@@ -49,7 +49,7 @@
       bind -n M-k resize-pane -U 5
       bind -n M-l resize-pane -R 5
 
-      bind-key a new-window
+      bind -n C-t new-window
       bind -n C-w kill-window
       bind-key n next-window
       bind-key p previous-window
@@ -57,12 +57,11 @@
       bind-key "J" swap-pane -D
       bind-key "K" swap-pane -U
 
-      bind -n C-s choose-window
-
       bind h split-window -h -c "#{pane_current_path}"
-      bind v split-window -v -c "#{pane_current_path}"
+      bind v split-window -v -c "#{pane_current_path}" 
 
-      bind-key "s" run-shell "sesh connect \"$(
+      unbind C-s
+      bind -n "C-s" run-shell "sesh connect \"$(
         sesh list --icons | fzf-tmux -p 60%,40% \
           --no-sort --ansi --border-label ' sesh ' --prompt '󱐋  ' \
           --header '  ^a all ^t tmux ^g configs ^x zoxide ^d tmux kill ^f find' \
