@@ -55,6 +55,10 @@
         {
             "path": "wallpapers",
             "name": "wallpapers"
+        },
+        {
+            "path": "vaults",
+            "name": "vaults"
         }
 
     ]
