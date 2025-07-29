@@ -50,7 +50,8 @@
       bind -n M-l resize-pane -R 5
 
       bind -n C-t new-window
-      bind -n C-w kill-window
+      unbind C-w
+      bind-key w kill-window
       bind-key n next-window
       bind-key p previous-window
 

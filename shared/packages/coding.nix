@@ -106,4 +106,5 @@ with pkgs; [
   nimble
   nimlangserver
   deno
+  sql-formatter
 ]

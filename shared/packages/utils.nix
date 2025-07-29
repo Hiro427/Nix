@@ -64,7 +64,5 @@ with pkgs; [
   awscli
   gemini-cli
   neovide
-  fum
-  micro
 ]
 

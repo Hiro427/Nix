@@ -14,6 +14,7 @@ return {
 			fortran = { "fprettify" },
 			haskell = { "ormolu" },
 			nix = { "nixfmt" },
+			sql = { "sql_formatter" },
 		},
 		format_on_save = {
 			-- These options will be passed to conform.format()
