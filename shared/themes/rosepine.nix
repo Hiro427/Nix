@@ -14,9 +14,9 @@
       text = "#6e6a86"; # muted
     };
     focusedWorkspace = {
-      background = "#31748f"; # pine
-      border = "#9ccfd8"; # foam
-      text = "#e0def4"; # text
+      background = "#ebbcba"; # pine
+      border = "#ebbcba"; # foam
+      text = "#26233a"; # text
     };
     urgentWorkspace = {
       background = "#eb6f92"; # love

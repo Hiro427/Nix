@@ -64,5 +64,6 @@ with pkgs; [
   awscli
   gemini-cli
   neovide
+  asciiquarium
 ]
 
