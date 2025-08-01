@@ -1,50 +1,26 @@
 return {
 	{
-		"folke/trouble.nvim",
-		opts = {}, -- for default options, refer to the configuration section for custom setup.
-		cmd = "Trouble",
-		keys = {
-			{
-				"<leader>xd",
-				"<cmd>Trouble diagnostics toggle<cr>",
-				desc = "Diagnostics (Trouble)",
-			},
-			{
-				"<leader>xL",
-				"<cmd>Trouble loclist toggle<cr>",
-				desc = "Location List (Trouble)",
-			},
-			{
-				"<leader>xQ",
-				"<cmd>Trouble qflist toggle<cr>",
-				desc = "Quickfix List (Trouble)",
-			},
-		},
-	},
-	{
 		"folke/todo-comments.nvim",
 		dependencies = { "nvim-lua/plenary.nvim" },
 		config = function()
-			require("todo-comments").setup({
-				vim.keymap.set("n", "<leader>xt", ":TodoTrouble<CR>", { desc = "View Todos (Trouble)" }),
-			})
+			require("todo-comments").setup({})
 		end,
 	},
 	{
 		"nvim-tree/nvim-web-devicons",
 		lazy = true,
 	},
-	-- {
-	-- 	"Bekaboo/dropbar.nvim",
-	-- 	dependencies = {
-	-- 		"nvim-telescope/telescope-fzf-native.nvim",
-	-- 		build = "make",
-	-- 	},
-	-- 	config = function()
-	-- 		local dropbar_api = require("dropbar.api")
-	-- 		vim.keymap.set("n", "<leader>;", dropbar_api.pick, { desc = "Pick symbols in winbar" })
-	-- 	end,
-	-- },
+	{
+		"Bekaboo/dropbar.nvim",
+		dependencies = {
+			"nvim-telescope/telescope-fzf-native.nvim",
+			build = "make",
+		},
+		config = function()
+			local dropbar_api = require("dropbar.api")
+			vim.keymap.set("n", "<leader>;", dropbar_api.pick, { desc = "Pick symbols in winbar" })
+		end,
+	},
 	{
 		"kristijanhusak/vim-dadbod-ui",
 		dependencies = {
@@ -77,9 +53,6 @@ return {
 			},
 		},
 	},
-	-- {
-	-- 	"tribela/transparent.nvim",
-	-- },
 	{
 		"christoomey/vim-tmux-navigator",
 		cmd = {
@@ -116,6 +89,7 @@ return {
 		config = function()
 			require("cloak").setup({})
 		end,
+		vim.keymap.set("n", "<leader>ct", ":CloakToggle<CR>", { desc = "Toggle Cloak" }),
 	},
 	{
 		{
@@ -180,6 +154,14 @@ return {
 				},
 			},
 			vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>", { desc = "Neo-Tree" }),
+		},
+	},
+	{
+		{
+			"kiennt63/harpoon-files.nvim",
+			dependencies = {
+				{ "ThePrimeagen/harpoon", branch = "harpoon2" },
+			},
 		},
 	},
 }

@@ -2,13 +2,14 @@ return {
 	"nvim-lualine/lualine.nvim",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	config = function()
+		local harpoon_files = require("harpoon_files")
 		require("lualine").setup({
 			options = {
 				icons_enabled = true,
 				theme = "auto",
 				component_separators = { left = "", right = "" },
-				section_separators = { left = "", right = "" },
 				disabled_filetypes = {},
+				section_separators = { left = "", right = "" },
 				globalstatus = true,
 			},
 			sections = {
@@ -25,13 +26,13 @@ return {
 					},
 				},
 				lualine_c = {
-					"%=", --[[ add your center compoentnts here in place of this comment ]]
+					-- "%=", --[[ add your center compoentnts here in place of this comment ]]
+					{ harpoon_files.lualine_component },
 				},
 				lualine_x = {},
 				lualine_y = {},
 				lualine_z = {
-					{ "diff", colored = true, color = { bg = "NONE" } },
-					{ "filetype", icon_only = false, icon = true, colored = false },
+					{ "filetype", icon_only = false, colored = false },
 				},
 			},
 			inactive_sections = {

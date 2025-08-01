@@ -107,4 +107,5 @@ with pkgs; [
   nimlangserver
   deno
   sql-formatter
+  devenv
 ]
