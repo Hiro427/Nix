@@ -240,7 +240,7 @@ return {
 				desc = "Todo",
 			},
 			{
-				"<leader>t",
+				"<leader>te",
 				function()
 					Snacks.terminal.toggle()
 				end,

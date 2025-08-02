@@ -9,6 +9,10 @@
             "name": "hackerrank"
         },
         {
+            "path": "coding/projects/ysearch",
+            "name": "ysearch"
+        },
+        {
             "path": "coding/aoc",
             "name": "aoc"
         },
