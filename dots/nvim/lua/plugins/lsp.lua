@@ -81,6 +81,7 @@ return {
 				"fortls",
 				"hls",
 				"nim_langserver",
+				"ols",
 			})
 
 			--   lspconfig.ts_ls.setup({

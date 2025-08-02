@@ -108,4 +108,6 @@ with pkgs; [
   deno
   sql-formatter
   devenv
+  odin
+  ols
 ]
