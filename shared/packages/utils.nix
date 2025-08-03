@@ -65,5 +65,7 @@ with pkgs; [
   gemini-cli
   neovide
   asciiquarium
+  exercism
+
 ]
 
