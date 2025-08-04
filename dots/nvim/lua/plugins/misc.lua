@@ -11,17 +11,6 @@ return {
 		lazy = true,
 	},
 	{
-		"Bekaboo/dropbar.nvim",
-		dependencies = {
-			"nvim-telescope/telescope-fzf-native.nvim",
-			build = "make",
-		},
-		config = function()
-			local dropbar_api = require("dropbar.api")
-			vim.keymap.set("n", "<leader>;", dropbar_api.pick, { desc = "Pick symbols in winbar" })
-		end,
-	},
-	{
 		"kristijanhusak/vim-dadbod-ui",
 		dependencies = {
 			{ "tpope/vim-dadbod", lazy = true },
@@ -82,24 +71,41 @@ return {
 			"neovim/nvim-lspconfig", -- optional
 		},
 		opts = { conceal = { enabled = true } }, -- your configuration
-		vim.keymap.set("n", "<leader>tt", ":TailwindConcealToggle<CR>", { desc = "Tailwind Conceal Toggle" }),
+		vim.keymap.set(
+			"n",
+			"<leader>tt",
+			":TailwindConcealToggle<CR>",
+			{ desc = "Tailwind Conceal Toggle", silent = true }
+		),
 	},
 	{
 		"laytan/cloak.nvim",
 		config = function()
 			require("cloak").setup({})
 		end,
-		vim.keymap.set("n", "<leader>ct", ":CloakToggle<CR>", { desc = "Toggle Cloak" }),
+		vim.keymap.set("n", "<leader>ct", ":CloakToggle<CR>", { desc = "Toggle Cloak", silent = true }),
 	},
 	{
 		{
 			"folke/flash.nvim",
 			event = "VeryLazy",
 			---@type Flash.Config
-			opts = {},
+			opts = {
+				modes = {
+					search = {
+						enabled = true,
+					},
+					char = {
+						jump_labels = true,
+					},
+				},
+			},
     -- stylua: ignore
             keys = {
-              { "<leader>/", mode = { "n", "x", "o" }, function() require("flash").jump() end,              desc = "Flash" },
+              { "<leader>/", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
+                {"S", mode = {"n", "x", "o"}, function() require("flash").treesitter() end, desc = "Remote Flash"},
+                {"r", mode = {"n", "x", "o"}, function() require("flash").remote() end, desc = "Remote Flash"},
+                {"R", mode = { "x", "o"}, function() require("flash").treesitter_search() end, desc = "Remote Flash"},
             },
 		},
 	},
@@ -153,7 +159,7 @@ return {
 					},
 				},
 			},
-			vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>", { desc = "Neo-Tree" }),
+			vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>", { desc = "Neo-Tree", silent = true }),
 		},
 	},
 	{
@@ -161,6 +167,21 @@ return {
 			"kiennt63/harpoon-files.nvim",
 			dependencies = {
 				{ "ThePrimeagen/harpoon", branch = "harpoon2" },
+			},
+			opts = {
+				icon = "󱡅",
+				show_icon = false,
+			},
+		},
+	},
+	{
+		"folke/lazydev.nvim",
+		ft = "lua", -- only load on lua files
+		opts = {
+			library = {
+				-- See the configuration section for more details
+				-- Load luvit types when the `vim.uv` word is found
+				{ path = "${3rd}/luv/library", words = { "vim%.uv" } },
 			},
 		},
 	},

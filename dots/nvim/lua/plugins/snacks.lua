@@ -59,17 +59,6 @@ return {
 					{ section = "header" },
 					{ icon = " ", title = "Keymaps", section = "keys", indent = 2, padding = 1 },
 					{ icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = 1 },
-					{
-						section = "terminal",
-						enabled = function()
-							return Snacks.git.get_root() ~= nil
-						end,
-						cmd = "git status --short --branch --renames",
-						height = 5,
-						padding = 1,
-						ttl = 5 * 60,
-						indent = 2,
-					},
 					{ section = "startup" },
 				},
 			},
@@ -183,6 +172,14 @@ return {
 				desc = "Buffer Lines",
 			},
 			{
+				"<leader>fc",
+				function()
+					local path = os.getenv("HOME") .. "/Nix/"
+					Snacks.picker.files({ cwd = path })
+				end,
+				desc = "Find Config File",
+			},
+			{
 				"<leader>ff",
 				function()
 					local path = os.getenv("HOME") .. "/coding/"
@@ -190,6 +187,7 @@ return {
 				end,
 				desc = "Find Config File",
 			},
+
 			{
 				"<leader>fB",
 				function()
@@ -253,14 +251,6 @@ return {
 				end,
 				desc = "Lazygit",
 			},
-			-- {
-			--
-			-- 	"<leader>sG",
-			-- 	function()
-			-- 		Snacks.statuscolumn.click_fold()
-			-- 	end,
-			-- 	desc = "statusCOlumn",
-			-- },
 		},
 	},
 }

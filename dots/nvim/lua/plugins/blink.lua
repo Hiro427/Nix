@@ -15,7 +15,7 @@ return {
 			completion = { menu = { auto_show = true } },
 		},
 		sources = {
-			default = { "lsp", "path", "snippets", "buffer" },
+			default = { "lsp", "path", "snippets", "buffer", "lazydev" },
 			per_filetype = {
 				sql = { "dadbod" },
 			},
@@ -24,6 +24,12 @@ return {
 					min_keyword_length = 2,
 				},
 				dadbod = { module = "vim_dadbod_completion.blink" },
+				lazydev = {
+					name = "LazyDev",
+					module = "lazydev.integrations.blink",
+					-- make lazydev completions top priority (see `:h blink.cmp`)
+					score_offset = 100,
+				},
 			},
 		},
 		completion = {

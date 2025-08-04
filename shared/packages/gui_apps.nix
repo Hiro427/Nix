@@ -19,4 +19,5 @@ with pkgs; [
   darktable
   gimp3
   inkscape
+  ticktick
 ]
