@@ -44,7 +44,9 @@ return {
 					line_up = "<S-k>",
 				},
 			})
+			require("mini.pick").setup({})
 			require("mini.ai").setup({})
+			require("mini.extra").setup({})
 			-- require("mini.statusline").setup({})
 			-- Would like some more sources here, path and cmdline completions are a must for me.
 			-- Otherwise this would be the ideal plugin for completions for my setup

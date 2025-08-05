@@ -7,7 +7,12 @@
         {
             "path": "coding/hackerrank",
             "name": "hackerrank"
+        },  
+{
+            "path": "coding/projects/portfolio",
+            "name": "portfolio"
         },
+
         {
             "path": "coding/aoc",
             "name": "aoc"

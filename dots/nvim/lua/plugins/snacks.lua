@@ -69,6 +69,12 @@ return {
 			},
 			picker = {
 				enabled = true,
+				-- layout = {
+				-- 	layout = {
+				-- 		width = 0.5,
+				-- 		height = 0.5,
+				-- 	},
+				-- },
 			},
 		},
 		keys = {
@@ -250,6 +256,48 @@ return {
 					Snacks.lazygit()
 				end,
 				desc = "Lazygit",
+			},
+			{
+				"<leader>fh",
+				function()
+					Snacks.picker.help()
+				end,
+				desc = "Help Pages",
+			},
+			{
+				"<leader>fH",
+				function()
+					Snacks.picker.highlights()
+				end,
+				desc = "Highlights",
+			},
+			{
+				"<leader>fi",
+				function()
+					Snacks.picker.icons()
+				end,
+				desc = "Icons",
+			},
+			{
+				"<leader>fj",
+				function()
+					Snacks.picker.jumps()
+				end,
+				desc = "Jumps",
+			},
+			{
+				"<leader>fk",
+				function()
+					Snacks.picker.keymaps()
+				end,
+				desc = "Keymaps",
+			},
+			{
+				"<leader>fl",
+				function()
+					Snacks.picker.loclist()
+				end,
+				desc = "Location List",
 			},
 		},
 	},

@@ -42,6 +42,7 @@
       "Mod4+Shift+b" = "bar mode toggle";
       "Mod4+Return" = "exec wezterm";
       "Mod4+f" = "exec nautilus";
+      "Mod4+b" = "exec zen-beta";
       "Mod1+Shift+p" = "exec sh ~/.config/rofi/power.sh";
       # "Mod4+space" = "exec dmenu_run -nb '#1e1e2e' -nf '#cdd6f4' -sb '#b4befe' -sf '#1e1e2e'";
       "Mod4+space" = "exec zsh -c bemenu-run";
@@ -119,62 +120,6 @@
         size = 12.0;
       };
       colors = theme.i3Colors;
-      # colors = {
-      #     # separator = "#cdd6f4"; 
-      #     # statusline = "dddddd"; 
-      #      background = "#313244"; # "#313244" - catppuccin "#282828" -gruv  "#2e3440" nord "#1a1b26" tokyonight "#181616" kanadragon
-      #      inactiveWorkspace = {
-      #        background = "#11111b"; #ctp
-      #        border = "#11111b";
-      #        text = "#313244";
-      #        # background = "#1d2021"; #gruv
-      #        # border = "#1d2021";
-      #        # text = "#504945";
-      #        # background = "#2e3440";  #nord
-      #        # border = "#4c566a";
-      #        # text = "#eceff4";
-      #        # background = "#1a1b26";  #tokyonight
-      #        # border = "#1a1b26";
-      #        # text = "#c0caf5";
-      #        # background = "#181616";  #kanadragon
-      #        # border = "#181616";
-      #        # text = "#c5c9c5";
-      #     };
-      #     focusedWorkspace = {
-      #        background = "#a6adc8"; #ctp
-      #        border = "#cdd6f4";
-      #        text = "#11111b";
-      #        # background = "#ebdbb2"; #gruv
-      #        # border = "#d5c4a1";
-      #        # text = "#282828";
-      #        # background = "#eceff4"; nord
-      #        # border = "#4c566a";
-      #        # text = "#2e3440";
-      #        # background = "#c0caf5";  #tokyonight
-      #        # border = "#c0caf5";
-      #        # text = "#1a1b26";
-      #        # background = "#8ba4b0";  #kanadragon
-      #        # border = "#8ba4b0";
-      #        # text = "#181616";
-      #     };
-      #     urgentWorkspace = {
-      #        background = "#f7768e";  #tokyonight
-      #        border = "#f7768e";
-      #        text = "#1a1b26";
-      #        # background = "#c4746e";  #kanadragon
-      #        # border = "#c4746e";
-      #        # text = "#181616";
-      #        # background = "#fb4934";  #gruv
-      #        # border = "#fb4934";
-      #        # text = "#282828";
-      #     };
-      #     # activeWorkspace = {
-      #     #    background = "#333333";
-      #     #    border = "#333333";
-      #     #    text = "#ffffff";
-      #     # };
-      #
-      # };
       extraConfig = "height 25";
     }];
 
