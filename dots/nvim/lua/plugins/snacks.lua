@@ -258,7 +258,7 @@ return {
 				desc = "Lazygit",
 			},
 			{
-				"<leader>fh",
+				"<leader>hp",
 				function()
 					Snacks.picker.help()
 				end,
@@ -291,13 +291,6 @@ return {
 					Snacks.picker.keymaps()
 				end,
 				desc = "Keymaps",
-			},
-			{
-				"<leader>fl",
-				function()
-					Snacks.picker.loclist()
-				end,
-				desc = "Location List",
 			},
 		},
 	},

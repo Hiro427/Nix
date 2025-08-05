@@ -110,4 +110,6 @@ with pkgs; [
   devenv
   odin
   ols
+  yq
+
 ]
