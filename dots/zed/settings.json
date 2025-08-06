@@ -36,9 +36,9 @@
   "autosave": "on_focus_change",
   "buffer_font_family": "JetBrainsMono Nerd Font",
   "buffer_font_size": 14,
-  "confim_quit": true,
+  "confirm_quit": true,
   "features": {
-    "copilot": false
+    "edit_prediction_provider": "none"
   },
   "file_finder": {
     "modal_max_width": "large"
@@ -55,11 +55,12 @@
     "show": "never"
   },
   "show_completion_documentation": true,
-  "show_completion_on_input": true,
+  "show_completions_on_input": true,
   "show_edit_predictions": false,
   "tab_bar": {
     "show": false
   },
+  "restore_on_startup": "none",
   "telemetry": {
     "diagnostics": false,
     "metrics": false

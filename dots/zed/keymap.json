@@ -30,12 +30,10 @@
       "space space": "file_finder::Toggle",
       "space t": "workspace::ToggleBottomDock",
       "space v": "pane::SplitRight",
-      "space f f": "workspace::OpenFiles",
-      "space f g": "project_panel::NewSearchInDirectory",
-      "space s m": "file_finder::ToggleSplitMenu",
       "space f r": "projects::OpenRecent",
       "space f s": "outline::Toggle",
       "space f d": "diagnostics::Deploy",
+      "space f g": "pane::DeploySearch",
       "g j": "editor::GoToDiagnostic",
       "g k": "editor::GoToPreviousDiagnostic",
       "space f l": "buffer_search::Deploy"
@@ -49,7 +47,8 @@
       "x": "project_panel::Cut",
       "p": "project_panel::Paste",
       "q": "project_panel::RemoveFromProject",
-      "space e": "workspace::CloseActiveDock"
+      "space e": "workspace::CloseActiveDock",
+      "space g": "git_panel::ToggleFocus"
     },
     "context": "ProjectPanel"
   },
@@ -65,7 +64,8 @@
       "shift-p": "git::Push",
       "shift-c": "git::ExpandCommitEditor",
       "shift-d": "git::RestoreFile",
-      "space g": "workspace::CloseActiveDock"
+      "space g": "git_panel::Close",
+      "space e": "project_panel::ToggleFocus"
     },
     "context": "GitPanel"
   },
@@ -88,5 +88,17 @@
       "tab": "editor::MoveRight"
     },
     "context": "vim_mode == insert"
+  },
+  {
+    "context": "(FileFinder || FileFinder > Picker  > Editor)",
+    "bindings": {
+      "space s m": "file_finder::ToggleSplitMenu"
+    }
+  },
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "space f g": "pane::DeploySearch"
+    }
   }
 ]
