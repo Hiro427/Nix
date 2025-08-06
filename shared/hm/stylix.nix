@@ -16,6 +16,7 @@
       qt.enable = false;
       foliate.enable = true;
       helix.enable = false;
+      zed.enable = false;
       # wezterm.enable = false;
     };
     fonts = {

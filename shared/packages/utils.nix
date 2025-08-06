@@ -66,6 +66,8 @@ with pkgs; [
   neovide
   asciiquarium
   exercism
+  pipx
+  libgccjit
 
 ]
 

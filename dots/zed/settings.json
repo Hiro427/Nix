@@ -1,7 +1,10 @@
 {
+  "terminal": {
+    "dock": "bottom"
+  },
   "auto_install_extensions": {
-    "Catppuccin": true,
     "air": true,
+    "catppuccin": true,
     "catppuccin icons": true,
     "csv": true,
     "discord presence": true,
@@ -22,10 +25,17 @@
     "templ": true,
     "toml": true,
     "xml": true,
-    "zig": true
+    "zig": true,
+    "svelte": true,
+    "svelte snippets": true,
+    "go snippets": true,
+    "go sum highlighting": true,
+    "python snippets": true,
+    "rosé pine": true
   },
   "autosave": "on_focus_change",
-  "buffer_font_size": 16,
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_size": 14,
   "confim_quit": true,
   "features": {
     "copilot": false
@@ -48,18 +58,24 @@
   "show_completion_on_input": true,
   "show_edit_predictions": false,
   "tab_bar": {
-    "show": true
+    "show": false
   },
   "telemetry": {
     "diagnostics": false,
     "metrics": false
   },
   "theme": {
-    "dark": "Catppuccin Mocha",
+    "dark": "Rosé Pine",
     "light": "Catppuccin Latte",
     "mode": "dark"
   },
-  "ui_font_size": 16,
+  "ui_font_family": "Noto Sans",
+  "ui_font_size": 14,
   "use_auto_surround": true,
-  "vim_mode": true
+  "vim_mode": true,
+  "diagnostics": {
+    "inline": {
+      "enabled": true
+    }
+  }
 }

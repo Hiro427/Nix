@@ -2,23 +2,85 @@
   {
     "bindings": {
       "/": "workspace::NewSearch",
-      "ctrl-e": "project_panel::ToggleFocus",
-      "ctrl-shift-j": "pane::SplitDown",
-      "ctrl-shift-k": "pane::SplitLeft",
+      "K": "editor::Hover",
+      "alt-h": "vim::ResizePaneRight",
+      "alt-j": "vim::ResizePaneDown",
+      "alt-k": "vim::ResizePaneUp",
+      "alt-l": "vim::ResizePaneLeft",
+      "ctrl-f": "editor::Format",
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-shift-h": "workspace::SwapPaneLeft",
+      "ctrl-shift-j": "workspace::SwapPaneDown",
+      "ctrl-shift-k": "workspace::SwapPaneUp",
+      "ctrl-shift-l": "workspace::SwapPaneRight",
       "space a": "workspace::AddFolderToProject",
-      "space e": "workspace::ToggleLeftDock",
-      "space l": "pane::TogglePreviewTab",
+      "space b": "tab_switcher::ToggleAll",
+      "space d": "diagnostics::Deploy",
+      "space e": "project_panel::ToggleFocus",
+      "space g": "git_panel::ToggleFocus",
+      "space h": "pane::SplitDown",
+      "space l": "workspace::ToggleLeftDock",
       "space o": "workspace::OpenFiles",
+      "space q": "pane::CloseActiveItem",
+      "space r": "editor::Rename",
+      "space s": "outline::Toggle",
       "space space": "file_finder::Toggle",
-      "space t": [
-        "workspace::OpenTerminal",
-        {
-          "working_directory": "."
-        }
-      ],
-      "space w": "terminal_panel::ToggleFocus"
+      "space t": "workspace::ToggleBottomDock",
+      "space v": "pane::SplitRight",
+      "space f f": "workspace::OpenFiles",
+      "space f g": "project_panel::NewSearchInDirectory",
+      "space s m": "file_finder::ToggleSplitMenu",
+      "space f r": "projects::OpenRecent",
+      "space f s": "outline::Toggle",
+      "space f d": "diagnostics::Deploy",
+      "g j": "editor::GoToDiagnostic",
+      "g k": "editor::GoToPreviousDiagnostic",
+      "space f l": "buffer_search::Deploy"
     },
     "context": "Editor && vim_mode == normal && vim_operator == none && !VimWaiting"
+  },
+  {
+    "bindings": {
+      "a": "project_panel::NewFile",
+      "f": "project_panel::NewDirectory",
+      "x": "project_panel::Cut",
+      "p": "project_panel::Paste",
+      "q": "project_panel::RemoveFromProject",
+      "space e": "workspace::CloseActiveDock"
+    },
+    "context": "ProjectPanel"
+  },
+  {
+    "bindings": {
+      "a": "git::StageFile",
+      "u": "git::UnstageFile",
+      "d": "git::RestoreFile",
+      "c": "git::Commit",
+      "x": "git::Uncommit",
+      "shift-a": "git::StageAll",
+      "shift-u": "git::UnstageAll",
+      "shift-p": "git::Push",
+      "shift-c": "git::ExpandCommitEditor",
+      "shift-d": "git::RestoreFile",
+      "space g": "workspace::CloseActiveDock"
+    },
+    "context": "GitPanel"
+  },
+  {
+    "bindings": {
+      "shift-j": "editor::MoveLineDown",
+      "shift-k": "editor::MoveLineUp"
+    },
+    "context": "Editor && vim_mode == visual && !VimWaiting && !menu"
+  },
+  {
+    "bindings": {
+      "space t": "workspace::ToggleBottomDock"
+    },
+    "context": "Terminal"
   },
   {
     "bindings": {

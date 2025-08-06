@@ -21,12 +21,17 @@ in {
     (pkgs.writeShellScriptBin "gm" (builtins.readFile ../dots/scripts/gm))
     (pkgs.writeShellScriptBin "rw" (builtins.readFile ../dots/scripts/rw))
     (pkgs.writeShellScriptBin "run" (builtins.readFile ../dots/scripts/run))
+    (pkgs.writeShellScriptBin "doom" ''
+      #!/bin/sh
+      # Execute the actual Doom Emacs binary
+      exec "$HOME/.config/emacs/bin/doom" "$@"
+    '')
   ];
   imports = [
     ./hm/freetube.nix
     ./hm/zsh.nix
     ./hm/spotify_player.nix
-    ./hm/zed.nix
+    # ./hm/zed.nix
     ./hm/brave.nix
     ./hm/ghostty.nix
     ./hm/wezterm.nix
@@ -47,6 +52,8 @@ in {
     ./hm/spicetify.nix
     ./hm/i3status.nix
   ];
+
+  programs.zed-editor.enable = true;
 
   # home.file = {
   #     ".wezterm.lua" = {

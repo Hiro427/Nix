@@ -20,4 +20,6 @@ with pkgs; [
   gimp3
   inkscape
   ticktick
+  emacs
+  jetbrains.pycharm-community-bin
 ]

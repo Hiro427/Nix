@@ -2,8 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, ... }:
-{
+{ config, pkgs, inputs, ... }: {
 
   #Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -15,9 +14,8 @@
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-  
 
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -51,7 +49,6 @@
 
   virtualisation.docker.enable = true;
 
-
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
@@ -62,7 +59,6 @@
   services.avahi.enable = true;
   services.avahi.nssmdns4 = true;
 
-
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -71,7 +67,7 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-};
+  };
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.jacobrambarran = {
     isNormalUser = true;
@@ -79,7 +75,7 @@
     shell = pkgs.zsh;
     extraGroups = [ "networkmanager" "wheel" "docker" ];
   };
-   boot.extraModprobeConfig = ''
+  boot.extraModprobeConfig = ''
     options hid_apple fnmode=1
   '';
 
@@ -90,16 +86,15 @@
   nixpkgs.config.allowUnfree = true;
   environment.localBinInPath = true;
   security.pam.services.i3lock = {
-  enable = true;
-  # Use the standard login PAM stack
-  text = ''
-    auth     include login
-    account  include login
-    password include login
-    session  include login
-  '';
-};
-
+    enable = true;
+    # Use the standard login PAM stack
+    text = ''
+      auth     include login
+      account  include login
+      password include login
+      session  include login
+    '';
+  };
 
   # programs.spicetify = {
   #   enable = true;
@@ -108,36 +103,46 @@
   #      hidePodcasts
   #      shuffle 
   #    ];
+  # };  
+  # programs.nix-ld = {
+  #   enable = true;
+  #   libraries = with pkgs; [ stdenv.cc.cc.lib glibc ];
   # };
 
+  services.emacs = {
+    enable = true;
+    package = pkgs.emacs;
+  };
+
   fonts = {
-      packages = with pkgs; [
-        noto-fonts
-        noto-fonts-cjk-sans
-        noto-fonts-emoji
-        nerd-fonts.jetbrains-mono
-        # add your preferred fonts here
-      ];
+    packages = with pkgs; [
+      noto-fonts
+      noto-fonts-cjk-sans
+      noto-fonts-emoji
+      nerd-fonts.jetbrains-mono
+      # add your preferred fonts here
+    ];
 
-      fontconfig = {
-        enable = true;
-        defaultFonts = {
-          serif = [ "Noto Serif" ];
-          sansSerif = [ "Noto Sans" ];
-          monospace = [ "JetBrainsMono Nerd Font" ]; # or "JetBrainsMono Nerd Font"
-          emoji = [ "Noto Color Emoji" ];
-        };
+    fontconfig = {
+      enable = true;
+      defaultFonts = {
+        serif = [ "Noto Serif" ];
+        sansSerif = [ "Noto Sans" ];
+        monospace =
+          [ "JetBrainsMono Nerd Font" ]; # or "JetBrainsMono Nerd Font"
+        emoji = [ "Noto Color Emoji" ];
       };
-};
+    };
+  };
 
- # stylix = {
- #        enable = true;
- #        base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
- #        targets = {
- #            gtk.enable = true;
- #            qt.enable = true;
- #        };
- #    };
+  # stylix = {
+  #        enable = true;
+  #        base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+  #        targets = {
+  #            gtk.enable = true;
+  #            qt.enable = true;
+  #        };
+  #    };
   #
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -165,5 +170,5 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "24.11"; # Did you read the comment? 
+  system.stateVersion = "24.11"; # Did you read the comment?
 }
