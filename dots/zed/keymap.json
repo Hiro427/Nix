@@ -1,7 +1,7 @@
 [
   {
     "bindings": {
-      "/": "workspace::NewSearch",
+      "/": "buffer_search::Deploy",
       "K": "editor::Hover",
       "alt-h": "vim::ResizePaneRight",
       "alt-j": "vim::ResizePaneDown",
@@ -35,22 +35,23 @@
       "space f d": "diagnostics::Deploy",
       "space f g": "pane::DeploySearch",
       "g j": "editor::GoToDiagnostic",
-      "g k": "editor::GoToPreviousDiagnostic",
-      "space f l": "buffer_search::Deploy"
+      "g k": "editor::GoToPreviousDiagnostic"
     },
     "context": "Editor && vim_mode == normal && vim_operator == none && !VimWaiting"
   },
   {
     "bindings": {
-      "a": "project_panel::NewFile",
-      "f": "project_panel::NewDirectory",
+      "f": "project_panel::NewFile",
+      "d": "project_panel::NewDirectory",
       "x": "project_panel::Cut",
       "p": "project_panel::Paste",
+      "w": "project_panel::Delete",
+      "Tab": "project_panel::ExpandSelectedEntry",
       "q": "project_panel::RemoveFromProject",
       "space e": "workspace::CloseActiveDock",
       "space g": "git_panel::ToggleFocus"
     },
-    "context": "ProjectPanel"
+    "context": "ProjectPanel && not_editing"
   },
   {
     "bindings": {
@@ -80,7 +81,7 @@
     "bindings": {
       "space t": "workspace::ToggleBottomDock"
     },
-    "context": "Terminal"
+    "context": "Terminal && not_editing"
   },
   {
     "bindings": {
@@ -92,7 +93,7 @@
   {
     "context": "(FileFinder || FileFinder > Picker  > Editor)",
     "bindings": {
-      "space s m": "file_finder::ToggleSplitMenu"
+      "ctrl-s": "file_finder::ToggleSplitMenu"
     }
   },
   {
