@@ -6,11 +6,12 @@
     autosuggestion.enable = true;
     # export LS_COLORS="$(vivid generate gruvbox-dark)" nord tokyonight-night
     initContent = ''
-      bindkey -M viins '^I' autosuggest-accept  
-      bindkey -M viins '^Z' "fg\n" 
+      bindkey -M viins '^I' autosuggest-accept    
 
       eval "$(starship init zsh)"
-      export LS_COLORS="$(vivid generate ${theme.vividTheme})"
+      export LS_COLORS="$(vivid generate ${theme.vividTheme})" 
+
+
 
     '';
     history = {
@@ -35,13 +36,11 @@
         "eza --color=always --git --icons=auto --no-user --no-permissions --no-time --long --no-filesize";
       c = "cd ..";
       e = "exit";
+      ns = "";
       activate = "source .venv/bin/activate";
-      cs = "crumbs";
       s = "cd - >> /dev/null";
       vim = "nvim";
       # alias rofi="rofi -show drun -normal-window"
-      tsv = "tmux split-pane -v";
-      tsh = "tmux split-pane -h";
       search = "is-fast";
       doom = "~/.config/emacs/bin/doom";
       nvidia-offload =

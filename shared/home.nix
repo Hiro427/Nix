@@ -21,6 +21,8 @@ in {
     (pkgs.writeShellScriptBin "gm" (builtins.readFile ../dots/scripts/gm))
     (pkgs.writeShellScriptBin "rw" (builtins.readFile ../dots/scripts/rw))
     (pkgs.writeShellScriptBin "run" (builtins.readFile ../dots/scripts/run))
+    (pkgs.writeShellScriptBin "tsm" (builtins.readFile ../dots/scripts/tsm))
+
     (pkgs.writeShellScriptBin "doom" ''
       #!/bin/sh
       # Execute the actual Doom Emacs binary

@@ -13,7 +13,7 @@
     targets = {
       gtk.enable = true;
       rofi.enable = true;
-      qt.enable = false;
+      qt.enable = true;
       foliate.enable = true;
       helix.enable = false;
       zed.enable = false;

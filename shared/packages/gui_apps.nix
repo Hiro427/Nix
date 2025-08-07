@@ -21,5 +21,7 @@ with pkgs; [
   inkscape
   ticktick
   emacs
+  libreoffice
   jetbrains.pycharm-community-bin
+  onlyoffice-desktopeditors
 ]

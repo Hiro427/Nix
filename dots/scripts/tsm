@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+find_dirs() {
+
+    find "$HOME/coding/" -mindepth 1 -maxdepth 3 -type d \( \
+        -name ".venv" -o -name "__pycache__" -o -name ".git" -o -name ".gitignore" -o -name "target" -o -name "release" -o -name "node_modules" \
+        \) -prune -o -type d -print
+}
+
+main() {
+    directories=$(find_dirs)
+
+    sel_dir=$(echo "$directories" | fzf --height 20 --reverse --highlight-line --border='double' --border-label='New Project' --border-label-pos=2 --preview='eza --tree --color=always --icons {} ' --preview-window='right' --preview-border='double')
+
+    eval sesh connect "$sel_dir"
+}
+
+main
