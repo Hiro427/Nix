@@ -59,6 +59,16 @@ in {
   # catppuccin.qutebrowser.flavor = "mocha";
   programs.zed-editor.enable = true;
   programs.rofi.enable = true;
+  services.flameshot = {
+    enable = true;
+    settings = {
+      General = {
+        disabledTrayIcon = true;
+        showStartupLaunchMessage = false;
+      };
+    };
+
+  };
 
   # home.file = {
   #     ".wezterm.lua" = {

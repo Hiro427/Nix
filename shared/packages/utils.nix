@@ -42,7 +42,6 @@ with pkgs; [
   ollama
   openvpn
   tty-clock
-  flameshot
   is-fast
   cava
   yt-dlp
