@@ -104,7 +104,7 @@ return {
             keys = {
               { "<leader>/", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
                 {"S", mode = {"n", "x", "o"}, function() require("flash").treesitter() end, desc = "Remote Flash"},
-                {"r", mode = {"n", "x", "o"}, function() require("flash").remote() end, desc = "Remote Flash"},
+                -- {"r", mode = {"n", "x", "o"}, function() require("flash").remote() end, desc = "Remote Flash"},
                 {"R", mode = { "x", "o"}, function() require("flash").treesitter_search() end, desc = "Remote Flash"},
             },
 		},

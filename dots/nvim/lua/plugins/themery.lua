@@ -15,11 +15,22 @@ return {
 					"kanagawa-dragon",
 					"rose-pine",
 					"everforest",
+					"onedark_dark",
 				}, -- Your list of installed colorschemes.
 				livePreview = true, -- Apply theme while picking. Default to true.
 			})
 		end,
 		vim.keymap.set("n", "<leader>cs", ":Themery<CR>", { desc = "Change colorschemes" }),
+	},
+	{
+		"olimorris/onedarkpro.nvim",
+		config = function()
+			require("onedarkpro").setup({
+				options = {
+					transparency = true,
+				},
+			})
+		end,
 	},
 	{
 		"catppuccin/nvim",
@@ -92,19 +103,6 @@ return {
 		"projekt0n/github-nvim-theme",
 		lazy = false, -- make sure we load this during startup if it is your main colorscheme
 		priority = 1000, --
-	},
-	{
-		"navarasu/onedark.nvim",
-		priority = 1000, -- make sure to load this before all the other start plugins
-		config = function()
-			require("onedark").setup({
-				style = "deep",
-				transparent = true,
-				ending_tildes = false,
-			})
-			-- Enable theme
-			-- require("onedark").load()
-		end,
 	},
 	{
 		"rebelot/kanagawa.nvim",

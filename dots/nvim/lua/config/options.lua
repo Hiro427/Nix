@@ -22,6 +22,9 @@ vim.opt.swapfile = false
 
 vim.o.background = "dark"
 vim.api.nvim_set_hl(0, "NormalFloat", { link = "Pmenu" })
+-- vim.api.nvim_set_hl(0, "WhichKey", { bg = "#000000" })
+-- vim.api.nvim_set_hl(0, "WhichKeyNormal", { bg = "#000000" })
+-- vim.api.nvim_set_hl(0, "WhichKeyBorder", { bg = "#000000" })
 -- vim.opt.list = true
 -- vim.cmd("set updatetime=100")
 

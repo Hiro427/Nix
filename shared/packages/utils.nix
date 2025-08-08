@@ -68,6 +68,6 @@ with pkgs; [
   exercism
   pipx
   libgccjit
-
+  bitwarden-cli
 ]
 

@@ -14,6 +14,11 @@ return {
 				border = "rounded",
 				width = { min = 20, max = 0.4 },
 			},
+			toggle = { enabled = true },
+			zen = {
+				enabled = true,
+			},
+			dim = { enabled = true },
 			terminal = { enabled = true, win = { style = "terminal" }, show_cwd = false },
 			dashboard = {
 				enabled = true,

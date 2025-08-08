@@ -14,9 +14,7 @@ return {
 				globalstatus = true,
 			},
 			sections = {
-				lualine_a = {
-					"mode",
-				},
+				lualine_a = {},
 				lualine_b = {
 					{
 						"branch",
@@ -31,7 +29,7 @@ return {
 					{ harpoon_files.lualine_component },
 				},
 				lualine_x = {},
-				lualine_y = { "diff" },
+				lualine_y = {},
 				lualine_z = {
 					{
 						"filename",

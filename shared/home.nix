@@ -1,6 +1,6 @@
 { config, pkgs, catppuccin, ... }:
 let
-  theme = import ./themes/rosepine.nix {
+  theme = import ./themes/onedark.nix {
     inherit pkgs;
     inherit config;
   };
@@ -54,8 +54,11 @@ in {
     ./hm/spicetify.nix
     ./hm/i3status.nix
   ];
-
+  # programs.qutebrowser.enable = true;
+  # catppuccin.qutebrowser.enable = true;
+  # catppuccin.qutebrowser.flavor = "mocha";
   programs.zed-editor.enable = true;
+  programs.rofi.enable = true;
 
   # home.file = {
   #     ".wezterm.lua" = {

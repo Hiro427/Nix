@@ -1,0 +1,21 @@
+# OneDark Dark theme for i3status-rs
+# Generated from Base16 OneDark Dark palette
+
+idle_bg = "#000000" # base00 - background
+idle_fg = "#abb2bf" # base05 - text
+
+info_fg = "#000000" # base00 - background for info text
+info_bg = "#61afef" # base0D - blue
+
+good_fg = "#000000" # base00 - background for good text
+good_bg = "#89ca78" # base0B - green
+
+warning_fg = "#000000" # base00 - background for warning text
+warning_bg = "#e5c07b" # base0A - yellow
+
+critical_fg = "#000000" # base00 - background for critical text
+critical_bg = "#ef596f" # base08 - red
+
+separator = "\ue0b2"
+separator_bg = "auto"
+separator_fg = "auto"

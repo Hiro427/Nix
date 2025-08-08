@@ -22,6 +22,6 @@ with pkgs; [
   ticktick
   emacs
   libreoffice
-  jetbrains.pycharm-community-bin
-  onlyoffice-desktopeditors
+  surf
+  qutebrowser
 ]
