@@ -45,7 +45,8 @@
       "Mod4+b" = "exec zen-beta";
       "Mod1+Shift+p" = "exec sh ~/.config/rofi/power.sh";
       # "Mod4+space" = "exec dmenu_run -nb '#1e1e2e' -nf '#cdd6f4' -sb '#b4befe' -sf '#1e1e2e'";
-      "Mod4+space" = "exec zsh -c bemenu-run";
+      # "Mod4+space" = "exec zsh -c bemenu-run";
+      "Mod4+space" = "exec rofi -show drun";
       "Ctrl+space" = "exec flameshot gui";
       "Mod4+Shift+r" = "restart";
       "Mod4+Shift+c" = "reload";
