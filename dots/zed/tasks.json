@@ -1,19 +1,27 @@
 [
   {
     "label": "Run Go File",
-    "command": "go run $ZED_FILE"
+    "command": "go run $ZED_FILE",
+    // "use_new_terminal": true,
+    "reveal": "no_focus"
   },
   {
     "label": "Run Lua File",
-    "command": "lua $ZED_FILE"
+    "command": "lua $ZED_FILE",
+    // "use_new_terminal": true,
+    "reveal": "no_focus"
   },
   {
     "label": "Run Python File",
-    "command": "python $ZED_FILE"
+    "command": "python $ZED_FILE",
+    "use_new_terminal": false,
+    "reveal": "no_focus"
   },
   {
     "label": "Run Typescript",
-    "command": "bun run $ZED_FILE"
+    "command": "bun run $ZED_FILE",
+    // "use_new_terminal": true,
+    "reveal": "no_focus"
   },
   {
     "label": "File Finder",
@@ -24,7 +32,7 @@
   },
   {
     "label": "Find Text",
-    "command": "zeditor \"$(tv text)\"",
+    "command": "zeditor \"$tv text)\"",
     "hide": "always",
     "allow_concurrent_runs": true,
     "use_new_terminal": true

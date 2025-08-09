@@ -127,9 +127,14 @@
     }
   },
   {
-    "context": "(VimControl && !menu)",
+    "context": "Pane",
     "bindings": {
-      "space f g": "pane::DeploySearch"
+      "space w": [
+        "pane::CloseCleanItems",
+        {
+          "close_pinned": false
+        }
+      ]
     }
   }
 ]

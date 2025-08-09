@@ -37,6 +37,7 @@
   "buffer_font_family": "JetBrainsMono Nerd Font",
   "buffer_font_size": 14,
   "confirm_quit": true,
+  "relative_line_numbers": true,
   "features": {
     "edit_prediction_provider": "none"
   },
@@ -60,7 +61,7 @@
   "tab_bar": {
     "show": false
   },
-  "restore_on_startup": "none",
+  "restore_on_startup": "last_session",
   "telemetry": {
     "diagnostics": false,
     "metrics": false
@@ -85,7 +86,7 @@
     "scrollbar.track.border": "#00000000",
     "editor.active_line.background": "#00000000"
   },
-  "ui_font_family": "Noto Sans",
+  "ui_font_family": "JetBrainsMono Nerd Font",
   "ui_font_size": 14,
   "use_auto_surround": true,
   "vim_mode": true,
