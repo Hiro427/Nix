@@ -171,6 +171,7 @@ return {
 			opts = {
 				icon = "󱡅",
 				show_icon = false,
+				show_index = false,
 			},
 		},
 	},

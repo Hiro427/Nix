@@ -68,5 +68,6 @@ with pkgs; [
   pipx
   libgccjit
   bitwarden-cli
+  television
 ]
 

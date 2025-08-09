@@ -2,8 +2,21 @@
   programs.helix = {
     enable = true;
     package = pkgs.evil-helix;
+    themes = {
+      "transparent" = {
+        inherits = theme.helixTheme;
+        "ui.background" = { };
+        "ui.menu" = { };
+        "ui.help" = { };
+        "ui.popup" = { };
+        "ui.statusline" = { };
+        "ui.statusline.inactive" = { };
+
+      };
+    };
+
     settings = {
-      theme = theme.helixTheme;
+      theme = "transparent";
       editor = {
         line-number = "relative";
         true-color = true;
@@ -11,27 +24,24 @@
         completion-trigger-len = 1;
         auto-format = true;
         end-of-line-diagnostics = "hint";
+        # diagnostics = "end-of-line";
       };
       editor.cursor-shape = { insert = "bar"; };
-      editor.inline-diagnostics = { cursor-line = "warning"; };
+      editor.inline-diagnostics = { cursor-line = "error"; };
       editor.indent-guides = {
         render = true;
-        rainbow-option = "normal";
+        rainbow-option = "dim";
       };
       editor.lsp = {
         enable = true;
         display-messages = true;
       };
       editor.statusline = {
-        left = [ "mode" "spacer" "version-control" ];
+        left = [ "version-control" ];
         center = [ ];
         right = [
-          "file-base-name"
-          "spinner"
-          "spacer"
           "workspace-diagnostics"
-          "spacer"
-          "position"
+          "file-base-name"
           "file-modification-indicator"
         ];
         separator = "│";
@@ -41,7 +51,9 @@
         C-f = [ ":new" ":insert-output yazi" ":buffer-close" ":redraw" ];
         C-r = [ ":open %sh run %val{filename}" ];
         space.y = ":clipboard-yank";
-        space.space = ":open ~/coding/";
+        space.F = ":open ~/coding/";
+        space.space = ":open .";
+        g.c = "toggle_comments";
         a = [ "append_mode" "collapse_selection" ];
         "{" = [ "extend_to_line_bounds" "goto_prev_paragraph" ];
         "}" = [ "extend_to_line_bounds" "goto_next_paragraph" ];

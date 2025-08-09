@@ -25,9 +25,30 @@
       "space l": "workspace::ToggleLeftDock",
       "space o": "workspace::OpenFiles",
       "space q": "pane::CloseActiveItem",
+      "space space": [
+        "task::Spawn",
+        {
+          "task_name": "File Finder",
+          "reveal_target": "center"
+        }
+      ],
+      "space o p": [
+        "task::Spawn",
+        {
+          "task_name": "Open Project",
+          "reveal_target": "center"
+        }
+      ],
+      "space f l": [
+        "task::Spawn",
+        {
+          "task_name": "Find Text",
+          "reveal_target": "center"
+        }
+      ],
       "space r": "editor::Rename",
       "space s": "outline::Toggle",
-      "space space": "file_finder::Toggle",
+      // "space space": "file_finder::Toggle",
       "space t": "workspace::ToggleBottomDock",
       "space v": "pane::SplitRight",
       "space f r": "projects::OpenRecent",
@@ -35,9 +56,10 @@
       "space f d": "diagnostics::Deploy",
       "space f g": "pane::DeploySearch",
       "g j": "editor::GoToDiagnostic",
-      "g k": "editor::GoToPreviousDiagnostic"
+      "g k": "editor::GoToPreviousDiagnostic",
+      "'": "vim::ToggleMarksView"
     },
-    "context": "Editor && vim_mode == normal && vim_operator == none && !VimWaiting"
+    "context": "Editor && vim_mode != insert && vim_operator == none && !VimWaiting"
   },
   {
     "bindings": {
@@ -79,9 +101,17 @@
   },
   {
     "bindings": {
-      "space t": "workspace::ToggleBottomDock"
+      "ctrl-t": "workspace::ToggleBottomDock",
+      "ctrl-n": [
+        "workspace::SendKeystrokes",
+        "down"
+      ],
+      "ctrl-p": [
+        "workspace::SendKeystrokes",
+        "up"
+      ]
     },
-    "context": "Terminal && not_editing"
+    "context": "Terminal"
   },
   {
     "bindings": {

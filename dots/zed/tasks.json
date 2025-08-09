@@ -1,0 +1,39 @@
+[
+  {
+    "label": "Run Go File",
+    "command": "go run $ZED_FILE"
+  },
+  {
+    "label": "Run Lua File",
+    "command": "lua $ZED_FILE"
+  },
+  {
+    "label": "Run Python File",
+    "command": "python $ZED_FILE"
+  },
+  {
+    "label": "Run Typescript",
+    "command": "bun run $ZED_FILE"
+  },
+  {
+    "label": "File Finder",
+    "command": "zeditor \"$(tv files)\"",
+    "hide": "always",
+    "allow_concurrent_runs": true,
+    "use_new_terminal": true
+  },
+  {
+    "label": "Find Text",
+    "command": "zeditor \"$(tv text)\"",
+    "hide": "always",
+    "allow_concurrent_runs": true,
+    "use_new_terminal": true
+  },
+  {
+    "label": "Open Project",
+    "command": "zeditor --add \"$(fd -t d . ~/coding/ | tv)\"",
+    "hide": "always",
+    "allow_concurrent_runs": true,
+    "use_new_terminal": true
+  }
+]
