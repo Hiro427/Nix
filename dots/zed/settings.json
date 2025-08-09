@@ -35,7 +35,6 @@
   },
   "autosave": "on_focus_change",
   "buffer_font_family": "JetBrainsMono Nerd Font",
-  "buffer_font_size": 14,
   "confirm_quit": true,
   "relative_line_numbers": true,
   "features": {
@@ -67,7 +66,7 @@
     "metrics": false
   },
   "theme": {
-    "dark": "Modest Dark",
+    "dark": "One Dark",
     "light": "Catppuccin Latte",
     "mode": "dark"
   },
@@ -87,7 +86,6 @@
     "editor.active_line.background": "#00000000"
   },
   "ui_font_family": "JetBrainsMono Nerd Font",
-  "ui_font_size": 14,
   "use_auto_surround": true,
   "vim_mode": true,
   "diagnostics": {
