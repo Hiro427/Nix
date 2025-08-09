@@ -9,7 +9,10 @@ in {
 
   home.username = "jacobrambarran";
   home.homeDirectory = "/home/jacobrambarran";
-  home.sessionVariables = { GOPATH = "$HOME/.go"; };
+  home.sessionVariables = {
+    GOPATH = "$HOME/.go";
+    GPUI_X11_SCALING_FACTOR = "1";
+  };
 
   home.sessionPath = [
     "$HOME/.nimble/bin"
