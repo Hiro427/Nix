@@ -56,12 +56,12 @@ in {
     ./hm/stylix.nix
     ./hm/spicetify.nix
     ./hm/i3status.nix
+    ./hm/rofi.nix
   ];
   # programs.qutebrowser.enable = true;
   # catppuccin.qutebrowser.enable = true;
   # catppuccin.qutebrowser.flavor = "mocha";
   programs.zed-editor.enable = true;
-  programs.rofi.enable = true;
   services.flameshot = {
     enable = true;
     settings = {
