@@ -21,17 +21,17 @@
       "space d": "diagnostics::Deploy",
       "space e": "project_panel::ToggleFocus",
       "space g": "git_panel::ToggleFocus",
-      "space h": "pane::SplitDown",
+      "space h": "workspace::NewFileSplitHorizontal",
       "space l": "workspace::ToggleLeftDock",
       "space o": "workspace::OpenFiles",
       "space q": "pane::CloseActiveItem",
-      "space space": [
-        "task::Spawn",
-        {
-          "task_name": "File Finder",
-          "reveal_target": "center"
-        }
-      ],
+      // "space space": [
+      //   "task::Spawn",
+      //   {
+      //     "task_name": "File Finder",
+      //     "reveal_target": "center"
+      //   }
+      // ],
       "space o p": [
         "task::Spawn",
         {
@@ -48,18 +48,27 @@
       ],
       "space r": "editor::Rename",
       "space s": "outline::Toggle",
-      // "space space": "file_finder::Toggle",
-      "space t": "workspace::ToggleBottomDock",
-      "space v": "pane::SplitRight",
+      "space space": "file_finder::Toggle",
+      "space t": "terminal_panel::ToggleFocus",
+      "space j": "pane::ActivateNextItem",
+      "space k": "pane::ActivatePreviousItem",
+      "space v": "workspace::NewFileSplitVertical",
       "space f r": "projects::OpenRecent",
       "space f s": "outline::Toggle",
       "space f d": "diagnostics::Deploy",
       "space f g": "pane::DeploySearch",
+      "space f b": "tab_switcher::ToggleAll",
       "g j": "editor::GoToDiagnostic",
       "g k": "editor::GoToPreviousDiagnostic",
       "'": "vim::ToggleMarksView"
     },
-    "context": "Editor && vim_mode != insert && vim_operator == none && !VimWaiting"
+    "context": "Editor && vim_mode == normal"
+  },
+  {
+    "bindings": {
+      "space f b": "tab_switcher::ToggleAll"
+    },
+    "context": "(Editor || Terminal) && vim_mode == normal"
   },
   {
     "bindings": {
@@ -118,7 +127,7 @@
       "shift-tab": "editor::Tab",
       "tab": "editor::MoveRight"
     },
-    "context": "vim_mode == insert"
+    "context": "Editor && vim_mode == insert"
   },
   {
     "context": "(FileFinder || FileFinder > Picker  > Editor)",
@@ -129,7 +138,7 @@
   {
     "context": "Pane",
     "bindings": {
-      "space w": [
+      "ctrl-w": [
         "pane::CloseCleanItems",
         {
           "close_pinned": false

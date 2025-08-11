@@ -3,25 +3,25 @@
     "label": "Run Go File",
     "command": "go run $ZED_FILE",
     // "use_new_terminal": true,
-    "reveal": "no_focus"
+    "reveal": "always"
   },
   {
     "label": "Run Lua File",
     "command": "lua $ZED_FILE",
     // "use_new_terminal": true,
-    "reveal": "no_focus"
+    "reveal": "always"
   },
   {
     "label": "Run Python File",
     "command": "python $ZED_FILE",
     "use_new_terminal": false,
-    "reveal": "no_focus"
+    "reveal": "always"
   },
   {
     "label": "Run Typescript",
     "command": "bun run $ZED_FILE",
     // "use_new_terminal": true,
-    "reveal": "no_focus"
+    "reveal": "always"
   },
   {
     "label": "File Finder",
@@ -43,5 +43,13 @@
     "hide": "always",
     "allow_concurrent_runs": true,
     "use_new_terminal": true
+  },
+  {
+    "label": "Update All Projects",
+    "command": "gm -lg",
+    "hide": "always",
+    "allow_concurrent_runs": true,
+    "use_new_terminal": true,
+    "reveal_target": "center"
   }
 ]

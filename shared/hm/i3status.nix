@@ -1,4 +1,10 @@
-{ config, pkgs, theme, ... }: {
+{
+  config,
+  pkgs,
+  theme,
+  ...
+}:
+{
   programs.i3status-rust = {
     enable = true;
     bars = {
@@ -26,39 +32,40 @@
           {
             block = "custom";
             interval = 5;
-            if_command = ''
-              [ "$(cat /sys/class/dmi/id/product_name)" != "B650 EAGLE AX" ]'';
+            if_command = ''[ "$(cat /sys/class/dmi/id/product_name)" != "B650 EAGLE AX" ]'';
             command = ''
-              if [ "$(sensors | grep fan1 | awk '{print $2; exit}')" -gt 2000 ]; then 
+              if [ "$(sensors | grep fan1 | awk '{print $2; exit}')" -gt 2000 ]; then
                   echo 󰈐 $(sensors | grep fan1 | awk '{print $2; exit}')
               fi
             '';
             hide_when_empty = true;
             theme_overrides = {
-              idle_bg = { link = "warning_bg"; };
-              idle_fg = { link = "warning_fg"; };
+              idle_bg = {
+                link = "warning_bg";
+              };
+              idle_fg = {
+                link = "warning_fg";
+              };
             };
           }
           {
             block = "nvidia_gpu";
-            if_command =
-              ''[ "$(cat /sys/class/dmi/id/product_name)" = "XPS 15 9510" ]'';
+            if_command = ''[ "$(cat /sys/class/dmi/id/product_name)" = "XPS 15 9510" ]'';
             interval = 10;
             format = " 󰾆 $utilization $temperature "; # $clocks
           }
           {
             block = "amd_gpu";
-            if_command =
-              ''[ "$(cat /sys/class/dmi/id/product_name)" = "B650 EAGLE AX" ]'';
+            if_command = ''[ "$(cat /sys/class/dmi/id/product_name)" = "B650 EAGLE AX" ]'';
             format = "   $utilization $vram_used ";
             interval = 5;
           }
 
           # {
-          #     block = "net"; 
-          #     format_alt = "{󰖩 $ssid | 󰈀 }$speed_up $speed_down "; 
-          #     format = "{󰖩 $ssid | 󰈀 }"; 
-          #     inactive_format = "󰖪 "; 
+          #     block = "net";
+          #     format_alt = "{󰖩 $ssid | 󰈀 }$speed_up $speed_down ";
+          #     format = "{󰖩 $ssid | 󰈀 }";
+          #     inactive_format = "󰖪 ";
           # }
           {
             block = "disk_space";
@@ -90,14 +97,16 @@
           {
             block = "music";
             format = "{ $combo.str(max_w:20,rot_interval:0.4) |}";
-            player = [ "spotify_player" "spotify" ];
+            player = [
+              "spotify_player"
+              "spotify"
+            ];
 
           }
           {
             block = "custom";
             interval = 3600;
-            command =
-              "echo 󰖕 $(curl -s 'wttr.in/NYC?format=1' | awk -F'+' '{print $2}')";
+            command = "echo 󰖕 $(curl -s 'wttr.in/NYC?format=1' | awk -F'+' '{print $2}')";
           }
           {
             block = "tea_timer";
@@ -148,11 +157,9 @@
           }
           {
             block = "battery";
-            if_command = ''
-              [ "$(cat /sys/class/dmi/id/product_name)" != "B650 EAGLE AX" ]'';
+            if_command = ''[ "$(cat /sys/class/dmi/id/product_name)" != "B650 EAGLE AX" ]'';
 
-            format =
-              " $percentage {$time_remaining.dur(hms:true, min_unit:m) |}";
+            format = " $percentage {$time_remaining.dur(hms:true, min_unit:m) |}";
             device = "DisplayDevice";
             driver = "upower";
             missing_format = "";
@@ -165,10 +172,11 @@
             # theme = "${config.home.homeDirectory}/Nix/dots/assets/tokyonight.toml";
           };
 
-          icons = { icons = "awesome4"; };
+          icons = {
+            icons = "awesome4";
+          };
         };
       };
     };
   };
 }
-
