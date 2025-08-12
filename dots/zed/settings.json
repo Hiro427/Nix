@@ -8,7 +8,8 @@
     "catppuccin icons": true,
     "csv": true,
     "discord presence": true,
-    "docker compose": true,
+    "docker-compose": true,
+    "git-firefly": true,
     "dockerfile": true,
     "env": true,
     "golangci-lint": true,
@@ -91,6 +92,31 @@
   "diagnostics": {
     "inline": {
       "enabled": true
+    }
+  },
+  "languages": {
+    "Templ": {
+      "language_servers": [
+        "templ",
+        "tailwindcss-language-server",
+        "vscode-html-language-server",
+        "emmet-language-server"
+      ]
+    }
+  },
+  "lsp": {
+    "tailwindcss-language-server": {
+      "settings": {
+        "includeLanguages": {
+          "templ": "html"
+        },
+        "experimental": {
+          "classRegex": [
+            "class=\"([^\"]*)\"",
+            "className=\"([^\"]*)\""
+          ]
+        }
+      }
     }
   }
 }

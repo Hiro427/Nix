@@ -58,11 +58,12 @@
       "space f d": "diagnostics::Deploy",
       "space f g": "pane::DeploySearch",
       "space f b": "tab_switcher::ToggleAll",
+      "space g b": "git::CheckoutBranch",
       "g j": "editor::GoToDiagnostic",
       "g k": "editor::GoToPreviousDiagnostic",
       "'": "vim::ToggleMarksView"
     },
-    "context": "Editor && vim_mode == normal"
+    "context": "(Editor && vim_mode == normal)"
   },
   {
     "bindings": {
@@ -80,6 +81,7 @@
       "Tab": "project_panel::ExpandSelectedEntry",
       "q": "project_panel::RemoveFromProject",
       "space e": "workspace::CloseActiveDock",
+      "ctrl-l": "editor::ToggleFocus",
       "space g": "git_panel::ToggleFocus"
     },
     "context": "ProjectPanel && not_editing"
