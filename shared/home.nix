@@ -62,6 +62,17 @@ in {
   # catppuccin.qutebrowser.enable = true;
   # catppuccin.qutebrowser.flavor = "mocha";
   programs.zed-editor.enable = true;
+  programs.qutebrowser.enable = true;
+  programs.qutebrowser = {
+    extraConfig = ''
+      c.tabs.show = "never"
+      c.statusbar.show = "in-mode" 
+      c.scrolling.smooth = True  
+      c.url.searchengines = {"DEFAULT": "https://google.com/search?q={}"}
+      c.url.start_pages = "https://search.google.com"
+      c.window.transparent = True
+    '';
+  };
   services.flameshot = {
     enable = true;
     settings = {

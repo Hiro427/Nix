@@ -37,6 +37,14 @@ lib, ... }: {
         format = "[$symbol$version](yellow)";
         symbol = "  ";
       };
+      bun = {
+        format = "[$symbol$version](yellow)";
+        symbol = "  ";
+      };
+      nodejs = {
+        format = "[$symbol$version](yellow)";
+        symbol = "  ";
+      };
       java = {
         symbol = " 󰬷 ";
         format = "[$symbol$version]($style)";
@@ -48,9 +56,21 @@ lib, ... }: {
         style = "bold peach";
       };
       lua = {
-        symbol = " ";
+        symbol = "  ";
         format = "[$symbol$version]($style)";
       };
+      # custom = {
+      #   symbol = "  ";
+      #   detect_extensions = [ "nix" ];
+      #   style = "bold cyan";
+      #   command = "nix --version 2>/dev/null | awk '{print $3}'";
+      #   format = "[$symbol($output)]($style)";
+      # };
+      nix_shell = {
+        symbol = "  ";
+        format = "[$symbol$version](bold cyan)";
+      };
+
       jobs = {
         format = "[$symbol$number]($style) ";
         style = "text";
@@ -81,7 +101,10 @@ lib, ... }: {
         "$python"
         "$c"
         "$rust"
+        "$nix_shell"
         "$zig"
+        "$nodejs"
+        "$bun"
         "$line_break"
         "$character"
       ];

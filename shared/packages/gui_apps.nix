@@ -23,5 +23,4 @@ with pkgs; [
   emacs
   libreoffice
   surf
-  qutebrowser
 ]

@@ -43,6 +43,10 @@
       # alias rofi="rofi -show drun -normal-window"
       search = "is-fast";
       doom = "~/.config/emacs/bin/doom";
+      tn = "tmux new-session -s $(basename $(pwd))";
+      ta = "tmux a -t $(tmux ls | cut -d: -f1 | fzf --height 10 --reverse)";
+      ts = "tmux ls";
+
       nvidia-offload =
         "__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia '$@'";
     };
