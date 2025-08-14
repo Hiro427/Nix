@@ -111,5 +111,7 @@ with pkgs; [
   odin
   ols
   yq
+  asm-lsp
+  nasm
 
 ]

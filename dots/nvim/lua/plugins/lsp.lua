@@ -82,6 +82,7 @@ return {
 				"hls",
 				"nim_langserver",
 				"ols",
+				"asm_lsp",
 			})
 
 			--   lspconfig.ts_ls.setup({
