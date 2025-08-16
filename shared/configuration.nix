@@ -18,7 +18,9 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Enable networking
+
   networking.networkmanager.enable = true;
+  networking.hosts = { "0.0.0.0" = [ "apresolve.spotify.com" ]; };
 
   # Set your time zone.
   time.timeZone = "America/New_York";

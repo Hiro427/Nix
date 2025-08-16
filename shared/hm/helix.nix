@@ -93,6 +93,17 @@
         command = "/run/current-system/sw/bin/emmet-language-server";
         args = [ "--stdio" ];
       };
+      language-server.golangci-lint-langserver = {
+        command = "/run/current-system/sw/bin/golangci-lint-langserver";
+        args = [
+          "golangci-lint"
+          "run"
+          "--output.json.path"
+          "stdout"
+          "--show-stats=false"
+          "--issues-exit-code=1"
+        ];
+      };
       # language-server.htmx-lsp =  {
       #     command = "/run/current-system/sw/bin/htmx-lsp";
       # };
@@ -128,6 +139,12 @@
           file-types = [ "nix" ];
 
           formatter = { command = "${pkgs.nixfmt-classic}/bin/nixfmt"; };
+        }
+        {
+          name = "go";
+          auto-format = true;
+          # formatter = { command = "${pkgs.gofmt}/bin/gofmt}"; };
+          language-servers = [ "gopls" "golangci-lint-langserver" ];
         }
         # {
         #      name = "templ"; 

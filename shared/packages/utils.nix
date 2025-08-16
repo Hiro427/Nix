@@ -69,5 +69,7 @@ with pkgs; [
   libgccjit
   bitwarden-cli
   television
+  spotifyd
+  librespot
 ]
 

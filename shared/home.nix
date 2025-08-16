@@ -62,6 +62,7 @@ in {
   # catppuccin.qutebrowser.enable = true;
   # catppuccin.qutebrowser.flavor = "mocha";
   programs.zed-editor.enable = true;
+  programs.ncspot.enable = true;
   programs.qutebrowser.enable = true;
   programs.qutebrowser = {
     extraConfig = ''

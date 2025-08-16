@@ -5,6 +5,8 @@ with pkgs; [
   zig
   go
   gcc
+  gnumake
+  glibc
   cargo
   python312Full
   nodejs_22

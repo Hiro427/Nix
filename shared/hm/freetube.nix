@@ -1,11 +1,4 @@
-{
-    config, 
-    pkgs,
-    ...
-}: 
-{
-    programs.freetube = {
-        enable = true;
-    };
+{ config, pkgs, ... }: {
+  programs.freetube = { enable = true; };
 
 }

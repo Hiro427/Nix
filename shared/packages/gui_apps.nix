@@ -9,7 +9,6 @@ with pkgs; [
   bruno
   bitwarden-desktop
   lxappearance
-  todoist-electron
   prismlauncher
   bottles
   pavucontrol
@@ -22,5 +21,5 @@ with pkgs; [
   ticktick
   emacs
   libreoffice
-  surf
+  spotify-qt
 ]
