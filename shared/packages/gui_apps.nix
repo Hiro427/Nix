@@ -22,4 +22,6 @@ with pkgs; [
   emacs
   libreoffice
   spotify-qt
+  whatsie
+  slack
 ]
