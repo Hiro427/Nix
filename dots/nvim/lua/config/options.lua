@@ -20,6 +20,18 @@ vim.opt.foldenable = true -- Enable folding by default
 vim.opt.foldlevel = 99 -- Start with all folds open
 vim.opt.swapfile = false
 
+vim.keymap.set("n", "<leader>vd", ":vertical resize -15<CR>", { desc = "decrease vertical split" })
+vim.keymap.set("n", "<leader>vi", ":vertical resize +15<CR>", { desc = "increase vertical split size" })
+vim.keymap.set("n", "<leader>hd", ":resize -5<CR>", { desc = "decrease vertical split" })
+vim.keymap.set("n", "<leader>hi", ":resize +5<CR>", { desc = "increase vertical split size" })
+
+vim.keymap.set("n", "<leader>sh", "<C-w>H") -- move to far left
+vim.keymap.set("n", "<leader>sl", "<C-w>L") -- move to far right
+vim.keymap.set("n", "<leader>sk", "<C-w>K") -- move to top
+vim.keymap.set("n", "<leader>sj", "<C-w>J") -- move to bottom
+vim.keymap.set("n", "<leader>vs", ":vsplit<CR>")
+vim.keymap.set("n", "<leader>hs", ":split<CR>")
+
 vim.o.background = "dark"
 vim.api.nvim_set_hl(0, "NormalFloat", { link = "Pmenu" })
 -- vim.api.nvim_set_hl(0, "WhichKey", { bg = "#000000" })

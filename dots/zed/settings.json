@@ -1,4 +1,11 @@
 {
+  "agent": {
+    "default_model": {
+      "provider": "ollama",
+      "model": "mistral:latest"
+    },
+    "default_profile": "ask"
+  },
   "terminal": {
     "dock": "bottom"
   },

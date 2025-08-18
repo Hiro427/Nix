@@ -115,5 +115,11 @@ with pkgs; [
   yq
   asm-lsp
   nasm
-
+  kotlin-language-server
+  kotlin
+  kotlin-interactive-shell
+  tinymist
+  typstyle
+  typst-live
+  typst
 ]

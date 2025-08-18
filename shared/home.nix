@@ -25,6 +25,8 @@ in {
     (pkgs.writeShellScriptBin "rw" (builtins.readFile ../dots/scripts/rw))
     (pkgs.writeShellScriptBin "run" (builtins.readFile ../dots/scripts/run))
     (pkgs.writeShellScriptBin "tsm" (builtins.readFile ../dots/scripts/tsm))
+    (pkgs.writeShellScriptBin "sel_audio"
+      (builtins.readFile ../dots/scripts/sel_audio))
 
     (pkgs.writeShellScriptBin "doom" ''
       #!/bin/sh

@@ -70,7 +70,8 @@ return {
 			"nvim-telescope/telescope.nvim", -- optional
 			"neovim/nvim-lspconfig", -- optional
 		},
-		opts = { conceal = { enabled = true } }, -- your configuration
+		-- opts = { conceal = { enabled = true } }, -- your configuration
+		opts = {}, -- your configuration
 		vim.keymap.set(
 			"n",
 			"<leader>tt",

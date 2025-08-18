@@ -50,7 +50,6 @@ with pkgs; [
   ttyper
   pulseaudioFull
   ytmdl
-  vdhcoapp
   bemenu
   dwt1-shell-color-scripts
   fastfetch
@@ -62,7 +61,6 @@ with pkgs; [
   chawan
   awscli
   gemini-cli
-  neovide
   asciiquarium
   exercism
   pipx
@@ -71,5 +69,6 @@ with pkgs; [
   television
   spotifyd
   librespot
+  pandoc
 ]
 

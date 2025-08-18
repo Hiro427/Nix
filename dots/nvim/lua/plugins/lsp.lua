@@ -82,7 +82,10 @@ return {
 				"hls",
 				"nim_langserver",
 				"ols",
+				"tinymist",
 				"asm_lsp",
+				"cmake",
+				"kotlin_language_server",
 			})
 
 			--   lspconfig.ts_ls.setup({

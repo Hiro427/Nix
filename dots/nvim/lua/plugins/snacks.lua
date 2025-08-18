@@ -256,7 +256,7 @@ return {
 				desc = "launch terminal",
 			},
 			{
-				"<leader>g",
+				"<leader>lg",
 				function()
 					Snacks.lazygit()
 				end,
