@@ -23,6 +23,8 @@ in {
   home.packages = [
     (pkgs.writeShellScriptBin "gm" (builtins.readFile ../dots/scripts/gm))
     (pkgs.writeShellScriptBin "rw" (builtins.readFile ../dots/scripts/rw))
+    (pkgs.writeShellScriptBin "rw" (builtins.readFile ../dots/scripts/rw))
+
     (pkgs.writeShellScriptBin "run" (builtins.readFile ../dots/scripts/run))
     (pkgs.writeShellScriptBin "tsm" (builtins.readFile ../dots/scripts/tsm))
     (pkgs.writeShellScriptBin "sel_audio"
@@ -65,6 +67,7 @@ in {
   # catppuccin.qutebrowser.flavor = "mocha";
   programs.zed-editor.enable = true;
   programs.ncspot.enable = true;
+  programs.lapce = { enable = true; };
   programs.qutebrowser.enable = true;
   programs.qutebrowser = {
     extraConfig = ''

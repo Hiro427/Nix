@@ -68,10 +68,10 @@
             warning = 875.0;
             format = " $icon $used ";
           }
-          {
-            block = "uptime";
-            interval = 3600;
-          }
+          # {
+          #   block = "uptime";
+          #   interval = 3600;
+          # }
           {
             block = "custom";
             interval = 1000;
@@ -84,14 +84,22 @@
             missing_format = "";
           }
           {
-            block = "sound";
-            driver = "pulseaudio";
+            block = "custom";
+            # if_command = "pgrep -f spotify-qt";
+            command = "~/Nix/dots/scripts/cava-bar.sh";
+            persistent = true;
           }
-
+          {
+            block = "sound";
+            click = [{
+              button = "left";
+              cmd = "pavucontrol";
+            }];
+          }
           {
             block = "music";
             format = "{ $combo.str(max_w:20,rot_interval:0.4) |}";
-            player = [ "spotify_player" "spotify" ];
+            player = [ "spotify_player" "spotify" "spotify-qt" ];
 
           }
           {

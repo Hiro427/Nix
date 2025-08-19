@@ -88,18 +88,19 @@
     };
     focus.followMouse = false;
     assigns = {
+      "1" = [{ class = "zen"; }];
       "2" = [{ class = "org.wezfurlong.wezterm"; }];
       # "2" = [{ class = "kitty"; }];
       # "2" = [{ class = "com.mitchellh.ghostty"; }];
       "3" = [{ class = "vesktop"; }];
-      "4" = [{ class = "Spotify"; }];
+      "4" = [{ class = "spotify-qt"; }];
       "6" = [{ class = "PrismLauncher"; }];
     };
     window = {
       border = 0;
       hideEdgeBorders = "smart";
       commands = [{
-        command = "floating disable, move workspace 1";
+        command = "floating disable";
         criteria = { class = "Brave-browser"; };
       }];
       titlebar = false;

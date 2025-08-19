@@ -70,5 +70,7 @@ with pkgs; [
   spotifyd
   librespot
   pandoc
+  rocmPackages.rocm-smi
+  rocmPackages.amdsmi
 ]
 
