@@ -72,5 +72,6 @@ with pkgs; [
   pandoc
   rocmPackages.rocm-smi
   rocmPackages.amdsmi
+  xscreensaver
 ]
 

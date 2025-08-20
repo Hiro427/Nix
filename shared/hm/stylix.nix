@@ -1,6 +1,7 @@
 { config, pkgs, stylix, theme, ... }: {
   stylix = {
     enable = true;
+    overlays.enable = false;
     # base16Scheme = "${pkgs."base16-schemes"}/share/themes/catppuccin-mocha.yaml";
     base16Scheme = theme.base16Scheme;
     autoEnable = true;
@@ -17,7 +18,6 @@
       foliate.enable = true;
       helix.enable = false;
       zed.enable = false;
-      # wezterm.enable = false;
     };
     fonts = {
       monospace = {

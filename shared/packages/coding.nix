@@ -122,4 +122,5 @@ with pkgs; [
   typstyle
   typst-live
   typst
+  hugo
 ]

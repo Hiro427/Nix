@@ -19,6 +19,7 @@
         always = true;
       }
       { command = "--no-startup-id dunst &"; }
+      { command = "--no-startup-id vicinae server &"; }
       {
         command = "--no-startup-id setxkbmap -option caps:escape";
         always = true;
@@ -46,7 +47,8 @@
       "Mod1+Shift+p" = "exec sh ~/.config/rofi/power.sh";
       # "Mod4+space" = "exec dmenu_run -nb '#1e1e2e' -nf '#cdd6f4' -sb '#b4befe' -sf '#1e1e2e'";
       # "Mod4+space" = "exec zsh -c bemenu-run";
-      "Mod4+space" = "exec rofi -show drun";
+      # "Mod4+space" = "exec rofi -show drun";
+      "Mod4+space" = "exec vicinae";
       "Ctrl+space" = "exec flameshot gui";
       "Mod4+Shift+r" = "restart";
       "Mod4+Shift+c" = "reload";
@@ -100,8 +102,8 @@
       border = 0;
       hideEdgeBorders = "smart";
       commands = [{
-        command = "floating disable";
-        criteria = { class = "Brave-browser"; };
+        command = "floating enable";
+        criteria = { class = "vicinae"; };
       }];
       titlebar = false;
     };

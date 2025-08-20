@@ -1,6 +1,6 @@
 { config, pkgs, theme, ... }: {
   programs.zsh = {
-    dotDir = ".config/zsh";
+    dotDir = "${config.xdg.configHome}/zsh";
     enable = true;
     syntaxHighlighting.enable = true;
     autosuggestion.enable = true;
