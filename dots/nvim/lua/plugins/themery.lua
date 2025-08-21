@@ -16,11 +16,35 @@ return {
 					"rose-pine",
 					"everforest",
 					"onedark_dark",
+					"monoglow-z",
 				}, -- Your list of installed colorschemes.
 				livePreview = true, -- Apply theme while picking. Default to true.
 			})
 		end,
 		vim.keymap.set("n", "<leader>cs", ":Themery<CR>", { desc = "Change colorschemes" }),
+	},
+	{
+		"wnkz/monoglow.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require("monoglow").setup({
+				transparent = true,
+				glow = true,
+				on_highlights = function(hl, c)
+					local my_color = "none"
+					hl.FloatBorder = {
+						bg = my_color,
+					}
+					hl.String = {
+						fg = "#87ccc6",
+					}
+					hl.Function = {
+						fg = "#ffffff",
+					}
+				end,
+			})
+		end,
 	},
 	{
 		"olimorris/onedarkpro.nvim",

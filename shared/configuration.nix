@@ -16,6 +16,7 @@
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.trusted-users = [ "root" "jacobrambarran" ];
 
   # Enable networking
 

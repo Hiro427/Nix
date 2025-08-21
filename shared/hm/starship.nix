@@ -68,7 +68,9 @@ lib, ... }: {
       # };
       nix_shell = {
         symbol = "  ";
-        format = "[$symbol$version](bold cyan)";
+        format = "[$symbol$state](bold cyan)";
+        impure_msg = "[  ](bold red)";
+        pure_msg = "[  ] (bold green)";
       };
 
       jobs = {

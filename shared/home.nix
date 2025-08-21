@@ -14,12 +14,12 @@ in {
     GPUI_X11_SCALING_FACTOR = "1";
   };
 
-  home.sessionPath = [
-    "$HOME/.nimble/bin"
-    "$HOME/.cargo/bin"
-    "$HOME/.local/bin"
-    "$HOME/.go/bin"
-  ];
+  # home.sessionPath = [
+  #   "$HOME/.nimble/bin"
+  #   "$HOME/.cargo/bin"
+  #   "$HOME/.local/bin"
+  #   "$HOME/.go/bin"
+  # ];
   home.packages = [
     (pkgs.writeShellScriptBin "gm" (builtins.readFile ../dots/scripts/gm))
     (pkgs.writeShellScriptBin "rw" (builtins.readFile ../dots/scripts/rw))
@@ -61,10 +61,8 @@ in {
     ./hm/spicetify.nix
     ./hm/i3status.nix
     ./hm/rofi.nix
+    ./hm/direnv.nix
   ];
-  # programs.qutebrowser.enable = true;
-  # catppuccin.qutebrowser.enable = true;
-  # catppuccin.qutebrowser.flavor = "mocha";
   programs.zed-editor.enable = true;
   programs.ncspot.enable = true;
   programs.lapce = { enable = true; };

@@ -138,6 +138,12 @@
     }
   },
   {
+    "context": "EmptyPane",
+    "bindings": {
+      "space f r": "projects::OpenRecent"
+    }
+  },
+  {
     "context": "Pane",
     "bindings": {
       "ctrl-w": [

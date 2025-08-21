@@ -20,7 +20,15 @@
             pkgs.python3
             pkgs.python3Packages.numpy
             pkgs.python3Packages.requests
+            pkgs.python3Packages.pandas
+            pkgs.python3Packages.matplotlib
+            pkgs.python3Packages.seaborn
           ];
+          shellHook = ''
+            export LD_LIBRARY_PATH=${pkgs.stdenv.cc.cc.lib}/lib:$LD_LIBRARY_PATH
+            export SHELL=${pkgs.zsh}/bin/zsh
+            exec $SHELL
+          '';
         };
 
         # Rust development shell

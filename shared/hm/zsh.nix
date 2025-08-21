@@ -6,10 +6,14 @@
     autosuggestion.enable = true;
     # export LS_COLORS="$(vivid generate gruvbox-dark)" nord tokyonight-night
     initContent = ''
-      bindkey -M viins '^I' autosuggest-accept    
+       bindkey -M viins '^I' autosuggest-accept    
 
-      eval "$(starship init zsh)"
-      export LS_COLORS="$(vivid generate ${theme.vividTheme})" 
+       eval "$(starship init zsh)"
+       export LS_COLORS="$(vivid generate ${theme.vividTheme})" 
+      export PATH="$HOME/.cargo/bin:$PATH" 
+        export PATH="$HOME/.go/bin:$PATH" 
+
+       export PATH="$HOME"/.nimble/bin:$PATH
 
 
 
@@ -46,6 +50,7 @@
       tn = "tmux new-session -s $(basename $(pwd))";
       ta = "tmux a -t $(tmux ls | cut -d: -f1 | fzf --height 10 --reverse)";
       ts = "tmux ls";
+      dev = "echo 'use nix' >> .envrc && direnv allow";
 
       nvidia-offload =
         "__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia '$@'";

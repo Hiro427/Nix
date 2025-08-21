@@ -98,7 +98,9 @@
           }
           {
             block = "music";
-            format = "{ $combo.str(max_w:20,rot_interval:0.4) |}";
+            # format = "{ $combo.str(max_w:20,rot_interval:0.4) |}";
+            format = "{ $combo.str(max_w:20) $prev $play $next |}";
+            # format_alt = "{  $combo.str(max_w:20,rot_interval:0.6) $play |}";
             player = [ "spotify_player" "spotify" "spotify-qt" ];
 
           }
