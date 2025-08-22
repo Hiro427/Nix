@@ -7,6 +7,23 @@ return {
 		end,
 	},
 	{
+		"fredrikaverpil/godoc.nvim",
+		version = "*",
+		dependencies = {
+			{ "folke/snacks.nvim" }, -- optional
+		},
+		build = "go install github.com/lotusirous/gostdsym/stdsym@latest", -- optional
+		cmd = { "GoDoc" }, -- optional
+		opts = {
+			window = {
+				type = "vsplit",
+			},
+			picker = {
+				type = "snacks",
+			},
+		}, -- see further down below for configuration
+	},
+	{
 		"nvim-tree/nvim-web-devicons",
 		lazy = true,
 	},

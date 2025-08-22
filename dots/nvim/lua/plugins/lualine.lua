@@ -13,6 +13,14 @@ return {
 		-- 	local res = git_root .. "" .. git_branch
 		-- 	return res
 		-- end
+		local function nix_shell()
+			local nix = os.getenv("IN_NIX_SHELL")
+			if nix ~= nil and nix ~= "" then
+				return " " .. nix
+			else
+				return ""
+			end
+		end
 		require("lualine").setup({
 			options = {
 				icons_enabled = true,
@@ -37,6 +45,7 @@ return {
 				},
 				lualine_b = {
 					-- { "diff", symbols = { added = " ", modified = " ", removed = " " }, colored = false },
+					{ nix_shell },
 				},
 				lualine_c = {
 					"%=", --[[ add your center compoentnts here in place of this comment ]]

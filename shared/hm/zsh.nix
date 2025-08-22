@@ -43,7 +43,7 @@
       ns = "";
       activate = "source .venv/bin/activate";
       s = "cd - >> /dev/null";
-      vim = "nvim";
+      v = "nvim";
       # alias rofi="rofi -show drun -normal-window"
       search = "is-fast";
       doom = "~/.config/emacs/bin/doom";
