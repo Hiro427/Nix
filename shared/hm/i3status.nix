@@ -110,12 +110,12 @@
             command =
               "echo 󰖕 $(curl -s 'wttr.in/NYC?format=1' | awk -F'+' '{print $2}')";
           }
-          {
-            block = "tea_timer";
-            format = "󰔟 {$time|0m 00s}";
-            done_cmd = "notify-send 'Timer Finished'";
-            increment = 301;
-          }
+          # {
+          #   block = "tea_timer";
+          #   format = "󰔟 {$time|0m 00s}";
+          #   done_cmd = "notify-send 'Timer Finished'";
+          #   increment = 301;
+          # }
           {
             block = "time";
             interval = 60;

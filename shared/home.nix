@@ -66,6 +66,7 @@ in {
   programs.zed-editor.enable = true;
   programs.ncspot.enable = true;
   programs.lapce = { enable = true; };
+  qt.enable = true;
   programs.qutebrowser.enable = true;
   programs.qutebrowser = {
     extraConfig = ''
