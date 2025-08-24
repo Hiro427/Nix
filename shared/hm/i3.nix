@@ -100,7 +100,7 @@
     };
     window = {
       border = 0;
-      hideEdgeBorders = "smart";
+      # hideEdgeBorders = "smart";
       commands = [{
         command = "floating enable";
         criteria = { class = "vicinae"; };

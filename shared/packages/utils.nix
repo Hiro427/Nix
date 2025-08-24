@@ -73,5 +73,6 @@ with pkgs; [
   rocmPackages.rocm-smi
   rocmPackages.amdsmi
   xscreensaver
+  websocat
 ]
 

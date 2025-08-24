@@ -8,9 +8,7 @@ return {
 					"gruvbox",
 					"catppuccin",
 					"nord",
-					"nordic",
 					"tokyonight-night",
-					"github_dark_default",
 					"onedark",
 					"kanagawa-dragon",
 					"rose-pine",
@@ -102,14 +100,6 @@ return {
 		end,
 	},
 	{
-		"AlexvZyl/nordic.nvim",
-		lazy = false,
-		priority = 1000,
-		config = function()
-			require("nordic").load()
-		end,
-	},
-	{
 		"folke/tokyonight.nvim",
 		lazy = false,
 		priority = 1000,
@@ -122,11 +112,6 @@ return {
 				},
 			})
 		end,
-	},
-	{
-		"projekt0n/github-nvim-theme",
-		lazy = false, -- make sure we load this during startup if it is your main colorscheme
-		priority = 1000, --
 	},
 	{
 		"rebelot/kanagawa.nvim",
