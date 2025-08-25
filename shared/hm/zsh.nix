@@ -48,7 +48,7 @@
       search = "is-fast";
       doom = "~/.config/emacs/bin/doom";
       tn = "tmux new-session -s $(basename $(pwd))";
-      ta = "tmux a -t $(tmux ls | cut -d: -f1 | fzf --height 10 --reverse)";
+      ta = "tmux a -t $(tmux ls | cut -d: -f1 | fzf --height 10 --reverse -1)";
       ts = "tmux ls";
       dev = "echo 'use nix' >> .envrc && direnv allow";
 

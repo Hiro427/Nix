@@ -74,5 +74,6 @@ with pkgs; [
   rocmPackages.amdsmi
   xscreensaver
   websocat
+  gpick
 ]
 
