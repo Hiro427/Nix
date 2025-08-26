@@ -19,7 +19,6 @@
         always = true;
       }
       { command = "--no-startup-id dunst &"; }
-      { command = "--no-startup-id vicinae server &"; }
       {
         command = "--no-startup-id setxkbmap -option caps:escape";
         always = true;

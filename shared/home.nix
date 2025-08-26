@@ -89,6 +89,14 @@ in {
 
   };
 
+  programs.fuzzel.enable = true;
+  programs.micro.enable = true;
+
+  services.vicinae = {
+    enable = true; # default: true
+    autoStart = true; # default: true
+  };
+
   # home.file = {
   #     ".wezterm.lua" = {
   #         source = ../dots/wezterm/.wezterm.lua;
