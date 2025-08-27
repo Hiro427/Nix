@@ -74,10 +74,14 @@
           # }
           {
             block = "custom";
-            interval = 1000;
+            interval = 600;
             command =
               "echo  $(docker ps -q | wc -l)  $(tmux ls | wc -l) $(git_i3bar) ";
             # format = "{$command|}";
+            click = [{
+              button = "left";
+              update = true;
+            }];
           }
           {
             block = "backlight";
