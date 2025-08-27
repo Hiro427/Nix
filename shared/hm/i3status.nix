@@ -75,7 +75,8 @@
           {
             block = "custom";
             interval = 1000;
-            command = "echo  $(docker ps -q | wc -l)  $(tmux ls | wc -l)";
+            command =
+              "echo  $(docker ps -q | wc -l)  $(tmux ls | wc -l) $(git_i3bar) ";
             # format = "{$command|}";
           }
           {

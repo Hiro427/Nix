@@ -23,9 +23,7 @@ status() {
     local icon
     local res
 
-    res="  "
-    icon="  ${res}"
-
+    res=" "
     mapfile -t projects < <(jq -r '.projects[].path' "$PROJECT")
 
     for i in "${projects[@]}"; do
@@ -37,13 +35,14 @@ status() {
         status=$(git status -s)
 
         if [[ -n "$status" ]]; then
-            res="  "
+            res=" "
             break
         else
             continue
         fi
     done
 
+    icon="  ${res}"
     echo "$icon"
 
 }
