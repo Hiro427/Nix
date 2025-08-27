@@ -1,0 +1,52 @@
+#!/usr/bin/env bash
+
+GREEN="#a6e3a1"
+RED="#f38ba8"
+
+PROJECT="$HOME/Nix/dots/assets/gm.json"
+
+ct() {
+    local header_color="$1"
+    local header="$2"
+
+    a_r=$((16#${header_color:1:2}))
+    a_g=$((16#${header_color:3:2}))
+    a_b=$((16#${header_color:5:2}))
+
+    echo -e "\e[38;2;${a_r};${a_g};${a_b}m${header}\e[0m"
+}
+
+status() {
+    local path
+    local projects
+    local status
+    local icon
+    local res
+
+    res="  "
+    icon="  ${res}"
+
+    mapfile -t projects < <(jq -r '.projects[].path' "$PROJECT")
+
+    for i in "${projects[@]}"; do
+
+        path=$i
+
+        cd "$HOME/$path" || echo "error in path: ${path}"
+
+        status=$(git status -s)
+
+        if [[ -n "$status" ]]; then
+            res="  "
+            break
+        else
+            continue
+        fi
+    done
+
+    echo "$icon"
+
+}
+
+#Run
+status

@@ -22,7 +22,7 @@ lib, ... }: {
       sudo = { symbol = ""; };
       golang = {
         symbol = "  ";
-        format = "[$symbol$version](sky)";
+        format = "[$symbol$version](bright-cyan)";
       };
       zig = {
         symbol = "  ";
@@ -31,33 +31,33 @@ lib, ... }: {
       c = {
         symbol = "  ";
         format = "[$symbol$version]($style)";
-        style = "blue";
+        style = "bright-blue";
       };
       python = {
         format = "[$symbol$version](yellow)";
         symbol = "  ";
       };
       bun = {
-        format = "[$symbol$version](yellow)";
+        format = "[$symbol$version](bright-white)";
         symbol = "  ";
       };
       nodejs = {
-        format = "[$symbol$version](yellow)";
+        format = "[$symbol$version](green)";
         symbol = "  ";
       };
       java = {
         symbol = " 󰬷 ";
         format = "[$symbol$version]($style)";
-        style = "red";
+        style = "brown";
       };
       rust = {
         format = "[$symbol$version]($style)";
         symbol = "  ";
-        style = "bold peach";
+        style = "orange";
       };
       lua = {
         symbol = "  ";
-        format = "[$symbol$version]($style)";
+        format = "[$symbol$version](purple)";
       };
       # custom = {
       #   symbol = "  ";
@@ -76,17 +76,17 @@ lib, ... }: {
       jobs = {
         format = "[$symbol$number]($style) ";
         style = "text";
-        symbol = "[ 󱃐 ](mauve italic)";
+        symbol = "[ 󱃐 ](bright-white)";
       };
       aws = {
         format = "[$symbol $profile $region]($style)";
-        style = "bold peach";
+        style = "brown";
         symbol = " ";
 
       };
       docker_context = {
         symbol = " ";
-        format = "[$symbol$context]($style)";
+        format = "[$symbol$context](bright-blue)";
         only_with_files = true;
         detect_files =
           [ "docker-compose.yml" "docker-compose.yaml" "Dockerfile" ];
