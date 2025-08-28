@@ -529,11 +529,11 @@
         "nixpkgs": "nixpkgs_5"
       },
       "locked": {
-        "lastModified": 1756126460,
-        "narHash": "sha256-rLodImTt2XBwbvvJ/+UiRuK8HfDM9GQPZPBF8caWQYk=",
+        "lastModified": 1756293534,
+        "narHash": "sha256-O5YINKNzeHUnJ9Ky7Aaeh42NhcmF/La7rb0dddrbjyQ=",
         "owner": "tomromeo",
         "repo": "vicinae-nix",
-        "rev": "fe9ca23fc07410c52da1238b2e3c692f41288346",
+        "rev": "9da69cbdecb40e16d37a77e7ba39c9dfbe8f25c5",
         "type": "github"
       },
       "original": {

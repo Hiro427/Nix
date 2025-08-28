@@ -66,28 +66,13 @@
             alert_unit = "GB";
             alert = 700.0;
             warning = 875.0;
-            format = " $icon $used ";
+            format = " $icon $free.eng(range:..10e10) |";
           }
           # {
           #   block = "uptime";
           #   interval = 3600;
           # }
-          {
-            block = "custom";
-            interval = 600;
-            command =
-              "echo  $(docker ps -q | wc -l)  $(tmux ls | wc -l) $(git_i3bar) ";
-            # format = "{$command|}";
-            click = [{
-              button = "left";
-              update = true;
-            }];
-          }
-          {
-            block = "backlight";
-            format = "󰃝 $brightness";
-            missing_format = "";
-          }
+
           {
             block = "custom";
             # if_command = "pgrep -f spotify-qt";
@@ -102,12 +87,28 @@
             }];
           }
           {
+            block = "backlight";
+            format = "󰃝 $brightness";
+            missing_format = "";
+          }
+          {
             block = "music";
             # format = "{ $combo.str(max_w:20,rot_interval:0.4) |}";
             format = "{ $combo.str(max_w:20) $prev $play $next |}";
             # format_alt = "{  $combo.str(max_w:20,rot_interval:0.6) $play |}";
             player = [ "spotify_player" "spotify" "spotify-qt" ];
 
+          }
+          {
+            block = "custom";
+            interval = 600;
+            command =
+              "echo  $(docker ps -q | wc -l)  $(tmux ls | wc -l) $(git_i3bar) ";
+            # format = "{$command|}";
+            click = [{
+              button = "left";
+              update = true;
+            }];
           }
           {
             block = "custom";
@@ -153,21 +154,22 @@
                 cmd = "i3lock -c 000000 && systemctl suspend";
               }
               {
-                display = "󰄽 ⭘ Shutdown 󰄾";
-                cmd = "systemctl poweroff";
+                display = "󰄽 󰍃 Log Out 󰄾";
+                cmd = "i3-msg exit";
               }
               {
                 display = "󰄽  Restart 󰄾";
                 cmd = "systemctl reboot";
               }
               {
+                display = "󰄽 ⭘ Shutdown 󰄾";
+                cmd = "systemctl poweroff";
+              }
+              {
                 display = "󰄽  Lock 󰄾";
                 cmd = "i3lock -c 000000";
               }
-              {
-                display = "󰄽 󰍃 Log Out 󰄾";
-                cmd = "i3-msg exit";
-              }
+
             ];
           }
           {

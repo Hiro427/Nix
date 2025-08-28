@@ -57,6 +57,8 @@
 
       bind-key "J" swap-pane -D
       bind-key "K" swap-pane -U
+      bind-key j switch-client -n  
+      bind-key k switch-client -p  # previous session
 
       bind h split-window -h -c "#{pane_current_path}"
       bind v split-window -v -c "#{pane_current_path}" 

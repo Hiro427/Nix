@@ -75,5 +75,6 @@ with pkgs; [
   xscreensaver
   websocat
   gpick
+  bk
 ]
 

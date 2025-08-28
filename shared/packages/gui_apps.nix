@@ -24,4 +24,5 @@ with pkgs; [
   spotify-qt
   whatsie
   slack
+  evolution
 ]
