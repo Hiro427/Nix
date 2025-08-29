@@ -6,7 +6,12 @@
     autosuggestion.enable = true;
     # export LS_COLORS="$(vivid generate gruvbox-dark)" nord tokyonight-night
     initContent = ''
+       tmuxm() { tsm } 
+       zle -N tmuxm
        bindkey -M viins '^I' autosuggest-accept    
+       bindkey '^N' fzf-file-widget  
+
+       bindkey '^X' tmuxm
 
        eval "$(starship init zsh)"
        export LS_COLORS="$(vivid generate ${theme.vividTheme})" 
