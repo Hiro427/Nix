@@ -74,6 +74,17 @@ return {
 			},
 			picker = {
 				enabled = true,
+
+				sources = {
+					explorer = {
+						layout = {
+							layout = {
+								width = 24,
+							},
+						},
+					},
+				},
+
 				-- layout = {
 				-- 	layout = {
 				-- 		width = 0.5,
@@ -289,6 +300,13 @@ return {
 					Snacks.picker.jumps()
 				end,
 				desc = "Jumps",
+			},
+			{
+				"<leader>e",
+				function()
+					Snacks.explorer()
+				end,
+				desc = "Explorer",
 			},
 			{
 				"<leader>fk",

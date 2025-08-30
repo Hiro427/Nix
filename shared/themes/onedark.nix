@@ -7,7 +7,6 @@
   i3statusTheme = "${config.home.homeDirectory}/Nix/dots/assets/onedark.toml";
   i3Colors = {
     background = "#000000"; # base00
-
     inactiveWorkspace = {
       background = "#000000"; # base01
       border = "#000000"; # base01

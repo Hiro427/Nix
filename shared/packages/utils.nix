@@ -76,5 +76,7 @@ with pkgs; [
   websocat
   gpick
   bk
+  youtube-tui
+  ani-cli
 ]
 

@@ -5,7 +5,6 @@
   helixTheme = "gruvbox";
   vividTheme = "gruvbox-dark";
   i3statusTheme = "gruvbox-dark";
-  tmuxStatusLine = "#ebdbb2";
   i3Colors = {
     background = "#282828";
     inactiveWorkspace = {
@@ -25,11 +24,11 @@
     };
   };
   tmuxBarColors = {
-        dotbar-fg = "#504945";
-        dotbar-bg = "#282828";
-        dotbar-fg-current = "#ebdbb2";
-        dotbar-fg-session= "#d5c4a1";
-        dotbar-fg-prefix = "#83a598";
+    dotbar-fg = "#504945";
+    dotbar-bg = "#282828";
+    dotbar-fg-current = "#ebdbb2";
+    dotbar-fg-session = "#d5c4a1";
+    dotbar-fg-prefix = "#83a598";
 
-    };
+  };
 }
