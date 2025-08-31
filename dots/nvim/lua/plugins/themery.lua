@@ -34,6 +34,9 @@ return {
 					hl.FloatBorder = {
 						bg = my_color,
 					}
+					hl.NormalFloat = {
+						bg = my_color,
+					}
 					hl.String = {
 						fg = "#87ccc6",
 					}

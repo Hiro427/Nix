@@ -7,7 +7,6 @@ with pkgs; [
   jq
   file
   viu
-  typioca
   gum
   feh
   lazygit
