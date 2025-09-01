@@ -92,7 +92,7 @@
               home-manager.users.jacobrambarran = { pkgs, ... }: {
                 imports = [
                   spicetify-nix.homeManagerModules.default
-
+                  vicinae.homeManagerModules.default
                   catppuccin.homeModules.catppuccin
                   ./shared/home.nix
                   stylix.homeModules.stylix
