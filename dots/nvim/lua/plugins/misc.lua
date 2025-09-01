@@ -22,6 +22,7 @@ return {
 				type = "snacks",
 			},
 		}, -- see further down below for configuration
+		vim.keymap.set("n", "<leader>gd", ":GoDoc<CR>", { desc = "Search Go Documentation" }),
 	},
 	{
 		"nvim-tree/nvim-web-devicons",

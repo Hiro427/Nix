@@ -12,7 +12,7 @@ main() {
 
     sel_dir=$(echo "$directories" | fzf --height 20 --reverse --highlight-line --border='double' --border-label='New Project' --border-label-pos=2 --preview='eza --tree --color=always --icons {} ' --preview-window='right' --preview-border='double')
 
-    eval sesh connect "$sel_dir"
+    eval sesh connect "$(basename "$sel_dir")"
 }
 
 main
