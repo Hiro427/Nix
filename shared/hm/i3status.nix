@@ -131,7 +131,7 @@
             block = "toggle";
             format = "$icon 󰋋 ";
             if_command = ''
-              [ "$(cat /sys/class/dmi/id/product_name)" != "B650 EAGLE AX" ]'';
+              [ "$(cat /sys/class/dmi/id/product_name)" == "B650 EAGLE AX" ]'';
 
             command_state = "pactl get-default-sink | grep -i -v 'usb'";
             command_on = "sel_audio headphones";
