@@ -5,7 +5,6 @@ with pkgs; [
   mpv
   thunderbird
   pcmanfm
-  xgalagapp
   bruno
   bitwarden-desktop
   lxappearance
@@ -18,11 +17,11 @@ with pkgs; [
   darktable
   gimp3
   inkscape
-  ticktick
   emacs
   libreoffice
   spotify-qt
   whatsie
   slack
   evolution
+  todoist-electron
 ]
