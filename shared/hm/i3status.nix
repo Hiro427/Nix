@@ -75,7 +75,6 @@
 
           {
             block = "custom";
-            # if_command = "pgrep -f spotify-qt";
             command = "~/Nix/dots/scripts/cava-bar.sh";
             persistent = true;
           }
@@ -93,9 +92,7 @@
           }
           {
             block = "music";
-            # format = "{ $combo.str(max_w:20,rot_interval:0.4) |}";
-            format = "{ $combo.str(max_w:20) $prev $play $next |}";
-            # format_alt = "{  $combo.str(max_w:20,rot_interval:0.6) $play |}";
+            format = "{ $combo.str(max_w:15,rot_interval:0.6) | (-.-)Zzz...}";
             player = [ "spotify_player" "spotify" "spotify-qt" "ncspot" ];
 
           }
@@ -104,7 +101,6 @@
             interval = 600;
             command =
               "echo  $(docker ps -q | wc -l)  $(tmux ls | wc -l) $(git_i3bar) ";
-            # format = "{$command|}";
             click = [{
               button = "left";
               update = true;
