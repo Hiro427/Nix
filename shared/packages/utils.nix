@@ -67,7 +67,7 @@ with pkgs; [
   bitwarden-cli
   television
   spotifyd
-  librespot
+  # librespot
   pandoc
   rocmPackages.rocm-smi
   rocmPackages.amdsmi
@@ -77,5 +77,8 @@ with pkgs; [
   bk
   youtube-tui
   ani-cli
+  posting
+  electron-chromedriver_37
+  chromium
 ]
 

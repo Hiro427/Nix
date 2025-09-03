@@ -56,6 +56,7 @@
       ta = "tmux a -t $(tmux ls | cut -d: -f1 | fzf --height 10 --reverse -1)";
       ts = "tmux ls";
       dev = "echo 'use nix' >> .envrc && direnv allow";
+      spt = "~/apps/bin/spotify_player";
 
       nvidia-offload =
         "__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia '$@'";
