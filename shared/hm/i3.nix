@@ -40,7 +40,8 @@
       "Mod4+minus" = "move scratchpad";
       "Mod4+Shift+minus" = "scratchpad show";
       "Mod4+Shift+b" = "bar mode toggle";
-      "Mod4+Return" = "exec wezterm";
+      # "Mod4+Return" = "exec wezterm";
+      "Mod4+Return" = "exec ghostty";
       "Mod4+f" = "exec nautilus";
       "Mod4+b" = "exec zen-beta";
       "Mod1+Shift+p" = "exec sh ~/.config/rofi/power.sh";
@@ -90,9 +91,9 @@
     focus.followMouse = false;
     assigns = {
       "1" = [{ class = "zen"; }];
-      "2" = [{ class = "org.wezfurlong.wezterm"; }];
+      # "2" = [{ class = "org.wezfurlong.wezterm"; }];
       # "2" = [{ class = "kitty"; }];
-      # "2" = [{ class = "com.mitchellh.ghostty"; }];
+      "2" = [{ class = "com.mitchellh.ghostty"; }];
       "3" = [{ class = "vesktop"; }];
       "4" = [{ class = "spotify-qt"; }];
       "6" = [{ class = "PrismLauncher"; }];

@@ -10,10 +10,11 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     vicinae.url = "github:tomromeo/vicinae-nix";
+    typeman.url = "github:Hiro427/typeman-flake";
   };
 
   outputs = { self, stylix, nixpkgs, home-manager, spicetify-nix, catppuccin
-    , zen-browser, vicinae, ... }@inputs: {
+    , zen-browser, vicinae, typeman, ... }@inputs: {
 
       nixosConfigurations = {
 

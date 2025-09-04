@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 with pkgs; [
   firefox
   brave

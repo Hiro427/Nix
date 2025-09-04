@@ -7,4 +7,6 @@ with pkgs; [
   roboto
   source-sans-pro
   font-awesome_6
+  chess-tui
+  stockfish
 ]

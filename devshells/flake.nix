@@ -14,18 +14,12 @@
           buildInputs = [
             pkgs.gcc
             pkgs.gnumake
-            pkgs.gdb
-            pkgs.valgrind
-            pkgs.alsa-lib
             pkgs.rustc
             pkgs.cargo
-            pkgs.openssl
             pkgs.pkg-config
-            pkgs.python3
-            pkgs.pulseaudioFull
-            pkgs.dbus-glib
             pkgs.libsixel
-
+            pkgs.font-util
+            pkgs.fontconfig
           ];
         };
 
