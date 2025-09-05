@@ -18,6 +18,10 @@
             "name": "aoc"
         },
         {
+            "path" : "coding/dlanime",
+            "name" : "dlanime"
+        },
+        {
             "path": "coding/resources",
             "name": "resources"
         },

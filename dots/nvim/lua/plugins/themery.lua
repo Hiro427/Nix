@@ -109,10 +109,9 @@ return {
 		opts = {},
 		config = function()
 			require("tokyonight").setup({
+				on_colors = function() end,
 				transparent = true,
-				styles = {
-					sidebars = "transparent",
-				},
+				on_highlights = function(hl, c) end,
 			})
 		end,
 	},

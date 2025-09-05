@@ -65,6 +65,15 @@ local function match_buffer_bg()
 		fg = fg_color,
 		bg = bg_color,
 	})
+	-- vim.api.nvim_set_hl(0, "FloatBoarder", {
+	-- 	bg = "none",
+	-- })
+	-- vim.api.nvim_set_hl(0, "NormalFloat", {
+	-- 	bg = "none",
+	-- })
+	-- vim.api.nvim_set_hl(0, "SnacksPickerBoxBorder", {
+	-- 	bg = "none",
+	-- })
 end
 
 -- Apply after colorscheme loads
