@@ -1,0 +1,10 @@
+name: rose-pine
+primary: "#c4a7e7" # buttons, fixed table columns - iris
+secondary: "#f6c177" # method selector, some minor labels - gold
+accent: "#ebbcba" # header text, scrollbars, cursors, focus highlights - rose
+background: "#191724" # background colors - base
+surface: "#1f1d2e" # panels, etc - surface
+error: "#eb6f92" # error messages - love
+success: "#9ccfd8" # success messages - foam
+warning: "#f6c177" # warning messages - gold
+

@@ -1,0 +1,13 @@
+theme: rose-pine
+layout: horizontal
+
+focus:
+  on_response: "body"
+  on_startup: "collection"
+
+keymap:
+  quit: "ctrl+q"
+  save-request: "ctrl+d"
+  toggle-collection: "ctrl+b"
+  focus-url: "ctrl+u"
+  send-request: "ctrl+x"
