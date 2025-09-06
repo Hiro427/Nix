@@ -101,10 +101,16 @@
     window = {
       border = 0;
       # hideEdgeBorders = "smart";
-      commands = [{
-        command = "floating enable";
-        criteria = { class = "vicinae"; };
-      }];
+      commands = [
+        {
+          command = "floating enable";
+          criteria = { class = "vicinae"; };
+        }
+        {
+          command = "floating enable, move position center";
+          criteria = { class = "mpv"; };
+        }
+      ];
       titlebar = false;
     };
     floating = {
