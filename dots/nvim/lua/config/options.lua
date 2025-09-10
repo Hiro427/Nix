@@ -65,17 +65,34 @@ local function match_buffer_bg()
 		fg = fg_color,
 		bg = bg_color,
 	})
-	-- vim.api.nvim_set_hl(0, "FloatBoarder", {
-	-- 	bg = "none",
-	-- })
-	-- vim.api.nvim_set_hl(0, "NormalFloat", {
-	-- 	bg = "none",
-	-- })
+	vim.api.nvim_set_hl(0, "FloatBorder", {
+		bg = "none",
+	})
+	vim.api.nvim_set_hl(0, "NormalFloat", {
+		bg = "none",
+	})
+	vim.api.nvim_set_hl(0, "Float", {
+		bg = "none",
+	})
+	vim.api.nvim_set_hl(0, "WhichKeyNormal", {
+		bg = "none",
+	})
+
 	-- vim.api.nvim_set_hl(0, "SnacksPickerBoxBorder", {
+	-- 	bg = "none",
+	-- })
+	-- vim.api.nvim_set_hl(0, "SnacksPickerBox", {
 	-- 	bg = "none",
 	-- })
 end
 
+-- vim.api.nvim_create_autocmd("ColorScheme", {
+-- 	pattern = "*",
+-- 	callback = function()
+-- 		vim.api.nvim_set_hl(0, "SnacksPicker", { bg = "none", nocombine = true })
+-- 		vim.api.nvim_set_hl(0, "SnacksPickerBorder", { bg = "none", nocombine = true })
+-- 	end,
+-- })
 -- Apply after colorscheme loads
 vim.api.nvim_create_autocmd("ColorScheme", {
 	pattern = "*",

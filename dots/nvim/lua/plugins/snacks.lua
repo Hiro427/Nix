@@ -4,7 +4,6 @@ return {
 		priority = 1000,
 		lazy = false,
 		opts = {
-
 			statuscolumn = {
 				enabled = true,
 			},
@@ -23,9 +22,8 @@ return {
 			dashboard = {
 				enabled = true,
 				width = 35,
-				formats = {
-					header = { "%s", align = "center" },
-				},
+				formats = {},
+				header = { "%s", align = "center" },
 
 				preset = {
 					header = [[
@@ -74,7 +72,16 @@ return {
 			},
 			picker = {
 				enabled = true,
-
+				win = {
+					style = {
+						blend = 10,
+					},
+				},
+				layout = {
+					layout = {
+						backdrop = true,
+					},
+				},
 				sources = {
 					explorer = {
 						layout = {

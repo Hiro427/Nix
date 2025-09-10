@@ -86,7 +86,16 @@ return {
 			})
 		end,
 	},
-	{ "shaunsingh/nord.nvim", priority = 1000 },
+	{
+		"gbprod/nord.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require("nord").setup({
+				transparent = true,
+			})
+		end,
+	},
 	{
 		"rose-pine/neovim",
 		name = "rose-pine",

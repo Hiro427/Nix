@@ -2,6 +2,7 @@
 
 {
   base16Scheme = "${pkgs.base16-schemes}/share/themes/nord.yaml";
+  helixTheme = "nord";
   vividTheme = "nord";
   i3statusTheme = "nord-dark";
   tmuxStatusLine = "#81a1c1";
@@ -22,5 +23,15 @@
       border = "#bf616a";
       text = "#eceff4";
     };
+  };
+
+  tmuxBarColors = {
+
+    dotbar-fg = "#eceff4";
+    dotbar-bg = "#2E3440";
+    dotbar-fg-current = "#e5e9f0";
+    dotbar-fg-session = "";
+    dotbar-fg-prefix = "#88C0D0";
+
   };
 }
