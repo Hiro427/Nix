@@ -620,11 +620,11 @@
         "nixpkgs": "nixpkgs_6"
       },
       "locked": {
-        "lastModified": 1756293534,
-        "narHash": "sha256-O5YINKNzeHUnJ9Ky7Aaeh42NhcmF/La7rb0dddrbjyQ=",
+        "lastModified": 1756547894,
+        "narHash": "sha256-iu0pzPv3ArB8m9H4rH7bFMjRspA5thRV6kp9fVLagZc=",
         "owner": "tomromeo",
         "repo": "vicinae-nix",
-        "rev": "9da69cbdecb40e16d37a77e7ba39c9dfbe8f25c5",
+        "rev": "5eea3c1f5d10abc074b27c65a38b1ca3b9a8adeb",
         "type": "github"
       },
       "original": {
