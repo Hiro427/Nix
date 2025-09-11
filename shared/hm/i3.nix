@@ -8,10 +8,17 @@
           "--no-startup-id picom --config $HOME/.config/picom/picom.conf";
       }
       { command = "--no-startup-id nm-applet &"; }
-      { command = "--no-startup-id sh ~/Nix/dots/i3/scripts/natscroll.sh"; }
+      {
+        command = "--no-startup-id sh ~/Nix/dots/i3/scripts/natscroll.sh";
+      }
+      # {
+      #   command =
+      #     "--no-startup-id feh --bg-fill $(cat ~/Nix/dots/i3/cur_wall.txt)";
+      #   always = true;
+      # }
       {
         command =
-          "--no-startup-id feh --bg-fill $(cat ~/Nix/dots/i3/cur_wall.txt)";
+          "xwinwrap -g 1920x1080 -ov -ni -s -nf -- mpv -wid WID --loop --no-audio --no-osc --no-osd-bar ~/Videos/night-city-pixel-moewalls-com.mp4 &";
         always = true;
       }
       {

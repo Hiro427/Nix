@@ -80,5 +80,8 @@ with pkgs; [
   posting
   electron-chromedriver_37
   chromium
+  xwinwrap
+  gifsicle
+  killall
 ]
 
