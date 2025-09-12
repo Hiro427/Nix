@@ -18,7 +18,7 @@
       # }
       {
         command =
-          "xwinwrap -g 1920x1080 -ov -ni -s -nf -- mpv -wid WID --loop --no-audio --no-osc --no-osd-bar ~/Videos/night-city-pixel-moewalls-com.mp4 &";
+          "pkill xwinwrap; xwinwrap -g 1920x1080 -ov -ni -s -nf -- mpv -wid WID --loop --no-audio --no-osc --no-osd-bar ~/wallpapers/moe-wallpapers/night-city-pixel-moewalls-com.mp4 &";
         always = true;
       }
       {
