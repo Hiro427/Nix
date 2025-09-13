@@ -52,7 +52,7 @@ in {
     ./hm/vesktop.nix
     ./hm/yazi.nix
     ./hm/helix.nix
-    # ./hm/picom.nix
+    ./hm/picom.nix
     ./hm/extras.nix
     ./hm/cpt.nix
     ./hm/tm.nix

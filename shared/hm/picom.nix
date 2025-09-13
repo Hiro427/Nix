@@ -1,6 +1,6 @@
 { config, pkgs, ... }: {
   services.picom = {
-    enable = false;
+    enable = true;
     fadeDelta = 4;
     fade = true;
     fadeSteps = [ 2.8e-2 3.0e-2 ];

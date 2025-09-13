@@ -62,7 +62,7 @@ return {
 				"ts_ls",
 				"bashls",
 				"nixd",
-				"pylsp",
+				"pyright",
 				"marksman",
 				"emmet_language_server",
 				"html",

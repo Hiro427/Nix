@@ -27,6 +27,7 @@ with pkgs; [
   ruff
   jdt-language-server
   python312Packages.python-lsp-server
+  pyright
   nil
   nixd
   stylua

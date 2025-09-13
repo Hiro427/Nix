@@ -8,19 +8,17 @@
           "--no-startup-id picom --config $HOME/.config/picom/picom.conf";
       }
       { command = "--no-startup-id nm-applet &"; }
+      { command = "--no-startup-id sh ~/Nix/dots/i3/scripts/natscroll.sh"; }
       {
-        command = "--no-startup-id sh ~/Nix/dots/i3/scripts/natscroll.sh";
+        command =
+          "--no-startup-id feh --bg-fill $(cat ~/Nix/dots/i3/cur_wall.txt)";
+        always = true;
       }
       # {
       #   command =
-      #     "--no-startup-id feh --bg-fill $(cat ~/Nix/dots/i3/cur_wall.txt)";
+      #     "pkill xwinwrap; xwinwrap -g 1920x1080 -ov -ni -s -nf -- mpv -wid WID --loop --no-audio --no-osc --no-osd-bar ~/Downloads/night-city-pixel-moewalls-com.mp4 &";
       #   always = true;
       # }
-      {
-        command =
-          "pkill xwinwrap; xwinwrap -g 1920x1080 -ov -ni -s -nf -- mpv -wid WID --loop --no-audio --no-osc --no-osd-bar ~/Downloads/night-city-pixel-moewalls-com.mp4 &";
-        always = true;
-      }
       {
         command = "--no-startup-id autotiling";
         always = true;
@@ -47,15 +45,16 @@
       "Mod4+minus" = "move scratchpad";
       "Mod4+Shift+minus" = "scratchpad show";
       "Mod4+Shift+b" = "bar mode toggle";
-      "Mod4+Return" = "exec wezterm";
+      # "Mod4+Return" = "exec wezterm";
       # "Mod4+Return" = "exec ghostty";
+      "Mod4+Return" = "exec kitty";
       "Mod4+f" = "exec nautilus";
       "Mod4+b" = "exec zen-beta";
       "Mod1+Shift+p" = "exec sh ~/.config/rofi/power.sh";
       # "Mod4+space" = "exec dmenu_run -nb '#1e1e2e' -nf '#cdd6f4' -sb '#b4befe' -sf '#1e1e2e'";
-      # "Mod4+space" = "exec zsh -c bemenu-run";
+      "Mod4+space" = "exec zsh -c bemenu-run";
       # "Mod4+space" = "exec rofi -show drun";
-      "Mod4+space" = "exec vicinae";
+      # "Mod4+space" = "exec vicinae";
       "Ctrl+space" = "exec flameshot gui";
       "Mod4+Shift+r" = "restart";
       "Mod4+Shift+c" = "reload";
@@ -98,9 +97,11 @@
     focus.followMouse = false;
     assigns = {
       "1" = [{ class = "zen"; }];
-      "2" = [{ class = "org.wezfurlong.wezterm"; }];
-      # "2" = [{ class = "kitty"; }];
-      # "2" = [{ class = "com.mitchellh.ghostty"; }];
+      "2" = [
+        { class = "org.wezfurlong.wezterm"; }
+        { class = "kitty"; }
+        { class = "com.mitchellh.ghostty"; }
+      ];
       "3" = [{ class = "vesktop"; }];
       "4" = [{ class = "spotify-qt"; }];
       "6" = [{ class = "PrismLauncher"; }];
