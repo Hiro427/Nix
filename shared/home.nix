@@ -92,6 +92,8 @@ in {
 
   };
 
+  programs.mullvad-vpn = { enable = true; };
+
   programs.fuzzel.enable = true;
   programs.micro.enable = true;
 

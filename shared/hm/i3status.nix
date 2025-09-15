@@ -112,6 +112,31 @@
             command =
               "echo 󰖕 $(curl -s 'wttr.in/NYC?format=1' | awk -F'+' '{print $2}')";
           }
+          {
+            block = "custom";
+            interval = 60;
+            command = "~/Nix/dots/scripts/mullstat";
+            click = [
+              {
+                button = "left";
+                cmd = "mullvad connect";
+              }
+              {
+                button = "right";
+                cmd = "mullvad disconnect";
+              }
+            ];
+
+          }
+          # {
+          #   block = "vpn";
+          #   driver = "mullvad";
+          #   interval = 180;
+          #   format_connected = "󰖂 : $icon ";
+          #   format_disconnected = "󰖂 : $icon ";
+          #   state_connected = "good";
+          #   state_disconnected = "idle";
+          # }
           # {
           #   block = "tea_timer";
           #   format = "󰔟 {$time|0m 00s}";

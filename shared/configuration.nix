@@ -114,6 +114,10 @@
       session  include login
     '';
   };
+  services.mullvad-vpn = {
+    enable = true;
+    package = pkgs.mullvad-vpn;
+  };
 
   # programs.spicetify = {
   #   enable = true;

@@ -1,52 +1,41 @@
-{
-    config, 
-    pkgs,
-    ...
-}: 
-{
+{ config, pkgs, ... }: {
   programs.yazi = {
-  enable = true;
-  settings = {
-  mgr = {
-      sort_by = "mtime";
-      show_hidden = true;
-    };
-    open = {
-      # Define commands
-      edit = [
-        "nvim \"$@\""
-      ];
-      feh = [
-        "feh \"$@\""
-      ];
-      zathura = [
-        "zathura \"$@\""
-      ];
-      mpv = [
-        "vlc \"$@\""
-      ];
+    enable = true;
 
-      # Rules for file types
-      rules = [
-        {
-          mime = "text/*";
-          use = "edit";
-        }
-        {
-          mime = "image/*";
-          use = "feh";
-        }
-        {
-          mime = "application/pdf";
-          use = "zathura";
-        }
-        {
-          mime = "video/*";
-          use = "mpv";
-        }
-      ];
+    settings = {
+      mgr = { show_hidden = true; };
+      opener = {
+        play = [
+          {
+            run = ''mpv "$@"'';
+            orphan = true;
+            for = "unix";
+          }
+          {
+            run = ''"C:\Program Files\mpv.exe" %*'';
+            orphan = true;
+            for = "windows";
+          }
+        ];
+
+        edit = [
+          {
+            run = ''$EDITOR "$@"'';
+            block = true;
+            for = "unix";
+          }
+          {
+            run = "%EDITOR% %*";
+            block = true;
+            for = "windows";
+          }
+        ];
+
+        open = [{
+          run = ''xdg-open "$@"'';
+          desc = "Open";
+        }];
+      };
     };
   };
-};
-
 }

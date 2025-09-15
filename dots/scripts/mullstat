@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+JSON=$(mullvad status -j)
+STATUS=$(echo "$JSON" | jq -r '.state')
+COUNTRY=$(echo "$JSON" | jq -r '.details.location.country')
+CITY=$(echo "$JSON" | jq -r '.details.location.city')
+
+case "$STATUS" in
+"connected")
+    echo "  ${CITY}, ${COUNTRY} "
+    ;;
+"disconnected")
+    echo "   ${CITY}, ${COUNTRY} "
+    ;;
+*)
+    echo "${CITY}, ${COUNTRY} "
+    ;;
+esac

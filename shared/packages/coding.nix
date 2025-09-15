@@ -9,6 +9,7 @@ with pkgs; [
   glibc
   cargo
   python312Full
+  python312Packages.nuitka
   nodejs_22
   lua
   love
