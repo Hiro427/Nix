@@ -112,22 +112,22 @@
             command =
               "echo 󰖕 $(curl -s 'wttr.in/NYC?format=1' | awk -F'+' '{print $2}')";
           }
-          {
-            block = "custom";
-            interval = 60;
-            command = "~/Nix/dots/scripts/mullstat";
-            click = [
-              {
-                button = "left";
-                cmd = "mullvad connect";
-              }
-              {
-                button = "right";
-                cmd = "mullvad disconnect";
-              }
-            ];
-
-          }
+          # {
+          #   block = "custom";
+          #   interval = 60;
+          #   command = "~/Nix/dots/scripts/mullstat";
+          #   click = [
+          #     {
+          #       button = "left";
+          #       cmd = "mullvad connect";
+          #     }
+          #     {
+          #       button = "right";
+          #       cmd = "mullvad disconnect";
+          #     }
+          #   ];
+          #
+          # }
           # {
           #   block = "vpn";
           #   driver = "mullvad";
