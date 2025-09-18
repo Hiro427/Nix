@@ -620,16 +620,16 @@
         "nixpkgs": "nixpkgs_6"
       },
       "locked": {
-        "lastModified": 1756547894,
-        "narHash": "sha256-iu0pzPv3ArB8m9H4rH7bFMjRspA5thRV6kp9fVLagZc=",
-        "owner": "tomromeo",
-        "repo": "vicinae-nix",
-        "rev": "5eea3c1f5d10abc074b27c65a38b1ca3b9a8adeb",
+        "lastModified": 1758123542,
+        "narHash": "sha256-OhI7im7PxUt2zalnD//UwXtX7K+wrPCuWBcOUTwCP7M=",
+        "owner": "vicinaehq",
+        "repo": "vicinae",
+        "rev": "2e633e046ff889323af74c5823a0fd01a911bf1c",
         "type": "github"
       },
       "original": {
-        "owner": "tomromeo",
-        "repo": "vicinae-nix",
+        "owner": "vicinaehq",
+        "repo": "vicinae",
         "type": "github"
       }
     },

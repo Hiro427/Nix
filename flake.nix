@@ -9,7 +9,7 @@
     stylix.url = "github:danth/stylix";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    vicinae.url = "github:tomromeo/vicinae-nix";
+    vicinae.url = "github:vicinaehq/vicinae";
     typeman.url = "github:Hiro427/typeman-flake";
   };
 

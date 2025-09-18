@@ -83,5 +83,6 @@ with pkgs; [
   xwinwrap
   gifsicle
   killall
+  pnpm
 ]
 

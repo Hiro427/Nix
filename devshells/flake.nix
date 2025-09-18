@@ -21,6 +21,11 @@
             pkgs.font-util
             pkgs.fontconfig
           ];
+          shellHook = ''
+            export LD_LIBRARY_PATH=${pkgs.stdenv.cc.cc.lib}/lib:$LD_LIBRARY_PATH
+            export SHELL=${pkgs.zsh}/bin/zsh
+            exec $SHELL
+          '';
         };
 
         # Python development shell
@@ -47,6 +52,11 @@
         # Rust development shell
         rust = pkgs.mkShell {
           buildInputs = [ pkgs.rustc pkgs.cargo pkgs.rust-analyzer ];
+          shellHook = ''
+            export LD_LIBRARY_PATH=${pkgs.stdenv.cc.cc.lib}/lib:$LD_LIBRARY_PATH
+            export SHELL=${pkgs.zsh}/bin/zsh
+            exec $SHELL
+          '';
         };
       };
     };

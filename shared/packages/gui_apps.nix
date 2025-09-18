@@ -24,4 +24,6 @@ with pkgs; [
   slack
   evolution
   todoist-electron
+  komikku
+  geany
 ]

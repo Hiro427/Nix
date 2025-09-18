@@ -100,6 +100,10 @@ in {
   services.vicinae = {
     enable = true; # default: true
     autoStart = true; # default: true
+    # settings = {
+    #   font.size = 11;
+    #   theme.name = "rosepine-base";
+    # };
   };
 
   # home.file = {

@@ -125,4 +125,6 @@ with pkgs; [
   typst-live
   typst
   hugo
+  ruff
+
 ]
