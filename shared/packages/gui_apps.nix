@@ -26,4 +26,5 @@ with pkgs; [
   todoist-electron
   komikku
   geany
+  audacity
 ]
