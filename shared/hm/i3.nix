@@ -16,7 +16,7 @@
       }
       # {
       #   command =
-      #     "pkill xwinwrap; xwinwrap -g 1920x1080 -ov -ni -s -nf -- mpv -wid WID --loop --no-audio --no-osc --no-osd-bar ~/Downloads/night-city-pixel-moewalls-com.mp4 &";
+      #     "pkill xwinwrap; xwinwrap -g 1920x1080 -ov -ni -s -nf -- mpv -wid WID --loop --no-audio --no-osc --no-osd-bar ~/Videos/live_wallpapers/persona-5-tokyo-rainy-night-moewalls-com.mp4 &";
       #   always = true;
       # }
       {
