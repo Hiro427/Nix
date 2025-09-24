@@ -4,6 +4,7 @@
     enable = true;
     syntaxHighlighting.enable = true;
     autosuggestion.enable = true;
+    # export XDG_DATA_DIRS=$XDG_DATA_DIRS:/usr/share:/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share
     # export LS_COLORS="$(vivid generate gruvbox-dark)" nord tokyonight-night
     initContent = ''
        tmuxm() { tsm } 

@@ -10,7 +10,7 @@
     vSync = true;
 
     settings = {
-      corner-radius = 8;
+      # corner-radius = 8;
       blur = { method = "dual_kawase"; };
       glx-use-copybuffer-mess = true;
       glx-copy-from-front = true;

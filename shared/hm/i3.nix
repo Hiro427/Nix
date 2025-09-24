@@ -107,7 +107,7 @@
       "6" = [{ class = "PrismLauncher"; }];
     };
     window = {
-      border = 0;
+      border = 2;
       # hideEdgeBorders = "smart";
       commands = [
         {
@@ -117,6 +117,10 @@
         {
           command = "floating enable, move position center";
           criteria = { class = "mpv"; };
+        }
+        {
+          command = "border pixel 2";
+          criteria = { class = ".*"; };
         }
       ];
       titlebar = false;

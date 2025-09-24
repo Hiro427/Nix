@@ -119,6 +119,7 @@
     package = pkgs.mullvad-vpn;
   };
 
+  # services.flatpak.enable = true;
   # programs.spicetify = {
   #   enable = true;
   #   enabledExtensions = with spicePkgs.extensions; [
