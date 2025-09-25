@@ -8,7 +8,11 @@
             "path": "coding/hackerrank",
             "name": "hackerrank"
         },  
-{
+        {
+            "path": "coding/projects/dlmanga",
+            "name": "dlmanga"
+        },
+        {
             "path": "coding/projects/portfolio",
             "name": "portfolio"
         },
