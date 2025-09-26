@@ -118,6 +118,10 @@
           command = "floating enable, move position center";
           criteria = { class = "mpv"; };
         }
+        {
+          command = "sticky enable";
+          criteria = { title = "Picture-in-Picture"; };
+        }
         # {
         #   command = "border pixel 2";
         #   criteria = { class = ".*"; };
