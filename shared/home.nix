@@ -1,6 +1,6 @@
 { config, pkgs, catppuccin, ... }:
 let
-  theme = import ./themes/rosepine.nix {
+  theme = import ./themes/onedark.nix {
     inherit pkgs;
     inherit config;
   };
