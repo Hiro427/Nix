@@ -27,4 +27,6 @@ with pkgs; [
   komikku
   geany
   audacity
+  maestral
+  maestral-gui
 ]

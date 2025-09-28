@@ -132,11 +132,8 @@ return {
 	{
 		{
 			"kiennt63/harpoon-files.nvim",
-			dependencies = {
-				{ "ThePrimeagen/harpoon", branch = "harpoon2" },
-			},
 			opts = {
-				icon = "󱡅",
+				icon = "",
 				show_icon = true,
 				show_index = false,
 			},
