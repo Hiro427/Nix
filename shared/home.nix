@@ -101,8 +101,8 @@ in {
     enable = true; # default: true
     autoStart = true; # default: true
     # settings = {
-    #   font.size = 11;
-    #   theme.name = "rosepine-base";
+    #   font.size = 12;
+    #   theme.name = "github_dark_high_contrast";
     # };
   };
 

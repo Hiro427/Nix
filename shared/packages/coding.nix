@@ -8,7 +8,7 @@ with pkgs; [
   gnumake
   glibc
   cargo
-  python312Full
+  python312
   python312Packages.nuitka
   nodejs_22
   lua
@@ -27,7 +27,7 @@ with pkgs; [
   zulu # java
   ruff
   jdt-language-server
-  python312Packages.python-lsp-server
+  python313Packages.python-lsp-server
   pyright
   nil
   nixd

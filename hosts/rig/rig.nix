@@ -27,9 +27,5 @@
     enable = true;
     gamescopeSession.enable = true; # Optional
   };
-  environment.systemPackages = with pkgs;
-    [
-      # your other packages...
-      inputs.typeman.packages.${system}.default
-    ];
+  environment.systemPackages = with pkgs; [ ];
 }

@@ -20,7 +20,6 @@ with pkgs; [
   emacs
   libreoffice
   spotify-qt
-  whatsie
   slack
   evolution
   todoist-electron

@@ -8,5 +8,6 @@ with pkgs; [
   source-sans-pro
   font-awesome_6
   chess-tui
+  solitaire-tui
   stockfish
 ]
