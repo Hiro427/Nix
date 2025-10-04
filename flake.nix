@@ -6,14 +6,16 @@
     catppuccin.url = "github:catppuccin/nix";
     spicetify-nix.url = "github:gerg-l/spicetify-nix";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
+
     stylix.url = "github:danth/stylix";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     vicinae.url = "github:vicinaehq/vicinae";
+    lobster.url = "github:justchokingaround/lobster";
   };
 
   outputs = { self, stylix, nixpkgs, home-manager, spicetify-nix, catppuccin
-    , zen-browser, vicinae, ... }@inputs: {
+    , zen-browser, vicinae, lobster, ... }@inputs: {
 
       nixosConfigurations = {
 
