@@ -13,9 +13,8 @@ with pkgs; [
   nodejs_22
   lua
   love
-  # lua52Packages.luafilesystem
+  stylua
   luabind
-  lua54Packages.luafilesystem
   luajit
   rustup # component add rust-analyzer rustup default stable(?)
   #lsps and formatters
@@ -31,7 +30,6 @@ with pkgs; [
   pyright
   nil
   nixd
-  stylua
   mesonlsp
   lua-language-server
   gopls
@@ -94,13 +92,13 @@ with pkgs; [
   intelephense
   laravel
   blade-formatter
-  php84Packages.composer
-  php84Extensions.gd
-  php84Extensions.zip
-  php84Extensions.readline
-  php84Extensions.curl
-  php84Extensions.xml
-  php84Extensions.mbstring
+  # php84Packages.composer
+  # php84Extensions.gd
+  # php84Extensions.zip
+  # php84Extensions.readline
+  # php84Extensions.curl
+  # php84Extensions.xml
+  # php84Extensions.mbstring
   prometheus-php-fpm-exporter
   symfony-cli
   ncurses
@@ -126,5 +124,4 @@ with pkgs; [
   typst
   hugo
   ruff
-
 ]
