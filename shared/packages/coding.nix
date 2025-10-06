@@ -10,6 +10,9 @@ with pkgs; [
   cargo
   python312
   python312Packages.nuitka
+  basedpyright
+  python313Packages.python-lsp-server
+  pyright
   nodejs_22
   lua
   love
@@ -26,8 +29,6 @@ with pkgs; [
   zulu # java
   ruff
   jdt-language-server
-  python313Packages.python-lsp-server
-  pyright
   nil
   nixd
   mesonlsp

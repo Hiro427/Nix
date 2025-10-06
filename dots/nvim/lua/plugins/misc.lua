@@ -104,31 +104,7 @@ return {
 		end,
 		vim.keymap.set("n", "<leader>ct", ":CloakToggle<CR>", { desc = "Toggle Cloak", silent = true }),
 	},
-	{
-		{
-			"folke/flash.nvim",
-			event = "VeryLazy",
-			---@type Flash.Config
-			opts = {
-				modes = {
-					search = {
-						enabled = true,
-					},
-					char = {
-						jump_labels = true,
-					},
-				},
-			},
-    -- stylua: ignore
-            keys = {
-              { "/", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Jump (Flash)" },
-                {"<leader>/t", mode = {"n", "x", "o"}, function() require("flash").treesitter() end, desc = "Treesitter (Flash)"},
-                {"<leader>/r", mode = {"n", "x", "o"}, function() require("flash").remote() end, desc = "Remote (Flash)"},
-                {"<leader>/s", mode = { "x", "o"}, function() require("flash").treesitter_search() end, desc = "Treesitter Search (Flash)"},
-                {"<c-f>", mode = {"c"}, function() require("flash").toggle() end, desc = "Toggle Flash Search"},
-            },
-		},
-	},
+
 	{
 		{
 			"kiennt63/harpoon-files.nvim",

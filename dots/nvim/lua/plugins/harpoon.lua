@@ -48,10 +48,10 @@ return {
 			vim.keymap.set("n", "<leader>j", function()
 				harpoon:list():next()
 			end, { desc = "Harpoon Next File" })
-			vim.keymap.set("n", "<leader>a", function()
+			vim.keymap.set("n", "<leader>ha", function()
 				harpoon:list():add()
 			end, { desc = "Harpoon Add file" })
-			vim.keymap.set("n", "<leader>lh", function()
+			vim.keymap.set("n", "<leader>hh", function()
 				harpoon.ui:toggle_quick_menu(harpoon:list())
 			end, { desc = "Open Harpoon Menu" })
 
