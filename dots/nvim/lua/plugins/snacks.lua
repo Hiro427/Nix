@@ -88,6 +88,7 @@ return {
 							layout = {
 								width = 26,
 							},
+							auto_hide = { "input" },
 						},
 					},
 				},
