@@ -65,7 +65,6 @@ return {
 					{ section = "startup" },
 				},
 			},
-			-- explorer = { enabled = true, size = 0.3 },
 			indent = { enabled = true },
 			input = {
 				enabled = true,

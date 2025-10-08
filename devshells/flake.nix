@@ -14,8 +14,10 @@
           buildInputs = [
             pkgs.gcc
             pkgs.gnumake
+            pkgs.cmake
             pkgs.rustc
             pkgs.cargo
+            pkgs.ncurses
             pkgs.pkg-config
             pkgs.libsixel
             pkgs.font-util

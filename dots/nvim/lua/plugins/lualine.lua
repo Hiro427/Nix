@@ -2,7 +2,6 @@ return {
 	"nvim-lualine/lualine.nvim",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	config = function()
-		local harpoon_files = require("harpoon_files")
 		local M = require("config.transparent_theme_ll")
 		-- local function get_git_root()
 		-- 	local git_root = vim.fn.fnamemodify(vim.fn.systemlist("git rev-parse --show-toplevel")[1], ":t")
@@ -49,9 +48,8 @@ return {
 				},
 				lualine_c = {
 					"%=", --[[ add your center compoentnts here in place of this comment ]]
-					{ harpoon_files.lualine_component },
 					-- { "diagnostics" },
-					-- { "diff" },
+					{ "diff" },
 				},
 				lualine_x = {},
 				lualine_y = {

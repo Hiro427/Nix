@@ -50,15 +50,6 @@ return {
 		opts = {
 			preset = "helix",
 		},
-		keys = {
-			{
-				"<leader>?",
-				function()
-					require("which-key").show({ global = true })
-				end,
-				desc = "Buffer Local Keymaps (which-key)",
-			},
-		},
 	},
 	{
 		"christoomey/vim-tmux-navigator",
@@ -103,17 +94,6 @@ return {
 			require("cloak").setup({})
 		end,
 		vim.keymap.set("n", "<leader>ct", ":CloakToggle<CR>", { desc = "Toggle Cloak", silent = true }),
-	},
-
-	{
-		{
-			"kiennt63/harpoon-files.nvim",
-			opts = {
-				icon = "",
-				show_icon = true,
-				show_index = false,
-			},
-		},
 	},
 	{
 		"folke/lazydev.nvim",
