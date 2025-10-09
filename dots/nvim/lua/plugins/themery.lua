@@ -1,27 +1,5 @@
 return {
 	{
-		"zaldih/themery.nvim",
-		lazy = false,
-		config = function()
-			require("themery").setup({
-				themes = {
-					"gruvbox",
-					"catppuccin",
-					"nord",
-					"tokyonight-night",
-					"onedark",
-					"kanagawa-dragon",
-					"rose-pine",
-					"everforest",
-					"onedark_dark",
-					"monoglow-z",
-				}, -- Your list of installed colorschemes.
-				livePreview = true, -- Apply theme while picking. Default to true.
-			})
-		end,
-		vim.keymap.set("n", "<leader>cs", ":Themery<CR>", { desc = "Change colorschemes" }),
-	},
-	{
 		"wnkz/monoglow.nvim",
 		lazy = false,
 		priority = 1000,
@@ -36,12 +14,6 @@ return {
 					}
 					hl.NormalFloat = {
 						bg = my_color,
-					}
-					hl.String = {
-						fg = "#87ccc6",
-					}
-					hl.Function = {
-						fg = "#ffffff",
 					}
 				end,
 			})
