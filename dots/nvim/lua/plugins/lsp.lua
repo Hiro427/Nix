@@ -11,7 +11,6 @@ return {
 					client.server_capabilities.documentFormattingProvider = false
 					client.server_capabilities.documentRangeFormattingProvider = false
 				end
-				-- ...rest of your on_attach logic...
 			end
 
 			require("lspconfig").emmet_ls.setup({
@@ -88,12 +87,6 @@ return {
 				"kotlin_language_server",
 			})
 
-			--   lspconfig.ts_ls.setup({
-			--     capabilities = capabilities,
-			--   })
-			--   -- Add other servers as needed
-			--
-			--
 			lspconfig.emmet_language_server.setup({
 				capabilities = capabilities,
 				filetypes = {
@@ -116,7 +109,6 @@ return {
 				},
 			})
 		end,
-		-- In your init.lua or a file sourced by it
 		vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "LSP Rename Symbol" }),
 		vim.keymap.set("n", "<leader>d", vim.lsp.buf.hover, { desc = "LSP Hover/Show Docs" }),
 	},

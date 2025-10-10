@@ -5,6 +5,10 @@
             "name": "Nix"
         },
         {
+            "path": "coding/projects/typeman-flake", 
+            "name": "typeman-flake"
+        },
+        {
             "path": "coding/hackerrank",
             "name": "hackerrank"
         },  
@@ -22,7 +26,7 @@
             "name": "aoc"
         },
         {
-            "path" : "coding/dlanime",
+            "path" : "coding/projects/dlanime",
             "name" : "dlanime"
         },
         {

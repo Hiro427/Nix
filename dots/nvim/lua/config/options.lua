@@ -47,3 +47,8 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 		vim.b.autoformat = false
 	end,
 })
+
+vim.api.nvim_set_hl(0, "TodoInverse", { reverse = true, link = "MiniHipatternsTodo" })
+vim.api.nvim_set_hl(0, "FixmeInverse", { reverse = true, link = "MiniHipatternsFixme" })
+vim.api.nvim_set_hl(0, "HackInverse", { reverse = true, link = "MiniHipatternsHack" })
+vim.api.nvim_set_hl(0, "NoteInverse", { reverse = true, link = "MiniHipatternsNote" })
