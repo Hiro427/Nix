@@ -19,13 +19,13 @@ return {
 		"n",
 		"<leader>ms",
 		":Markview splitToggle<CR>",
-		{ desc = "Toggle Split Doc Preview (yaml, markdown, latex, html)" }
+		{ desc = "Toggle Split Doc Preview (yaml, markdown, latex, html)", silent = true }
 	),
 
 	vim.keymap.set(
 		"n",
 		"<leader>mt",
 		":Markview Toggle<CR>",
-		{ desc = "Toggle Doc Preview (yaml, markdown, latex, html)" }
+		{ desc = "Toggle Doc Preview (yaml, markdown, latex, html)", silent = true }
 	),
 }

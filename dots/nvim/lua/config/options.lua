@@ -14,6 +14,7 @@ vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.opt.fillchars = { eob = " " }
 
 -- GUI Settings
+vim.opt.laststatus = 3 --limit statusline to 1
 
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
@@ -32,6 +33,8 @@ vim.keymap.set("n", "<leader>sk", "<C-w>K") -- move to top
 vim.keymap.set("n", "<leader>sj", "<C-w>J") -- move to bottom
 vim.keymap.set("n", "<leader>vs", ":vsplit<CR>")
 vim.keymap.set("n", "<leader>hs", ":split<CR>")
+vim.keymap.set("n", "<leader>u", ":update<CR> :source<CR>", { desc = "reload config", silent = true })
+-- Example: Set a dark gray background for mini.notify notifications
 
 vim.o.background = "dark"
 vim.api.nvim_set_hl(0, "NormalFloat", { link = "Pmenu" })
@@ -47,8 +50,3 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 		vim.b.autoformat = false
 	end,
 })
-
-vim.api.nvim_set_hl(0, "TodoInverse", { reverse = true, link = "MiniHipatternsTodo" })
-vim.api.nvim_set_hl(0, "FixmeInverse", { reverse = true, link = "MiniHipatternsFixme" })
-vim.api.nvim_set_hl(0, "HackInverse", { reverse = true, link = "MiniHipatternsHack" })
-vim.api.nvim_set_hl(0, "NoteInverse", { reverse = true, link = "MiniHipatternsNote" })

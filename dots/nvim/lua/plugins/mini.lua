@@ -19,7 +19,7 @@ return {
 			require("mini.surround").setup({})
 			require("mini.cursorword").setup({})
 			require("mini.diff").setup({})
-
+			require("mini.files").setup({})
 			require("mini.move").setup({
 				mappings = {
 					-- Move visual selection in Visual mode. Defaults are Alt (Meta) + hjkl.
@@ -45,6 +45,43 @@ return {
 			require("mini.icons").setup({})
 			require("mini.jump").setup({})
 			require("mini.jump2d").setup({})
+			require("mini.bracketed").setup({})
+			require("mini.starter").setup({
+				header = [[
+        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣤⣠⡤⢶⣶⠖⢲⣶⠀⠀⠀⠀⠀⠀⠀⠀⣼⠋⠉⠉⢹⣷⠖⣶⠖⣶⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⡤⠶⠚⠋⠉⢹⣿⡏⡀⣼⡇⠀⣿⡏⠀⠀⠀⠀⠀⠀⠀⢰⠇⠀⠀⢠⣿⣿⣴⣿⣤⣿⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+        ⠀⠀⠀⠀⠀⠀⠀⠀⢰⠏⠁⠀⠀⠀⠀⢐⣿⣿⣀⣰⣿⣶⣾⣿⣥⠤⠴⠖⠒⠒⠚⣿⡿⠶⠿⠿⣿⣿⠋⠉⠉⣿⣏⣀⣀⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+        ⠀⠀⠀⠀⠀⠀⠀⢀⡟⠀⠀⠀⣀⣠⣴⣾⣿⠿⠛⠛⠋⢹⡿⠀⠀⠀⠀⠀⠀⠀⢰⣿⠁⠀⠀⢰⣿⠇⠀⠀⢸⡿⠀⠀⠀⠀⠀⠉⢹⣿⠀⣀⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+        ⠀⠀⠀⠀⠀⠀⠀⣼⣁⣤⣶⣿⠿⠟⢻⣿⡟⠀⠀⠀⢀⣿⣁⣀⣤⣴⡶⠀⠀⠀⣾⣇⣀⣀⣤⣾⡟⠀⠀⢀⣿⠷⠶⠶⠶⠆⠀⠀⣾⡿⠋⠁⠀⢀⠉⠑⢦⠀⠀⠀⠀⠀⠀⠀⠀
+        ⠀⠀⠀⠀⠀⠀⢠⡿⠟⠋⠁⠀⠀⠀⣾⣿⠁⠀⠀⠀⣼⠟⠛⠉⠉⠀⠀⠀⠀⣸⣿⠿⠿⠿⠛⠋⠀⠀⠀⣸⣯⣤⣤⣀⡀⠀⠀⢰⡏⠀⣼⠏⠀⣾⣧⠀⠈⣇⠀⠀⠀⠀⠀⠀⠀
+        ⠀⠀⠀⠀⠀⠀⡟⠀⠀⠀⠀⠀⠀⢰⣿⠇⠀⠀⠀⢰⡟⠀⣀⣀⣤⠀⠀⠀⢀⡿⠁⠀⠀⠀⠀⠀⠀⠀⣰⡿⠁⠀⠈⠉⠀⠀⢀⣿⡄⠀⠋⢀⣾⠟⠁⠀⣰⡟⠀⠀⠀⠀⠀⠀⠀
+        ⠀⠀⠀⠀⠀⣸⠁⠀⠀⠀⣀⣤⣶⣿⡏⠀⠀⠀⠀⣾⠿⠛⠛⠉⠁⠀⠀⢀⣾⠇⠀⢀⣀⣀⣀⣀⣤⣾⣿⣇⣀⣀⣀⣠⣤⣴⡿⣏⣻⣦⣴⣿⣷⣀⣠⣴⣿⣁⣀⣠⣤⣀⠀⠀⠀
+        ⠀⠀⠀⠀⢠⠇⣀⣴⣶⣿⣿⠿⠛⠉⠀⠀⠀⠀⣼⠇⠀⠀⠀⠀⢀⣠⣴⣿⣿⣩⠭⠭⠖⠲⣬⣭⢡⣶⢰⢿⣧⣶⣰⢿⡏⠁⢠⡟⡽⣭⣭⣭⣭⡽⢭⣽⢿⣿⣍⣵⣶⣜⢷⣄⠀
+        ⠀⠀⠀⠀⠾⢿⣿⠿⠛⠉⠀⠀⠀⠀⠀⠀⢀⣼⡿⢀⣠⣤⣶⡾⠿⠛⠉⣿⡕⣿⣣⡴⠲⣼⣿⣵⣟⣳⣶⣿⣿⣿⡟⣾⣥⣤⣿⣸⠁⣿⣷⣶⡗⢠⣿⣿⣿⣯⣋⠾⣽⣾⣗⣽⠇
+        ⠀⠀⠀⣴⠞⠉⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⡿⠛⠻⠟⠛⠉⠀⠀⠀⠀⣼⠇⣿⣿⣿⣿⡟⢻⢿⣿⣿⣿⣿⣿⡿⣿⣴⣷⣌⣛⣣⠿⢿⣿⣿⡿⢿⣿⣟⣽⣿⣷⡿⣞⣿⣇⡾⠁⠀
+        ⠀⠀⢠⠇⠀⠀⠀⠀⠀⠀⠀⣠⣴⣿⠟⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⣸⢿⣻⣹⣿⢃⡏⢸⠛⡿⣻⣭⢹⣿⢋⣿⣋⣿⣟⡟⢠⣿⣿⣿⠃⡾⡿⣿⣿⣿⣿⢣⣿⡟⣼⠃⠀⠀
+        ⠀⠀⡟⠀⠀⠀⠀⠀⣀⣴⣾⠟⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡾⣣⡿⠿⣿⣻⡏⣾⣟⣩⣴⣇⡽⣷⠿⣷⣿⣾⣿⡞⡿⠁⣾⣿⣿⠏⣸⣽⣧⣿⡿⣞⡿⣎⢣⣻⡇⠀⠀⠀
+        ⠀⣸⠀⠀⠀⣀⣴⣾⠟⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⣟⣽⠷⣖⣒⣒⡲⢼⣛⣯⣷⣘⣿⣯⣵⠧⠽⣦⣭⣿⣙⣓⣚⣿⣿⣓⣒⣋⣛⣃⣘⣻⡽⢾⣝⠾⣽⠃⠀⠀⠀
+        ⢠⠇⣀⣴⣾⠟⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⣯⡼⠞⠛⠉⠁⠉⠙⠷⠟⠀⠘⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠀⠀⠀⠙⠿⠏⠀⠀⠀⠀
+        ⣼⣾⠟⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+]],
+				-- items = {
+				-- 	{ name = "󰒲 lazy", action = "Lazy", section = "Actions" },
+				-- },
+				footer = [[
+Whatever you do, enjoy it to the fullest. That is the secret of life. 
+                        - Rider (Fate/Zero)
+                ]],
+			})
+			require("mini.notify").setup({
+				window = {
+					config = {
+						border = "rounded",
+						zindex = 200,
+					},
+					winblend = 0, -- transparency
+				},
+			})
 		end,
 	},
 	vim.keymap.set("n", "<leader><space>", ":Pick files<CR>", { desc = "Find Files (mini)", silent = true }),
@@ -53,9 +90,10 @@ return {
 	vim.keymap.set("n", "<leader>fc", ":Pick commands<CR>", { desc = "Find Commands (mini)", silent = true }),
 	vim.keymap.set("n", "<leader>fb", ":Pick buffers<CR>", { desc = "Find Buffers (mini)", silent = true }),
 	vim.keymap.set("n", "<leader>fl", ":Pick buf_lines<CR>", { desc = "Find Lines (mini)", silent = true }),
+	vim.keymap.set("n", "<leader>fg", ":Pick grep<CR>", { desc = "Grep (mini)", silent = true }),
 	vim.keymap.set(
 		"n",
-		"<leader>fs"
+		"<leader>fs",
 		":Pick lsp scope='document_symbol'<CR>",
 		{ desc = "Find Symbols (mini)", silent = true }
 	),
@@ -67,6 +105,9 @@ return {
 	),
 	vim.keymap.set("n", "<leader>fd", ":Pick diagnostic<CR>", { desc = "Find Symbols (mini)", silent = true }),
 	vim.keymap.set("n", "<leader>fk", ":Pick keymaps<CR>", { desc = "Find Symbols (mini)", silent = true }),
+	vim.keymap.set("n", "<leader>e", function()
+		MiniFiles.open()
+	end, { desc = "Find Symbols (mini)", silent = true }),
 	vim.keymap.set("n", "<leader>ft", function()
 		require("mini.pick").builtin.grep({
 			pattern = "TODO|FIXME|HACK|NOTE",
