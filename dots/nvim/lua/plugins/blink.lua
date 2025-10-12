@@ -16,14 +16,10 @@ return {
 		},
 		sources = {
 			default = { "lsp", "path", "snippets", "buffer", "lazydev" },
-			per_filetype = {
-				sql = { "dadbod" },
-			},
 			providers = {
 				cmdline = {
 					min_keyword_length = 2,
 				},
-				dadbod = { module = "vim_dadbod_completion.blink" },
 				lazydev = {
 					name = "LazyDev",
 					module = "lazydev.integrations.blink",

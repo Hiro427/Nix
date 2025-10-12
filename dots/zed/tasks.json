@@ -31,13 +31,6 @@
     "use_new_terminal": true
   },
   {
-    "label": "Find Text",
-    "command": "zeditor \"$tv text)\"",
-    "hide": "always",
-    "allow_concurrent_runs": true,
-    "use_new_terminal": true
-  },
-  {
     "label": "Open Project",
     "command": "zeditor --add \"$(fd -t d . ~/coding/ | tv)\"",
     "hide": "always",

@@ -84,5 +84,6 @@ with pkgs; [
   gifsicle
   killall
   pnpm
+  rainfrog
 ]
 

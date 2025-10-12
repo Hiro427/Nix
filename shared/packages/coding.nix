@@ -125,4 +125,5 @@ with pkgs; [
   typst
   hugo
   ruff
+  lld
 ]

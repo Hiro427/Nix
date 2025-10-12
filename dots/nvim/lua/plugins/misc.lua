@@ -24,24 +24,6 @@ return {
 	},
 
 	{
-		"kristijanhusak/vim-dadbod-ui",
-		dependencies = {
-			{ "tpope/vim-dadbod", lazy = true },
-			{ "kristijanhusak/vim-dadbod-completion", ft = { "sql", "mysql", "plsql" }, lazy = true },
-		},
-		cmd = {
-			"DBUI",
-			"DBUIToggle",
-			"DBUIAddConnection",
-			"DBUIFindBuffer",
-		},
-		init = function()
-			vim.g.db_ui_use_nerd_fonts = 1
-		end,
-	},
-
-	-- tailwind-tools.lua
-	{
 		"luckasRanarison/tailwind-tools.nvim",
 		name = "tailwind-tools",
 		build = ":UpdateRemotePlugins",
@@ -49,7 +31,6 @@ return {
 			"nvim-treesitter/nvim-treesitter",
 			"neovim/nvim-lspconfig", -- optional
 		},
-		-- opts = { conceal = { enabled = true } }, -- your configuration
 		opts = {}, -- your configuration
 		vim.keymap.set(
 			"n",
@@ -110,6 +91,18 @@ return {
 		opt = true, -- Set this to true if the plugin is optional
 		event = "InsertCharPre", -- Set the event to 'InsertCharPre' for better compatibility
 		priority = 1000,
+	},
+	{
+		"kndndrj/nvim-dbee",
+		dependencies = {
+			"MunifTanjim/nui.nvim",
+		},
+		build = function()
+			require("dbee").install()
+		end,
+		config = function()
+			require("dbee").setup()
+		end,
 	},
 	{
 		"akinsho/toggleterm.nvim",

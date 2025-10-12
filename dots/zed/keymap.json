@@ -17,21 +17,14 @@
       "ctrl-shift-k": "workspace::SwapPaneUp",
       "ctrl-shift-l": "workspace::SwapPaneRight",
       "space a": "workspace::AddFolderToProject",
-      "space b": "tab_switcher::ToggleAll",
-      "space d": "diagnostics::Deploy",
+      // "space b": "tab_switcher::ToggleAll",
+      // "space d": "diagnostics::Deploy",
       "space e": "project_panel::ToggleFocus",
       "space g": "git_panel::ToggleFocus",
       "space h": "workspace::NewFileSplitHorizontal",
       "space l": "workspace::ToggleLeftDock",
       "space o": "workspace::OpenFiles",
       "space q": "pane::CloseActiveItem",
-      // "space space": [
-      //   "task::Spawn",
-      //   {
-      //     "task_name": "File Finder",
-      //     "reveal_target": "center"
-      //   }
-      // ],
       "space o p": [
         "task::Spawn",
         {
@@ -39,16 +32,11 @@
           "reveal_target": "center"
         }
       ],
-      "space f l": [
-        "task::Spawn",
-        {
-          "task_name": "Find Text",
-          "reveal_target": "center"
-        }
-      ],
+      "space f l": "buffer_search::Deploy",
       "space r": "editor::Rename",
       "space s": "outline::Toggle",
       "space space": "file_finder::Toggle",
+      "space c t": "workspace::NewCenterTerminal",
       "space t": "terminal_panel::ToggleFocus",
       "space j": "pane::ActivateNextItem",
       "space k": "pane::ActivatePreviousItem",
@@ -113,6 +101,7 @@
   {
     "bindings": {
       "ctrl-t": "workspace::ToggleBottomDock",
+      "ctrl-k": "terminal_panel::ToggleFocus",
       "ctrl-n": [
         "workspace::SendKeystrokes",
         "down"
