@@ -7,9 +7,15 @@ return {
 			require("mini.surround").setup({})
 			require("mini.cursorword").setup({})
 			require("mini.diff").setup({})
+			require("mini.git").setup({})
 			require("mini.files").setup({})
 			require("mini.pick").setup({})
 			require("mini.ai").setup({})
+			require("mini.indentscope").setup({
+				draw = {
+					delay = 100,
+				},
+			})
 			require("mini.extra").setup({})
 			-- Would like some more sources here, path and cmdline completions are a must for me.
 			-- Otherwise this would be the ideal plugin for completions for my setup
@@ -17,7 +23,13 @@ return {
 			-- require("mini.completion").setup({})
 			require("mini.icons").setup({})
 			require("mini.jump").setup({})
-			require("mini.jump2d").setup({})
+			require("mini.bufremove")
+			require("mini.jump2d").setup({
+				view = {
+					dim = true,
+					n_steps_ahead = 1,
+				},
+			})
 			local miniclue = require("mini.clue")
 			miniclue.setup({
 				triggers = {
