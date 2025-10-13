@@ -1,3 +1,4 @@
 require("config.lazy")
 require("config.options")
-require("ui.statusline")
+require("extras.statusline")
+require("extras.keymaps")

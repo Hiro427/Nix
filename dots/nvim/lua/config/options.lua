@@ -9,7 +9,7 @@ vim.opt.showmode = false
 vim.o.number = true
 vim.o.relativenumber = true
 vim.g.mapleader = " "
-vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
+vim.keymap.set({ "n", "v" }, "<leader>yy", [["+y]])
 -- removed '~' from empty lines
 vim.opt.fillchars = { eob = " " }
 
@@ -34,15 +34,11 @@ vim.keymap.set("n", "<leader>sj", "<C-w>J") -- move to bottom
 vim.keymap.set("n", "<leader>vs", ":vsplit<CR>")
 vim.keymap.set("n", "<leader>hs", ":split<CR>")
 vim.keymap.set("n", "<leader>u", ":update<CR> :source<CR>", { desc = "reload config", silent = true })
--- Example: Set a dark gray background for mini.notify notifications
 
 vim.o.background = "dark"
 vim.api.nvim_set_hl(0, "NormalFloat", { link = "Pmenu" })
 
-vim.diagnostic.config({
-	virtual_text = false,
-	update_in_insert = false,
-})
+vim.diagnostic.config({ virtual_text = false, update_in_insert = false })
 
 vim.api.nvim_create_autocmd({ "FileType" }, {
 	pattern = { "lua" },

@@ -7,15 +7,11 @@ return {
 			require("mini.surround").setup({})
 			require("mini.cursorword").setup({})
 			require("mini.diff").setup({})
-			require("mini.git").setup({})
 			require("mini.files").setup({})
+			require("mini.git").setup({})
 			require("mini.pick").setup({})
 			require("mini.ai").setup({})
-			require("mini.indentscope").setup({
-				draw = {
-					delay = 100,
-				},
-			})
+			require("mini.indentscope").setup({ draw = { delay = 100 } })
 			require("mini.extra").setup({})
 			-- Would like some more sources here, path and cmdline completions are a must for me.
 			-- Otherwise this would be the ideal plugin for completions for my setup
@@ -23,13 +19,8 @@ return {
 			-- require("mini.completion").setup({})
 			require("mini.icons").setup({})
 			require("mini.jump").setup({})
-			require("mini.bufremove")
-			require("mini.jump2d").setup({
-				view = {
-					dim = true,
-					n_steps_ahead = 1,
-				},
-			})
+			require("mini.splitjoin").setup({})
+			require("mini.jump2d").setup({ view = { dim = true, n_steps_ahead = 1 } })
 			local miniclue = require("mini.clue")
 			miniclue.setup({
 				triggers = {
@@ -84,15 +75,14 @@ return {
 
 			require("mini.bracketed").setup({})
 			local hipatterns = require("mini.hipatterns")
+
 			hipatterns.setup({
 				highlighters = {
 					-- Highlight standalone 'FIXME', 'HACK', 'TODO', 'NOTE'
-					fixme = { pattern = "%f[%w]()FIXME()%f[%W]", group = "MiniHipatternsFixme" },
-					hack = { pattern = "%f[%w]()HACK()%f[%W]", group = "MiniHipatternsHack" },
-					todo = { pattern = "%f[%w]()TODO()%f[%W]", group = "MiniHipatternsTodo" },
-					note = { pattern = "%f[%w]()NOTE()%f[%W]", group = "MiniHipatternsNote" },
-
-					hex_color = hipatterns.gen_highlighter.hex_color(),
+					fixme = { pattern = "FIXME.*", group = "MiniHipatternsFixme" },
+					hack = { pattern = "HACK.*", group = "MiniHipatternsHack" },
+					todo = { pattern = "TODO.*", group = "MiniHipatternsTodo" },
+					note = { pattern = "NOTE.*", group = "MiniHipatternsNote" },
 				},
 			})
 			require("mini.starter").setup({
@@ -117,23 +107,13 @@ return {
 				-- items = {
 				-- 	{ name = "󰒲 lazy", action = "Lazy", section = "Actions" },
 				-- },
-				items = {
-					require("mini.starter").sections.recent_files(5, false, true),
-				},
+				items = { require("mini.starter").sections.recent_files(5, false, true) },
 				footer = [[
 Whatever you do, enjoy it to the fullest. That is the secret of life. 
                         - Rider (Fate/Zero)
                 ]],
 			})
-			require("mini.notify").setup({
-				window = {
-					config = {
-						border = "rounded",
-						zindex = 200,
-					},
-					winblend = 0, -- transparency
-				},
-			})
+			require("mini.notify").setup({ window = { config = { border = "rounded", zindex = 200 }, winblend = 0 } })
 		end,
 	},
 	vim.keymap.set("n", "<leader><space>", ":Pick files<CR>", { desc = "Find Files (mini)", silent = true }),

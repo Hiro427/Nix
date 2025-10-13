@@ -7,12 +7,14 @@
     # export XDG_DATA_DIRS=$XDG_DATA_DIRS:/usr/share:/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share
     # export LS_COLORS="$(vivid generate gruvbox-dark)" nord tokyonight-night
     initContent = ''
-       tmuxm() { tsm } 
-       zle -N tmuxm
+       res() { fg }
+       
+       zle -N res 
        bindkey -M viins '^I' autosuggest-accept    
        bindkey '^N' fzf-file-widget  
 
-       bindkey '^X' tmuxm
+       bindkey '^Z' res
+
 
        eval "$(starship init zsh)"
        export LS_COLORS="$(vivid generate ${theme.vividTheme})" 
