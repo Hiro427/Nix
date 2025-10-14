@@ -14,7 +14,7 @@ vim.keymap.set({ "n", "v" }, "<leader>yy", [["+y]])
 vim.opt.fillchars = { eob = " " }
 
 -- GUI Settings
-vim.opt.laststatus = 3 --limit statusline to 1
+-- vim.opt.laststatus = 3 --limit statusline to 1
 
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"

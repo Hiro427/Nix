@@ -33,6 +33,8 @@ return {
 					-- Marks
 					{ mode = "n", keys = "'" },
 					{ mode = "x", keys = "'" },
+					{ mode = "n", keys = "`" },
+					{ mode = "x", keys = "`" },
 					--Square-Brackets
 					{ mode = "n", keys = "]" },
 					{ mode = "x", keys = "[" },
@@ -41,6 +43,7 @@ return {
 					{ mode = "x", keys = '"' },
 					{ mode = "i", keys = "<C-r>" },
 					{ mode = "c", keys = "<C-r>" },
+					{ mode = "n", keys = "m", desc = "Set mark" },
 				},
 				window = { delay = 200 },
 				clues = {
@@ -79,10 +82,10 @@ return {
 			hipatterns.setup({
 				highlighters = {
 					-- Highlight standalone 'FIXME', 'HACK', 'TODO', 'NOTE'
-					fixme = { pattern = "FIXME.*", group = "MiniHipatternsFixme" },
-					hack = { pattern = "HACK.*", group = "MiniHipatternsHack" },
-					todo = { pattern = "TODO.*", group = "MiniHipatternsTodo" },
-					note = { pattern = "NOTE.*", group = "MiniHipatternsNote" },
+					fixme = { pattern = "FIXME", group = "MiniHipatternsFixme" },
+					hack = { pattern = "HACK", group = "MiniHipatternsHack" },
+					todo = { pattern = "TODO", group = "MiniHipatternsTodo" },
+					note = { pattern = "NOTE", group = "MiniHipatternsNote" },
 				},
 			})
 			require("mini.starter").setup({

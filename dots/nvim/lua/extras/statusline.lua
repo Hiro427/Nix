@@ -39,4 +39,4 @@ function _G.statusline()
 end
 
 vim.opt.statusline = "%!v:lua.statusline()"
-vim.opt.laststatus = 2
+vim.opt.laststatus = 3
