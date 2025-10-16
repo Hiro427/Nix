@@ -62,6 +62,7 @@
         space.f.g = "global_search";
         space.f.S = "workspace_symbol_picker";
         space.f.b = "buffer_picker";
+        space.f.l = [ "select_all" "select_regex" ];
         space.j = ":buffer-next";
         space.k = ":buffer-previous";
         space.h.s = ":hsplit";

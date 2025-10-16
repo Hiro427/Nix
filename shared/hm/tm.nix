@@ -6,30 +6,19 @@
     baseIndex = 1;
     prefix = "C-a";
     mouse = true;
-    plugins = with pkgs;
-      [
-        # colors= gruv:ebdbb2, ctp: b4befe
-        # {
-        #     plugin = tmuxPlugins.power-theme;
-        #     extraConfig = ''
-        #         set -g @tmux_power_theme '${theme.tmuxStatusLine}'
-        #         set -g @tmux_power_time_format '%-I:%M %p'
-        #     '';
-        # }
-        {
-          plugin = tmuxPlugins.vim-tmux-navigator;
-          extraConfig = ''
-            set -g @vim_navigator_mapping_left "C-Left C-h"  # use C-h and C-Left
-            set -g @vim_navigator_mapping_right "C-Right C-l"
-            set -g @vim_navigator_mapping_up "C-k"
-            set -g @vim_navigator_mapping_down "C-j"
-            set -g @vim_navigator_mapping_prev ""  # removes the C-\ binding
-          '';
-        }
-      ];
+    plugins = with pkgs; [{
+      plugin = tmuxPlugins.vim-tmux-navigator;
+      extraConfig = ''
+        set -g @vim_navigator_mapping_left "C-Left C-h"  # use C-h and C-Left
+        set -g @vim_navigator_mapping_right "C-Right C-l"
+        set -g @vim_navigator_mapping_up "C-k"
+        set -g @vim_navigator_mapping_down "C-j"
+        set -g @vim_navigator_mapping_prev ""  # removes the C-\ binding
+      '';
+    }];
     extraConfig = ''
       set -g default-terminal "tmux-256color"
-      set-option -g allow-passthrough on 
+      set-option -g allow-passthrough on
 
       set -ga terminal-overrides ",xterm-256color:Tc"
       set -g status-position bottom
