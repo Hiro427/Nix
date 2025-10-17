@@ -155,7 +155,6 @@
         {
           name = "go";
           # auto-format = true;
-          # formatter = {command = "${pkgs.gofm}"}
           formatter = { command = "/run/current-system/sw/bin/gofmt}"; };
           language-servers = [ "gopls" "golangci-lint-langserver" ];
         }

@@ -6,16 +6,7 @@
     baseIndex = 1;
     prefix = "C-a";
     mouse = true;
-    plugins = with pkgs; [{
-      plugin = tmuxPlugins.vim-tmux-navigator;
-      extraConfig = ''
-        set -g @vim_navigator_mapping_left "C-Left C-h"  # use C-h and C-Left
-        set -g @vim_navigator_mapping_right "C-Right C-l"
-        set -g @vim_navigator_mapping_up "C-k"
-        set -g @vim_navigator_mapping_down "C-j"
-        set -g @vim_navigator_mapping_prev ""  # removes the C-\ binding
-      '';
-    }];
+
     extraConfig = ''
       set -g default-terminal "tmux-256color"
       set-option -g allow-passthrough on
@@ -30,8 +21,12 @@
       bind-key "t" display-popup -E "$SHELL"
 
       unbind r
-      bind r source-file ~/.config/tmux/tmux.conf
+      bind r source-file ~/.config/tmux/tmux.conf 
 
+      bind -n C-j select-pane -D
+      bind -n C-k select-pane -U
+      bind -n C-h select-pane -L
+      bind -n C-l select-pane -R
 
       bind -n M-h resize-pane -L 5
       bind -n M-j resize-pane -D 5
