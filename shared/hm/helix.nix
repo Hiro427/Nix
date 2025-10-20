@@ -5,7 +5,7 @@
     themes = {
       transparent = {
         inherits = theme.helixTheme;
-        "ui.background" = { };
+        "rui.background" = { };
         "ui.menu" = { };
         "ui.help" = { };
         "ui.popup" = { };
@@ -65,10 +65,21 @@
         space.f.l = [ "select_all" "select_regex" ];
         space.j = ":buffer-next";
         space.k = ":buffer-previous";
+        space.x = ":write-buffer-close";
         space.h.s = ":hsplit";
+
         space.v.s = ":vsplit";
         space.l.i = ":toggle lsp.display-inlay-hints";
         space.l.r = "rename_symbol";
+        space.h.a =
+          ":sh ~/Nix/dots/scripts/marks.sh --add-file '%sh{pwd}/%sh{basename %{buffer_name}}' ";
+        space.h.o = ":open /tmp/hxmarks";
+        space.h.h = ":sh ~/Nix/dots/scripts/marks.sh ls";
+        space.h.z = ":open %sh{~/Nix/dots/scripts/marks.sh --file 1}";
+        space.h.x = ":open %sh{~/Nix/dots/scripts/marks.sh --file 2}";
+        space.h.c = ":open %sh{~/Nix/dots/scripts/marks.sh --file 3}";
+        space.h.v = ":open %sh{~/Nix/dots/scripts/marks.sh --file 4}";
+        space.h.b = ":open %sh{~/Nix/dots/scripts/marks.sh --file 5}";
         space.y.t = [
           ":sh rm -f /tmp/unique-file"
           ":insert-output yazi %{buffer_name} --chooser-file=/tmp/unique-file"
@@ -76,9 +87,6 @@
           ":open %sh{cat /tmp/unique-file}"
           ":redraw"
         ];
-        s.a = "surround_add";
-        s.r = "surround_replace";
-        s.d = "surround_delete";
         ret = "goto_word";
         space.space = ":open .";
         g.c = "toggle_comments";
@@ -90,10 +98,10 @@
       keys.select = {
         u = [ "switch_to_lowercase" "collapse_selection" "normal_mode" ];
         U = [ "switch_to_uppercase" "collapse_selection" "normal_mode" ];
-        s.a = "surround_add";
-        s.r = "surround_replace";
-        s.d = "surround_delete";
-        g.c = "toggle_comments";
+        space.s.a = "surround_add";
+        space.s.r = "surround_replace";
+        space.s.d = "surround_delete";
+        space.g.c = "toggle_comments";
       };
     };
     languages = {
