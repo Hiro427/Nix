@@ -65,7 +65,7 @@
         space.f.l = [ "select_all" "select_regex" ];
         space.j = ":buffer-next";
         space.k = ":buffer-previous";
-        space.x = ":write-buffer-close";
+        space.w.b = ":write-buffer-close";
         space.h.s = ":hsplit";
 
         space.v.s = ":vsplit";
@@ -164,7 +164,7 @@
           name = "go";
           # auto-format = true;
           formatter = { command = "/run/current-system/sw/bin/gofmt}"; };
-          language-servers = [ "gopls" "golangci-lint-langserver" ];
+          language-servers = [ "gopls" "golangci-lint-langserver" "" ];
         }
         # {
         #      name = "templ"; 
