@@ -126,4 +126,6 @@ with pkgs; [
   hugo
   ruff
   lld
+  elixir-ls
+  elixir
 ]

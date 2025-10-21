@@ -5,7 +5,7 @@
     themes = {
       transparent = {
         inherits = theme.helixTheme;
-        "rui.background" = { };
+        "ui.background" = { };
         "ui.menu" = { };
         "ui.help" = { };
         "ui.popup" = { };
@@ -32,6 +32,7 @@
         # rainbow-option = "dim";
       };
       editor.lsp = {
+        snippets = true;
         enable = true;
         display-messages = true;
         # display-inlay-hints = true;
@@ -164,7 +165,7 @@
           name = "go";
           # auto-format = true;
           formatter = { command = "/run/current-system/sw/bin/gofmt}"; };
-          language-servers = [ "gopls" "golangci-lint-langserver" "" ];
+          language-servers = [ "gopls" "golangci-lint-langserver" ];
         }
         # {
         #      name = "templ"; 
