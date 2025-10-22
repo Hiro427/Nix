@@ -56,6 +56,7 @@ in {
     ./hm/extras.nix
     ./hm/cpt.nix
     ./hm/tm.nix
+    ./hm/vim.nix
     ./hm/dots.nix
     ./hm/dunst.nix
     ./hm/starship.nix

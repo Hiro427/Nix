@@ -6,6 +6,7 @@ with pkgs; [
   thunderbird
   pcmanfm
   bruno
+  yaak
   bitwarden-desktop
   lxappearance
   prismlauncher
