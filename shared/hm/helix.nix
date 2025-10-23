@@ -103,6 +103,28 @@
         space.s.r = "surround_replace";
         space.s.d = "surround_delete";
         space.g.c = "toggle_comments";
+        K = [ # scroll selections up one lin
+          "ensure_selections_forward"
+          "extend_to_line_bounds"
+          "extend_char_right"
+          "extend_char_left"
+          "delete_selection"
+          "move_line_up"
+          "add_newline_above"
+          "move_line_up"
+          "replace_with_yanked"
+        ];
+
+        J = [ # scroll selections down one line
+          "ensure_selections_forward"
+          "extend_to_line_bounds"
+          "extend_char_right"
+          "extend_char_left"
+          "delete_selection"
+          "add_newline_below"
+          "move_line_down"
+          "replace_with_yanked"
+        ];
       };
     };
     languages = {
