@@ -56,6 +56,7 @@
       # "Mod4+space" = "exec rofi -show drun";
       "Mod4+space" = "exec vicinae";
       "Ctrl+space" = "exec flameshot gui";
+      "Mod4+s" = "exec kitty --class spt spotify_player";
       "Mod4+Shift+r" = "restart";
       "Mod4+Shift+c" = "reload";
       "Mod4+Shift+s" = "mode resize";
@@ -102,8 +103,8 @@
         { class = "kitty"; }
         { class = "com.mitchellh.ghostty"; }
       ];
-      "3" = [{ class = "vesktop"; }];
-      "4" = [{ class = "spotify-qt"; }];
+      "4" = [{ class = "vesktop"; }];
+      "3" = [ { class = "spotify-qt"; } { class = "spt"; } ];
       "6" = [{ class = "PrismLauncher"; }];
     };
     window = {

@@ -48,7 +48,7 @@
         "eza --color=always --git --icons=auto --no-user --no-permissions --no-time --long --no-filesize";
       c = "cd ..";
       e = "exit";
-      h = "hx";
+      h = "hx .";
       ns = "";
       activate = "source .venv/bin/activate";
       s = "cd - >> /dev/null";

@@ -85,5 +85,6 @@ with pkgs; [
   killall
   pnpm
   rainfrog
+  discordo
 ]
 
