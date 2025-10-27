@@ -73,11 +73,11 @@
           #   interval = 3600;
           # }
 
-          {
-            block = "custom";
-            command = "~/Nix/dots/scripts/cava-bar.sh";
-            persistent = true;
-          }
+          # {
+          #   block = "custom";
+          #   command = "~/Nix/dots/scripts/cava-bar.sh";
+          #   persistent = true;
+          # }
           {
             block = "sound";
             click = [{
@@ -90,22 +90,22 @@
             format = "󰃝 $brightness";
             missing_format = "";
           }
-          {
-            block = "music";
-            format = "{ $combo.str(max_w:15,rot_interval:0.6) | (-.-)Zzz...}";
-            player = [ "spotify_player" "spotify" "spotify-qt" "ncspot" ];
+          # {
+          #   block = "music";
+          #   format = "{ $combo.str(max_w:15,rot_interval:0.6) | (-.-)Zzz...}";
+          #   player = [ "spotify_player" "spotify" "spotify-qt" "ncspot" ];
 
-          }
-          {
-            block = "custom";
-            interval = 600;
-            command =
-              "echo  $(docker ps -q | wc -l)  $(tmux ls | wc -l) $(git_i3bar) ";
-            click = [{
-              button = "left";
-              update = true;
-            }];
-          }
+          # }
+          # {
+          #   block = "custom";
+          #   interval = 600;
+          #   command =
+          #     "echo  $(docker ps -q | wc -l)  $(tmux ls | wc -l) $(git_i3bar) ";
+          #   click = [{
+          #     button = "left";
+          #     update = true;
+          #   }];
+          # }
           {
             block = "custom";
             interval = 3600;

@@ -44,8 +44,8 @@
       bind-key j switch-client -n  
       bind-key k switch-client -p  # previous session
 
-      bind h split-window -h -c "#{pane_current_path}"
-      bind v split-window -v -c "#{pane_current_path}" 
+      bind v split-window -h -c "#{pane_current_path}"
+      bind h split-window -v -c "#{pane_current_path}" 
 
       unbind C-s
       bind -n "C-s" run-shell "sesh connect \"$(

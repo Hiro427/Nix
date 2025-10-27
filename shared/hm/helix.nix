@@ -31,6 +31,7 @@
         render = true;
         # rainbow-option = "dim";
       };
+      editor.file-picker = { hidden = false; };
       editor.lsp = {
         snippets = true;
         enable = true;
