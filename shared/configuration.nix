@@ -41,12 +41,13 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
-
+  security.polkit.enable = true;
   # Enable the GNOME Desktop Environment.
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
   services.xserver.windowManager.i3.enable = true;
   security.pam.services.i3lock.enableGnomeKeyring = true;
+  security.pam.services.swaylock.enableGnomeKeyring = true;
   security.pam.services.gdm.enableGnomeKeyring = true;
   services.gnome.gnome-keyring.enable = true;
 

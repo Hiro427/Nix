@@ -1,6 +1,6 @@
 { config, pkgs, theme, ... }: {
   programs.swayimg.enable = true;
-  programs.swaync = {
+  services.swaync = {
     enable = true;
     settings = {
       positionX = "right";
@@ -20,28 +20,10 @@
       notification-body-image-width = 200;
     };
   };
-  wayland.windowManager.i3 = {
+  wayland.windowManager.sway = {
     enable = true;
     config = {
-      startup = [
-        { command = "--no-startup-id dex --autostart environment i3"; }
-
-        { command = "--no-startup-id nm-applet &"; }
-        { command = "--no-startup-id sh ~/Nix/dots/i3/scripts/natscroll.sh"; }
-        {
-          command =
-            "--no-startup-id feh --bg-fill $(cat ~/Nix/dots/i3/cur_wall.txt)";
-          always = true;
-        }
-        {
-          command = "--no-startup-id autotiling";
-          always = true;
-        }
-        {
-          command = "--no-startup-id setxkbmap -option caps:escape";
-          always = true;
-        }
-      ];
+      startup = [{ command = "--no-startup-id nm-applet &"; }];
       keybindings = {
         "Mod4+w" = "exec i3-msg kill";
         "Mod4+h" = "focus left";
