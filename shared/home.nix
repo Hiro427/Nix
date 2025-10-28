@@ -65,8 +65,10 @@ in {
     ./hm/i3status.nix
     ./hm/rofi.nix
     ./hm/direnv.nix
+    ./hm/sway.nix
   ];
   programs.zed-editor.enable = true;
+
   programs.ncspot.enable = true;
   programs.lapce = { enable = true; };
   qt.enable = true;
