@@ -52,9 +52,9 @@
       "Mod4+b" = "exec zen-beta";
       "Mod1+Shift+p" = "exec sh ~/.config/rofi/power.sh";
       # "Mod4+space" = "exec dmenu_run -nb '#1e1e2e' -nf '#cdd6f4' -sb '#b4befe' -sf '#1e1e2e'";
-      # "Mod4+space" = "exec zsh -c bemenu-run";
+      "Mod4+space" = "exec zsh -c bemenu-run";
       # "Mod4+space" = "exec rofi -show drun";
-      "Mod4+space" = "exec vicinae toggle";
+      # "Mod4+space" = "exec vicinae toggle";
       "Ctrl+space" = "exec flameshot gui";
       "Mod4+s" = "exec kitty --class spt spotify_player";
       "Mod4+Shift+r" = "restart";
