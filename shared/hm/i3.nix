@@ -7,7 +7,7 @@
         command =
           "--no-startup-id picom --config $HOME/.config/picom/picom.conf";
       }
-      { command = "--no-startup-id nm-applet &"; }
+      # { command = "--no-startup-id nm-applet &"; }
       { command = "--no-startup-id sh ~/Nix/dots/i3/scripts/natscroll.sh"; }
       {
         command =
