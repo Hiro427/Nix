@@ -54,12 +54,6 @@
             interval = 5;
           }
 
-          # {
-          #     block = "net";
-          #     format_alt = "{󰖩 $ssid | 󰈀 }$speed_up $speed_down ";
-          #     format = "{󰖩 $ssid | 󰈀 }";
-          #     inactive_format = "󰖪 ";
-          # }
           {
             block = "disk_space";
             info_type = "used";
@@ -68,10 +62,10 @@
             warning = 875.0;
             format = " $icon $free.eng(range:..10e10) |";
           }
-          # {
-          #   block = "uptime";
-          #   interval = 3600;
-          # }
+          {
+            block = "uptime";
+            interval = 3600;
+          }
 
           # {
           #   block = "custom";
@@ -112,6 +106,7 @@
             command =
               "echo 󰖕 $(curl -s 'wttr.in/NYC?format=1' | awk -F'+' '{print $2}')";
           }
+
           # {
           #   block = "custom";
           #   interval = 60;
@@ -137,28 +132,14 @@
           #   state_connected = "good";
           #   state_disconnected = "idle";
           # }
-          # {
-          #   block = "tea_timer";
-          #   format = "󰔟 {$time|0m 00s}";
-          #   done_cmd = "notify-send 'Timer Finished'";
-          #   increment = 301;
-          # }
           {
-            block = "time";
-            interval = 60;
-            format = "$timestamp.datetime(f:' %D %I:%M%p') ";
-          }
-          {
-            block = "toggle";
-            format = "$icon 󰋋 ";
-            if_command = ''
-              [ "$(cat /sys/class/dmi/id/product_name)" == "B650 EAGLE AX" ]'';
-
-            command_state = "pactl get-default-sink | grep -i -v 'usb'";
-            command_on = "sel_audio headphones";
-            command_off = "sel_audio";
-            state_on = "idle";
-            state_off = "idle";
+            block = "net";
+            format =
+              " $icon {$signal_strength $ssid $frequency|Wired connection} ";
+            click = [{
+              button = "left";
+              cmd = "nm-connection-editor";
+            }];
           }
           # {
           #   block = "toggle";
@@ -170,15 +151,9 @@
           #   state_off = "idle";
           # }
           {
-            block = "toggle";
-            format = "$icon 󰅶 ";
-            command_state =
-              "pgrep swayidle > /dev/null && echo 'enabled' || echo 'disabled'";
-            command_on = "pkill swayidle"; # Turn off idle (keep awake)
-            command_off = ''
-              swayidle -w timeout 300 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' &''; # Turn on idle
-            state_on = "idle";
-            state_off = "idle";
+            block = "time";
+            interval = 60;
+            format = "$timestamp.datetime(f:' %D %I:%M%p') ";
           }
           {
             block = "menu";
@@ -187,7 +162,7 @@
               {
                 display = "󰄽 󰒲 Suspend 󰄾";
                 # cmd = "i3lock -c 000000 && systemctl suspend";
-                cmd = "swaylock -c 000000 && systemctl suspend";
+                cmd = "swaylock && systemctl suspend";
               }
               {
                 display = "󰄽 󰍃 Log Out 󰄾";
@@ -204,11 +179,12 @@
               }
               {
                 display = "󰄽  Lock 󰄾";
-                cmd = "i3lock -c 000000";
+                cmd = "swaylock";
               }
 
             ];
           }
+
           {
             block = "battery";
             if_command = ''

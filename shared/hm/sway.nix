@@ -1,5 +1,6 @@
 { config, pkgs, theme, ... }: {
   programs.swayimg.enable = true;
+  programs.fuzzel.enable = true;
   programs.swaylock = {
     enable = true;
     settings = {
@@ -15,6 +16,7 @@
       {
         timeout = 300;
         command = "${pkgs.swaylock}/bin/swaylock";
+
       }
       {
         timeout = 315;
@@ -47,7 +49,6 @@
     enable = true;
     config = {
       startup = [
-        { command = "nm-applet"; }
         {
           command =
             "swaymsg output '*' bg $(cat ~/Nix/dots/i3/cur_wall.txt) fill";
@@ -85,7 +86,9 @@
         # "Mod4+space" = "exec dmenu_run -nb '#1e1e2e' -nf '#cdd6f4' -sb '#b4befe' -sf '#1e1e2e'";
         # "Mod4+space" = "exec zsh -c bemenu-run";
         # "Mod4+space" = "exec rofi -show drun";
-        "Mod4+space" = "exec vicinae toggle";
+        # "Mod4+space" = "exec vicinae toggle";
+        "Mod4+space" = "exec fuzzel";
+        #
         "Ctrl+space" = "exec flameshot gui";
         "Mod4+s" = "exec kitty --class spt spotify_player";
         "Mod4+Shift+r" = "swaymsg reload";
