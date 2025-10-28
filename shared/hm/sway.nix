@@ -133,14 +133,26 @@
       };
       focus.followMouse = false;
       assigns = {
-        "1" = [{ class = "zen"; }];
-        "2" = [
-          { class = "org.wezfurlong.wezterm"; }
-          { class = "kitty"; }
-          { class = "com.mitchellh.ghostty"; }
+        "1" = [
+          { app_id = "zen-alpha"; } # Native Wayland
+          { class = "zen"; } # XWayland fallback
         ];
-        "4" = [{ class = "vesktop"; }];
-        "3" = [ { class = "spotify-qt"; } { class = "spt"; } ];
+        "2" = [
+          { app_id = "org.wezfurlong.wezterm"; }
+          { app_id = "kitty"; }
+          { app_id = "com.mitchellh.ghostty"; }
+          { class = "kitty"; } # Fallback for XWayland
+        ];
+        "3" = [
+          { app_id = "spotify-qt"; }
+          { app_id = "spt"; }
+          { class = "Spotify"; } # XWayland Spotify
+        ];
+        "4" = [
+          { app_id = "vesktop"; }
+          { class = "vesktop"; }
+          { class = "discord"; }
+        ];
         "6" = [{ class = "PrismLauncher"; }];
       };
       window = {
@@ -148,16 +160,19 @@
         # hideEdgeBorders = "smart";
         commands = [
           {
+            criteria = {
+              app_id = "firefox";
+              title = "^Picture-in-Picture$";
+            };
+            command = "floating enable, sticky enable";
+          }
+          {
             command = "floating enable";
             criteria = { class = "vicinae"; };
           }
           {
             command = "floating enable, move position center";
             criteria = { class = "mpv"; };
-          }
-          {
-            command = "sticky enable";
-            criteria = { title = "Picture-in-Picture"; };
           }
           # {
           #   command = "border pixel 2";

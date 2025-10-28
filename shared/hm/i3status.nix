@@ -62,11 +62,6 @@
             warning = 875.0;
             format = " $icon $free.eng(range:..10e10) |";
           }
-          {
-            block = "uptime";
-            interval = 3600;
-          }
-
           # {
           #   block = "custom";
           #   command = "~/Nix/dots/scripts/cava-bar.sh";
@@ -84,12 +79,12 @@
             format = "󰃝 $brightness";
             missing_format = "";
           }
-          # {
-          #   block = "music";
-          #   format = "{ $combo.str(max_w:15,rot_interval:0.6) | (-.-)Zzz...}";
-          #   player = [ "spotify_player" "spotify" "spotify-qt" "ncspot" ];
+          {
+            block = "music";
+            format = "{ $combo.str(max_w:15,rot_interval:0.6) | (-.-)Zzz...}";
+            player = [ "spotify_player" "spotify" "spotify-qt" "ncspot" ];
 
-          # }
+          }
           # {
           #   block = "custom";
           #   interval = 600;
@@ -134,8 +129,7 @@
           # }
           {
             block = "net";
-            format =
-              " $icon {$signal_strength $ssid $frequency|Wired connection} ";
+            format = "{󰖩 $signal_strength $ssid $frequency|󰈀 Wired} ";
             click = [{
               button = "left";
               cmd = "nm-connection-editor";
@@ -161,13 +155,13 @@
             items = [
               {
                 display = "󰄽 󰒲 Suspend 󰄾";
-                # cmd = "i3lock -c 000000 && systemctl suspend";
-                cmd = "swaylock && systemctl suspend";
+                cmd = "i3lock -c 000000 && systemctl suspend";
+                # cmd = "swaylock && systemctl suspend";
               }
               {
                 display = "󰄽 󰍃 Log Out 󰄾";
-                # cmd = "i3-msg exit";
-                cmd = "swaymsg exit";
+                cmd = "i3-msg exit";
+                # cmd = "swaymsg exit";
               }
               {
                 display = "󰄽  Restart 󰄾";

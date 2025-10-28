@@ -17,6 +17,7 @@
 
     settings = {
       theme = "transparent";
+      # theme = theme.helixTheme;
       editor = {
         line-number = "relative";
         true-color = true;

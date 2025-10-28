@@ -13,7 +13,7 @@
       config.window_close_confirmation = "NeverPrompt"
       config.enable_wayland = false
       if os.getenv("XDG_CURRENT_DESKTOP") == "i3" then
-      config.window_decorations = "RESIZE"
+       config.window_decorations = "RESIZE"
       else
           config.window_decorations = "NONE"
       end
