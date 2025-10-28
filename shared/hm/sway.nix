@@ -1,5 +1,28 @@
 { config, pkgs, theme, ... }: {
   programs.swayimg.enable = true;
+  programs.swaylock = {
+    enable = true;
+    settings = {
+      daemonize = true;
+      indicator-idle-visible = false;
+      indicator-radius = 100;
+      show-failed-attempts = true;
+    };
+  };
+  services.swayidle = {
+    enable = true;
+    timeouts = [
+      {
+        timeout = 300;
+        command = "${pkgs.swaylock}/bin/swaylock";
+      }
+      {
+        timeout = 315;
+        command = "${pkgs.systemd}/bin/systemctl suspend";
+      }
+    ];
+
+  };
   services.swaync = {
     enable = true;
     settings = {
@@ -23,7 +46,20 @@
   wayland.windowManager.sway = {
     enable = true;
     config = {
-      startup = [{ command = "--no-startup-id nm-applet &"; }];
+      startup = [
+        { command = "nm-applet"; }
+        {
+          command =
+            "swaymsg output '*' bg $(cat ~/Nix/dots/i3/cur_wall.txt) fill";
+          always = true;
+        }
+        {
+          command = "sh ~/Nix/dots/i3/scripts/natscroll_sway.sh";
+          always = true;
+        }
+        { command = "autotiling"; }
+      ];
+      input = { "type:keyboard" = { xkb_options = "caps:escape"; }; };
       keybindings = {
         "Mod4+w" = "exec i3-msg kill";
         "Mod4+h" = "focus left";
@@ -52,7 +88,7 @@
         "Mod4+space" = "exec vicinae toggle";
         "Ctrl+space" = "exec flameshot gui";
         "Mod4+s" = "exec kitty --class spt spotify_player";
-        "Mod4+Shift+r" = "restart";
+        "Mod4+Shift+r" = "swaymsg reload";
         "Mod4+Shift+c" = "reload";
         "Mod4+Shift+s" = "mode resize";
         "Mod4+1" = "workspace number 1";

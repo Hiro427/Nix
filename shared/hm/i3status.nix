@@ -160,12 +160,23 @@
             state_on = "idle";
             state_off = "idle";
           }
+          # {
+          #   block = "toggle";
+          #   format = "$icon 󰅶 ";
+          #   command_state = "xset q | grep 'DPMS is Disabled'";
+          #   command_on = "xset q -dpms s off";
+          #   command_off = "xset q +dpms s on";
+          #   state_on = "idle";
+          #   state_off = "idle";
+          # }
           {
             block = "toggle";
             format = "$icon 󰅶 ";
-            command_state = "xset q | grep 'DPMS is Disabled'";
-            command_on = "xset q -dpms s off";
-            command_off = "xset q +dpms s on";
+            command_state =
+              "pgrep swayidle > /dev/null && echo 'enabled' || echo 'disabled'";
+            command_on = "pkill swayidle"; # Turn off idle (keep awake)
+            command_off = ''
+              swayidle -w timeout 300 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' &''; # Turn on idle
             state_on = "idle";
             state_off = "idle";
           }
@@ -175,11 +186,13 @@
             items = [
               {
                 display = "󰄽 󰒲 Suspend 󰄾";
-                cmd = "i3lock -c 000000 && systemctl suspend";
+                # cmd = "i3lock -c 000000 && systemctl suspend";
+                cmd = "swaylock -c 000000 && systemctl suspend";
               }
               {
                 display = "󰄽 󰍃 Log Out 󰄾";
-                cmd = "i3-msg exit";
+                # cmd = "i3-msg exit";
+                cmd = "swaymsg exit";
               }
               {
                 display = "󰄽  Restart 󰄾";
