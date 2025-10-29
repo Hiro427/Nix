@@ -209,8 +209,6 @@
           # SwayFX blur settings
           blur enable
           blur_xray disable
-          blur_passes 1
-          blur_radius 3
 
           # Rounded corners
           corner_radius 10
@@ -223,7 +221,7 @@
       # Additional SwayFX options
       default_dim_inactive 0.1
       for_window [class=".*"] blur enable
-      for_window [class="zen"] blur disable
+      for_window [class="zen-beta"] blur disable
     '';
 
   };
