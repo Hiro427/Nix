@@ -45,18 +45,16 @@
       "Mod4+minus" = "move scratchpad";
       "Mod4+Shift+minus" = "scratchpad show";
       "Mod4+Shift+b" = "bar mode toggle";
-      "Mod4+Return" = "exec wezterm";
-      # "Mod4+Return" = "exec ghostty";
-      # "Mod4+Return" = "exec kitty";
+      "Mod4+Return" = "exec wezterm, workspace 2";
       "Mod4+f" = "exec nautilus";
-      "Mod4+b" = "exec zen-beta";
+      "Mod4+b" = "exec zen-beta, workspace 1";
       "Mod1+Shift+p" = "exec sh ~/.config/rofi/power.sh";
-      # "Mod4+space" = "exec dmenu_run -nb '#1e1e2e' -nf '#cdd6f4' -sb '#b4befe' -sf '#1e1e2e'";
       "Mod4+space" = "exec zsh -c bemenu-run";
       # "Mod4+space" = "exec rofi -show drun";
       # "Mod4+space" = "exec vicinae toggle";
       "Ctrl+space" = "exec flameshot gui";
-      "Mod4+s" = "exec kitty --class spt spotify_player";
+      "Mod4+s" = "exec kitty --class spt spotify_player, workspace 3";
+      "Mod4+d" = "exec vesktop, workspace 4";
       "Mod4+Shift+r" = "restart";
       "Mod4+Shift+c" = "reload";
       "Mod4+Shift+s" = "mode resize";
@@ -81,12 +79,16 @@
     };
     modes = {
       resize = {
-        Down = "resize grow height 10 px or 10 ppt";
         Escape = "mode default";
-        Left = "resize shrink width 10 px or 10 ppt";
         Return = "mode default";
         Right = "resize grow width 10 px or 10 ppt";
+        Left = "resize shrink width 10 px or 10 ppt";
         Up = "resize shrink height 10 px or 10 ppt";
+        Down = "resize grow height 10 px or 10 ppt";
+        l = "resize grow width 10 px or 10 ppt";
+        h = "resize shrink width 10 px or 10 ppt";
+        k = "resize shrink height 10 px or 10 ppt";
+        j = "resize grow height 10 px or 10 ppt";
       };
     };
     gaps = {
@@ -105,7 +107,7 @@
       ];
       "4" = [{ class = "vesktop"; }];
       "3" = [ { class = "spotify-qt"; } { class = "spt"; } ];
-      "6" = [{ class = "PrismLauncher"; }];
+      "5" = [{ class = "PrismLauncher"; }];
     };
     window = {
       border = 0;

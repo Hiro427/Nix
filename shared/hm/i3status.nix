@@ -62,11 +62,6 @@
             warning = 875.0;
             format = " $icon $free.eng(range:..10e10) |";
           }
-          # {
-          #   block = "custom";
-          #   command = "~/Nix/dots/scripts/cava-bar.sh";
-          #   persistent = true;
-          # }
           {
             block = "sound";
             click = [{
@@ -135,15 +130,15 @@
               cmd = "nm-connection-editor";
             }];
           }
-          # {
-          #   block = "toggle";
-          #   format = "$icon 󰅶 ";
-          #   command_state = "xset q | grep 'DPMS is Disabled'";
-          #   command_on = "xset q -dpms s off";
-          #   command_off = "xset q +dpms s on";
-          #   state_on = "idle";
-          #   state_off = "idle";
-          # }
+          {
+            block = "toggle";
+            format = "$icon 󰅶 ";
+            command_state = "xset q | grep 'DPMS is Disabled'";
+            command_on = "xset q -dpms s off";
+            command_off = "xset q +dpms s on";
+            state_on = "idle";
+            state_off = "idle";
+          }
           {
             block = "time";
             interval = 60;

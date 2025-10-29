@@ -45,7 +45,10 @@
   # Enable the GNOME Desktop Environment.
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
-  programs.sway = { enable = true; };
+  programs.sway = {
+    enable = true;
+    package = pkgs.swayfx;
+  };
 
   services.xserver.windowManager.i3.enable = true;
   security.pam.services.i3lock.enableGnomeKeyring = true;

@@ -37,7 +37,7 @@
         snippets = true;
         enable = true;
         display-messages = true;
-        # display-inlay-hints = true;
+        display-inlay-hints = true;
       };
       editor.statusline = {
         left = [ "version-control" "spinner" ];

@@ -46,6 +46,8 @@
     };
   };
   wayland.windowManager.sway = {
+    checkConfig = false;
+
     enable = true;
     config = {
       startup = [
@@ -203,5 +205,25 @@
       }];
 
     };
+    extraConfig = ''
+      # SwayFX blur settings
+      blur enable
+      blur_xray disable
+      blur_passes 2
+      blur_radius 5
+
+      # Rounded corners
+      corner_radius 10
+
+      # Shadows
+      shadows enable
+      shadow_blur_radius 20
+      shadow_color #0000007F
+
+      # Additional SwayFX options
+      default_dim_inactive 0.1
+      for_window [class=".*"] blur enable
+    '';
+
   };
 }
