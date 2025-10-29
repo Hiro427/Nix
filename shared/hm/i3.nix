@@ -51,6 +51,7 @@
       "Mod1+Shift+p" = "exec sh ~/.config/rofi/power.sh";
       # "Mod4+space" = "exec zsh -c bemenu-run";
       "Mod4+space" = "exec rofi -show drun";
+      "Mod1+Tab" = "exec ~/Nix/dots/scripts/rofi_win_sw.sh";
       # "Mod4+space" = "exec vicinae toggle";
       "Ctrl+space" = "exec flameshot gui";
       "Mod4+s" = "exec kitty --class spt spotify_player, workspace 3";
