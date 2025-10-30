@@ -53,11 +53,11 @@
       startup = [
         {
           command =
-            "swaymsg output '*' bg $(cat ~/Nix/dots/i3/cur_wall.txt) fill";
+            "swaymsg output '*' bg $(cat ~/Nix/dots/scripts/wm/cur_wall.txt) fill";
           always = true;
         }
         {
-          command = "sh ~/Nix/dots/i3/scripts/natscroll_sway.sh";
+          command = "sh ~/Nix/dots/scripts/wm/natscroll_sway.sh";
           always = true;
         }
         { command = "autotiling"; }

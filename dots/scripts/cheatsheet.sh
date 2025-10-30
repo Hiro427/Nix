@@ -1,13 +1,14 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 
 CHT_DIR="$HOME/coding/resources/"
 
-selected=$(ls "$CHT_DIR" | gum filter)
+selected=$(fd . "$CHT_DIR" -t f -e md --exec basename {} \; | fzf)
 
-if [[ "${selected##*.}" == "md" ]]; then 
+
+if [ -n "$TMUX" ]; then
+    tmux split-window -h "glow --pager \"$CHT_DIR$selected\"" # use ';read' to keep pane open upon quit
+else
     glow --pager "$CHT_DIR$selected"
-else 
-    nvim "$CHT_DIR$selected"
 fi
 
 

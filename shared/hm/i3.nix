@@ -7,11 +7,11 @@
         command =
           "--no-startup-id picom --config $HOME/.config/picom/picom.conf";
       }
-      # { command = "--no-startup-id nm-applet &"; }
-      { command = "--no-startup-id sh ~/Nix/dots/i3/scripts/natscroll.sh"; }
+      { command = "--no-startup-id nm-applet &"; }
+      { command = "--no-startup-id sh ~/Nix/dots/scripts/wm/natscroll.sh"; }
       {
         command =
-          "--no-startup-id feh --bg-fill $(cat ~/Nix/dots/i3/cur_wall.txt)";
+          "--no-startup-id feh --bg-fill $(cat ~/Nix/dots/scripts/wm/cur_wall.txt)";
         always = true;
       }
       # {
@@ -48,7 +48,7 @@
       "Mod4+Return" = "exec wezterm, workspace 2";
       "Mod4+f" = "exec nautilus";
       "Mod4+b" = "exec zen-beta, workspace 1";
-      "Mod1+Shift+p" = "exec sh ~/.config/rofi/power.sh";
+      "Mod4+p" = "exec sh ~/Nix/dots/scripts/wm/rofi-power-menu.sh";
       # "Mod4+space" = "exec zsh -c bemenu-run";
       "Mod4+space" = "exec rofi -show drun";
       "Mod1+Tab" = "exec ~/Nix/dots/scripts/rofi_win_sw.sh";
@@ -106,9 +106,9 @@
         { class = "kitty"; }
         { class = "com.mitchellh.ghostty"; }
       ];
-      "4" = [{ class = "vesktop"; }];
       "3" = [ { class = "spotify-qt"; } { class = "spt"; } ];
-      "5" = [{ class = "PrismLauncher"; }];
+      "4" = [{ class = "mpv"; }];
+      "5" = [{ class = "vesktop"; }];
     };
     window = {
       border = 0;
@@ -118,10 +118,10 @@
           command = "floating enable";
           criteria = { class = "vicinae"; };
         }
-        {
-          command = "floating enable, move position center";
-          criteria = { class = "mpv"; };
-        }
+        # {
+        #   command = "floating enable, move position center";
+        #   criteria = { class = "mpv"; };
+        # }
         {
           command = "sticky enable";
           criteria = { title = "Picture-in-Picture"; };

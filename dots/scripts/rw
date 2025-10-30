@@ -6,63 +6,63 @@ SET_IMAGE="gsettings set org.gnome.desktop.background picture-uri-dark file:///"
 
 main() {
 
-    while true; do
+	while true; do
 
-        image="$(find "${WALLPAPER_DIR[@]}" -name "*.jpg" -o -name "*.png" -o -name "*.jpeg" -o -name "*.webp" | fzf --height 40 --preview 'chafa --size=40x30 {}')"
-        chafa "$image"
+		image="$(find "${WALLPAPER_DIR[@]}" -name "*.jpg" -o -name "*.png" -o -name "*.jpeg" -o -name "*.webp" | fzf --height 40 --preview 'chafa --size=40x30 {}')"
+		chafa "$image"
 
-        tput civis
+		tput civis
 
-        read -rsn1 key
+		read -rsn1 key
 
-        if [[ "$key" == $'\e' ]]; then
-            read -rsn2 key
-        fi
+		if [[ "$key" == $'\e' ]]; then
+			read -rsn2 key
+		fi
 
-        case "$key" in
+		case "$key" in
 
-        q | SIGINT)
-            clear
-            tput cnorm
-            break
-            exit
-            ;;
-        b)
-            clear
-            main
-            ;;
-        "")
-            case $XDG_CURRENT_DESKTOP in
-            GNOME)
-                eval "$SET_IMAGE${image}"
-                echo "$image" >~/Nix/dots/i3/cur_wall.txt
-                clear
-                tput cnorm
-                exit
-                ;;
-            i3 | none+i3)
-                feh --bg-fill "$image"
-                echo "$image" >~/Nix/dots/i3/cur_wall.txt
-                clear
-                tput cnorm
-                exit
-                ;;
-            sway)
-                swaymsg "*" bg "$image" fill
-                echo "$image" >~/Nix/dots/i3/cur_wall.txt
-                clear
-                tput cnorm
-                swaymsg reload
-                exit
-            ;;
-            *)
-                exit
-                ;;
-            esac
+		q | SIGINT)
+			clear
+			tput cnorm
+			break
+			exit
+			;;
+		b)
+			clear
+			main
+			;;
+		"")
+			case $XDG_CURRENT_DESKTOP in
+			GNOME)
+				eval "$SET_IMAGE${image}"
+				echo "$image" >~/Nix/dots/scripts/wm/cur_wall.txt
+				clear
+				tput cnorm
+				exit
+				;;
+			i3 | none+i3)
+				feh --bg-fill "$image"
+				echo "$image" >~/Nix/dots/scripts/wm/cur_wall.txt
+				clear
+				tput cnorm
+				exit
+				;;
+			sway)
+				swaymsg "*" bg "$image" fill
+				echo "$image" >~/Nix/dots/i3/cur_wall.txt
+				clear
+				tput cnorm
+				swaymsg reload
+				exit
+				;;
+			*)
+				exit
+				;;
+			esac
 
-            ;;
-        esac
-    done
+			;;
+		esac
+	done
 
 }
 

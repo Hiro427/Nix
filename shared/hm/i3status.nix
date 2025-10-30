@@ -122,14 +122,14 @@
           #   state_connected = "good";
           #   state_disconnected = "idle";
           # }
-          {
-            block = "net";
-            format = "{󰖩 $signal_strength $ssid $frequency|󰈀 Wired} ";
-            click = [{
-              button = "left";
-              cmd = "nm-connection-editor";
-            }];
-          }
+          # {
+          #   block = "net";
+          #   format = "{󰖩 $signal_strength $ssid $frequency|󰈀 Wired} ";
+          #   click = [{
+          #     button = "left";
+          #     cmd = "nm-connection-editor";
+          #   }];
+          # }
           {
             block = "toggle";
             format = "$icon 󰅶 ";

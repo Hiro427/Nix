@@ -19,6 +19,8 @@
       bind "'" split-window -h
 
       bind-key "t" display-popup -E "$SHELL"
+      bind-key "c" display-popup -E "~/Nix/dots/scripts/cheatsheet.sh"
+
 
       unbind r
       bind r source-file ~/.config/tmux/tmux.conf 
@@ -59,8 +61,8 @@
           --bind 'ctrl-x:change-prompt(  )+reload(sesh list -z --icons)' \
           --bind 'ctrl-f:change-prompt(  )+reload(fd -H -d 2 -t d -E .Trash . ~)' \
           --bind 'ctrl-d:execute(tmux kill-session -t {2..})+change-prompt(󱐋  )+reload(sesh list --icons)' \
-          --preview-window 'right:55%' \
-          --preview 'sesh preview {}'
+          # --preview-window 'right:55%' \
+          # --preview 'sesh preview {}'
       )\""
 
       set -g @tmux-dotbar-fg "${theme.tmuxBarColors.dotbar-fg}"
