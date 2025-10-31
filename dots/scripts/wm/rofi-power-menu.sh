@@ -6,7 +6,7 @@ options="\n\n\n\n"
 # Show the power menu in Rofi and capture the user's choice
 # chosen=$(echo -e "$options" | rofi -dmenu -i -p "Power Menu:" -theme-str 'inputbar {enabled: false;} window { height: 200px; }' -kb-row-down "j" -kb-row-up "k")
 
-DE=$XDG_CURRENT_DESTKOP
+DE=$(echo "$XDG_CURRENT_DESTKOP")
 
 chosen=$(echo -e "$options" | rofi -dmenu -i -p "" \
     -theme-str '
@@ -51,7 +51,7 @@ suspend_cmd() {
     if [[ "$DE" != "sway" ]]; then 
         i3-lock -c 000000 && systemctl suspend
      else
-         swaylock && systemctl suspend
+        swaylock && systemctl suspend
     fi
 }
 
@@ -70,11 +70,11 @@ lock_cmd() {
 case "$chosen" in
     "")
         # Replace with your lock screen command
-        i3lock -c 000000
+        i3lock -c 000000 || swaylock
         ;;
     "")
         # Replace with the appropriate logout command for your desktop environment
-        exit_cmd
+        swaymsg exit || i3-msg exit
         ;;
     "")
        systemctl reboot
@@ -84,8 +84,8 @@ case "$chosen" in
         ;;
     "")
         # light-locker-command -l && systemctl suspend 
-        # i3lock -c 000000 && systemctl suspend
-        suspend_cmd
+        i3lock -c 000000 || swaylock && systemctl suspend 
+        # suspend_cmd
         ;;
     *)
         # Exit if no option is chosen
