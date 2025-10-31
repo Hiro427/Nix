@@ -19,7 +19,11 @@ with pkgs; [
   stylua
   luabind
   luajit
-  rustup # component add rust-analyzer rustup default stable(?)
+  # rustup # component add rust-analyzer rustup default stable(?)
+  cargo
+  rust-analyzer
+  rustfmt
+  rustc
   #lsps and formatters
   taplo
   zls
