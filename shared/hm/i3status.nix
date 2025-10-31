@@ -39,13 +39,13 @@
               idle_fg = { link = "warning_fg"; };
             };
           }
-          {
-            block = "nvidia_gpu";
-            if_command =
-              ''[ "$(cat /sys/class/dmi/id/product_name)" = "XPS 15 9510" ]'';
-            interval = 10;
-            format = " 󰾆 $utilization $temperature "; # $clocks
-          }
+          # {
+          #   block = "nvidia_gpu";
+          #   if_command =
+          #     ''[ "$(cat /sys/class/dmi/id/product_name)" = "XPS 15 9510" ]'';
+          #   interval = 10;
+          #   format = " 󰾆 $utilization $temperature "; # $clocks
+          # }
           {
             block = "amd_gpu";
             if_command =
