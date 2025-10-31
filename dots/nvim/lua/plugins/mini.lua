@@ -15,12 +15,12 @@ return {
 			require("mini.extra").setup({})
 			-- Would like some more sources here, path and cmdline completions are a must for me.
 			-- Otherwise this would be the ideal plugin for completions for my setup
-			-- require("mini.snippets").setup({})
-			-- require("mini.completion").setup({})
+			require("mini.snippets").setup({})
+			require("mini.completion").setup({})
 			require("mini.icons").setup({})
 			require("mini.jump").setup({})
 			require("mini.splitjoin").setup({})
-			require("mini.jump2d").setup({ view = { dim = true, n_steps_ahead = 1 } })
+			require("mini.jump2d").setup({ view = { dim = true, n_steps_ahead = 0 } })
 			local miniclue = require("mini.clue")
 			miniclue.setup({
 				triggers = {

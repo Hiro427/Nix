@@ -34,15 +34,8 @@ vim.keymap.set("n", "<leader>sj", "<C-w>J") -- move to bottom
 vim.keymap.set("n", "<leader>vs", ":vsplit<CR>")
 vim.keymap.set("n", "<leader>hs", ":split<CR>")
 vim.keymap.set("n", "<leader>u", ":update<CR> :source<CR>", { desc = "reload config", silent = true })
-
+vim.keymap.set("i", "<C-p>", "<C-x><C-f>", { noremap = true, silent = true })
 vim.o.background = "dark"
 vim.api.nvim_set_hl(0, "NormalFloat", { link = "Pmenu" })
 
-vim.diagnostic.config({ virtual_text = false, update_in_insert = false })
-
-vim.api.nvim_create_autocmd({ "FileType" }, {
-	pattern = { "lua" },
-	callback = function()
-		vim.b.autoformat = false
-	end,
-})
+vim.diagnostic.config({ virtual_text = false, update_in_insert = false }) 

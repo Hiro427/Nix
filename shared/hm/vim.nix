@@ -2,7 +2,6 @@
   programs.vim = {
     enable = true;
     extraConfig = ''
-
       set tabstop=4
       set softtabstop=4
       set shiftwidth=4
@@ -19,6 +18,7 @@
       set ttymouse=xterm2
       set laststatus=2
       set noshowmode
+      set noswapfile
       set re=0
       set guicursor=n-v-c:block,i-ci:ver25,r-cr:hor20,o:hor50
       set encoding=utf-8
@@ -27,6 +27,8 @@
       let &t_EI = "\e[2 q"
       let mapleader = "\<Space>"
       let &t_ut=""
+
+
     '';
 
     plugins = with pkgs.vimPlugins; [
@@ -39,11 +41,11 @@
       vim-devicons
       fzf-vim
       vim-go
-      # vim-lsp-settings
-      # vim-lsp
+      vim-lsp-settings
+      vim-lsp
       # ale
-      # vim-polyglot
-      # asyncomplete-lsp-vim
+      vim-polyglot
+      asyncomplete-lsp-vim
       # asyncomplete-vim
 
     ];

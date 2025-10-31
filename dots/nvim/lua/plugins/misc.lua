@@ -1,16 +1,5 @@
 return {
 	{ "nvim-tree/nvim-web-devicons", lazy = true },
-
-	{ "christoomey/vim-tmux-navigator" },
-	{
-		"fredrikaverpil/godoc.nvim",
-		version = "*",
-		build = "go install github.com/lotusirous/gostdsym/stdsym@latest", -- optional
-		cmd = { "GoDoc" }, -- optional
-		opts = { window = { type = "vsplit" }, picker = { type = "mini" } }, -- see further down below for configuration
-		vim.keymap.set("n", "<leader>gd", ":GoDoc<CR>", { desc = "Search Go Documentation" }),
-	},
-
 	{
 		"luckasRanarison/tailwind-tools.nvim",
 		name = "tailwind-tools",
@@ -71,30 +60,5 @@ return {
 		opt = true, -- Set this to true if the plugin is optional
 		event = "InsertCharPre", -- Set the event to 'InsertCharPre' for better compatibility
 		priority = 1000,
-	},
-	{
-		"kdheepak/lazygit.nvim",
-		lazy = true,
-		cmd = {
-			"LazyGit",
-		},
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-		},
-		keys = {
-			{ "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
-		},
-	},
-	{
-		"mikavilpas/yazi.nvim",
-		event = "VeryLazy",
-		dependencies = {
-			{ "nvim-lua/plenary.nvim", lazy = true },
-		},
-		keys = {
-			{ "<leader>yt", mode = { "n", "v" }, "<cmd>Yazi<cr>", desc = "Open yazi at the current file" },
-			{ "<leader>yr", "<cmd>Yazi toggle<cr>", desc = "Resume the last yazi session" },
-		},
-		opts = {},
 	},
 }

@@ -37,7 +37,7 @@
         snippets = true;
         enable = true;
         display-messages = true;
-        display-inlay-hints = true;
+        display-inlay-hints = false;
       };
       editor.statusline = {
         left = [ "version-control" "spinner" ];
@@ -51,7 +51,6 @@
       };
       keys.normal = {
         C-g = [ ":new" ":insert-output lazygit" ":buffer-close" ":redraw" ];
-        C-f = [ ":new" ":insert-output yazi" ":buffer-close" ":redraw" ];
         C-r = [ ":earlier" ];
         space.r = "repeat_last_motion";
         space.d = "hover";
@@ -83,7 +82,7 @@
         space.h.c = ":open %sh{~/Nix/dots/scripts/marks.sh --file 3}";
         space.h.v = ":open %sh{~/Nix/dots/scripts/marks.sh --file 4}";
         space.h.b = ":open %sh{~/Nix/dots/scripts/marks.sh --file 5}";
-        space.y.t = [
+        C-f = [
           ":sh rm -f /tmp/unique-file"
           ":insert-output yazi %{buffer_name} --chooser-file=/tmp/unique-file"
           ":insert-output echo 'x1b[?1049hx1b[?2004h' > /dev/tty"
@@ -188,7 +187,7 @@
         {
           name = "go";
           # auto-format = true;
-          formatter = { command = "/run/current-system/sw/bin/gofmt}"; };
+          formatter = { command = "${pkgs.go}/bin/gofmt}"; };
           language-servers = [ "gopls" "golangci-lint-langserver" ];
         }
         # {
