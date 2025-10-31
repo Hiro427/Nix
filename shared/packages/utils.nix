@@ -18,7 +18,7 @@ with pkgs; [
   mlocate
   fzf
   eza
-  tldr
+  tealdeer
   calcurse
   lm_sensors
   hwdata
