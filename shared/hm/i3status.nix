@@ -44,12 +44,22 @@
             if_command = ''
               [ "$(cat /sys/class/dmi/id/product_name)" != "B650 EAGLE AX" ]'';
 
-            format =
-              " $percentage {$time_remaining.dur(hms:true, min_unit:m) |}";
+            format = " 󰁹 $percentage ";
             device = "DisplayDevice";
             driver = "upower";
             missing_format = "";
             full_format = "";
+            theme_overrides = {
+              good_bg = { link = "idle_bg"; };
+              good_fg = { link = "idle_fg"; };
+              warning_bg = { link = "idle_bg"; };
+              warning_fg = { link = "idle_fg"; };
+              critical_bg = { link = "idle_bg"; };
+              critical_fg = { link = "idle_fg"; };
+              info_bg = { link = "idle_bg"; };
+              info_fg = { link = "idle_fg"; };
+
+            };
           }
           # {
           #   block = "nvidia_gpu";
