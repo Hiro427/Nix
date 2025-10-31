@@ -49,7 +49,7 @@ main() {
 				;;
 			sway)
 				swaymsg "*" bg "$image" fill
-				echo "$image" >~/Nix/dots/i3/cur_wall.txt
+				echo "$image" >~/Nix/dots/scripts/wm/cur_wall.txt
 				clear
 				tput cnorm
 				swaymsg reload

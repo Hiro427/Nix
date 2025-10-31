@@ -47,7 +47,7 @@
   };
   wayland.windowManager.sway = {
     checkConfig = false;
-    package = pkgs.swayfx;
+    # package = pkgs.swayfx;
     enable = true;
     config = {
       startup = [
@@ -69,6 +69,8 @@
         "Mod4+j" = "focus down";
         "Mod4+k" = "focus up";
         "Mod4+l" = "focus right";
+        "Mod4+p" = "exec ~/Nix/dots/scripts/wm/rofi-power-menu.sh";
+        "Mod1+Tab" = "exec ~/Nix/dots/scripts/rofi_win_sw.sh";
         "Mod4+Shift+h" = "move left";
         "Mod4+Shift+j" = "move down";
         "Mod4+Shift+k" = "move up";
@@ -80,16 +82,12 @@
         "Mod4+Shift+minus" = "scratchpad show";
         "Mod4+Shift+b" = "bar mode toggle";
         "Mod4+Return" = "exec wezterm";
-        # "Mod4+Return" = "exec ghostty";
-        # "Mod4+Return" = "exec kitty";
         "Mod4+f" = "exec nautilus";
         "Mod4+b" = "exec zen-beta";
-        "Mod1+Shift+p" = "exec sh ~/.config/rofi/power.sh";
-        # "Mod4+space" = "exec dmenu_run -nb '#1e1e2e' -nf '#cdd6f4' -sb '#b4befe' -sf '#1e1e2e'";
-        # "Mod4+space" = "exec zsh -c bemenu-run";
-        # "Mod4+space" = "exec rofi -show drun";
         # "Mod4+space" = "exec vicinae toggle";
-        "Mod4+space" = "exec fuzzel";
+        # "Mod4+space" = "exec fuzzel";
+        "Mod4+space" = "exec rofi -show drun";
+        #
         #
         "Ctrl+space" = "exec flameshot gui";
         "Mod4+s" = "exec kitty --class spt spotify_player";
@@ -206,22 +204,22 @@
 
     };
     extraConfig = ''
-          # SwayFX blur settings
-          blur enable
-          blur_xray disable
+      #     # SwayFX blur settings
+      #     blur enable
+      #     blur_xray disable
 
-          # Rounded corners
-          corner_radius 10
+      #     # Rounded corners
+      #     corner_radius 10
 
-          # # Shadows
-          # shadows enable
-          # shadow_blur_radius 20
-          # shadow_color #0000007F
+      #     # # Shadows
+      #     # shadows enable
+      #     # shadow_blur_radius 20
+      #     # shadow_color #0000007F
 
-      # Additional SwayFX options
-      default_dim_inactive 0.1
-      for_window [class=".*"] blur enable
-      for_window [class="zen-beta"] blur disable
+      # # Additional SwayFX options
+      # default_dim_inactive 0.1
+      # for_window [class=".*"] blur enable
+      # for_window [class="zen-beta"] blur disable
     '';
 
   };

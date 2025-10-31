@@ -47,7 +47,7 @@
   services.desktopManager.gnome.enable = true;
   programs.sway = {
     enable = true;
-    package = pkgs.swayfx;
+    # package = pkgs.swayfx;
   };
 
   services.xserver.windowManager.i3.enable = true;

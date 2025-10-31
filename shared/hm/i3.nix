@@ -48,8 +48,7 @@
       "Mod4+Return" = "exec wezterm, workspace 2";
       "Mod4+f" = "exec nautilus";
       "Mod4+b" = "exec zen-beta, workspace 1";
-      "Mod4+p" = "exec sh ~/Nix/dots/scripts/wm/rofi-power-menu.sh";
-      # "Mod4+space" = "exec zsh -c bemenu-run";
+      "Mod4+p" = "exec ~/Nix/dots/scripts/wm/rofi-power-menu.sh";
       "Mod4+space" = "exec rofi -show drun";
       "Mod1+Tab" = "exec ~/Nix/dots/scripts/rofi_win_sw.sh";
       # "Mod4+space" = "exec vicinae toggle";

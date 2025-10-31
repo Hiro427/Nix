@@ -2,9 +2,11 @@
 
 # Options for the power menu
 # options=" Lock\n Logout\n Reboot\n Shutdown\n Suspend"
-options="\n\n\n\n"
+options="\n\n\n\n"
 # Show the power menu in Rofi and capture the user's choice
 # chosen=$(echo -e "$options" | rofi -dmenu -i -p "Power Menu:" -theme-str 'inputbar {enabled: false;} window { height: 200px; }' -kb-row-down "j" -kb-row-up "k")
+
+DE=$XDG_CURRENT_DESTKOP
 
 chosen=$(echo -e "$options" | rofi -dmenu -i -p "" \
     -theme-str '
@@ -37,6 +39,33 @@ chosen=$(echo -e "$options" | rofi -dmenu -i -p "" \
         }' \
     -kb-row-down "j" -kb-row-up "k")
 
+exit_cmd() {
+    if [[ "$DE" != "sway" ]]; then 
+        i3-msg exit
+     else
+         sway-msg exit
+    fi
+}
+
+suspend_cmd() {
+    if [[ "$DE" != "sway" ]]; then 
+        i3-lock -c 000000 && systemctl suspend
+     else
+         swaylock && systemctl suspend
+    fi
+}
+
+lock_cmd() {
+    if [[ "$DE" != "sway" ]]; then 
+        i3-lock -c 000000
+     else
+         swaylock
+    fi
+}
+
+    
+
+
 # Execute the corresponding command based on the user's choice
 case "$chosen" in
     "")
@@ -45,7 +74,7 @@ case "$chosen" in
         ;;
     "")
         # Replace with the appropriate logout command for your desktop environment
-        i3-msg exit
+        exit_cmd
         ;;
     "")
        systemctl reboot
@@ -55,7 +84,8 @@ case "$chosen" in
         ;;
     "")
         # light-locker-command -l && systemctl suspend 
-        i3lock -c 000000 && systemctl suspend
+        # i3lock -c 000000 && systemctl suspend
+        suspend_cmd
         ;;
     *)
         # Exit if no option is chosen

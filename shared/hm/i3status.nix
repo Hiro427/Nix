@@ -39,6 +39,18 @@
               idle_fg = { link = "warning_fg"; };
             };
           }
+          {
+            block = "battery";
+            if_command = ''
+              [ "$(cat /sys/class/dmi/id/product_name)" != "B650 EAGLE AX" ]'';
+
+            format =
+              " $percentage {$time_remaining.dur(hms:true, min_unit:m) |}";
+            device = "DisplayDevice";
+            driver = "upower";
+            missing_format = "";
+            full_format = "";
+          }
           # {
           #   block = "nvidia_gpu";
           #   if_command =
@@ -74,12 +86,12 @@
             format = "󰃝 $brightness";
             missing_format = "";
           }
-          {
-            block = "music";
-            format = "{ $combo.str(max_w:15,rot_interval:0.6) | (-.-)Zzz...}";
-            player = [ "spotify_player" "spotify" "spotify-qt" "ncspot" ];
+          # {
+          #   block = "music";
+          #   format = "{ $combo.str(max_w:15,rot_interval:0.6) | (-.-)Zzz...}";
+          #   player = [ "spotify_player" "spotify" "spotify-qt" "ncspot" ];
 
-          }
+          # }
           # {
           #   block = "custom";
           #   interval = 600;
@@ -133,6 +145,8 @@
           {
             block = "toggle";
             format = "$icon 󰅶 ";
+            if_command = ''[ "$(echo $XDG_CURRENT_DESKTOP)" != "sway" ]'';
+
             command_state = "xset q | grep 'DPMS is Disabled'";
             command_on = "xset q -dpms s off";
             command_off = "xset q +dpms s on";
@@ -142,50 +156,38 @@
           {
             block = "time";
             interval = 60;
-            format = "$timestamp.datetime(f:' %D %I:%M%p') ";
+            format = "$timestamp.datetime(f:'%D %I:%M%p') ";
           }
-          {
-            block = "menu";
-            text = " ";
-            items = [
-              {
-                display = "󰄽 󰒲 Suspend 󰄾";
-                cmd = "i3lock -c 000000 && systemctl suspend";
-                # cmd = "swaylock && systemctl suspend";
-              }
-              {
-                display = "󰄽 󰍃 Log Out 󰄾";
-                cmd = "i3-msg exit";
-                # cmd = "swaymsg exit";
-              }
-              {
-                display = "󰄽  Restart 󰄾";
-                cmd = "systemctl reboot";
-              }
-              {
-                display = "󰄽 ⭘ Shutdown 󰄾";
-                cmd = "systemctl poweroff";
-              }
-              {
-                display = "󰄽  Lock 󰄾";
-                cmd = "swaylock";
-              }
+          # {
+          #   block = "menu";
+          #   text = " ";
+          #   items = [
+          #     {
+          #       display = "󰄽 󰒲 Suspend 󰄾";
+          #       cmd = "i3lock -c 000000 && systemctl suspend";
+          #       # cmd = "swaylock && systemctl suspend";
+          #     }
+          #     {
+          #       display = "󰄽 󰍃 Log Out 󰄾";
+          #       cmd = "i3-msg exit";
+          #       # cmd = "swaymsg exit";
+          #     }
+          #     {
+          #       display = "󰄽  Restart 󰄾";
+          #       cmd = "systemctl reboot";
+          #     }
+          #     {
+          #       display = "󰄽 ⭘ Shutdown 󰄾";
+          #       cmd = "systemctl poweroff";
+          #     }
+          #     {
+          #       display = "󰄽  Lock 󰄾";
+          #       cmd = "swaylock";
+          #     }
 
-            ];
-          }
+          #   ];
+          # }
 
-          {
-            block = "battery";
-            if_command = ''
-              [ "$(cat /sys/class/dmi/id/product_name)" != "B650 EAGLE AX" ]'';
-
-            format =
-              " $percentage {$time_remaining.dur(hms:true, min_unit:m) |}";
-            device = "DisplayDevice";
-            driver = "upower";
-            missing_format = "";
-            full_format = "";
-          }
         ];
         settings = {
           theme = {
