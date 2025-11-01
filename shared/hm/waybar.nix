@@ -64,7 +64,8 @@
           };
         };
         clock = {
-          format = " {:%H:%M 󰃭 %Y-%m-%d}";
+          format = " {:%H:%M}";
+          format-alt = "󰃭 {:%m-%d-%Y}";
           tooltip-format = "<tt><small>{calendar}</small></tt>";
 
           calendar = {
