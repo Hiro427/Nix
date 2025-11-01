@@ -70,8 +70,7 @@
         "Mod4+j" = "focus down";
         "Mod4+k" = "focus up";
         "Mod4+l" = "focus right";
-        "Mod4+p" = "exec ~/Nix/dots/scripts/wm/rofi-power-menu.sh";
-        "Mod1+Tab" = "exec ~/Nix/dots/scripts/rofi_win_sw.sh";
+        "Mod4+p" = "exec sh ~/Nix/dots/scripts/wm/shared/rofi-power-menu.sh";
         "Mod4+Shift+h" = "move left";
         "Mod4+Shift+j" = "move down";
         "Mod4+Shift+k" = "move up";
