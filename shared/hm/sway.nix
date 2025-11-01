@@ -55,7 +55,7 @@
           always = true;
         }
         {
-          command = "sh ~/Nix/dots/scripts/wm/natscroll_sway.sh";
+          command = "sh ~/Nix/dots/scripts/wm/sway/natscroll.sh";
           always = true;
         }
         {
@@ -92,8 +92,7 @@
         #
         "Ctrl+space" = "exec flameshot gui";
         "Mod4+s" = "exec kitty --class spt spotify_player";
-        "Mod4+Shift+r" = "swaymsg reload";
-        "Mod4+Shift+c" = "reload";
+        "Mod4+Shift+r" = "exec swaymsg reload";
         "Mod4+Shift+s" = "mode resize";
         "Mod4+1" = "workspace number 1";
         "Mod4+2" = "workspace number 2";

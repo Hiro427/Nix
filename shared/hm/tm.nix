@@ -19,7 +19,7 @@
       bind "'" split-window -h
 
       bind-key "t" display-popup -E "$SHELL"
-      bind-key "c" display-popup -E "~/Nix/dots/scripts/cheatsheet.sh"
+      bind-key "c" display-popup -E "~/Nix/dots/scripts/wm/shared/cheatsheet.sh"
 
 
       unbind r

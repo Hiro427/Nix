@@ -8,7 +8,7 @@
           "--no-startup-id picom --config $HOME/.config/picom/picom.conf";
       }
       { command = "--no-startup-id nm-applet &"; }
-      { command = "--no-startup-id sh ~/Nix/dots/scripts/wm/natscroll.sh"; }
+      { command = "--no-startup-id sh ~/Nix/dots/scripts/wm/i3/natscroll.sh"; }
       {
         command =
           "--no-startup-id feh --bg-fill $(cat ~/Nix/dots/scripts/wm/cur_wall.txt)";
@@ -48,9 +48,8 @@
       "Mod4+Return" = "exec wezterm, workspace 2";
       "Mod4+f" = "exec nautilus";
       "Mod4+b" = "exec zen-beta, workspace 1";
-      "Mod4+p" = "exec ~/Nix/dots/scripts/wm/rofi-power-menu.sh";
+      "Mod4+p" = "exec ~/Nix/dots/scripts/wm/shared/rofi-power-menu.sh";
       "Mod4+space" = "exec rofi -show drun";
-      "Mod1+Tab" = "exec ~/Nix/dots/scripts/rofi_win_sw.sh";
       # "Mod4+space" = "exec vicinae toggle";
       "Ctrl+space" = "exec flameshot gui";
       "Mod4+s" = "exec kitty --class spt spotify_player, workspace 3";

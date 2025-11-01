@@ -8,8 +8,8 @@ in {
       configuration = {
         modi = "drun,window,run";
         show-icons = true;
-
-        icon-theme = "Papirus"; # Change to your preferred icon theme
+        icon-theme = "${pkgs.papirus-icon-theme}";
+        # icon-theme = "Papirus"; # Change to your preferred icon theme
         drun-display-format = "{icon} {name}";
 
       };

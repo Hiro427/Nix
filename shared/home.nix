@@ -23,9 +23,6 @@ in {
   home.packages = [
     (pkgs.writeShellScriptBin "gm" (builtins.readFile ../dots/scripts/gm))
     (pkgs.writeShellScriptBin "rw" (builtins.readFile ../dots/scripts/rw))
-    (pkgs.writeShellScriptBin "git_i3bar"
-      (builtins.readFile ../dots/scripts/git_i3bar))
-
     (pkgs.writeShellScriptBin "run" (builtins.readFile ../dots/scripts/run))
     (pkgs.writeShellScriptBin "tsm" (builtins.readFile ../dots/scripts/tsm))
     (pkgs.writeShellScriptBin "sel_audio"
@@ -90,6 +87,7 @@ in {
       General = {
         disabledTrayIcon = true;
         showStartupLaunchMessage = false;
+        useGrimAdapter = true;
       };
     };
 

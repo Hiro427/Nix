@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-ignores=("names" "hello" "something")
-
-for i in "${ignores[@]}"; do
-    echo "$i" >>hello.txt
-done

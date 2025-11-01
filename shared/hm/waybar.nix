@@ -9,18 +9,38 @@
         modules-left = [ "sway/workspaces" ];
         modules-center = [ "sway/window" ];
         modules-right = [
-          "idle_inhibitor"
-          "pulseaudio"
-          "backlight"
-          "disk"
           "temperature"
           "cpu"
           "memory"
+          "disk"
           "battery"
+          "pulseaudio"
+          "backlight"
           "clock"
+          "idle_inhibitor"
+          "custom/notification"
           "tray"
         ];
-
+        "custom/notification" = {
+          tooltip = true;
+          format = "{icon}";
+          format-icons = {
+            notification = "󱅫";
+            none = "󰂜";
+            dnd-notification = "󰂠";
+            dnd-none = "󰪓";
+            inhibited-notification = "󰂛";
+            inhibited-none = "󰪑";
+            dnd-inhibited-notification = "󰂛";
+            dnd-inhibited-none = "󰪑";
+          };
+          return-type = "json";
+          exec-if = "which swaync-client";
+          exec = "swaync-client -swb";
+          on-click = "swaync-client -t -sw";
+          on-click-right = "swaync-client -d -sw";
+          escape = true;
+        };
         "sway/workspaces" = {
           disable-scroll = true;
           all-outputs = true;
@@ -35,7 +55,8 @@
             "nvim" = "";
             "hx" = "";
             "zsh" = "";
-            "bash" = "";
+            "bash" = "";
+            "tmux" = "";
             "wezterm" = "";
             ".*[Dd]iscord.*" = "󰙯 ";
             ".*[Rr]eddit.*" = "";
@@ -100,7 +121,8 @@
         };
         disk = {
           interval = 60;
-          format = " {percentage_free}%";
+          format = " {percentage_used}%";
+          tooltip-format = "Used: {used}/{total}";
           path = "/";
         };
         pulseaudio = {
@@ -159,10 +181,22 @@
       #tray {
         padding: 4px;
       }
-      #clock, #cpu, #memory, #disk, #temperature, #idle_inhibitor, #battery, #backlight, #pulseaudio, #network {
+      #clock, #cpu, #memory, #disk, #temperature, #idle_inhibitor, #battery, #backlight, #pulseaudio, #network, #custom-notification {
+
         padding: 0 8px;
         margin: 0 2px;
       }
+
+      #custom-notification.dnd-notification, #custom-notification.dnd {
+        color: @base0E;
+      }
+      #custom-notification.notification {
+        color: @base0B;
+      }
+      #custom-notification.dnd-notification {
+        color: @base0C;
+      }
+
 
       #idle_inhibitor.activated {
        color: @base0B;
