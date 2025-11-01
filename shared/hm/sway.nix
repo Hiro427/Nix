@@ -1,6 +1,4 @@
 { config, pkgs, theme, ... }: {
-  programs.swayimg.enable = true;
-  programs.fuzzel.enable = true;
   programs.swaylock = {
     enable = true;
     settings = {
@@ -61,6 +59,7 @@
           always = true;
         }
         { command = "autotiling"; }
+        { command = "waybar"; }
       ];
       input = { "type:keyboard" = { xkb_options = "caps:escape"; }; };
       keybindings = {
@@ -157,28 +156,10 @@
       };
       window = {
         border = 0;
-        # hideEdgeBorders = "smart";
-        commands = [
-          {
-            criteria = {
-              app_id = "firefox";
-              title = "^Picture-in-Picture$";
-            };
-            command = "floating enable, sticky enable";
-          }
-          {
-            command = "floating enable";
-            criteria = { class = "vicinae"; };
-          }
-          {
-            command = "floating enable, move position center";
-            criteria = { class = "mpv"; };
-          }
-          # {
-          #   command = "border pixel 2";
-          #   criteria = { class = ".*"; };
-          # }
-        ];
+        commands = [{
+          criteria = { title = "^Picture-in-Picture$"; };
+          command = "floating enable, sticky enable";
+        }];
         titlebar = false;
       };
       floating = {
@@ -187,40 +168,7 @@
         border = 0;
       };
       defaultWorkspace = "workspace number 1";
-      bars = [{
-        id = "mainbar";
-        mode = "dock";
-        # trayOutput = "primary";
-        statusCommand =
-          "i3status-rs ~/.config/i3status-rust/config-bottom.toml";
-        position = "bottom";
-        fonts = {
-          names = [ "JetBrainsMonoNerdFont" ];
-          size = 12.0;
-        };
-        colors = theme.i3Colors;
-        extraConfig = "height 25";
-      }];
-
     };
-    extraConfig = ''
-      #     # SwayFX blur settings
-      #     blur enable
-      #     blur_xray disable
-
-      #     # Rounded corners
-      #     corner_radius 10
-
-      #     # # Shadows
-      #     # shadows enable
-      #     # shadow_blur_radius 20
-      #     # shadow_color #0000007F
-
-      # # Additional SwayFX options
-      # default_dim_inactive 0.1
-      # for_window [class=".*"] blur enable
-      # for_window [class="zen-beta"] blur disable
-    '';
 
   };
 }

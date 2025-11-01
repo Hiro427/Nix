@@ -1,1 +1,1 @@
-/home/jacobrambarran/wallpapers/rosepine/nixos.png
+/home/jacobrambarran/wallpapers/gruvbox/minimalistic/nasa.png

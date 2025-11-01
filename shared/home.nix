@@ -1,6 +1,6 @@
 { config, pkgs, catppuccin, ... }:
 let
-  theme = import ./themes/rosepine.nix {
+  theme = import ./themes/gruvbox.nix {
     inherit pkgs;
     inherit config;
   };
@@ -65,6 +65,7 @@ in {
     ./hm/rofi.nix
     ./hm/direnv.nix
     ./hm/sway.nix
+    ./hm/waybar.nix
   ];
   programs.zed-editor.enable = true;
 

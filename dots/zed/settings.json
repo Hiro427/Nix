@@ -74,11 +74,12 @@
     "metrics": false
   },
   "theme": {
-    "dark": "Rosé Pine",
+    "dark": "Gruvbox Dark Hard",
     "light": "Catppuccin Latte",
     "mode": "dark"
   },
   "experimental.theme_overrides": {
+    "background.appearance": "blurred",
     "background": "#00000000",
     "editor.background": "#00000000",
     "editor.gutter.background": "#00000000",
