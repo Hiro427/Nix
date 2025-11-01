@@ -58,8 +58,10 @@
           command = "sh ~/Nix/dots/scripts/wm/natscroll_sway.sh";
           always = true;
         }
-        { command = "autotiling"; }
-        { command = "waybar"; }
+        {
+          command = "autotiling";
+        }
+        # { command = "waybar"; }
       ];
       input = { "type:keyboard" = { xkb_options = "caps:escape"; }; };
       keybindings = {
@@ -168,6 +170,7 @@
         border = 0;
       };
       defaultWorkspace = "workspace number 1";
+      bars = [{ command = "swaybar_command waybar"; }];
     };
 
   };

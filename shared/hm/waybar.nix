@@ -45,7 +45,7 @@
         tray = { spacing = 5; };
 
         battery = {
-          bat = "BAT2";
+          # bat = "BAT2";
           interval = 60;
           states = {
             warning = 30;
@@ -115,8 +115,8 @@
           on-click = "pavucontrol";
         };
         backlight = {
-          format = "{percent}%";
-          format-icons = [ "" "" ];
+          format = " {percent}%";
+          # format-icons = [ "" "" ];
         };
         network = {
           interface = "wlp2s0";
@@ -159,7 +159,7 @@
       #tray {
         padding: 4px;
       }
-      #clock, #cpu, #memory, #disk, #temperature, #idle_inhibitor, #battery, backlight, pulseaudio, network {
+      #clock, #cpu, #memory, #disk, #temperature, #idle_inhibitor, #battery, #backlight, #pulseaudio, #network {
         padding: 0 8px;
         margin: 0 2px;
       }
