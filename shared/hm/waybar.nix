@@ -7,7 +7,7 @@
         position = "top";
         height = 32;
         modules-left = [ "sway/workspaces" ];
-        modules-center = [ "sway/window" ];
+        modules-center = [ "sway/window" "mpris" ];
         modules-right = [
           "temperature"
           "cpu"
@@ -47,11 +47,25 @@
 
         };
 
+        mpris = {
+          format = " [{player_icon} {title} - {artist} ({position}/{length})]";
+          format-paused = "{status_icon} <i>{dynamic}</i>";
+          player-icons = {
+            default = "▶";
+            mpv = "";
+            spotify_player = "󰓇";
+          };
+          status-icons = { paused = "⏸"; };
+          ignored-players = [ "firefox" ];
+        };
+
         "sway/window" = {
           format = "{title}";
           max-length = 50;
           rewrite = {
             "(.*) - [Yy]ou[Tt]ube.*" = "  $1";
+            "(.*) - mpv.*" = "  $1";
+            "(.*) — Zen Browser.*" = "󰈹  $1";
             "nvim" = "";
             "hx" = "";
             "zsh" = "";
@@ -61,6 +75,7 @@
             ".*[Dd]iscord.*" = "󰙯 ";
             ".*[Rr]eddit.*" = "";
             ".*r\\/([^ ]+).*" = "";
+            ".*[Ss]potify.*" = "";
           };
         };
         tray = { spacing = 5; };
