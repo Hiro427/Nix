@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-
 HOST=$(cat "/sys/class/dmi/id/product_name")
 
 desktop() {
@@ -17,10 +16,27 @@ desktop() {
 }
 
 
+xps() {
+  local resp
+  local identifier
+
+    resp=$( swaymsg -r -t get_inputs | \
+    jq -r '.[] | select(.type == "touchpad")')
+
+  identifier=$(echo "$resp" | jq -r .identifier)
+
+  swaymsg input "$identifier" "natural_scroll" "enabled"
+    
+
+}
+
 
 case "$HOST" in
   "B650 EAGLE AX")
     desktop
+  ;;
+  "XPS 15 9510")
+    xps
   ;;
   *)
    exit
