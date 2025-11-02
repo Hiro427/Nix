@@ -167,6 +167,12 @@
       defaultWorkspace = "workspace number 1";
       bars = [{ command = "swaybar_command none"; }];
     };
+    extraConfig = ''
+      # Swipe left: move to next workspace
+      bindgesture swipe:left workspace next
+      # Swipe right: move to previous workspace
+      bindgesture swipe:right workspace prev
+    '';
 
   };
 }
