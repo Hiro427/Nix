@@ -58,13 +58,18 @@
           command = "sh ~/Nix/dots/scripts/wm/sway/natscroll.sh";
           always = true;
         }
-        {
-          command = "autotiling";
-        }
-        # { command = "waybar"; }
+        { command = "autotiling"; }
+        { command = "waybar"; }
       ];
       input = { "type:keyboard" = { xkb_options = "caps:escape"; }; };
       keybindings = {
+        #Applications
+        "Mod4+Return" = "exec wezterm, workspace 2";
+        "Mod4+f" = "exec nautilus";
+        "Mod4+b" = "exec zen-beta, workspace 1";
+        "Ctrl+space" = "exec flameshot gui";
+        "Mod4+s" = "exec kitty --class spt spotify_player, workspace 3";
+        "Mod4+d" = "exec vesktop, workspace 4";
         "Mod4+w" = "exec i3-msg kill";
         "Mod4+h" = "focus left";
         "Mod4+j" = "focus down";
@@ -77,20 +82,12 @@
         "Mod4+Shift+l" = "move right";
         "Mod4+Shift+f" = "fullscreen toggle";
         "Mod4+Shift+space" = "floating toggle";
+        "Mod4+Shift+b" = "bar mode toggle";
         "Mod4+a" = "focus parent";
         "Mod4+minus" = "move scratchpad";
         "Mod4+Shift+minus" = "scratchpad show";
-        "Mod4+Shift+b" = "bar mode toggle";
-        "Mod4+Return" = "exec wezterm";
-        "Mod4+f" = "exec nautilus";
-        "Mod4+b" = "exec zen-beta";
         # "Mod4+space" = "exec vicinae toggle";
-        # "Mod4+space" = "exec fuzzel";
         "Mod4+space" = "exec rofi -show drun";
-        #
-        #
-        "Ctrl+space" = "exec flameshot gui";
-        "Mod4+s" = "exec kitty --class spt spotify_player";
         "Mod4+Shift+r" = "exec swaymsg reload";
         "Mod4+Shift+s" = "mode resize";
         "Mod4+1" = "workspace number 1";
@@ -133,14 +130,14 @@
       focus.followMouse = false;
       assigns = {
         "1" = [
-          { app_id = "zen-alpha"; } # Native Wayland
+          { app_id = "zen-beta"; } # Native Wayland
           { class = "zen"; } # XWayland fallback
         ];
         "2" = [
           { app_id = "org.wezfurlong.wezterm"; }
           { app_id = "kitty"; }
           { app_id = "com.mitchellh.ghostty"; }
-          { class = "kitty"; } # Fallback for XWayland
+          { class = "org.wezfurlong.wezterm"; } # Fallback for XWayland
         ];
         "3" = [
           { app_id = "spotify-qt"; }
@@ -157,7 +154,7 @@
       window = {
         border = 0;
         commands = [{
-          criteria = { title = "^Picture-in-Picture$"; };
+          criteria = { app_id = "^Picture-in-Picture$"; };
           command = "floating enable, sticky enable";
         }];
         titlebar = false;
@@ -168,7 +165,7 @@
         border = 0;
       };
       defaultWorkspace = "workspace number 1";
-      bars = [{ command = "swaybar_command waybar"; }];
+      bars = [{ command = "swaybar_command none"; }];
     };
 
   };
