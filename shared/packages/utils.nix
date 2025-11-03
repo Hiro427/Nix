@@ -86,5 +86,7 @@ with pkgs; [
   pnpm
   rainfrog
   discordo
+  glow
+  appimage-run
 ]
 

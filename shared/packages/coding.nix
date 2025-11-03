@@ -42,8 +42,9 @@ with pkgs; [
   golangci-lint
   llvmPackages_19.clang-tools
   cmake-language-server
-  glow
+  cmake-format
   cmake
+  pkg-config
   gnumake
   sqls
   docker-language-server

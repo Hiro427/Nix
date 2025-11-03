@@ -125,7 +125,9 @@
     package = pkgs.mullvad-vpn;
   };
 
-  # services.flatpak.enable = true;
+  services.flatpak.enable = true;
+  # flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
   # programs.spicetify = {
   #   enable = true;
   #   enabledExtensions = with spicePkgs.extensions; [

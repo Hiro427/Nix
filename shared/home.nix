@@ -88,6 +88,8 @@ in {
         disabledTrayIcon = true;
         showStartupLaunchMessage = false;
         useGrimAdapter = true;
+        showDesktopNotification = false;
+        showAbortNotification = false;
       };
     };
 

@@ -41,10 +41,30 @@
           on-click-right = "swaync-client -d -sw";
           escape = true;
         };
-        "sway/workspaces" = {
-          disable-scroll = true;
-          all-outputs = true;
 
+        "sway/workspaces" = {
+          format = "{icon}";
+          on-click = "activate";
+          format-icons = {
+            "1" = "󰈹";
+            "2" = "";
+            "3" = "";
+            "4" = "󰙯";
+            "5" = "";
+            urgent = "";
+            active = "";
+            default = "";
+          };
+          disable-scroll = false;
+          # all-outputs = true;
+          persistent-workspaces = {
+            "1" = [ ];
+            "2" = [ ];
+            "3" = [ ];
+            "4" = [ ];
+            "5" = [ ];
+
+          };
         };
 
         mpris = {
@@ -57,6 +77,27 @@
           };
           status-icons = { paused = "⏸"; };
           ignored-players = [ "firefox" ];
+        };
+
+        cava = {
+          framerate = 30;
+          autosens = 1;
+          sensitivity = 75;
+          bars = 8;
+          lower_cutoff_freq = 50;
+          higher_cutoff_freq = 10000;
+          hide_on_silence = true;
+          method = "pulse";
+          source = "auto";
+          stereo = true;
+          reverse = false;
+          bar_delimiter = 0;
+          monstercat = false;
+          waves = true;
+          noise_reduction = { };
+          input_delay = 2;
+          format-icons = [ "▁" "▂" "▃" "▄" "▅" "▆" "▇" "█" ];
+          actions = { on-click-right = "mode"; };
         };
 
         "sway/window" = {
@@ -144,7 +185,7 @@
           format = "{icon}{volume}%";
           format-muted = " ";
           format-icons = {
-            headphone = "";
+            headphone = " ";
             default = [ " " " " ];
 
           };
@@ -189,8 +230,8 @@
       }
 
       .modules-left #workspaces button.focused {
-        border-bottom: 2px solid @base0C;
-        color: @base0C;
+        border-bottom: 3px solid @base0B;
+        color: @base0B;
       }
 
       #tray {
@@ -212,9 +253,19 @@
         color: @base0C;
       }
 
+      #mpris.paused {
+       color: @base0E;
+      }
+
+      #mpris {
+       color: @base0C;
+      }
 
       #idle_inhibitor.activated {
-       color: @base0B;
+       color: @base0C;
+      }
+      #idle_inhibitor.deactivated {
+       color: @base0E;
       }
 
       #network.disconnected {

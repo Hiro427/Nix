@@ -149,12 +149,15 @@
           { class = "vesktop"; }
           { class = "discord"; }
         ];
-        "6" = [{ class = "PrismLauncher"; }];
+        "5" = [ { app_id = "mpv"; } { class = "mpv"; } ];
       };
       window = {
         border = 0;
         commands = [{
-          criteria = { app_id = "^Picture-in-Picture$"; };
+          criteria = {
+            title = "Picture-in-Picture";
+            app_id = "zen-beta";
+          };
           command = "floating enable, sticky enable";
         }];
         titlebar = false;
@@ -165,6 +168,7 @@
         border = 0;
       };
       defaultWorkspace = "workspace number 1";
+
       bars = [{ command = "swaybar_command none"; }];
     };
     extraConfig = ''
