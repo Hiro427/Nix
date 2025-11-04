@@ -96,12 +96,14 @@
         "Mod4+4" = "workspace number 4";
         "Mod4+5" = "workspace number 5";
         "Mod4+6" = "workspace number 6";
+        "Mod4+7" = "workspace number 7";
         "Mod4+Shift+1" = "move container to workspace number 1";
         "Mod4+Shift+2" = "move container to workspace number 2";
         "Mod4+Shift+3" = "move container to workspace number 3";
         "Mod4+Shift+4" = "move container to workspace number 4";
         "Mod4+Shift+5" = "move container to workspace number 5";
-        "Mod4+Shift+6" = "move container to workspace number 5";
+        "Mod4+Shift+6" = "move container to workspace number 6";
+        "Mod4+Shift+7" = "move container to workspace number 7";
         "Mod4+Tab" = "workspace back_and_forth";
         "XF86AudioRaiseVolume" =
           "exec pactl set-sink-volume @DEFAULT_SINK@ +5%";
@@ -150,16 +152,27 @@
           { class = "discord"; }
         ];
         "5" = [ { app_id = "mpv"; } { class = "mpv"; } ];
+        "6" = [ { app_id = "steam"; } { class = "steam"; } ];
+        # "7" = [ { app_id = "^steam_app.*"; } { class = "^steam_app.*"; } ];
       };
       window = {
         border = 0;
-        commands = [{
-          criteria = {
-            title = "Picture-in-Picture";
-            app_id = "zen-beta";
-          };
-          command = "floating enable, sticky enable";
-        }];
+        commands = [
+          {
+            criteria = {
+              title = "Picture-in-Picture";
+              app_id = "zen-beta";
+            };
+            command = "floating enable, sticky enable";
+          }
+          {
+            criteria = {
+              app_id = "^steam_app_.*";
+              class = "^steam_app_.*";
+            };
+            command = "floating disable, move to workspace '7' ";
+          }
+        ];
         titlebar = false;
       };
       floating = {

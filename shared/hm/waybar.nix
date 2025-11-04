@@ -51,6 +51,8 @@
             "3" = "";
             "4" = "󰙯";
             "5" = "";
+            "6" = "󰓓";
+            "7" = "󰊗";
             urgent = "";
             active = "";
             default = "";
@@ -63,6 +65,8 @@
             "3" = [ ];
             "4" = [ ];
             "5" = [ ];
+            "6" = [ ];
+            "7" = [ ];
 
           };
         };
@@ -211,6 +215,13 @@
 
       };
     };
+    # window#waybar {
+    #   border: 2px solid @base0C;
+    #   border-radius: 8px;
+    #   margin: 6px;
+    #   padding: 0;
+    # }
+
     style = ''
       * {
         font-size: 14px;           
