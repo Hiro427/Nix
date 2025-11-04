@@ -88,5 +88,8 @@ with pkgs; [
   discordo
   glow
   appimage-run
+  rbw
+  rofi-rbw-wayland
+  pinentry-all
 ]
 

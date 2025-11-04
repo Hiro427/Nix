@@ -14,8 +14,8 @@ in {
 
       };
       window = {
-        width = 300;
-        height = 400;
+        width = 400;
+        height = 500;
         # border = mkLiteral "2px";
         # border-color = mkLiteral "var(blue)";
       };
