@@ -240,6 +240,10 @@
         border-radius: 4px;
       }
 
+      #workspaces.urgent {
+       color: @base08;
+      }
+
       .modules-left #workspaces button.focused {
         border-bottom: 3px solid @base0B;
         color: @base0B;

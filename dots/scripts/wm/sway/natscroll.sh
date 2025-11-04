@@ -16,7 +16,7 @@ desktop() {
 }
 
 
-xps() {
+laptop() {
   local resp
   local identifier
 
@@ -35,8 +35,8 @@ case "$HOST" in
   "B650 EAGLE AX")
     desktop
   ;;
-  "XPS 15 9510")
-    xps
+  "XPS 15 9510" | "20L70023US")
+    laptop
   ;;
   *)
    exit
