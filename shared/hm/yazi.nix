@@ -3,7 +3,10 @@
     enable = true;
 
     settings = {
-      mgr = { show_hidden = true; };
+      mgr = {
+        show_hidden = false;
+        sort_by = "natural";
+      };
       opener = {
         play = [
           {

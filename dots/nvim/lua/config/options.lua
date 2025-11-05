@@ -4,7 +4,7 @@ vim.cmd("set softtabstop=4")
 vim.cmd("set shiftwidth=4")
 vim.cmd("set cursorline")
 vim.cmd("set conceallevel=1")
-vim.cmd("colorscheme rose-pine")
+vim.cmd("colorscheme tokyonight-night")
 vim.opt.showmode = false
 vim.o.number = true
 vim.o.relativenumber = true
@@ -38,4 +38,4 @@ vim.keymap.set("i", "<C-p>", "<C-x><C-f>", { noremap = true, silent = true })
 vim.o.background = "dark"
 vim.api.nvim_set_hl(0, "NormalFloat", { link = "Pmenu" })
 
-vim.diagnostic.config({ virtual_text = false, update_in_insert = false }) 
+vim.diagnostic.config({ virtual_text = false, update_in_insert = false })

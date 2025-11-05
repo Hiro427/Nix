@@ -24,6 +24,7 @@ with pkgs; [
   rust-analyzer
   rustfmt
   rustc
+  clippy
   #lsps and formatters
   taplo
   zls
@@ -133,4 +134,5 @@ with pkgs; [
   lld
   elixir-ls
   elixir
+  uwu-colors # lsp to get hex colors etc in documents (for helix)
 ]

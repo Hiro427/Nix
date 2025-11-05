@@ -52,8 +52,11 @@
       keys.normal = {
         C-g = [ ":new" ":insert-output lazygit" ":buffer-close" ":redraw" ];
         C-r = [ ":earlier" ];
+        space.q = [ ":lsp-stop" ":write-quit-all" ];
         space.r = "repeat_last_motion";
+
         space.d = "hover";
+
         space.y.y = ":clipboard-yank";
         space.f.j = "jumplist_picker";
         space.f.f = ":open .";
@@ -64,6 +67,7 @@
         space.f.g = "global_search";
         space.f.S = "workspace_symbol_picker";
         space.f.b = "buffer_picker";
+        space.f.t = "@<space>/(TODO|FIXME|BUG|NOTE)";
         space.f.l = [ "select_all" "select_regex" ];
         space.j = ":buffer-next";
         space.k = ":buffer-previous";
@@ -130,11 +134,12 @@
     };
     languages = {
       language-server.emmet-language-server = {
-        command = "/run/current-system/sw/bin/emmet-language-server";
+        command = "${pkgs.emmet-language-server}/bin/emmet-language-server";
         args = [ "--stdio" ];
       };
       language-server.golangci-lint-langserver = {
-        command = "/run/current-system/sw/bin/golangci-lint-langserver";
+        command =
+          "${pkgs.golangci-lint-langserver}/bin/golangci-lint-langserver";
         args = [
           "golangci-lint"
           "run"
@@ -144,13 +149,20 @@
           "--issues-exit-code=1"
         ];
       };
-      # language-server.htmx-lsp =  {
-      #     command = "/run/current-system/sw/bin/htmx-lsp";
-      # };
-      # language-server.templ =  {
-      #     command = "/run/current-system/sw/bin/templ";
-      #     args = ["lsp"];
-      # };
+      language-server.htmx-lsp = { command = "${pkgs.htmx-lsp}/bin/htmx-lsp"; };
+      language-server.templ = {
+        command = "${pkgs.templ}/bin/templ";
+        args = [ "lsp" ];
+      };
+      language-server.uwu_colors = {
+        command = "${pkgs.uwu-colors}/bin/uwu_colors";
+      };
+      language-server.tailwindcss-ls = {
+        command =
+          "${pkgs.tailwindcss-language-server}/bin/tailwindcss-language-server";
+        args = [ "--stdio" ];
+        config = { userLanguages = { templ = "html"; }; };
+      };
       language = [
         {
           name = "rust";
@@ -160,7 +172,8 @@
         }
         {
           name = "css";
-          language-servers = [ "vscode-css-language-server" "tailwindcss-ls" ];
+          language-servers =
+            [ "vscode-css-language-server" "tailwindcss-ls" "uwu_colors" ];
         }
         {
           name = "python";
@@ -180,6 +193,7 @@
         {
           name = "nix";
           auto-format = true;
+          language-servers = [ "nixd" "uwu_colors" ];
           file-types = [ "nix" ];
 
           formatter = { command = "${pkgs.nixfmt-classic}/bin/nixfmt"; };
@@ -188,14 +202,21 @@
           name = "go";
           # auto-format = true;
           formatter = { command = "${pkgs.go}/bin/gofmt}"; };
-          language-servers = [ "gopls" "golangci-lint-langserver" ];
+          language-servers =
+            [ "gopls" "golangci-lint-langserver" "uwu_colors" ];
         }
-        # {
-        #      name = "templ"; 
-        #      language-servers = [ "emmet-language-server" "templ" "htmx-lsp" "tailwindcss-ls"]; 
-        #      file-types = ["html" "templ"];
-        #      auto-format = true; 
-        #  } 
+        {
+          name = "templ";
+          language-servers = [
+            "emmet-language-server"
+            "templ"
+            "htmx-lsp"
+            "tailwindcss-ls"
+            "uwu_colors"
+          ];
+          file-types = [ "html" "templ" ];
+          auto-format = true;
+        }
 
       ];
     };

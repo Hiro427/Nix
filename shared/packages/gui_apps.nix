@@ -27,4 +27,5 @@ with pkgs; [
   komikku
   geany
   audacity
+  onedrive
 ]

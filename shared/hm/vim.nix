@@ -8,7 +8,7 @@
       set expandtab
       set backspace=indent,eol,start
       set hlsearch
-      set signcolumn=no 
+      set signcolumn=yes 
       set splitbelow
       set number
       set relativenumber
@@ -28,6 +28,26 @@
       let mapleader = "\<Space>"
       let &t_ut=""
 
+      let g:ycm_auto_trigger = 1
+      let g:ycm_global_ycm_extra_conf = expand('~/.ycm_extra_conf.py')
+      let g:ycm_confirm_extra_conf = 0
+      let g:python_highlight_space_errors = 0
+
+      let g:go_highlight_types = 1
+      let g:go_highlight_fields = 1
+      let g:go_highlight_functions = 1
+      let g:go_highlight_methods = 1
+      let g:go_highlight_structs = 1
+      let g:go_highlight_operators = 1
+      let g:go_highlight_build_constraints = 1
+      let g:go_highlight_extra_types = 1    
+      let g:go_highlight_generate_tags = 1   
+      let g:go_highlight_variable_declarations = 1 
+      let g:go_highlight_variable_assignments = 1
+      let g:go_highlight_function_calls = 1   
+
+
+
 
     '';
 
@@ -36,18 +56,12 @@
       vim-commentary
       vim-surround
       zig-vim
-      ctrlp-vim
       nerdtree
       vim-devicons
       fzf-vim
       vim-go
-      vim-lsp-settings
-      vim-lsp
-      # ale
       vim-polyglot
-      asyncomplete-lsp-vim
-      # asyncomplete-vim
-
+      YouCompleteMe
     ];
 
   };
