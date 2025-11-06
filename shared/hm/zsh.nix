@@ -4,16 +4,24 @@
     enable = true;
     syntaxHighlighting.enable = true;
     autosuggestion.enable = true;
-    # export XDG_DATA_DIRS=$XDG_DATA_DIRS:/usr/share:/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share
     # export LS_COLORS="$(vivid generate gruvbox-dark)" nord tokyonight-night
     initContent = ''
        res() { fg }
-       
-       zle -N res 
-       bindkey -M viins '^I' autosuggest-accept    
-       bindkey '^N' fzf-file-widget  
+       _tsm() { tsm  zle accept-line }
+       _yazi() { yazi zle accept-line }
+       _update_repos() { gm -lg zle accept-line }
 
+       zle -N res
+       zle -N _tsm
+       zle -N _yazi
+       zle -N _update_repos
+       
+       bindkey -M viins '^I' autosuggest-accept    
+       bindkey '^N' fzf-file-widget
+       bindkey '^X' _tsm
        bindkey '^Z' res
+       bindkey '^F' _yazi
+       bindkey '^G' _update_repos
 
 
        eval "$(starship init zsh)"
@@ -35,7 +43,7 @@
       extended = true;
     };
     sessionVariables = {
-      EDITOR = "nvim";
+      EDITOR = "hx";
       REPO_FPATH = "$HOME/.dotfiles/github/repos.txt";
       PROJ_DIR = "$HOME/coding/projects/";
       MANGA_DL_DIR = "$HOME/Downloads/Manga/";
@@ -53,15 +61,14 @@
       activate = "source .venv/bin/activate";
       s = "cd - >> /dev/null";
       v = "nvim";
-      # alias rofi="rofi -show drun -normal-window"
       search = "is-fast";
       doom = "~/.config/emacs/bin/doom";
-      tn = "tmux new-session -s $(basename $(pwd))";
+      gc = "git clone";
+      tn =
+        "tmux new-session -d -s $(basename $(pwd)); tmux attach -t $(basename $(pwd))";
       ta = "tmux a -t $(tmux ls | cut -d: -f1 | fzf --height 10 --reverse -1)";
       ts = "tmux ls";
       dev = "echo 'use nix' >> .envrc && direnv allow";
-      spt = "~/apps/bin/spotify_player";
-
       nvidia-offload =
         "__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia '$@'";
     };

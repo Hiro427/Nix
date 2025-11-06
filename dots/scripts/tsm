@@ -10,9 +10,28 @@ find_dirs() {
 main() {
     directories=$(find_dirs)
 
-    sel_dir=$(echo "$directories" | fzf --height 20 --reverse --highlight-line --border='double' --border-label='New Project' --border-label-pos=2 --preview='eza --tree --color=always --icons {} ' --preview-window='right' --preview-border='double')
+    sel_dir=$(echo "$directories" 2>/dev/null | fzf \
+        --reverse --highlight-line --border='double' \
+        --border-label='New Project' --border-label-pos=2 \
+        --preview='eza --tree --color=always --icons {} ' \
+        --preview-window='right' --preview-border='double' 2>/dev/null)
 
-    eval sesh connect "$(basename "$sel_dir")"
+    if [[ "$sel_dir" == "" ]]; then
+        exit
+    fi
+
+    name="$(basename "$sel_dir")"
+    if ! tmux has-session -t "${name}:" 2>/dev/null; then
+      tmux new-session -d -s "$name" -c "$sel_dir" "$SHELL" 2>/dev/null || {
+        echo "failed to create session $name" >&2
+        exit 1
+      }
+    fi
+    if [ -n "$TMUX" ]; then
+      tmux switch-client -t "$name"
+    else
+      tmux attach -t "$name"
+    fi
 }
 
 main

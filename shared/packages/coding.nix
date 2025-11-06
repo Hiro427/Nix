@@ -61,10 +61,8 @@ with pkgs; [
   tailwindcss
   tailwindcss-language-server
   #misc 
-  live-server
   sqlite
   uv
-  sesh
   tmux
   #x11 dev stuff 
   xorg.libX11

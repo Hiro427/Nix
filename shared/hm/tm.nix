@@ -47,23 +47,10 @@
       bind-key k switch-client -p  # previous session
 
       bind v split-window -h -c "#{pane_current_path}"
-      bind h split-window -v -c "#{pane_current_path}" 
+      bind h split-window -v -c "#{pane_current_path}"
 
-      unbind C-s
-      bind -n "C-s" run-shell "sesh connect \"$(
-        sesh list --icons | fzf-tmux -p 60%,40% \
-          --no-sort --ansi --border-label ' sesh ' --prompt '󱐋  ' \
-          --header '  ^a all ^t tmux ^g configs ^x zoxide ^d tmux kill ^f find' \
-          --bind 'tab:down,btab:up' \
-          --bind 'ctrl-a:change-prompt(󱐋  )+reload(sesh list --icons)' \
-          --bind 'ctrl-t:change-prompt(󱂬  )+reload(sesh list -t --icons)' \
-          --bind 'ctrl-g:change-prompt(  )+reload(sesh list -c --icons)' \
-          --bind 'ctrl-x:change-prompt(  )+reload(sesh list -z --icons)' \
-          --bind 'ctrl-f:change-prompt(  )+reload(fd -H -d 2 -t d -E .Trash . ~)' \
-          --bind 'ctrl-d:execute(tmux kill-session -t {2..})+change-prompt(󱐋  )+reload(sesh list --icons)' \
-          # --preview-window 'right:55%' \
-          # --preview 'sesh preview {}'
-      )\""
+      bind -n C-s choose-tree -Zs
+      bind-key -T choose-tree n command-prompt -p "new-session name:" "new-session -ds '%%'"
 
       set -g @tmux-dotbar-fg "${theme.tmuxBarColors.dotbar-fg}"
       set -g @tmux-dotbar-bg "${theme.tmuxBarColors.dotbar-bg}"
