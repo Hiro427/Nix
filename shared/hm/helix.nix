@@ -1,5 +1,6 @@
 { config, pkgs, theme, ... }: {
   programs.helix = {
+    defaultEditor = true;
     enable = true;
     package = pkgs.evil-helix;
     themes = {
