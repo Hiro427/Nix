@@ -64,7 +64,7 @@
       input = { "type:keyboard" = { xkb_options = "caps:escape"; }; };
       keybindings = {
         #Applications
-        "Mod4+Return" = "exec kitty, workspace 2";
+        "Mod4+Return" = "exec foot, workspace 2";
         "Mod4+f" = "exec nautilus";
         "Mod4+b" = "exec zen-beta, workspace 1";
         "Ctrl+space" = "exec flameshot gui";

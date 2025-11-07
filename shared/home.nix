@@ -102,6 +102,12 @@ in {
   programs.foot = {
     enable = true;
     settings.colors.alpha = lib.mkOverride 60 0.85;
+    settings = {
+      cursor = {
+        style = "beam";
+        blink = "yes";
+      };
+    };
     # you can also override background alpha instead:
     # settings.colors.background = lib.mkOverride 60 "#1e1e2ecc";
   };
