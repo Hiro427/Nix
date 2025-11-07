@@ -6,7 +6,6 @@
     baseIndex = 1;
     prefix = "C-a";
     mouse = true;
-
     extraConfig = ''
       set -g default-terminal "tmux-256color"
       set-option -g allow-passthrough on

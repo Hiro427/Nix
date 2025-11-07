@@ -4,7 +4,7 @@ vim.cmd("set softtabstop=4")
 vim.cmd("set shiftwidth=4")
 vim.cmd("set cursorline")
 vim.cmd("set conceallevel=1")
-vim.cmd("colorscheme tokyonight-night")
+vim.cmd("colorscheme rose-pine")
 vim.opt.showmode = false
 vim.o.number = true
 vim.o.relativenumber = true
@@ -31,6 +31,10 @@ vim.keymap.set("n", "<leader>sh", "<C-w>H") -- move to far left
 vim.keymap.set("n", "<leader>sl", "<C-w>L") -- move to far right
 vim.keymap.set("n", "<leader>sk", "<C-w>K") -- move to top
 vim.keymap.set("n", "<leader>sj", "<C-w>J") -- move to bottom
+vim.keymap.set("n", "<leader>wh", "<C-w>h") -- move to far left
+vim.keymap.set("n", "<leader>wl", "<C-w>l") -- move to far right
+vim.keymap.set("n", "<leader>wk", "<C-w>k") -- move to top
+vim.keymap.set("n", "<leader>wj", "<C-w>j") -- move to bottom
 vim.keymap.set("n", "<leader>vs", ":vsplit<CR>")
 vim.keymap.set("n", "<leader>hs", ":split<CR>")
 vim.keymap.set("n", "<leader>u", ":update<CR> :source<CR>", { desc = "reload config", silent = true })

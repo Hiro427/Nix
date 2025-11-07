@@ -7,7 +7,7 @@
     # export LS_COLORS="$(vivid generate gruvbox-dark)" nord tokyonight-night
     initContent = ''
        res() { fg }
-       _tsm() { tsm  zle accept-line }
+       _tsm() { sh ~/Nix/dots/scripts/tsm  zle accept-line }
        _yazi() { yazi zle accept-line }
        _update_repos() { gm -lg zle accept-line }
 

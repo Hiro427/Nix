@@ -13,15 +13,12 @@ return {
 				end
 			end
 
-			-- Remove the incorrect mini.completion line
-			-- capabilities = require("blink.cmp").get_lsp_capabilities(capabilities)
+			capabilities = require("blink.cmp").get_lsp_capabilities(capabilities)
 
 			capabilities.textDocument.completion.completionItem.snippetSupport = true
 			capabilities.textDocument.completion.completionItem.resolveSupport = {
 				properties = { "documentation", "detail" },
 			}
-
-			local lspconfig = require("lspconfig")
 
 			vim.lsp.enable({
 				"lua_ls",
@@ -58,7 +55,7 @@ return {
 				"kotlin_language_server",
 			})
 
-			lspconfig.emmet_language_server.setup({
+			vim.lsp.config("emmet_language_server", {
 				capabilities = capabilities,
 				on_attach = on_attach,
 				filetypes = {

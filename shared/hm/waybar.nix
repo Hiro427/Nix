@@ -52,7 +52,6 @@
             "4" = "󰙯";
             "5" = "";
             "6" = "󰓓";
-            "7" = "󰊗";
             urgent = "";
             active = "";
             default = "";
@@ -66,8 +65,6 @@
             "4" = [ ];
             "5" = [ ];
             "6" = [ ];
-            "7" = [ ];
-
           };
         };
 
@@ -284,12 +281,16 @@
       }
 
       #network.disconnected {
-       color: @base08;
+       color: @base0F;
       }
+
       #pulseaudio.muted {
        color: @base08;
       }
 
+      #pulseaudio.source-muted {
+       color: @base08;
+      }
 
       #battery.warning {
        color: @base0A;
@@ -303,7 +304,7 @@
        color: @base0B;
       }
       #temperature.critical {
-        color: @base08;
+        color: @base0F;
       }
 
       #window {

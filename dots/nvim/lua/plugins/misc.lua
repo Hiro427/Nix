@@ -1,22 +1,6 @@
 return {
 	{ "nvim-tree/nvim-web-devicons", lazy = true },
 	{
-		"luckasRanarison/tailwind-tools.nvim",
-		name = "tailwind-tools",
-		build = ":UpdateRemotePlugins",
-		dependencies = {
-			"nvim-treesitter/nvim-treesitter",
-			"neovim/nvim-lspconfig", -- optional
-		},
-		opts = {}, -- your configuration
-		vim.keymap.set(
-			"n",
-			"<leader>tt",
-			":TailwindConcealToggle<CR>",
-			{ desc = "Tailwind Conceal Toggle", silent = true }
-		),
-	},
-	{
 		"laytan/cloak.nvim",
 		config = function()
 			require("cloak").setup({})

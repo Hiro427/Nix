@@ -8,13 +8,29 @@ find_dirs() {
 }
 
 main() {
-    directories=$(find_dirs)
+    local directories=()
+    local fzf_args
 
-    sel_dir=$(echo "$directories" 2>/dev/null | fzf \
-        --reverse --highlight-line --border='double' \
-        --border-label='New Project' --border-label-pos=2 \
-        --preview='eza --tree --color=always --icons {} ' \
-        --preview-window='right' --preview-border='double' 2>/dev/null)
+    fzf_args=(
+      --reverse
+      --highlight-line
+      --border='double'
+      --border-label='New Project'
+      --border-label-pos=2
+    )
+      # --preview='eza --tree --color=always --icons {}'
+      # --preview-window='right'
+      # --preview-border='double'
+
+    mapfile -t directories < <(find_dirs)
+    directories+=("/home/jacobrambarran/Nix")
+
+    if [ -n "$TMUX" ]; then
+      sel_dir=$(printf '%s\n' "${directories[@]}" 2>/dev/null | fzf-tmux -p50%,30% "${fzf_args[@]}" 2>/dev/null)
+    else
+      sel_dir=$(printf '%s\n' "${directories[@]}" 2>/dev/null | fzf --height 30% "${fzf_args[@]}" 2>/dev/null)
+
+    fi 
 
     if [[ "$sel_dir" == "" ]]; then
         exit
@@ -22,7 +38,7 @@ main() {
 
     name="$(basename "$sel_dir")"
     if ! tmux has-session -t "${name}:" 2>/dev/null; then
-      tmux new-session -d -s "$name" -c "$sel_dir" "$SHELL" 2>/dev/null || {
+      tmux new-session -d -s "$name" -c "$sel_dir" 2>/dev/null || {
         echo "failed to create session $name" >&2
         exit 1
       }

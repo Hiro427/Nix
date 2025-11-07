@@ -1,6 +1,6 @@
-{ config, pkgs, catppuccin, ... }:
+{ config, pkgs, catppuccin, lib, ... }:
 let
-  theme = import ./themes/tokyonight.nix {
+  theme = import ./themes/rosepine.nix {
     inherit pkgs;
     inherit config;
   };
@@ -99,7 +99,12 @@ in {
 
   programs.fuzzel.enable = true;
   programs.micro.enable = true;
-
+  programs.foot = {
+    enable = true;
+    settings.colors.alpha = lib.mkOverride 60 0.85;
+    # you can also override background alpha instead:
+    # settings.colors.background = lib.mkOverride 60 "#1e1e2ecc";
+  };
   services.vicinae = {
     enable = true; # default: true
     autoStart = true; # default: true

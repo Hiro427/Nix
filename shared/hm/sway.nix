@@ -64,7 +64,7 @@
       input = { "type:keyboard" = { xkb_options = "caps:escape"; }; };
       keybindings = {
         #Applications
-        "Mod4+Return" = "exec wezterm, workspace 2";
+        "Mod4+Return" = "exec kitty, workspace 2";
         "Mod4+f" = "exec nautilus";
         "Mod4+b" = "exec zen-beta, workspace 1";
         "Ctrl+space" = "exec flameshot gui";
@@ -136,6 +136,7 @@
         "2" = [
           { app_id = "org.wezfurlong.wezterm"; }
           { app_id = "kitty"; }
+          { app_id = "foot"; }
           { app_id = "com.mitchellh.ghostty"; }
           { class = "org.wezfurlong.wezterm"; } # Fallback for XWayland
         ];
