@@ -58,6 +58,7 @@
 
   virtualisation.docker.enable = true;
 
+  # environment.pathsToLink = [ "share/foot" ];
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
@@ -150,7 +151,7 @@
     packages = with pkgs; [
       noto-fonts
       noto-fonts-cjk-sans
-      noto-fonts-emoji
+      noto-fonts-color-emoji
       nerd-fonts.jetbrains-mono
       # add your preferred fonts here
     ];

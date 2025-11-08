@@ -48,7 +48,6 @@ with pkgs; [
   pkg-config
   gnumake
   sqls
-  docker-language-server
   shfmt
   nixpkgs-fmt
   taplo

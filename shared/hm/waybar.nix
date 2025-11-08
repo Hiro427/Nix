@@ -107,7 +107,7 @@
           rewrite = {
             "(.*) - [Yy]ou[Tt]ube.*" = "  $1";
             "(.*) - mpv.*" = "  $1";
-            "(.*) — Zen Browser.*" = "󰈹  $1";
+            "(.*) — Zen Browser.*" = "";
             "nvim" = "";
             "hx" = "";
             "zsh" = "";

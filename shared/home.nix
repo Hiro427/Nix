@@ -99,10 +99,12 @@ in {
 
   programs.fuzzel.enable = true;
   programs.micro.enable = true;
+  # programs.neovide.enable = true;
   programs.foot = {
     enable = true;
     settings.colors.alpha = lib.mkOverride 60 0.85;
     settings = {
+      # main = { font = "JetBrainsMono Nerd Font:size=12"; };
       cursor = {
         style = "beam";
         blink = "yes";

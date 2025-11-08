@@ -12,7 +12,7 @@ with pkgs; [
   prismlauncher
   bottles
   pavucontrol
-  whatsapp-for-linux
+  wasistlos
   foliate
   vlc
   darktable
@@ -28,4 +28,5 @@ with pkgs; [
   geany
   audacity
   onedrive
+  neovide
 ]

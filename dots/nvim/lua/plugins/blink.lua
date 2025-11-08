@@ -12,6 +12,7 @@ return {
 			["<Tab>"] = { "select_next", "fallback" },
 		},
 		cmdline = {
+			keymap = { preset = "inherit" },
 			completion = { menu = { auto_show = true } },
 		},
 		sources = {

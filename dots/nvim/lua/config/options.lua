@@ -13,6 +13,9 @@ vim.keymap.set({ "n", "v" }, "<leader>yy", [["+y]])
 -- removed '~' from empty lines
 vim.opt.fillchars = { eob = " " }
 
+vim.g.neovide_opacity = 0.2
+vim.o.guifont = "JetbrainsMono Nerd Font:h12"
+
 -- GUI Settings
 -- vim.opt.laststatus = 3 --limit statusline to 1
 

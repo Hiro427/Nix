@@ -18,6 +18,7 @@
       foliate.enable = true;
       helix.enable = false;
       zed.enable = false;
+      # foot.enable = false;
       # waybar.enable = false;
     };
     fonts = {
@@ -38,7 +39,7 @@
         name = "JetBrainsMono Nerd Font";
       };
       emoji = {
-        package = pkgs.noto-fonts-emoji;
+        package = pkgs.noto-fonts-color-emoji;
         name = "Noto Color Emoji";
       };
       sizes = {
