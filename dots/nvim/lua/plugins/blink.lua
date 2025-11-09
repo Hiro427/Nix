@@ -43,7 +43,7 @@ return {
 				auto_show_delay_ms = 0,
 				auto_show = true,
 				window = {
-					border = "rounded",
+					-- border = "rounded",
 					winhighlight = "Normal:Normal,FloatBorder:Normal,CursorLine:Visual,Search:None",
 				},
 			},

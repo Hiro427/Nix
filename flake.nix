@@ -62,6 +62,7 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.jacobrambarran = { pkgs, ... }: {
+                _module.args = { inherit inputs; };
                 imports = [
                   spicetify-nix.homeManagerModules.default
                   catppuccin.homeModules.catppuccin

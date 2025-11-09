@@ -1,82 +1,76 @@
 {
-    "projects": [
-        {
-            "path": "Nix", 
-            "name": "Nix"
-        },
-        {
-            "path": "coding/projects/typeman-flake", 
-            "name": "typeman-flake"
-        },
-        {
-            "path": "coding/hackerrank",
-            "name": "hackerrank"
-        },  
-        {
-            "path": "coding/projects/dlmanga",
-            "name": "dlmanga"
-        },
-        {
-            "path": "coding/projects/portfolio",
-            "name": "portfolio"
-        },
-
-        {
-            "path": "coding/aoc",
-            "name": "aoc"
-        },
-        {
-            "path" : "coding/projects/dlanime",
-            "name" : "dlanime"
-        },
-        {
-            "path": "coding/resources",
-            "name": "resources"
-        },
-        {
-            "path": "coding/projects/wip",
-            "name": "wip"
-        },
-        {
-            "path": "coding/projects/mxdownloader",
-            "name": "mxdownloader"
-        },
-        {
-            "path": "coding/projects/creader",
-            "name": "creader"
-        },
-        {
-            "path": "coding/projects/ygosearch",
-            "name": "ygosearch"
-        },
-        {
-            "path": "coding/leetcode", 
-            "name": "leetcode"
-        },
-        {
-            "path": "coding/game-dev", 
-            "name": "game-dev"
-        },
-        {
-            "path": "coding/homepage", 
-            "name": "homepage"
-        }, 
-        {
-            "path": "coding/lang",
-            "name": "lang"
-        },
-        {
-            "path": "coding/scratchpad",
-            "name": "scratchpad"
-        },
-        {
-            "path": "wallpapers",
-            "name": "wallpapers"
-        },
-        {
-            "path": "vaults",
-            "name": "vaults"
-        }
-
-    ]
+  "projects": [
+    {
+      "path": "Nix",
+      "name": "Nix"
+    },
+    {
+      "path": "coding/hackerrank",
+      "name": "hackerrank"
+    },
+    {
+      "path": "coding/projects/dlmanga",
+      "name": "dlmanga"
+    },
+    {
+      "path": "coding/projects/portfolio",
+      "name": "portfolio"
+    },
+    {
+      "path": "coding/aoc",
+      "name": "aoc"
+    },
+    {
+      "path": "coding/projects/dlanime",
+      "name": "dlanime"
+    },
+    {
+      "path": "coding/resources",
+      "name": "resources"
+    },
+    {
+      "path": "coding/projects/wip",
+      "name": "wip"
+    },
+    {
+      "path": "coding/projects/mxdownloader",
+      "name": "mxdownloader"
+    },
+    {
+      "path": "coding/projects/creader",
+      "name": "creader"
+    },
+    {
+      "path": "coding/projects/ygosearch",
+      "name": "ygosearch"
+    },
+    {
+      "path": "coding/leetcode",
+      "name": "leetcode"
+    },
+    {
+      "path": "coding/game-dev",
+      "name": "game-dev"
+    },
+    {
+      "path": "coding/homepage",
+      "name": "homepage"
+    },
+    {
+      "path": "coding/lang",
+      "name": "lang"
+    },
+    {
+      "path": "coding/scratchpad",
+      "name": "scratchpad"
+    },
+    {
+      "path": "wallpapers",
+      "name": "wallpapers"
+    },
+    {
+      "path": "vaults",
+      "name": "vaults"
+    }
+  ]
 }

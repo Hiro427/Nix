@@ -20,13 +20,10 @@ with pkgs; [
   inkscape
   emacs
   libreoffice
-  spotify-qt
   slack
   evolution
-  todoist-electron
   komikku
   geany
   audacity
-  onedrive
   neovide
 ]

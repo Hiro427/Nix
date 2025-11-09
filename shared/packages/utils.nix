@@ -91,5 +91,6 @@ with pkgs; [
   rbw
   rofi-rbw-wayland
   pinentry-all
+  python3Packages.adblock
 ]
 

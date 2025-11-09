@@ -2,21 +2,21 @@
   programs.helix = {
     enable = true;
     package = pkgs.evil-helix;
-    themes = {
-      transparent = {
-        inherits = theme.helixTheme;
-        "ui.background" = { };
-        "ui.menu" = { };
-        "ui.help" = { };
-        "ui.popup" = { };
-        "ui.statusline" = { };
-        "ui.statusline.inactive" = { };
-
-      };
-    };
+    # themes = {
+    #   transparent = {
+    #     inherits = theme.helixTheme;
+    #     "ui.background" = { };
+    #     "ui.menu" = { };
+    #     "ui.help" = { };
+    #     "ui.popup" = { };
+    #     "ui.statusline" = { };
+    #     "ui.statusline.inactive" = { };
+    #
+    #   };
+    # };
 
     settings = {
-      theme = "transparent";
+      theme = "base16_transparent";
       # theme = theme.helixTheme;
       editor = {
         line-number = "relative";

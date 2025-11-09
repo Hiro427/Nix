@@ -23,7 +23,6 @@
        bindkey '^F' _yazi
        bindkey '^G' _update_repos
 
-
        eval "$(starship init zsh)"
        export LS_COLORS="$(vivid generate ${theme.vividTheme})" 
       export PATH="$HOME/.cargo/bin:$PATH" 

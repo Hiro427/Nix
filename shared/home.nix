@@ -1,6 +1,6 @@
 { config, pkgs, catppuccin, lib, ... }:
 let
-  theme = import ./themes/rosepine.nix {
+  theme = import ./themes/onedark.nix {
     inherit pkgs;
     inherit config;
   };
@@ -102,9 +102,9 @@ in {
   # programs.neovide.enable = true;
   programs.foot = {
     enable = true;
-    settings.colors.alpha = lib.mkOverride 60 0.85;
+    # settings.colors.alpha = lib.mkOverride 60 0.85;
     settings = {
-      # main = { font = "JetBrainsMono Nerd Font:size=12"; };
+      main = { pad = "10x10"; };
       cursor = {
         style = "beam";
         blink = "yes";

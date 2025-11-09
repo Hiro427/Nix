@@ -68,7 +68,8 @@
         "Mod4+f" = "exec nautilus";
         "Mod4+b" = "exec zen-beta, workspace 1";
         "Ctrl+space" = "exec flameshot gui";
-        "Mod4+s" = "exec kitty --class spt spotify_player, workspace 3";
+        # "Mod4+s" = "exec kitty --class spt spotify_player, workspace 3";
+        "Mod4+s" = "exec spotify, workspace 3";
         "Mod4+d" = "exec vesktop, workspace 4";
         "Mod4+w" = "exec i3-msg kill";
         "Mod4+h" = "focus left";
