@@ -26,8 +26,6 @@ with pkgs; [
   geany
   audacity
   neovide
-  insync
-  megasync
   maestral
   maestral-gui
 ]
