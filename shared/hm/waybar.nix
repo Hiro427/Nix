@@ -7,15 +7,15 @@
         position = "top";
         height = 32;
         modules-left = [ "sway/workspaces" ];
-        modules-center = [ "sway/window" "mpris" ];
+        modules-center = [ "mpris" ];
         modules-right = [
+          "pulseaudio"
+          "backlight"
           "temperature"
           "cpu"
           "memory"
           "disk"
           "battery"
-          "pulseaudio"
-          "backlight"
           "clock"
           "idle_inhibitor"
           "custom/notification"
@@ -73,12 +73,14 @@
           format-paused = "{status_icon} <i>{dynamic}</i>";
           player-icons = {
             default = "▶";
-            mpv = "";
-            spotify_player = "󰓇";
-            vlc = "󰕼";
+            mpv = " ";
+            spotify_player = "󰓇 ";
+            spotify = "󰓇 ";
+            vlc = "󰕼 ";
+            firefox = " ";
           };
-          status-icons = { paused = "⏸"; };
-          ignored-players = [ "firefox" ];
+          status-icons = { paused = "󰏤"; };
+          # ignored-players = [ "firefox" ];
         };
 
         cava = {

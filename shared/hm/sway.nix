@@ -64,7 +64,7 @@
       input = { "type:keyboard" = { xkb_options = "caps:escape"; }; };
       keybindings = {
         #Applications
-        "Mod4+Return" = "exec ghostty, workspace 2";
+        "Mod4+Return" = "exec foot, workspace 2";
         "Mod4+f" = "exec nautilus";
         "Mod4+b" = "exec zen-beta, workspace 1";
         "Ctrl+space" = "exec flameshot gui";
@@ -155,18 +155,19 @@
         "5" = [ { app_id = "steam"; } { class = "steam"; } ];
       };
       window = {
-        border = 0;
+        border = 1;
         commands = [
           {
             criteria = {
               title = "Picture-in-Picture";
               app_id = "zen-beta";
             };
-            command = "floating enable, sticky enable";
+            command = "floating enable, sticky enable, move position 0 0";
           }
           {
             criteria = { app_id = "mpv"; };
-            command = "floating enable, sticky enable, resize set 420 250";
+            command =
+              "floating enable, sticky enable, resize set 420 250, move position 0 0";
           }
         ];
         titlebar = false;
