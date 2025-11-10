@@ -86,7 +86,7 @@
         space.h.c = ":open %sh{~/Nix/dots/scripts/marks.sh --file 3}";
         space.h.v = ":open %sh{~/Nix/dots/scripts/marks.sh --file 4}";
         space.h.b = ":open %sh{~/Nix/dots/scripts/marks.sh --file 5}";
-        C-f = [
+        space.e = [
           ":sh rm -f /tmp/unique-file"
           ":insert-output yazi %{buffer_name} --chooser-file=/tmp/unique-file"
           ":insert-output echo 'x1b[?1049hx1b[?2004h' > /dev/tty"

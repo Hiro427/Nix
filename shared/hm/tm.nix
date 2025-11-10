@@ -18,6 +18,7 @@
       bind "'" split-window -h
 
       bind-key "t" display-popup -E "$SHELL"
+      bind-key "x" 
       bind-key "c" display-popup -E "~/Nix/dots/scripts/wm/shared/cheatsheet.sh"
 
 
@@ -35,6 +36,7 @@
       bind -n M-l resize-pane -R 5
 
       bind -n C-t new-window
+      bind-key "m" run-shell tsm
       unbind C-w
       bind-key w kill-window
       bind-key n next-window

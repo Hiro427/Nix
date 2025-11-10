@@ -12,7 +12,7 @@
       window-colorspace = "display-p3";
       gtk-single-instance = true;
       background-blur = true;
-      background-opacity = 0.5;
+      # background-opacity = 0.5;
 
     };
   };

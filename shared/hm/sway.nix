@@ -64,7 +64,7 @@
       input = { "type:keyboard" = { xkb_options = "caps:escape"; }; };
       keybindings = {
         #Applications
-        "Mod4+Return" = "exec foot, workspace 2";
+        "Mod4+Return" = "exec ghostty, workspace 2";
         "Mod4+f" = "exec nautilus";
         "Mod4+b" = "exec zen-beta, workspace 1";
         "Ctrl+space" = "exec flameshot gui";
@@ -114,12 +114,12 @@
       };
       modes = {
         resize = {
-          Down = "resize grow height 10 px or 10 ppt";
+          j = "resize grow height 10 px or 10 ppt";
           Escape = "mode default";
-          Left = "resize shrink width 10 px or 10 ppt";
+          h = "resize shrink width 10 px or 10 ppt";
           Return = "mode default";
-          Right = "resize grow width 10 px or 10 ppt";
-          Up = "resize shrink height 10 px or 10 ppt";
+          l = "resize grow width 10 px or 10 ppt";
+          k = "resize shrink height 10 px or 10 ppt";
         };
       };
       gaps = {
@@ -151,18 +151,24 @@
           { class = "vesktop"; }
           { class = "discord"; }
         ];
-        "5" = [ { app_id = "mpv"; } { class = "mpv"; } ];
-        "6" = [ { app_id = "steam"; } { class = "steam"; } ];
+        # "5" = [ { app_id = "mpv"; } { class = "mpv"; } ];
+        "5" = [ { app_id = "steam"; } { class = "steam"; } ];
       };
       window = {
         border = 0;
-        commands = [{
-          criteria = {
-            title = "Picture-in-Picture";
-            app_id = "zen-beta";
-          };
-          command = "floating enable, sticky enable";
-        }];
+        commands = [
+          {
+            criteria = {
+              title = "Picture-in-Picture";
+              app_id = "zen-beta";
+            };
+            command = "floating enable, sticky enable";
+          }
+          {
+            criteria = { app_id = "mpv"; };
+            command = "floating enable, sticky enable, resize set 420 250";
+          }
+        ];
         titlebar = false;
       };
       floating = {
