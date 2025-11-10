@@ -9,12 +9,12 @@
         modules-left = [ "sway/workspaces" ];
         modules-center = [ "sway/window" ];
         modules-right = [
-          "pulseaudio"
-          "backlight"
           "temperature"
           "cpu"
           "memory"
           "disk"
+          "pulseaudio"
+          "backlight"
           "battery"
           "clock"
           "idle_inhibitor"

@@ -78,7 +78,7 @@ return {
 				styles = {
 					italic = true,
 					bold = true,
-					transparency = true,
+					transparency = false,
 				},
 			})
 		end,
