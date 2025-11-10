@@ -23,6 +23,12 @@
       text = "#282828";
     };
   };
+  swaycolors = {
+    uborder = "#1d2021";
+    border = "#d5c4a1";
+    fg = "#504945";
+    bg = "#282828";
+  };
   tmuxBarColors = {
     dotbar-fg = "#504945";
     dotbar-bg = "#282828";

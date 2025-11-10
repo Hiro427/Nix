@@ -155,7 +155,7 @@
         "5" = [ { app_id = "steam"; } { class = "steam"; } ];
       };
       window = {
-        border = 1;
+        border = 2;
         commands = [
           {
             criteria = {
@@ -182,10 +182,21 @@
       bars = [{ command = "swaybar_command none"; }];
     };
     extraConfig = ''
+      set $background "${theme.swaycolors.bg}"
+      set $text "${theme.swaycolors.fg}"
+      set $border "${theme.swaycolors.border}"
+      set $unfocused_border "${theme.swaycolors.uborder}"
+       
       # Swipe left: move to next workspace
       bindgesture swipe:left workspace next
       # Swipe right: move to previous workspace
       bindgesture swipe:right workspace prev
+      client.focused          $border $background $text $border $border
+      client.focused_inactive $unfocused_border $background $text $unfocused_border $unfocused_border
+      client.unfocused        $border $background $text $border $border
+      client.urgent           $border $background $text $border $border
+      client.placeholder      $border $background $text $border $border
+      client.background       $background
     '';
 
   };

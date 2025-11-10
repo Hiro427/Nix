@@ -7,7 +7,7 @@
         position = "top";
         height = 32;
         modules-left = [ "sway/workspaces" ];
-        modules-center = [ "mpris" ];
+        modules-center = [ "sway/window" ];
         modules-right = [
           "pulseaudio"
           "backlight"
@@ -16,7 +16,6 @@
           "memory"
           "disk"
           "battery"
-          "clock"
           "idle_inhibitor"
           "custom/notification"
           "tray"
@@ -69,8 +68,8 @@
         };
 
         mpris = {
-          format = " [{player_icon} {title} - {artist} ({position}/{length})]";
-          format-paused = "{status_icon} <i>{dynamic}</i>";
+          format = "{player_icon} {title} - {artist}";
+          format-paused = "{status_icon} {title} - {artist}";
           player-icons = {
             default = "▶";
             mpv = " ";
@@ -80,7 +79,7 @@
             firefox = " ";
           };
           status-icons = { paused = "󰏤"; };
-          # ignored-players = [ "firefox" ];
+          ignored-players = [ "firefox" "vlc" "mpv" ];
         };
 
         cava = {
@@ -110,19 +109,22 @@
           rewrite = {
             "(.*) - [Yy]ou[Tt]ube.*" = "  $1";
             "(.*) - mpv.*" = "  $1";
+            # "mpv" = "";
             "(.*) — Zen Browser.*" = "";
+            # "zen-beta" = "";
+            # "vlc" = "󰕼";
+            "Picture-in-Picture" = "";
             "nvim" = "";
             "hx (.*)" = " $1";
-            "h" = "";
+            "(h|hx)" = "";
             "~" = "";
-            "zsh" = "";
-            "bash" = "";
+            "(zsh|bash)" = "";
             "tmux" = "";
-            "wezterm" = "";
-            ".*[Dd]iscord.*" = "󰙯 ";
+            "(wezterm|foot)" = "";
+            "(.*[Dd]iscord.*|vesktop)" = "󰙯 ";
             ".*[Rr]eddit.*" = "";
             ".*r\\/([^ ]+).*" = "";
-            ".*[Ss]potify.*" = "";
+            ".*[Ss]potify.*" = "󰓇 ";
           };
         };
         tray = { spacing = 5; };

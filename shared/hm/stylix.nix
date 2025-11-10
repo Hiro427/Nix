@@ -18,6 +18,7 @@
       foliate.enable = true;
       helix.enable = false;
       zed.enable = false;
+      sway.enable = false;
       # foot.enable = false;
       # waybar.enable = false;
     };
