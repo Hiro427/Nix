@@ -16,6 +16,7 @@
           "memory"
           "disk"
           "battery"
+          "clock"
           "idle_inhibitor"
           "custom/notification"
           "tray"
