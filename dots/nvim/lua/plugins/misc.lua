@@ -1,42 +1,11 @@
 return {
 	{ "nvim-tree/nvim-web-devicons", lazy = true },
 	{
-		"NeogitOrg/neogit",
-		dependencies = {
-			"nvim-lua/plenary.nvim", -- required
-			"sindrets/diffview.nvim", -- optional - Diff integration
-
-			-- Only one of these is needed.
-			"nvim-telescope/telescope.nvim", -- optional
-		},
-	},
-	{
 		"laytan/cloak.nvim",
 		config = function()
 			require("cloak").setup({})
 		end,
 		vim.keymap.set("n", "<leader>ct", ":CloakToggle<CR>", { desc = "Toggle Cloak", silent = true }),
-	},
-	{
-		"saghen/blink.indent",
-		--- @module 'blink.indent'
-		--- @type blink.indent.Config
-		opts = {
-			static = {
-				char = "│",
-			},
-			scope = {
-				char = "│",
-			},
-		},
-	},
-	{
-		"xiyaowong/transparent.nvim",
-		config = function()
-			require("transparent").setup({
-				extra_groups = { "FloatBorder", "NormalFloat", "Float", "WhichKeyNormal", "MiniNotifyNormal" },
-			})
-		end,
 	},
 	{
 		"chomosuke/typst-preview.nvim",

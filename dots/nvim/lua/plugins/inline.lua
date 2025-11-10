@@ -20,7 +20,7 @@ return {
 				},
 				break_line = {
 					enabled = true,
-					after = 30,
+					after = 20,
 				},
 			})
 		end,

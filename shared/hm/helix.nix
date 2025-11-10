@@ -16,8 +16,8 @@
     # };
 
     settings = {
-      theme = "base16_transparent";
-      # theme = theme.helixTheme;
+      # theme = "base16_transparent";
+      theme = theme.helixTheme;
       editor = {
         line-number = "relative";
         true-color = true;

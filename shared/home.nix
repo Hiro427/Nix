@@ -79,6 +79,7 @@ in {
       c.url.start_pages = "https://search.google.com"
       c.window.transparent = True
       c.colors.webpage.darkmode.enabled = True
+
     '';
   };
   services.flameshot = {

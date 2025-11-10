@@ -5,26 +5,52 @@ return {
 	dependencies = { "nvim-lua/plenary.nvim", { "nvim-telescope/telescope-fzf-native.nvim", build = "make" } },
 	config = function()
 		require("telescope").setup({
-			defaults = require("telescope.themes").get_ivy(),
+			defaults = {
+				mappings = {
+					i = {
+						["<C-f>"] = require("telescope.actions.layout").toggle_preview,
+						["C-c"] = require("telescope.actions").close,
+					},
+				},
+				preview = {
+					hide_on_startup = true, -- hide previewer when picker starts
+				},
+			},
 			pickers = {
 				marks = {
 					theme = "dropdown",
 				},
-
+				current_buffer_fuzzy_find = {
+					theme = "dropdown",
+					previewer = false,
+				},
 				commands = {
 					theme = "dropdown",
 				},
 				lsp_document_symbols = {
 					theme = "dropdown",
+					previewer = false,
 				},
 				lsp_dynamic_workspace_symbols = {
 					theme = "dropdown",
+					previewer = false,
 				},
 				keymaps = {
 					theme = "dropdown",
 				},
 				buffers = {
 					theme = "dropdown",
+					previewer = false,
+				},
+				oldfiles = {
+					previewer = false,
+					disable_devicons = true,
+					theme = "dropdown",
+				},
+				find_files = {
+					disable_devicons = true,
+					theme = "ivy",
+					previewer = true,
 				},
 			},
 			extensions = {
