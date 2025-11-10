@@ -58,6 +58,7 @@
           command = "sh ~/Nix/dots/scripts/wm/sway/natscroll.sh";
           always = true;
         }
+        { command = "pkill nm-applet; nm-applet"; }
         { command = "autotiling"; }
         { command = "waybar"; }
       ];
