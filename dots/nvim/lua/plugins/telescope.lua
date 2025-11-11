@@ -56,10 +56,12 @@ return {
 				oldfiles = {
 					disable_devicons = true,
 					theme = "dropdown",
+					previewer = true,
 				},
 				find_files = {
 					disable_devicons = true,
 					theme = "ivy",
+					previewer = true,
 				},
 			},
 			extensions = {
