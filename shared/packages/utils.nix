@@ -92,5 +92,6 @@ with pkgs; [
   rofi-rbw-wayland
   pinentry-all
   python3Packages.adblock
+  pastel
 ]
 

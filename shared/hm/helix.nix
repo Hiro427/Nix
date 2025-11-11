@@ -50,7 +50,7 @@
         separator = "│";
       };
       keys.normal = {
-        C-g = [ ":new" ":insert-output lazygit" ":buffer-close" ":redraw" ];
+        C-g = [ ":new" ":insert-output lazygit" ":buffer-close!" ":redraw" ];
         C-r = [ ":earlier" ];
         space.q = [ ":lsp-stop" ":write-quit-all" ];
         space.r = "repeat_last_motion";
@@ -78,7 +78,7 @@
         space.l.i = ":toggle lsp.display-inlay-hints";
         space.l.r = "rename_symbol";
         space.h.a =
-          ":sh ~/Nix/dots/scripts/marks.sh --add-file '%sh{pwd}/%sh{basename %{buffer_name}}' ";
+          ":sh ~/Nix/dots/scripts/marks.sh --add-file '%sh{pwd}/%{buffer_name}' ";
         space.h.o = ":open /tmp/hxmarks";
         space.h.h = ":sh ~/Nix/dots/scripts/marks.sh ls";
         space.h.z = ":open %sh{~/Nix/dots/scripts/marks.sh --file 1}";
@@ -181,7 +181,7 @@
       language = [
         {
           name = "rust";
-          auto-format = true;
+          # auto-format = true;
           roots = [ "Cargo.toml" "Cargo.lock" ];
           language-servers = [ "rust-analyzer" ];
         }

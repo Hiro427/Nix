@@ -70,11 +70,9 @@ return {
 					{ section = "startup" },
 				},
 			},
-			-- explorer = { enabled = true, size = 0.3 },
+			explorer = { enabled = true },
 			indent = { enabled = true },
-			input = {
-				enabled = true,
-			},
+			input = { enabled = true },
 			terminal = {
 				enabled = true,
 				win = {
@@ -99,7 +97,7 @@ return {
 					explorer = {
 						layout = {
 							layout = {
-								width = 26,
+								width = 30,
 							},
 							auto_hide = { "input" },
 						},
@@ -114,6 +112,13 @@ return {
 					Snacks.explorer()
 				end,
 				desc = "Explorer",
+			},
+			{
+				"<leader>lg",
+				function()
+					Snacks.lazygit()
+				end,
+				desc = "Toggle Terminal",
 			},
 			{
 				"<leader>tt",

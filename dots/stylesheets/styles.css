@@ -1,0 +1,1555 @@
+/* not my stylesheet. see link to author: https://github.com/sameerasw/my-internet/tree/main */
+
+
+:root {
+  --main-bg-color: #191724;
+}
+
+/* transparency */
+body,
+.nav,
+.header:not(.el-dialog__body > .header),
+.result-col,
+.list-preview,
+.markdown-editor,
+.media-preview[data-v-796abd11],
+.nav-wrap[data-v-1cc2919e],
+.favourites-wrap[data-v-ddf96a3c],
+.stats-wrap[data-v-5c30286e],
+.theme-switch[data-v-0567dd85],
+.medialist.table .list-section,
+.bar-chart-wrap[data-v-46edc0ca],
+.pie-chart[data-v-26dc9635],
+.line-chart-wrap[data-v-84e71bc6],
+.footer[data-v-0165744a],
+.input,
+.search[data-v-219025ae],
+.recommendation-pair-card[data-v-20967985],
+.content[data-v-48560ace],
+.input[data-v-c574a71c] .el-textarea__inner,
+.search-input>.el-input__inner,
+.search-input:has(.el-input__inner),
+.entry-filter>.el-input__inner,
+.entry-filter:has(.el-input__inner),
+.stat-card[data-v-686e8358],
+.relations-wrap[data-v-686e8358],
+.wrap[data-v-04d66030],
+.thread-card[data-v-550f7194],
+.review-card[data-v-0369a0cf],
+.list-stats[data-v-815ccddc],
+.footer[data-v-815ccddc],
+.app-section[data-v-4ab65192],
+.comment-wrap[data-v-20438142],
+.body[data-v-3f00779d],
+.rating[data-v-5ca094da],
+.body[data-v-5ca094da],
+.role-card[data-v-f92815d6],
+.follow[data-v-69b91520],
+.time[data-v-04d66030],
+.load-more[data-v-6f203cf2],
+.ranking[data-v-a6e466b2],
+.no-threads[data-v-19b948c8],
+.external-link[data-v-c1b7ee7c],
+.markdown .markdown-spoiler.spoiler-visible span,
+.landing,
+.media-card,
+.stats-graph,
+.media-score-distribution,
+.status-distribution[data-v-e2bbc000],
+.about .content-wrap[data-v-5c30286e],
+.overview[data-v-5c30286e] .content-wrap,
+.hohTable,
+.hohNotification {
+  background-color: var(--main-bg-color) !important;
+  background: var(--main-bg-color) !important;
+  border: none !important;
+  box-shadow: none !important;
+  transition:
+    background-color 0.5s ease-in-out,
+    background 0.5s ease-in-out,
+    border 0.5s ease-in-out,
+    box-shadow 0.5s ease-in-out !important;
+}
+
+/* darkreader */
+:root {
+  --darkreader-background-ffffff: transparent !important;
+}
+
+/* no footer */
+.footer[data-v-0165744a] {
+  display: none !important;
+}/* not my stylesheet. see link to author: https://github.com/sameerasw/my-internet/tree/main */
+
+
+:root {
+  --main-bg-color: #191724;
+}
+
+/* gh-transparency */
+html,
+body,
+header,
+.color-bg-default,
+.feed-background,
+.session-authentication,
+.auth-form-body,
+[aria-labelledby="folders-and-files"] .bgColor-muted,
+nav,
+.dxnHPp,
+.kcVpNH,
+.discussion-timeline-actions,
+.TimelineItem-break,
+.gh-header,
+.PageLayout-pane,
+.bSTcOH,
+.gOhIYN,
+#blob-edit-side-panel-id,
+#repository-container-header,
+.empty-cell,
+.FleZw,
+.MarkdownInput-module__textArea--QjIwG,
+.notifications-list-item,
+.notifications-list-item.notification-read,
+.search-results-page,
+.application-main>div>div,
+#memex-root,
+[aria-label="Project"],
+#memex-project-view-root>div,
+[aria-label="Formatting tools"],
+.slicer-items-module__SlicerPanel--nSeK0,
+.jyoUVC,
+.Box-sc-g0xbh4-0[role="grid"],
+[role="row"],
+.eqCHeb,
+[data-testid="chat-layout"],
+aside>div,
+[data-testid="chat-layout"]>div>div>div,
+[data-testid="chat-layout"]>div>aside,
+.ContentPreview-module__tabsContainer--bNywg::after,
+.snippet-clipboard-content>.notranslate,
+.IssueViewer-module__contentArea--mHr61,
+.SubscriptionSection-module__button--WSUPv,
+.IssueViewer-module__contentArea--IpMnd,
+section[aria-label="Events"]>div>div>[data-timeline-event-id] {
+  background-color: var(--main-bg-color) !important;
+  background: var(--main-bg-color) !important;
+  border: none !important;
+  box-shadow: none !important;
+  transition:
+    background-color 0.5s ease-in-out,
+    background 0.5s ease-in-out,
+    border 0.5s ease-in-out,
+    box-shadow 0.5s ease-in-out !important;
+}
+
+button[role="tab"] {
+  &[aria-selected="true"] {
+    border-radius: 0.5em !important;
+  }
+}
+
+.MarkdownEditor-module__viewSwitchBorder--zeiDB,
+.js-comment-container::before,
+.js-comment-container .TimelineItem::before {
+  display: none !important;
+}
+
+[aria-label="Copilot badge"]+div>.js-snippet-clipboard-copy-unpositioned:has(h3) {
+  padding: 1em !important;
+}
+
+/* gh-transparent lists $ Make the files, issues and other lists transparent */
+.PageLayout-content .Box:not(.Popover-message),
+.PageLayout-content .Box-row,
+#repo-content-turbo-frame .Box.Box:not(.Popover-message) {
+  background-color: var(--main-bg-color) !important;
+  background: var(--main-bg-color) !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* gh-no footer */
+footer:has(h2),
+div.px-2:nth-child(3) {
+  opacity: 0 !important;
+}
+
+/* gh-hover $ Make the left and right sidebars show on hover */
+.feed-left-sidebar,
+.feed-right-sidebar {
+  opacity: 0 !important;
+  transition: all 0.3s ease-in-out !important;
+
+  &:hover {
+    opacity: 1 !important;
+  }
+}
+
+/* gh-border mods */
+table,
+.eIKYQa,
+div.border-bottom,
+td {
+  border: none !important;
+}
+
+.dJnomT,
+.jPdcfu,
+.gOHzTT,
+.eBevHz,
+.Box-header,
+#repos-sticky-header>div,
+.jbBkdO,
+.file-header,
+.TabNav-item {
+  border-radius: 0.5em !important;
+}
+
+[data-selector="repos-split-pane-content"] {
+
+  section,
+  .NWhVB,
+  .cm-gutters,
+  [data-testid="codemirror-editor"],
+  [data-testid="codemirror-editor"] .cm-content,
+  .llKfAj {
+    background: var(--main-bg-color) !important;
+    box-shadow: none !important;
+  }
+}
+
+#user-profile-frame .Box,
+.mgKNn,
+.fGELhp,
+.timeline-comment,
+.empty-diff-line,
+.Diff-module__diffHeaderWrapper--rsdD4::before {
+  background: var(--main-bg-color) !important;
+  box-shadow: none !important;
+}
+
+.feed-item-content,
+.color-bg-subtle,
+.ajax-pagination-btn,
+action-graph .color-bg-inset,
+[data-testid="comment-header"] .Box-sc-g0xbh4-0,
+.copilotPreview__suggestionButton:not(:hover) {
+  background-color: var(--main-bg-color) !important;
+  background: var(--main-bg-color) !important;
+  box-shadow: none !important;
+}
+
+/* gh-overlay fixes $ Fix some transparent overlays and menus */
+modal-dialog .search-suggestions,
+details-dialog.Box,
+.Box-sc-g0xbh4-0.gOHzTT.js-notification-shelf-offset-top.color-bg-default,
+.Popover-message,
+.HeaderMetadata-module__stickyContainer--xk69x {
+  background-color: var(--bgColor-inset) !important;
+  transition: background-color 0.3s ease-in-out !important;
+  border-radius: 1em !important;
+}
+
+/* gh-glass effect */
+.prc-Button-ButtonBase-c50BI,
+.MergeabilityIcon-module__mergeabilityIcon--GOu7M,
+.range-editor,
+.TableHead.prc-DataTable-TableHead-eOrJU,
+.Table.prc-DataTable-Table-qYfrL,
+.tabnav-tab.selected,
+.TabNav__TabNavLink-sc-pwdi4r-3.selected,
+.timeline-comment-header,
+.Metadata-module__container--tL6Q3,
+.CodeBlock-module__header--RMUQr,
+.CodeBlock-module__codeContainer--dAEis,
+.ChatMessage-module__actions--Jllb6,
+.ContentPreviewTab-module__tabContent--zNIXv:hover,
+.cm-gutters,
+.cm-editor.ͼ1.ͼ2.ͼ5nc.ͼ5fa.hide-help.js-codemirror-editor,
+.FilePreview-module__toolbar--toYCM,
+.cm-content,
+.FileBlock-module__container--zWu5c,
+.ChatMessage-module__content--MYneF,
+.Layout-module__previewPane--vF1ZO.Layout-module__active--nDCtU,
+.ChatInput-module__container--NFzCy,
+#settings-frame .Box,
+.form-select,
+.edit_user button,
+.Box-sc-g0xbh4-0 .gxwXUv,
+.Box-sc-g0xbh4-0.fXxPgR,
+.Box-sc-62in7e-0.BranchInfoBar-module__Box--NhDLA.BranchInfoBar-module__BranchInfoBarContainer--vaFVP,
+#file-tree-filter-field,
+.highlight pre,
+.ListItem-module__listItem--kHali:hover,
+.Box-sc-g0xbh4-0 .gpHFJV,
+.Box-row.Box-row--focus-gray.p-0.mt-0.js-navigation-item.js-issue-row.navigation-focus,
+.d-flex.flex-column.border.rounded-2.mb-3.pl-1,
+.form-group .form-control,
+.Box-sc-g0xbh4-0 .erfCwp,
+.Box-sc-g0xbh4-0 .eHDvEW,
+.Box-sc-g0xbh4-0 .ldkMIO,
+.Box-sc-g0xbh4-0 .eWEbRA:hover,
+.react-directory-row:hover,
+.tabnav-tab[aria-selected="true"],
+.snippet-clipboard-content.notranslate.position-relative.overflow-auto,
+.Shared-module__CommentBox--x3rre,
+.Box-sc-g0xbh4-0 .crArEc,
+.copilotPreview,
+.MarkdownEditor-module__inputWrapper--MtV0d,
+.TextInput-wrapper,
+.AppHeader-search-whenRegular,
+turbo-frame>article>div.feed-item-content,
+#feed-filter-menu summary,
+.pagehead-actions button,
+.pagehead-actions details summary,
+.tabnav-tab:hover,
+#fork-button,
+.BtnGroup button,
+.BtnGroup details summary,
+input[value="Follow"],
+.Button--secondary,
+#dashboard-repos-filter-left,
+.react-directory-remove-file-icon button,
+#branch-picker-repos-header-ref-selector,
+.FilterInputWrapper-module__Box_1--vewob,
+.FilterInputWrapper-module__Box_1--vewob button,
+.SearchBarActions-module__buttons--N7M2V a,
+#\:rbo\:-list-view-container,
+table[aria-labelledby="folders-and-files"],
+#\:r1a\:-list-view-container,
+[aria-label="Issues"][data-issue-and-pr-hovercards-enabled],
+#js-issues-search,
+.QueryBuilder [data-target="query-builder.styledInput"],
+.Box-body,
+a[aria-label="Add file"],
+button[aria-label="Search this repository"],
+[data-testid="issue-body"],
+#\:rc\:-list-view-container,
+.container:has(#repos-sticky-header),
+.UnderlineNav-item:hover,
+.TabNav__TabNavLink-sc-pwdi4r-3:hover,
+.notifications-list,
+.notifications-list-item.notification-unread,
+.Box-header,
+.Box-sc-g0xbh4-0.iwUbcA,
+#type-options summary,
+#language-options summary,
+#sort-options summary,
+.Box-sc-g0xbh4-0.NWhVB,
+[data-selector="repos-split-pane-content"] .Box-sc-g0xbh4-0.NWhVB,
+.react-issue-comment,
+.MergeBox-module__mergePartialContainer--N4i3Z,
+.MarkdownEditor-module__previewWrapper--UHhTL,
+.FormControl-input,
+.btn.btn-block.js-profile-editable-edit-button,
+.btn.js-quick-submit-alternative,
+#your-repos-filter {
+  box-shadow:
+    rgba(0, 0, 0, 0.05) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset !important;
+  background-color: light-dark(#fff8, #0005) !important;
+  border-radius: 0.5em !important;
+}
+
+.avatar-upload div.position-absolute {
+  box-shadow:
+    rgba(0, 0, 0, 0.5) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset !important;
+}
+
+.TabNav__TabNavTabList-sc-pwdi4r-1.DvNYj,
+.tabnav-tabs.d-flex.overflow-auto,
+.fLXEGX {
+  gap: 8px !important;
+}
+
+.CommentBox-container,
+.CommentBox-comment {
+  background-color: light-dark(#fff8, #0005) !important;
+  border-radius: 0 0 10px 10px !important;
+  border: none !important;
+  margin: 0px !important;
+}
+
+#new_comment_field,
+.CommentBox-comment {
+  box-shadow: none !important;
+}
+
+.tabnav.CommentBox-header {
+  border: none !important;
+  background-color: light-dark(#fff8, #0005) !important;
+}
+
+.timeline-comment-group .timeline-comment {
+  box-shadow:
+    rgba(0, 0, 0, 0.05) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset !important;
+  background-color: light-dark(#fff8, #0005) !important;
+  border-radius: 0.5em !important;
+}
+
+.row-module__timelineBodyRowContainer--ml7YX {
+  padding: 0.5em !important;
+}
+
+/* no tab text $ Make repository tabs only got icons and show text only on hover */
+.UnderlineNav-item {
+  span:not([class="Counter"]) {
+    opacity: 0 !important;
+    width: 0em !important;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.2) !important;
+  }
+
+  &:hover {
+    span:not([class="Counter"]) {
+      width: 6em !important;
+      opacity: 1 !important;
+    }
+  }
+}
+
+.UnderlineNav-item:hover .Counter {
+  margin-left: var(--control-medium-gap) !important;
+}
+
+.AppHeader-localBar .Counter {
+  margin-left: 0px !important;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.2) !important;
+}
+
+/* repo sidebar hover $ Revel more info on repository description and below sidebar content on hover */
+.Layout-sidebar {
+  .BorderGrid-cell {
+
+    .mt-2,
+    ul,
+    div:not(.hide-sm.hide-md, .flex-items-center, .my-3, .f6) {
+      height: 0 !important;
+      opacity: 0 !important;
+      margin: 0 !important;
+      transition: all 0.5s ease-out !important;
+    }
+  }
+
+  &:hover {
+    .BorderGrid-cell {
+
+      .mt-2,
+      ul,
+      div:not(.hide-sm.hide-md, .flex-items-center, .my-3, .f6) {
+        height: 100% !important;
+        opacity: 1 !important;
+        margin: 0.5em !important;
+      }
+    }
+  }
+}
+
+/* immersive search $ Blur and zoom in with search */
+.application-main {
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.35) !important;
+}
+
+body:has(header > .search-expanded) .application-main {
+  filter: blur(20px) !important;
+  scale: 1.05 !important;
+}
+
+/* Hide Separator in toolbar */
+.AppHeader .AppHeader-globalBar .AppHeader-actions::before {
+  display: none !important;
+}
+
+/* better vertical timeline icon bg */
+[data-testid="issue-viewer-container"],
+#repo-content-turbo-frame {
+
+  .TimelineItem-badge,
+  .prc-Timeline-TimelineBadge-BqMiN {
+    background-color: light-dark(#fff8, #00000054) !important;
+    border: solid var(--borderWidth-thin) #3d444d !important;
+  }
+}
+
+/* gh-better chip margin */
+.OverviewContent-module__Button--MDoYP {
+  margin-right: 8px !important;
+}
+
+#global-copilot-menu-button {
+  margin-left: 8px !important;
+}
+
+/* gh-remove borders */
+.prc-Button-ButtonBase-c50BI,
+.BtnGroup-item,
+.Button--secondary,
+.TextInput__StyledTextInput-sc-ttxlvl-0,
+.Box-sc-62in7e-0.BranchInfoBar-module__Box--NhDLA.BranchInfoBar-module__BranchInfoBarContainer--vaFVP {
+  border: none !important;
+}
+
+#fork-button,
+.BtnGroup-parent {
+  margin-right: 3px !important;
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}/* not my stylesheet. see link to author: https://github.com/sameerasw/my-internet/tree/main */
+
+
+:root {
+  --main-bg-color: #191724;
+}
+
+/* transparency */
+html,
+body,
+nav,
+header,
+.app-root,
+#pass-sidebar,
+#main,
+#content,
+section,
+.navbar-inner,
+.nav a {
+  background-color: var(--main-bg-color) !important;
+  background: var(--main-bg-color) !important;
+  border: none !important;
+  box-shadow: none !important;
+  transition:
+    background-color 0.5s ease-in-out,
+    background 0.5s ease-in-out,
+    border 0.5s ease-in-out,
+    box-shadow 0.5s ease-in-out !important;
+}
+
+/* darkreader */
+:root {
+  --darkreader-background-ffffff: transparent !important;
+}
+
+/* no footer */
+footer {
+  display: none !important;
+}/* not my stylesheet. see link to author: https://github.com/sameerasw/my-internet/tree/main */
+
+
+:root {
+  --main-bg-color: #191724;
+}
+
+/* reddit-transparency */
+#subreddit-right-rail__partial aside,
+header,
+.grid-container,
+comment-body-header,
+shreddit-comment-tree,
+#left-sidebar,
+#flex-left-nav-container,
+.toolbar-container,
+.threadline,
+#pdp-credit-bar {
+  background-color: var(--main-bg-color) !important;
+  border: none !important;
+}
+
+shreddit-comments-sort-dropdown,
+shreddit-comment {
+  --color-neutral-background: var(--main-bg-color) !important;
+}
+
+shreddit-comment>div {
+  --color-neutral-background: light-dark(#ffffff, #0b1416) !important;
+}
+
+shreddit-app,
+body,
+html {
+  background-color: var(--main-bg-color) !important;
+}
+
+/* reddit-no chat feed */
+[source="chat_module_home"] {
+  display: none !important;
+}
+
+/* no recent posts */
+div aside recent-posts {
+  display: none !important;
+}
+
+/* reddit-hide elements */
+hr {
+  display: none !important;
+}
+
+nav.z-\[2\]>nav:nth-child(18),
+div.visible {
+  display: none !important;
+}
+
+hr.w-100.my-sm.border-neutral-border-weak {
+  display: none !important;
+}
+
+/* reddit-other changes */
+.overflow-visible>div:nth-child(32),
+faceplate-dropdown-menu {
+  border-radius: 1em 1em 0 0 !important;
+}
+
+shreddit-comment {
+  --color-tone-4: light-dark(#000, #fff) !important;
+}
+
+/* reddit-hover */
+[expanded="0"] #flex-left-nav-container,
+#flex-nav-buttons,
+#left-nav-drawer.rpl-dialog *,
+#hovercard {
+  background-color: light-dark(#fff, #000) !important;
+  border-radius: 1em !important;
+}
+
+#flex-left-nav-container,
+#right-sidebar-container {
+  transition: opacity 0.3s ease-in-out !important;
+  opacity: 0 !important;
+
+  &:hover {
+    opacity: 1 !important;
+  }
+}
+
+/* glass effect */
+shreddit-post {
+  padding: 1em !important;
+  margin-bottom: 1em;
+}
+
+shreddit-comment {
+  border-radius: 1em !important;
+  padding: 0.5em !important;
+}
+
+article shreddit-post,
+shreddit-post,
+[source="comment_composer"] button,
+shreddit-comment[depth="0"] {
+  box-shadow:
+    rgba(0, 0, 0, 0.05) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+    rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px;
+  background-color: light-dark(#fff8, #0005) !important;
+}
+
+/* no ads */
+shreddit-ad-post {
+  display: none !important;
+}/* not my stylesheet. see link to author: https://github.com/sameerasw/my-internet/tree/main */
+
+
+:root {
+  --main-bg-color: #191724;
+}
+
+/* transparency */
+html,
+body,
+nav,
+header,
+.app-root,
+#pass-sidebar,
+#main,
+#content,
+section,
+.border-r,
+.group\/sidebar-wrapper>div,
+.dark\:bg-sidebar>div,
+main>div,
+.to-transparent,
+.bg-noise,
+.bg-gradient-noise-top {
+  background-color: var(--main-bg-color) !important;
+  background: var(--main-bg-color) !important;
+  border: none !important;
+  box-shadow: none !important;
+  transition:
+    background-color 0.5s ease-in-out,
+    background 0.5s ease-in-out,
+    border 0.5s ease-in-out,
+    box-shadow 0.5s ease-in-out !important;
+}
+
+/* hidden */
+footer,
+span:has(a[href="/terms-of-service"]),
+.prose:has(a[href="/terms-of-service"]),
+[style="clip-path: inset(0px 12px 0px 0px);"],
+.fixed.right-0.top-0 .ease-snappy svg {
+  display: none !important;
+}/* not my stylesheet. see link to author: https://github.com/sameerasw/my-internet/tree/main */
+
+:root {
+  --main-bg-color: #191724;
+}
+
+
+/* todoist-transparency */
+html,
+body,
+nav,
+#nav,
+.nav,
+navbar,
+.navbar,
+#navbar,
+header,
+#header,
+.header,
+app,
+#app,
+.sidebar-wrap,
+section,
+#__next,
+#root,
+.app,
+.AppContainer,
+.app-root,
+#wrapper,
+body[data-theme="dark"],
+body[data-theme="light"],
+#pass-sidebar,
+.side-bar,
+#main,
+.sidebar,
+main,
+.header-top,
+#content,
+#cu-identity,
+section,
+.l-root,
+#__next,
+.landing-hero,
+loading_screen,
+#navigation-wrapper,
+#global-navbar,
+.layout__content-wrapper,
+.head.notfixed,
+.main-container,
+#app>div,
+.btm-nav>a,
+.oc-content--main,
+body.dark_mode,
+body.light_mode,
+text-div>textarea,
+#todoist_app>div:has(> .app-sidebar-container),
+#todoist_app>div>div.app-sidebar-container>div>nav,
+#todoist_app>div>div.app-sidebar-container>div>nav>div,
+#todoist_app>div>div:has(> #content),
+header>div,
+.task_list_item,
+.task_list_item:hover .task_list_item__actions,
+.task_list_item .task_list_item__actions__active,
+.theme_dark .task_list_item:hover .task_list_item__actions,
+.theme_dark .task_list_item__actions__active,
+.section,
+.loading_screen,
+.task_editor__editing_area,
+.task_editor__description_field,
+.rbc-calendar>div,
+div[data-expansion-panel-header="true"] {
+  background-color: var(--main-bg-color) !important;
+  background-image: none !important;
+}
+
+header>div {
+  border-color: var(--main-bg-color) !important;
+}
+
+.task_editor {
+  background: rgba(50, 50, 50, 0.44) !important;
+}
+
+li:not(.current)>div[data-sidebar-list-item="true"]>div:hover {
+  background-color: #5f5f5f70 !important;
+}
+
+li.current>div[data-sidebar-list-item="true"]>div {
+  background-color: #d04a4a40 !important;
+}
+
+:root {
+  --product-library-selectable-secondary-selected-fill: #d04a4a40 !important;
+}
+
+div[data-expansion-panel-header="true"]:has(* button[aria-expanded="false"]) {
+  position: unset !important;
+}
+
+div#week-view-container>div:first-child>div:first-child>div:first-child {
+  backdrop-filter: blur(5px) !important;
+  background-color: var(--main-bg-color) !important;
+}
+
+div[data-column-date]>div:first-child>div,
+div[data-column-date]~div {
+  background: rgba(50, 50, 50, 0.44) !important;
+  backdrop-filter: blur(2px) grayscale() !important;
+}
+
+div[data-column-date]>div {
+  border-bottom: none !important;
+}
+
+/* todoist-sidebar hover */
+.app-sidebar-container>div:has(> nav > div > div > div > button[aria-expanded="true"]) {
+  min-width: 24px !important;
+  overflow: hidden !important;
+  transition:
+    min-width 0.3s,
+    width 0.3s,
+    margin 0.3s !important;
+}
+
+.app-sidebar-container>div:not(:hover):has(> nav > div > div > div > button[aria-expanded="true"]) {
+  width: 24px !important;
+  margin: 5px !important;
+}
+
+.app-sidebar-container>div:has(> nav > div > div > div > button[aria-expanded="true"]) * {
+  transition:
+    margin 0.3s,
+    padding 0.3s !important;
+}
+
+.app-sidebar-container>div:not(:hover):has(> nav > div > div > div > button[aria-expanded="true"]) * {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+.app-sidebar-container>div:has(> nav > div > div > div > button[aria-expanded="true"]) div[data-expansion-panel-header="true"] {
+  transition: height 0.3s !important;
+  overflow: hidden !important;
+}
+
+.app-sidebar-container>div:not(:hover):has(> nav > div > div > div > button[aria-expanded="true"]) div[data-expansion-panel-header="true"] {
+  height: 0 !important;
+}
+
+.app-sidebar-container>div:not(:hover):has(> nav > div > div > div > button[aria-expanded="true"])>nav>div>div>div:has(> button[aria-controls="sidebar"]) {
+  display: none !important;
+}
+
+.app-sidebar-container>div:not(:hover):has(> nav > div > div > div > button[aria-expanded="true"]) button[aria-label="Settings"] svg {
+  opacity: 0 !important;
+  transition: opactiy 0.3s !important;
+}
+
+/* darkreader */
+:root {
+  --darkreader-background-ffffff: transparent !important;
+}
+
+/* no footer */
+footer,
+mfe-footer-pharos-footer,
+.footer,
+#footer {
+  display: none !important;
+}/* not my stylesheet. see link to author: https://github.com/sameerasw/my-internet/tree/main */
+
+
+:root {
+  --main-bg-color: #191724;
+}
+
+/* yt-Transparency */
+html[dark],
+html,
+body,
+#container.ytd-searchbox,
+ytd-app,
+#page-header-container,
+#page-header,
+#tabs-container,
+#tabs-inner-container,
+#chips-wrapper,
+.navigation-container,
+#cinematic-shorts-scrim,
+#shorts-container,
+.ytLrGuideResponseMask,
+.ytLrPromoShelfRendererContainer,
+ytd-item-section-renderer[page-subtype="playlist"] #header.ytd-item-section-renderer,
+.ytd-engagement-panel-title-header-renderer,
+.ytd-engagement-panel-section-list-renderer {
+  background-color: var(--main-bg-color) !important;
+  background: var(--main-bg-color) !important;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+#tabs-divider,
+#short-video-container #cinematic-container,
+#frosted-glass {
+  display: none !important;
+}
+
+#shorts-container {
+  height: 98vh !important;
+}
+
+tp-yt-app-drawer>#contentContainer,
+#guide-content,
+ytd-mini-guide-renderer,
+ytd-mini-guide-entry-renderer {
+  background-color: var(--main-bg-color) !important;
+  background: var(--main-bg-color) !important;
+}
+
+.ytLrPromoShelfRendererPreviewBackground {
+  -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 60%) !important;
+  mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 50%) !important;
+  -webkit-mask-repeat: no-repeat !important;
+  mask-repeat: no-repeat !important;
+  -webkit-mask-size: cover !important;
+  mask-size: cover !important;
+}
+
+/* yt-Toggle side guide $ Completely remove the side guide */
+ytd-mini-guide-renderer,
+[theater=""] #contentContainer::after {
+  display: none !important;
+}
+
+tp-yt-app-drawer>#contentContainer:not([opened=""]),
+#contentContainer:not([opened=""]) #guide-content,
+ytd-mini-guide-renderer,
+ytd-mini-guide-entry-renderer {
+  background-color: var(--yt-spec-text-primary-inverse) !important;
+  background: var(--yt-spec-text-primary-inverse) !important;
+}
+
+#content:not(:has(#contentContainer[opened=""])) #page-manager {
+  margin-left: 0 !important;
+}
+
+ytd-app:not([guide-persistent-and-visible=""]) tp-yt-app-drawer>#contentContainer {
+  background-color: var(--yt-spec-text-primary-inverse) !important;
+}
+
+ytd-alert-with-button-renderer {
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* yt-clean side guide $ Remove YouTube Studio, Sports, Settings and the gfooter from the guide */
+ytd-guide-section-renderer:has([title="YouTube Studio"], [title="Sport"], [title="Settings"]),
+ytd-guide-renderer #footer {
+  display: none !important;
+}
+
+ytd-guide-section-renderer,
+ytd-guide-collapsible-section-entry-renderer {
+  border: none !important;
+}
+
+/* yt-mini guide $ A minimal guide with an icon only sidebar similar to the tablet view but more entries */
+body:not(:has([mini-guide-visible=""])) {
+
+  #endpoint.ytd-guide-entry-renderer yt-formatted-string,
+  h3.ytd-guide-section-renderer,
+  #newness-dot,
+  tp-yt-paper-item:not(:hover) yt-icon.guide-entry-badge {
+    display: none !important;
+  }
+
+  #endpoint.ytd-guide-entry-renderer,
+  ytd-guide-entry-renderer,
+  ytd-guide-collapsible-section-entry-renderer,
+  .ytd-guide-section-renderer,
+  ytd-guide-section-renderer,
+  ytd-guide-renderer>#sections,
+  ytd-guide-renderer,
+  #guide-inner-content,
+  #guide-content,
+  #guide-wrapper,
+  tp-yt-app-drawer,
+  #tabsContent,
+  yt-tab-group-shape,
+  yt-tab-group-shape>[role="tablist"] {
+    width: fit-content !important;
+  }
+
+  tp-yt-paper-item {
+    padding: 2px 10px !important;
+  }
+
+  yt-icon.ytd-guide-entry-renderer,
+  yt-img-shadow.ytd-guide-entry-renderer {
+    margin: 0 !important;
+  }
+
+  tp-yt-paper-tabs {
+    margin: auto 0 !important;
+  }
+
+  #page-manager {
+    margin-left: 80px !important;
+  }
+
+  #tabsContainer.tp-yt-paper-tabs {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+  }
+
+  ytd-app:not([guide-persistent-and-visible=""]) tp-yt-app-drawer>#contentContainer {
+    background: transparent !important;
+  }
+}
+
+ytd-alert-with-button-renderer {
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+ytd-two-column-browse-results-renderer[page-subtype="playlist"] {
+  width: fit-content !important;
+}
+
+/* yt-Transparent header */
+#masthead-container {
+  #background.ytd-masthead {
+    background-color: var(--main-bg-color) !important;
+  }
+}
+
+.ytSearchboxComponentSearchButton {
+  background-color: var(--yt-spec-text-primary-inverse) !important;
+  color: var(--yt-live-chat-text-input-field-placeholder-color) !important;
+}
+
+/* yt-no voice search */
+#voice-search-button {
+  display: none !important;
+}
+
+/* yt-Hide filter chips $ Hide the chips at the top of the feed homepage if unused */
+#chips-wrapper {
+  top: 0 !important;
+}
+
+[page-subtype="home"] .ytd-two-column-browse-results-renderer #header {
+  display: none !important;
+}
+
+/* yt-early New To You chip */
+#chips {
+  display: flex !important;
+}
+
+#chips>yt-chip-cloud-chip-renderer:nth-last-child(1) {
+  order: 1 !important;
+  margin-right: 12px !important;
+}
+
+#chips>yt-chip-cloud-chip-renderer:not(:nth-last-child(1)) {
+  order: 2 !important;
+}
+
+#chips>yt-chip-cloud-chip-renderer:nth-child(1) {
+  order: 1 !important;
+}
+
+/* yt-Compact feed $ Reduce spacing, Show menu button on hover, inline details */
+ytd-rich-item-renderer {
+  margin-bottom: 15px !important;
+
+  [rendered-from-rich-grid] {
+    --ytd-rich-item-row-usable-width: calc(100% - var(--ytd-rich-grid-gutter-margin) * 1) !important;
+  }
+
+  #metadata.ytd-video-meta-block {
+    flex-direction: row !important;
+
+    #metadata-line span:nth-child(3) {
+      height: 1em !important;
+      margin-left: 1em !important;
+    }
+  }
+}
+
+ytd-rich-grid-media {
+  border-radius: 1.2em;
+  height: 100% !important;
+
+  ytd-menu-renderer #button {
+    opacity: 0 !important;
+    transition: opacity 0.3s ease-in-out !important;
+  }
+
+  :hover ytd-menu-renderer #button {
+    opacity: 1 !important;
+  }
+}
+
+/* yt-thumbnail hover $ Zoom in the inline thumbnail previews while hovering */
+#inline-preview-player {
+  transition: scale 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s !important;
+  scale: 1 !important;
+}
+
+#video-preview-container:has(#inline-preview-player) {
+  transition: scale 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+  border-radius: 1.2em !important;
+  overflow: hidden !important;
+  scale: 1 !important;
+}
+
+#video-preview-container:has(#inline-preview-player):hover {
+  scale: 1.25 !important;
+  box-shadow: #0008 0px 0px 60px;
+  transition: scale 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) 2s !important;
+}
+
+ytd-app #content {
+  opacity: 1 !important;
+  transition: opacity 0.3s ease-in-out !important;
+}
+
+ytd-app:has(#video-preview-container:hover) #content {
+  opacity: 0.5 !important;
+  transition: opacity 4s ease-in-out 1s !important;
+}
+
+/* yt-no distractions $ No shorts and other obsolete sections in the feed */
+#contents ytd-rich-section-renderer {
+  display: none !important;
+}
+
+ytd-merch-shelf-renderer,
+.annotation {
+  display: none !important;
+}
+
+/* yt-Transparent video background */
+.html5-main-video,
+.html5-video-container,
+#movie_player,
+#container,
+#ytd-player,
+#player-container,
+#player-full-bleed-container,
+#full-bleed-container,
+ytlr-player {
+  background-color: #0000000 !important;
+  background: transparent !important;
+}
+
+#cinematics {
+  display: none !important;
+}
+
+.ytp-gradient-bottom {
+  display: none !important;
+}
+
+/* yt-no ambient mode */
+#cinematics-container {
+  display: none !important;
+}
+
+/* yt-theater: zen view $ Make the theater view video fit the full window size */
+#content:has(ytd-masthead[theater=""]) #full-bleed-container {
+  height: 100vh !important;
+  max-height: 100vh !important;
+  top: 0 !important;
+}
+
+#masthead-container,
+#columns #secondary {
+  transition: all 0.3s ease-in-out 0.5s !important;
+}
+
+body:has([fullscreen=""], [theater=""]):not(:has(ytd-watch-flexy[hidden=""])) #masthead-container:not(:has(.ytSearchboxComponentInputBoxHasFocus)) {
+  top: -40px !important;
+  opacity: 0 !important;
+  transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95) !important;
+
+  &:hover {
+    opacity: 1 !important;
+    top: 0 !important;
+  }
+}
+
+ytd-app:has([fullscreen=""], [theater=""]):not(:has(ytd-watch-flexy[hidden=""])) {
+  --ytd-toolbar-height: 0px !important;
+
+  #page-manager {
+    margin: 0 !important;
+  }
+}
+
+/* yt-zen view comments $ In theater mode, move comments to the edge of the video on left or right and show on hover */
+#content:has([data-title-no-tooltip="Full screen"]):has([data-title-no-tooltip="Default view"]) #columns #secondary {
+  scale: 0 !important;
+  display: none !important;
+}
+
+ytd-comments {
+  transition: all 0.5s ease-in-out !important;
+}
+
+#content:has([data-title-no-tooltip="Full screen"]):has([data-title-no-tooltip="Default view"]) ytd-comments {
+  background-color: var(--yt-live-chat-shimmer-background-color) !important;
+  backdrop-filter: blur(20px) !important;
+  padding: 0 2em !important;
+  border-radius: 2em 0 0 2em !important;
+  max-height: calc(100vh - 175px) !important;
+  overflow-y: scroll !important;
+  position: fixed !important;
+  z-index: 1000 !important;
+  top: 3vh !important;
+  right: -42em !important;
+  width: 40em !important;
+  height: 90vh !important;
+  opacity: 0 !important;
+
+  &:hover {
+    opacity: 1 !important;
+    right: 0 !important;
+  }
+}
+
+/* yt-zen view comments on left */
+#content:has([data-title-no-tooltip="Full screen"]):has([data-title-no-tooltip="Default view"]) ytd-comments {
+  border-radius: 0 2em 2em 0 !important;
+
+  left: -40em !important;
+
+  &:hover {
+    left: 0 !important;
+  }
+}
+
+/* yt-zen comments solid $ Make above Zen View comments background solid instead of blur */
+#content:has([data-title-no-tooltip="Full screen"]):has([data-title-no-tooltip="Default view"]) ytd-comments {
+  backdrop-filter: none !important;
+  background-color: var(--yt-spec-text-primary-inverse) !important;
+}
+
+/* yt-transparent overlay chat $ Make the live chat appear as an overlay in theater mode right side edge. */
+#content:has([data-title-no-tooltip="Full screen"]):has([data-title-no-tooltip="Default view"]) #chat {
+  position: absolute !important;
+  height: 800px !important;
+  top: 50vh !important;
+  transform: translateY(-50%) !important;
+  opacity: 0.8 !important;
+}
+
+#content:has([data-title-no-tooltip="Full screen"]):has([data-title-no-tooltip="Default view"]) yt-live-chat-renderer {
+  background: none !important;
+  background-color: transparent !important;
+}
+
+#content:has([data-title-no-tooltip="Exit full screen"]) ytd-live-chat-frame {
+  background-color: var(--app-drawer-content-container-background-color) !important;
+}
+
+/* yt-Misc */
+#content #dismissible:hover {
+  ytd-video-meta-block {
+    opacity: 1 !important;
+  }
+}
+
+#content:has(ytd-masthead[theater=""]:not([fullscreen=""])) #panels-full-bleed-container {
+  width: 0 !important;
+}
+
+ytd-two-column-browse-results-renderer:has(.ytd-playlist-video-renderer) {
+  margin-left: 100px !important;
+}
+
+#frosted-glass {
+  display: none !important;
+}
+
+/* yt-better captions $ Caption background has blur */
+.caption-window {
+  backdrop-filter: blur(10px) brightness(70%) !important;
+  border-radius: 1em !important;
+  padding: 1em !important;
+  box-shadow: #0008 0 0 20px !important;
+  width: fit-content !important;
+}
+
+/* yt-Keep player shadow $ Remove the shadow around the player when disabled */
+.ytp-gradient-bottom {
+  display: initial !important;
+}
+
+/* yt-fix new feed layout $ Revert the new ugly feed layout that barely fits 3 columns of videos */
+ytd-rich-item-renderer[rendered-from-rich-grid] {
+  @media only screen and (min-width: 1400px) {
+    --ytd-rich-grid-items-per-row: 4 !important;
+
+    @media only screen and (min-width: 1700px) {
+      --ytd-rich-grid-items-per-row: 5 !important;
+
+      @media only screen and (min-width: 2180px) {
+        --ytd-rich-grid-items-per-row: 6 !important;
+      }
+    }
+  }
+}
+
+ytd-rich-item-renderer[is-in-first-column=""] {
+  margin-left: calc(var(--ytd-rich-grid-item-margin) / 2) !important;
+}
+
+#contents {
+  padding-left: calc(var(--ytd-rich-grid-item-margin) / 2 + var(--ytd-rich-grid-gutter-margin)) !important;
+}
+
+/* yt-Immersive search $ Smooth blur and zoom effect for searhbar */
+#page-manager,
+yt-searchbox {
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.35) !important;
+}
+
+#masthead yt-searchbox button[aria-label="Search"] {
+  display: none !important;
+}
+
+.ytSearchboxComponentInputBox {
+  border-radius: 2em !important;
+}
+
+yt-searchbox:has(.ytSearchboxComponentInputBoxHasFocus) {
+  position: relative !important;
+  left: 0vw !important;
+  top: -30vh !important;
+
+  height: 40px !important;
+  max-width: 600px !important;
+  scale: 1 !important;
+
+  @media only screen and (min-width: 1400px) {
+    height: 60px !important;
+    max-width: 700px !important;
+    scale: 1.1 !important;
+  }
+
+  .ytSearchboxComponentInputBox,
+  #i0 {
+    background-color: #fffb !important;
+
+    @media (prefers-color-scheme: dark) {
+      background-color: #000b !important;
+    }
+
+    box-shadow: black 0 0 30px !important;
+  }
+
+  #i0 {
+    margin-top: 10px !important;
+
+    @media only screen and (min-width: 1400px) {
+      margin-top: 30px !important;
+    }
+  }
+}
+
+.ytd-masthead #center:has(.ytSearchboxComponentInputBoxHasFocus) {
+  height: 100vh !important;
+  width: 100vw !important;
+  left: 0 !important;
+  top: 0 !important;
+  position: fixed !important;
+  justify-content: center !important;
+}
+
+#content:has(.ytSearchboxComponentInputBoxHasFocus) #page-manager {
+  filter: blur(20px) !important;
+  scale: 1.05 !important;
+}
+
+/* yt-Addon : Viewstats */
+.card {
+  background: var(--yt-spec-badge-chip-background) !important;
+}
+
+.vs-btn {
+  background: var(--yt-spec-badge-chip-background) !important;
+  color: var(--yt-spec-text-primary-inverse) !important;
+  border-radius: 1em !important;
+  padding: 0.5em 1em !important;
+  margin: 0.5em !important;
+}
+
+/* yt-Addon : timed comments */
+.__youtube-timestamps__stamp {
+  scale: 3 !important;
+  border-radius: 1.5px !important;
+  transition: all 0.3s ease-in-out !important;
+  z-index: 10000000000000 !important;
+
+  &:hover {
+    scale: 5 !important;
+  }
+}
+
+.__youtube-timestamps__preview-wrapper {
+  scale: 1.2 !important;
+  transform: translateX(16%) !important;
+
+  .__youtube-timestamps__preview {
+    border-radius: 1em !important;
+    backdrop-filter: blur(20px) !important;
+    background-color: #000000bb !important;
+    border: solid 2px gray !important;
+
+    .__youtube-timestamps__preview__avatar {
+      height: 2.5em !important;
+      width: 2.5em !important;
+      border-radius: 0.5em !important;
+    }
+
+    .__youtube-timestamps__preview__text-stamp {
+      background-color: #ffaaaa !important;
+      padding: 0.1em 0.3em !important;
+      border-radius: 0.5em !important;
+      color: #000 !important;
+    }
+
+    .__youtube-timestamps__preview__name,
+    .__youtube-timestamps__preview__text {
+      color: #ffffff !important;
+    }
+  }
+}
+
+.comments-container {
+  div.wrapper {
+    background-color: transparent !important;
+  }
+
+  div.clickable-comment,
+  div.replies {
+    background-color: #00000077 !important;
+    backdrop-filter: blur(20px) !important;
+    padding: 1em !important;
+    margin-bottom: 1em !important;
+    border-radius: 1em !important;
+    max-width: 40em !important;
+    transition: all 0.4s ease-in-out !important;
+
+    .likes-and-replies {
+      opacity: 0.3 !important;
+    }
+  }
+}
+
+/* yt-YT TV $ YouTube TV player modifications */
+.ytLrWatchDefaultControlsBackground,
+ytlr-watch-metadata,
+.ytVirtualListItem:not(.ytVirtualListItemSelected) ytlr-comment-renderer,
+.ytLrChannelHeaderRendererMetadata,
+ytlr-surface-page::before {
+  background-color: #fff7 !important;
+  backdrop-filter: blur(15px) !important;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: #0007 !important;
+  }
+}
+
+.ytLrWatchDefaultControlsBackground {
+  width: 80rem !important;
+  transform: translateX(-50%) !important;
+  left: 50% !important;
+  border-radius: 1em 1em 0 0 !important;
+}
+
+.ytLrAnimatedOverlayContainer,
+ytlr-compact-link-renderer {
+  background-color: transparent !important;
+  font-size: 0.7em !important;
+}
+
+/* yt-New player blur */
+.ytp-left-controls {
+
+  .ytp-play-button,
+  .ytp-volume-area,
+  .ytp-time-display.notranslate>span,
+  .ytp-chapter-container>button,
+  .ytp-prev-button,
+  .ytp-next-button {
+    backdrop-filter: blur(5px) !important;
+    background-color: #0001 !important;
+  }
+}
+
+.ytp-right-controls {
+  backdrop-filter: blur(5px) !important;
+  background-color: #0001 !important;
+}
+
+.ytp-popup {
+  backdrop-filter: blur(10px) !important;
+  background-color: #0007 !important;
+}

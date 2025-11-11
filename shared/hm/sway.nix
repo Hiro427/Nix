@@ -86,10 +86,13 @@
         "Mod4+Shift+space" = "floating toggle";
         "Mod4+Shift+b" = "bar mode toggle";
         "Mod4+a" = "focus parent";
+        "Mod4+Shift+p" =
+          "exec rofi-rbw --action copy --selector fuzzel --target password --selector-args '--width 50 --dpi-aware=no' --clear-after 60";
         "Mod4+minus" = "move scratchpad";
         "Mod4+Shift+minus" = "scratchpad show";
         # "Mod4+space" = "exec vicinae toggle";
-        "Mod4+space" = "exec rofi -show drun";
+        # "Mod4+space" = "exec rofi -show drun";
+        "Mod4+space" = "exec fuzzel --dpi-aware=no";
         "Mod4+Shift+r" = "exec swaymsg reload";
         "Mod4+Shift+s" = "mode resize";
         "Mod4+1" = "workspace number 1";
@@ -163,12 +166,13 @@
               title = "Picture-in-Picture";
               app_id = "zen-beta";
             };
-            command = "floating enable, sticky enable, move position 0 0";
+            command =
+              "floating enable, sticky enable, move absolute position 1450px 50px";
           }
           {
             criteria = { app_id = "mpv"; };
             command =
-              "floating enable, sticky enable, resize set 420 250, move position 0 0";
+              "floating enable, sticky enable, resize set 420 250, move absolute position 1600px 0px";
           }
         ];
         titlebar = false;

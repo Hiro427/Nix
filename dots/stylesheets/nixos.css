@@ -1,0 +1,39 @@
+/* not my stylesheet. see link to author: https://github.com/sameerasw/my-internet/tree/main */
+
+
+:root {
+  --main-bg-color: #191724;
+}
+
+/* transparency */
+html,
+body,
+nav,
+header,
+.app-root,
+#pass-sidebar,
+#main,
+#content,
+section,
+.navbar-inner,
+.nav a {
+  background-color: var(--main-bg-color) !important;
+  background: var(--main-bg-color) !important;
+  border: none !important;
+  box-shadow: none !important;
+  transition:
+    background-color 0.5s ease-in-out,
+    background 0.5s ease-in-out,
+    border 0.5s ease-in-out,
+    box-shadow 0.5s ease-in-out !important;
+}
+
+/* darkreader */
+:root {
+  --darkreader-background-ffffff: transparent !important;
+}
+
+/* no footer */
+footer {
+  display: none !important;
+}

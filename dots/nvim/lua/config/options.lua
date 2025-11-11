@@ -5,25 +5,28 @@ vim.cmd("set shiftwidth=4")
 vim.cmd("set cursorline")
 vim.cmd("set conceallevel=1")
 vim.cmd("colorscheme rose-pine")
+vim.cmd("set laststatus=0")
+vim.cmd("set noru")
+vim.cmd("set noshowcmd")
 vim.opt.showmode = false
 vim.o.number = true
 vim.o.relativenumber = true
 vim.g.mapleader = " "
-vim.keymap.set({ "n", "v" }, "<leader>yy", [["+y]])
--- removed '~' from empty lines
 vim.opt.fillchars = { eob = " " }
-
--- vim.g.neovide_opacity = 0.2
-vim.o.guifont = "JetbrainsMono Nerd Font:h12"
-
--- GUI Settings
--- vim.opt.laststatus = 3 --limit statusline to 1
-
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.foldenable = true -- Enable folding by default
 vim.opt.foldlevel = 99 -- Start with all folds open
 vim.opt.swapfile = false
+
+-- GUI Settings
+-- vim.g.neovide_opacity = 0.2
+vim.o.guifont = "JetbrainsMono Nerd Font:h12"
+
+-- Misc Keybindings
+vim.keymap.set({ "n", "v" }, "<leader>yy", [["+y]])
+vim.keymap.set("n", "<leader>u", ":update<CR> :source<CR>", { desc = "reload config", silent = true })
+vim.keymap.set("n", "<leader>qc", ":cexpr []<CR>", { desc = "Clear QuickFix List", silent = true })
 
 vim.keymap.set("n", "<leader>vd", ":vertical resize -15<CR>", { desc = "decrease vertical split" })
 vim.keymap.set("n", "<leader>vi", ":vertical resize +15<CR>", { desc = "increase vertical split size" })
@@ -34,15 +37,18 @@ vim.keymap.set("n", "<leader>sh", "<C-w>H") -- move to far left
 vim.keymap.set("n", "<leader>sl", "<C-w>L") -- move to far right
 vim.keymap.set("n", "<leader>sk", "<C-w>K") -- move to top
 vim.keymap.set("n", "<leader>sj", "<C-w>J") -- move to bottom
+
 vim.keymap.set("n", "<leader>wh", "<C-w>h") -- move to far left
 vim.keymap.set("n", "<leader>wl", "<C-w>l") -- move to far right
 vim.keymap.set("n", "<leader>wk", "<C-w>k") -- move to top
 vim.keymap.set("n", "<leader>wj", "<C-w>j") -- move to bottom
+
 vim.keymap.set("n", "<leader>vs", ":vsplit<CR>")
 vim.keymap.set("n", "<leader>hs", ":split<CR>")
-vim.keymap.set("n", "<leader>u", ":update<CR> :source<CR>", { desc = "reload config", silent = true })
+
 vim.keymap.set("i", "<C-p>", "<C-x><C-f>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>c", "gc", { remap = true, desc = "Toggle comment" })
+vim.keymap.set("v", "<leader>c", "gc", { remap = true, desc = "Toggle comment (visual)" })
 vim.o.background = "dark"
-vim.api.nvim_set_hl(0, "NormalFloat", { link = "Pmenu" })
 
 vim.diagnostic.config({ virtual_text = false, update_in_insert = false })

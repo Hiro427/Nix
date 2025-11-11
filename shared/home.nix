@@ -75,10 +75,14 @@ in {
       c.tabs.show = "never"
       c.statusbar.show = "in-mode" 
       c.scrolling.smooth = True  
-      c.url.searchengines = {"DEFAULT": "https://google.com/search?q={}"}
-      c.url.start_pages = "https://search.google.com"
+      c.url.searchengines = {"DEFAULT": "https://search.brave.com/search?q={}"}
+      c.url.start_pages = "https://search.brave.com"
       c.window.transparent = True
       c.colors.webpage.darkmode.enabled = True
+      config.set(
+        "content.user_stylesheets",
+        ["~/Nix/dots/stylesheets/styles.css"],
+      )
 
     '';
   };

@@ -106,12 +106,12 @@
 
         "sway/window" = {
           format = "{title}";
-          max-length = 50;
+          max-length = 30;
           rewrite = {
             "(.*) - [Yy]ou[Tt]ube.*" = "  $1";
             "(.*) - mpv.*" = "  $1";
             # "mpv" = "";
-            "(.*) — Zen Browser.*" = "";
+            "(.*) — Zen Browser.*" = " $1";
             # "zen-beta" = "";
             # "vlc" = "󰕼";
             "Picture-in-Picture" = "";
@@ -234,10 +234,18 @@
         margin: 0;
       }
 
-      window#waybar {
+      window#waybar  {
         border: none;
         padding: 0;
+        color: @base05;
       }
+
+      window#waybar #window {
+        border: none;
+        padding: 2px;
+        color: @base09;
+      }
+
 
       #workspaces button {
         padding: 2px 8px;            
@@ -245,14 +253,23 @@
         border-radius: 4px;
       }
 
-      #workspaces.urgent {
+      .modules-left #workspaces button.urgent {
+        border-bottom: 3px solid @base08;
        color: @base08;
+
       }
 
       .modules-left #workspaces button.focused {
         border-bottom: 3px solid @base0B;
         color: @base0B;
       }
+      .modules-left #workspaces button.empty {
+        color: @base02;
+      }
+      .modules-left #workspaces button {
+        color: @base04;
+      }
+
 
       #tray {
         padding: 4px;
@@ -282,7 +299,7 @@
       }
 
       #idle_inhibitor.activated {
-       color: @base0C;
+       color: @base0D;
       }
       #idle_inhibitor.deactivated {
        color: @base0E;

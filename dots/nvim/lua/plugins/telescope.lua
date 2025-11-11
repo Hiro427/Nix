@@ -9,7 +9,19 @@ return {
 				mappings = {
 					i = {
 						["<C-f>"] = require("telescope.actions.layout").toggle_preview,
-						["C-c"] = require("telescope.actions").close,
+						["<C-e>"] = { "<esc>", type = "command" },
+						["<esc>"] = require("telescope.actions").close,
+						["<Tab>"] = require("telescope.actions").move_selection_next,
+						["<S-Tab>"] = require("telescope.actions").move_selection_previous,
+						["<C-l>"] = require("telescope.actions").toggle_selection,
+					},
+					n = {
+						["<C-f>"] = require("telescope.actions.layout").toggle_preview,
+						["<C-e>"] = { "<esc>", type = "command" },
+						["<esc>"] = require("telescope.actions").close,
+						["<Tab>"] = require("telescope.actions").move_selection_next,
+						["<S-Tab>"] = require("telescope.actions").move_selection_previous,
+						["<C-l>"] = require("telescope.actions").toggle_selection,
 					},
 				},
 				preview = {
@@ -17,40 +29,37 @@ return {
 				},
 			},
 			pickers = {
+				git_branches = {
+					theme = "dropdown",
+				},
 				marks = {
 					theme = "dropdown",
 				},
 				current_buffer_fuzzy_find = {
 					theme = "dropdown",
-					previewer = false,
 				},
 				commands = {
 					theme = "dropdown",
 				},
 				lsp_document_symbols = {
 					theme = "dropdown",
-					previewer = false,
 				},
 				lsp_dynamic_workspace_symbols = {
 					theme = "dropdown",
-					previewer = false,
 				},
 				keymaps = {
 					theme = "dropdown",
 				},
 				buffers = {
 					theme = "dropdown",
-					previewer = false,
 				},
 				oldfiles = {
-					previewer = false,
 					disable_devicons = true,
 					theme = "dropdown",
 				},
 				find_files = {
 					disable_devicons = true,
 					theme = "ivy",
-					previewer = true,
 				},
 			},
 			extensions = {

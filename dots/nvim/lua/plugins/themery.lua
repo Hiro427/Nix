@@ -1,25 +1,5 @@
 return {
 	{
-		"wnkz/monoglow.nvim",
-		lazy = false,
-		priority = 1000,
-		config = function()
-			require("monoglow").setup({
-				transparent = true,
-				glow = true,
-				on_highlights = function(hl, c)
-					local my_color = "none"
-					hl.FloatBorder = {
-						bg = my_color,
-					}
-					hl.NormalFloat = {
-						bg = my_color,
-					}
-				end,
-			})
-		end,
-	},
-	{
 		"olimorris/onedarkpro.nvim",
 		config = function()
 			require("onedarkpro").setup({
@@ -92,7 +72,6 @@ return {
 			require("tokyonight").setup({
 				on_colors = function() end,
 				transparent = true,
-				on_highlights = function(hl, c) end,
 			})
 		end,
 	},
