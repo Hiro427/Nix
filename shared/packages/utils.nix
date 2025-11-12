@@ -67,7 +67,10 @@ with pkgs; [
   bitwarden-cli
   television
   spotifyd
-  # librespot
+  librespot
+  croc
+  cbonsai
+  asciinema
   pandoc
   rocmPackages.rocm-smi
   rocmPackages.amdsmi
