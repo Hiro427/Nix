@@ -1,6 +1,10 @@
 {
   "projects": [
     {
+      "path": "coding/projects/sak", 
+      "name" : "sak"
+    },
+    {
       "path": "Nix",
       "name": "Nix"
     },

@@ -97,7 +97,7 @@ return {
 					explorer = {
 						layout = {
 							layout = {
-								width = 30,
+								width = 26,
 							},
 							auto_hide = { "input" },
 						},
@@ -121,7 +121,7 @@ return {
 				desc = "Toggle Terminal",
 			},
 			{
-				"<leader>tt",
+				"<leader>t",
 				function()
 					Snacks.terminal.toggle()
 				end,

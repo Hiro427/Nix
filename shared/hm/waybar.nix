@@ -5,9 +5,9 @@
       mainBar = {
         layer = "top";
         position = "top";
-        height = 32;
+        height = 40;
         modules-left = [ "sway/workspaces" ];
-        modules-center = [ "sway/window" ];
+        modules-center = [ "clock" "mpris" ];
         modules-right = [
           "temperature"
           "cpu"
@@ -16,9 +16,8 @@
           "pulseaudio"
           "backlight"
           "battery"
-          "clock"
-          "idle_inhibitor"
           "custom/notification"
+          "idle_inhibitor"
           "tray"
         ];
         "custom/notification" = {
@@ -71,6 +70,7 @@
         mpris = {
           format = "{player_icon} {title} - {artist}";
           format-paused = "{status_icon} {title} - {artist}";
+          title-len = 20;
           player-icons = {
             default = "▶";
             mpv = " ";
@@ -150,14 +150,14 @@
           };
         };
         clock = {
-          format = " {:%H:%M}";
-          format-alt = "󰃭 {:%m-%d-%Y}";
+          format = "󰃭 {:%B %d %Y %H:%M}";
+          # format-alt = "";
           tooltip-format = "<tt><small>{calendar}</small></tt>";
 
           calendar = {
-            mode = "year";
+            mode = "month";
             mode-mon-col = 3;
-            weeks-pos = "right";
+            # weeks-pos = "right";
             on-scroll = 1;
             format = {
               months = "<span color='#ffead3'><b>{}</b></span>";
@@ -238,7 +238,10 @@
         border: none;
         padding: 0;
         color: @base05;
+        background-color: transparent;
       }
+
+
 
       window#waybar #window {
         border: none;
@@ -253,15 +256,22 @@
         border-radius: 4px;
       }
 
+      .modules-left, .modules-right, .modules-center {
+        background-color: @base00; 
+        border-radius: 10px;
+        margin: 3px;
+        border: none;
+      }
+
       .modules-left #workspaces button.urgent {
-        border-bottom: 3px solid @base08;
        color: @base08;
+        border-bottom: 2px solid @base08;
 
       }
 
       .modules-left #workspaces button.focused {
-        border-bottom: 3px solid @base0B;
         color: @base0B;
+        border-bottom: 2px solid @base0B
       }
       .modules-left #workspaces button.empty {
         color: @base02;
@@ -274,7 +284,7 @@
       #tray {
         padding: 4px;
       }
-      #clock, #cpu, #memory, #disk, #temperature, #idle_inhibitor, #battery, #backlight, #pulseaudio, #network, #custom-notification {
+      #clock, #cpu, #memory, #disk, #mpris, #temperature, #idle_inhibitor, #battery, #backlight, #pulseaudio, #network, #custom-notification {
 
         padding: 0 8px;
         margin: 0 2px;
@@ -284,10 +294,10 @@
         color: @base0E;
       }
       #custom-notification.notification {
-        color: @base0B;
+        color: @base0C;
       }
       #custom-notification.dnd-notification {
-        color: @base0C;
+        color: @base0E;
       }
 
       #mpris.paused {

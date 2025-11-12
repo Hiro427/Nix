@@ -24,7 +24,7 @@ return {
 
 	vim.keymap.set(
 		"n",
-		"<leader>mt",
+		"<leader>pm",
 		":Markview Toggle<CR>",
 		{ desc = "Toggle Doc Preview (yaml, markdown, latex, html)", silent = true }
 	),

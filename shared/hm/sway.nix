@@ -45,7 +45,7 @@
   };
   wayland.windowManager.sway = {
     checkConfig = false;
-    # package = pkgs.swayfx;
+    package = pkgs.swayfx;
     enable = true;
     config = {
       startup = [
@@ -58,6 +58,7 @@
           command = "sh ~/Nix/dots/scripts/wm/sway/natscroll.sh";
           always = true;
         }
+        { command = "swaync"; }
         { command = "pkill nm-applet; nm-applet"; }
         { command = "autotiling"; }
         { command = "waybar"; }
@@ -127,7 +128,7 @@
         };
       };
       gaps = {
-        inner = 10;
+        inner = 5;
         outer = 5;
         smartBorders = "no_gaps";
         smartGaps = false;
@@ -159,7 +160,7 @@
         "5" = [ { app_id = "steam"; } { class = "steam"; } ];
       };
       window = {
-        border = 2;
+        border = 0;
         commands = [
           {
             criteria = {
@@ -191,11 +192,12 @@
       set $text "${theme.swaycolors.fg}"
       set $border "${theme.swaycolors.border}"
       set $unfocused_border "${theme.swaycolors.uborder}"
-       
-      # Swipe left: move to next workspace
+
+      corner_radius 10
+
       bindgesture swipe:left workspace next
-      # Swipe right: move to previous workspace
       bindgesture swipe:right workspace prev
+
       client.focused          $border $background $text $border $border
       client.focused_inactive $unfocused_border $background $text $unfocused_border $unfocused_border
       client.unfocused        $border $background $text $border $border

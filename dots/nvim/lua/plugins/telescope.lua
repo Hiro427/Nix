@@ -6,6 +6,10 @@ return {
 	config = function()
 		require("telescope").setup({
 			defaults = {
+				layout_config = {
+					prompt_position = "top",
+				},
+				sorting_strategy = "ascending",
 				mappings = {
 					i = {
 						["<C-f>"] = require("telescope.actions.layout").toggle_preview,
@@ -55,12 +59,12 @@ return {
 				},
 				oldfiles = {
 					disable_devicons = true,
-					theme = "dropdown",
+					-- theme = "dropdown",
 					previewer = true,
 				},
 				find_files = {
 					disable_devicons = true,
-					theme = "ivy",
+					-- theme = "ivy",
 					previewer = true,
 				},
 			},
@@ -80,7 +84,7 @@ return {
 	),
 	vim.keymap.set(
 		"n",
-		"<leader>ff",
+		"<leader>fr",
 		require("telescope.builtin").oldfiles,
 		{ desc = "Find Recent Files (telescope)", silent = true }
 	),
@@ -131,6 +135,12 @@ return {
 		"<leader>fd",
 		require("telescope.builtin").diagnostics,
 		{ desc = "Find Symbols (telescope)", silent = true }
+	),
+	vim.keymap.set(
+		"n",
+		"<leader>gb",
+		require("telescope.builtin").git_branches,
+		{ desc = "Search Git Branches (telescope)", silent = true }
 	),
 	vim.keymap.set(
 		"n",

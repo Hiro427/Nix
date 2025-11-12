@@ -5,7 +5,7 @@ return {
 		config = function()
 			require("cloak").setup({})
 		end,
-		vim.keymap.set("n", "<leader>ct", ":CloakToggle<CR>", { desc = "Toggle Cloak", silent = true }),
+		-- vim.keymap.set("n", "<leader>", ":CloakToggle<CR>", { desc = "Toggle Cloak", silent = true }),
 	},
 	{
 		"chomosuke/typst-preview.nvim",
@@ -20,7 +20,7 @@ return {
 				},
 			})
 		end,
-		vim.keymap.set("n", "<leader>tp", ":TypstPreview<CR>", { desc = "Open Typst Preview" }),
+		vim.keymap.set("n", "<leader>pt", ":TypstPreview<CR>", { desc = "Open Typst Preview" }),
 	},
 	{
 		"abecodes/tabout.nvim",
