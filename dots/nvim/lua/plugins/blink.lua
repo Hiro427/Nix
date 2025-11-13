@@ -10,6 +10,7 @@ return {
 			preset = "enter",
 			["<S-Tab>"] = { "select_prev", "fallback" },
 			["<Tab>"] = { "select_next", "fallback" },
+			-- ["<Esc>"] = { "cancel" },
 		},
 		cmdline = {
 			keymap = { preset = "inherit" },

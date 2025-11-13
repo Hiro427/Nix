@@ -34,31 +34,4 @@ vim.opt_local.winbar = ""
 -- vim.g.neovide_opacity = 0.2
 vim.o.guifont = "JetbrainsMono Nerd Font:h12"
 
--- Misc Keybindings
-vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "increase vertical split size", silent = true })
-vim.keymap.set("n", "<leader>u", ":update<CR> :source<CR>", { desc = "reload config", silent = true })
-vim.keymap.set("n", "<leader>qc", ":cexpr []<CR>", { desc = "Clear QuickFix List", silent = true })
-
-vim.keymap.set("n", "<leader>vd", ":vertical resize -15<CR>", { desc = "decrease vertical split", silent = true })
-vim.keymap.set("n", "<leader>vi", ":vertical resize +15<CR>", { desc = "increase vertical split size", silent = true })
-vim.keymap.set("n", "<leader>hd", ":resize -5<CR>", { desc = "decrease vertical split", silent = true })
-vim.keymap.set("n", "<leader>hi", ":resize +5<CR>", { desc = "increase vertical split size", silent = true })
-
-vim.keymap.set("n", "<leader>sh", "<C-w>H", { desc = "increase vertical split size", silent = true }) -- move to far left
-vim.keymap.set("n", "<leader>sl", "<C-w>L", { desc = "increase vertical split size", silent = true }) -- move to far right
-vim.keymap.set("n", "<leader>sk", "<C-w>K", { desc = "increase vertical split size", silent = true }) -- move to top
-vim.keymap.set("n", "<leader>sj", "<C-w>J", { desc = "increase vertical split size", silent = true }) -- move to bottom
-
-vim.keymap.set("n", "<leader>wh", "<C-w>h", { desc = "increase vertical split size", silent = true }) -- move to far left
-vim.keymap.set("n", "<leader>wl", "<C-w>l", { desc = "increase vertical split size", silent = true }) -- move to far right
-vim.keymap.set("n", "<leader>wk", "<C-w>k", { desc = "increase vertical split size", silent = true }) -- move to top
-vim.keymap.set("n", "<leader>wj", "<C-w>j", { desc = "increase vertical split size", silent = true }) -- move to bottom
-
-vim.keymap.set("n", "<leader>vs", ":vsplit<CR>", { desc = "increase vertical split size", silent = true })
-vim.keymap.set("n", "<leader>hs", ":split<CR>", { desc = "increase vertical split size", silent = true })
-
-vim.keymap.set("i", "<C-p>", "<C-x><C-f>", { noremap = true, silent = true })
-vim.keymap.set("t", "<C-c>", "<C-\\><C-n><C-w>h<C-w>k", { desc = "Temporarily exit Terminal", silent = true })
-vim.keymap.set({ "n", "v" }, "<leader>c", "gcc", { remap = true, desc = "Comment Line (remap)", silent = true })
-
 vim.diagnostic.config({ virtual_text = false, update_in_insert = false })

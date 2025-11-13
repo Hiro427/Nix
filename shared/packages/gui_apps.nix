@@ -28,4 +28,5 @@ with pkgs; [
   neovide
   maestral
   maestral-gui
+
 ]
