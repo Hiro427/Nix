@@ -122,6 +122,7 @@ in {
 
   programs.fuzzel.enable = true;
   programs.micro.enable = true;
+  programs.alacritty.enable = true;
   # programs.neovide.enable = true;
   programs.foot = {
     enable = true;

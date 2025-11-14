@@ -31,3 +31,12 @@ vim.keymap.set({ "n", "v" }, "<leader>c", "gcc", { remap = true, desc = "Comment
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "increase vertical split size", silent = true })
 vim.keymap.set("n", "<leader>u", ":update<CR> :source<CR>", { desc = "reload config", silent = true })
 vim.keymap.set("n", "<leader>qc", ":cexpr []<CR>", { desc = "Clear QuickFix List", silent = true })
+
+vim.keymap.set("n", "<leader>k", ":bprevious<CR>", { desc = "Buffer Previous", silent = true })
+vim.keymap.set("n", "<leader>j", ":bnext<CR>", { desc = "Buffer Next", silent = true })
+
+vim.keymap.set("n", "dm", function()
+	local key = vim.fn.getchar()
+	local char = type(key) == "number" and vim.fn.nr2char(key) or key
+	vim.cmd("delmarks " .. char)
+end, { desc = "Delete a single mark" })

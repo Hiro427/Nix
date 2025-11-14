@@ -11,6 +11,7 @@
         modules-right = [
           "temperature"
           "cpu"
+          "custom/rocm"
           "memory"
           "disk"
           "pulseaudio"
@@ -40,7 +41,15 @@
           on-click-right = "swaync-client -d -sw";
           escape = true;
         };
-
+        "custom/rocm" = {
+          exec = "sh ~/Nix/dots/scripts/wm/shared/amdgpu.sh";
+          exec-if = "which rocm-smi";
+          interval = 10;
+          return-type = "json";
+          format = "{text}";
+          tooltip-format = "{alt}";
+          tootlip = true;
+        };
         "sway/workspaces" = {
           format = "{icon}";
           on-click = "activate";
@@ -284,7 +293,7 @@
       #tray {
         padding: 4px;
       }
-      #clock, #cpu, #memory, #disk, #mpris, #temperature, #idle_inhibitor, #battery, #backlight, #pulseaudio, #network, #custom-notification {
+      #clock, #cpu, #memory, #disk, #mpris, #gpu, #temperature, #idle_inhibitor, #battery, #backlight, #pulseaudio, #network, #custom-notification {
 
         padding: 0 8px;
         margin: 0 2px;
