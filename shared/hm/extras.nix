@@ -4,6 +4,14 @@
     lazygit.enable = true;
     cava.enable = true;
     bat.enable = true;
+    foliate.enable = true;
+    zathura = {
+      enable = true;
+      options = {
+        recolor = true;
+        recolor-keephue = true;
+      };
+    };
     mangohud = {
       enable = true;
       settings = {
@@ -33,8 +41,6 @@
       };
     };
     # rofi.enable = true;
-    foliate.enable = true;
-    zathura.enable = true;
     zoxide = {
       enable = true;
       enableZshIntegration = true;
