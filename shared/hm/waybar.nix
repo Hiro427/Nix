@@ -11,7 +11,7 @@
         modules-right = [
           "temperature"
           "cpu"
-          "custom/rocm"
+          # "custom/rocm"
           "memory"
           "disk"
           "pulseaudio"
