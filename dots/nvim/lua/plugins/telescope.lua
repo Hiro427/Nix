@@ -6,6 +6,10 @@ return {
 	config = function()
 		require("telescope").setup({
 			defaults = {
+
+				-- file_ignore_patterns = {
+				-- 	"node_modules",
+				-- },
 				layout_config = {
 					prompt_position = "top",
 				},
@@ -65,6 +69,9 @@ return {
 				find_files = {
 					disable_devicons = true,
 					-- theme = "ivy",
+					find_command = { "fd", "--type", "f", "--color", "never" },
+					-- find_command = { "fd", "--type", "f", "--color", "never", "--no-require-git" },
+					-- hidden = true,
 					previewer = true,
 				},
 			},

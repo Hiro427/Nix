@@ -81,6 +81,7 @@ in {
     ./hm/direnv.nix
     ./hm/sway.nix
     ./hm/waybar.nix
+    ./hm/gnome.nix
   ];
   programs.zed-editor.enable = true;
 
