@@ -188,23 +188,28 @@
       bars = [{ command = "swaybar_command none"; }];
     };
     extraConfig = ''
-      set $background "${theme.swaycolors.bg}"
-      set $text "${theme.swaycolors.fg}"
-      set $border "${theme.swaycolors.border}"
-      set $unfocused_border "${theme.swaycolors.uborder}"
-
       corner_radius 10
-
       bindgesture swipe:left workspace next
       bindgesture swipe:right workspace prev
-
-      client.focused          $border $background $text $border $border
-      client.focused_inactive $unfocused_border $background $text $unfocused_border $unfocused_border
-      client.unfocused        $border $background $text $border $border
-      client.urgent           $border $background $text $border $border
-      client.placeholder      $border $background $text $border $border
-      client.background       $background
     '';
+    # extraConfig = ''
+    #   set $background "${theme.swaycolors.bg}"
+    #   set $text "${theme.swaycolors.fg}"
+    #   set $border "${theme.swaycolors.border}"
+    #   set $unfocused_border "${theme.swaycolors.uborder}"
+    #
+    #   corner_radius 10
+    #
+    #   bindgesture swipe:left workspace next
+    #   bindgesture swipe:right workspace prev
+    #
+    #   client.focused          $border $background $text $border $border
+    #   client.focused_inactive $unfocused_border $background $text $unfocused_border $unfocused_border
+    #   client.unfocused        $border $background $text $border $border
+    #   client.urgent           $border $background $text $border $border
+    #   client.placeholder      $border $background $text $border $border
+    #   client.background       $background
+    # '';
 
   };
 }

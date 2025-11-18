@@ -15,7 +15,9 @@ return {
 			-- Otherwise this would be the ideal plugin for completions for my setup
 			-- require("mini.snippets").setup({})
 			-- require("mini.completion").setup({})
-			-- require("mini.icons").setup({})
+			require("mini.icons").setup({})
+			-- require("mini.jump").setup({})
+			-- require("mini.jump2d").setup({ view = { dim = true, n_steps_ahead = 10 } })
 			require("mini.move").setup({
 				mappings = {
 					-- Move visual selection in Visual mode. Defaults are Alt (Meta) + hjkl.

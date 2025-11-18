@@ -1,31 +1,11 @@
 -- For `plugins/markview.lua` users.
 return {
-	"OXY2DEV/markview.nvim",
-	lazy = false,
-
+	"MeanderingProgrammer/render-markdown.nvim",
+	dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-mini/mini.icons" }, -- if you use standalone mini plugins
+	---@module 'render-markdown'
+	---@type render.md.UserConfig
+	opts = {},
 	config = function()
-		require("markview.spec").setup({
-			preview = {
-				icon_provider = "devicons",
-				enable = false,
-			},
-			typst = {
-				enable = false,
-			},
-		})
+		require("render-markdown").setup({})
 	end,
-
-	vim.keymap.set(
-		"n",
-		"<leader>ms",
-		":Markview splitToggle<CR>",
-		{ desc = "Toggle Split Doc Preview (yaml, markdown, latex, html)", silent = true }
-	),
-
-	vim.keymap.set(
-		"n",
-		"<leader>pm",
-		":Markview Toggle<CR>",
-		{ desc = "Toggle Doc Preview (yaml, markdown, latex, html)", silent = true }
-	),
 }
