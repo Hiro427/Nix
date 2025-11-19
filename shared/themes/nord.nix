@@ -2,7 +2,7 @@
 
 {
   base16Scheme = "${pkgs.base16-schemes}/share/themes/nord.yaml";
-  helixTheme = "nord";
+  helixTheme = "nord-night";
   vividTheme = "nord";
   i3statusTheme = "nord-dark";
   tmuxStatusLine = "#81a1c1";

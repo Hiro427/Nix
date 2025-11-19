@@ -5,6 +5,8 @@ with pkgs; [
   zig
   go
   gcc
+  clang
+  clang-tools
   gnumake
   glibc
   cargo

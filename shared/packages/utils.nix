@@ -19,7 +19,6 @@ with pkgs; [
   fzf
   eza
   tealdeer
-  calcurse
   lm_sensors
   hwdata
   zoxide
@@ -57,7 +56,6 @@ with pkgs; [
   papirus-icon-theme
   nix-index
   lazydocker
-  chawan
   awscli
   gemini-cli
   asciiquarium

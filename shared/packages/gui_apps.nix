@@ -29,5 +29,5 @@ with pkgs; [
   maestral
   maestral-gui
   obsidian
-
+  figma-linux
 ]

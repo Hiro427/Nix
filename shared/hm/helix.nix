@@ -2,27 +2,29 @@
   programs.helix = {
     enable = true;
     package = pkgs.evil-helix;
-    # themes = {
-    #   transparent = {
-    #     inherits = theme.helixTheme;
-    #     "ui.background" = { };
-    #     "ui.menu" = { };
-    #     "ui.help" = { };
-    #     "ui.popup" = { };
-    #     "ui.statusline" = { };
-    #     "ui.statusline.inactive" = { };
-    #
-    #   };
-    # };
+    themes = {
+      transparent = {
+        inherits = theme.helixTheme;
+        "ui.background" = { };
+        "ui.menu" = { };
+        "ui.help" = { };
+        "ui.popup" = { };
+        "ui.statusline" = { };
+        "ui.statusline.inactive" = { };
+
+      };
+    };
 
     settings = {
-      # theme = "base16_transparent";
-      theme = theme.helixTheme;
+      theme = "transparent";
+      # theme = theme.helixTheme;
       editor = {
         line-number = "relative";
         true-color = true;
+        # bufferline = "always";
         preview-completion-insert = true;
         completion-trigger-len = 1;
+        # completion-replace = false;
         auto-format = true;
         end-of-line-diagnostics = "hint";
       };
@@ -41,12 +43,8 @@
       };
       editor.statusline = {
         left = [ "version-control" "spinner" ];
-        center = [ "workspace-diagnostics" ];
-        right = [
-          "file-base-name"
-          "file-modification-indicator"
-          "read-only-indicator"
-        ];
+        center = [ "workspace-diagnostics" "file-modification-indicator" ];
+        right = [ "file-base-name" "read-only-indicator" ];
         separator = "│";
       };
       keys.normal = {
