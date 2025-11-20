@@ -7,7 +7,7 @@
       window_padding_width 10
       cursor_shape_unfocused hollow
       confirm_os_window_close 0 
-      background_opacity 0.7
+      background_opacity 1
     '';
     # cursor_trail 3 
     # dynamic_background_opacity yes 
