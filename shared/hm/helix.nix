@@ -28,8 +28,12 @@
         auto-format = true;
         end-of-line-diagnostics = "hint";
       };
-      editor.cursor-shape = { insert = "bar"; };
-      editor.inline-diagnostics = { cursor-line = "error"; };
+      editor.cursor-shape = {
+        insert = "bar";
+        normal = "block";
+        select = "underline";
+      };
+      editor.inline-diagnostics = { cursor-line = "warning"; };
       editor.indent-guides = {
         render = true;
         # rainbow-option = "dim";
@@ -84,6 +88,8 @@
         space.h.c = ":open %sh{~/Nix/dots/scripts/marks.sh --file 3}";
         space.h.v = ":open %sh{~/Nix/dots/scripts/marks.sh --file 4}";
         space.h.b = ":open %sh{~/Nix/dots/scripts/marks.sh --file 5}";
+        s.m = [ "select_mode" "match_brackets" ];
+
         space.e = [
           ":sh rm -f /tmp/unique-file"
           ":insert-output yazi %{buffer_name} --chooser-file=/tmp/unique-file"
@@ -102,9 +108,10 @@
       keys.select = {
         u = [ "switch_to_lowercase" "collapse_selection" "normal_mode" ];
         U = [ "switch_to_uppercase" "collapse_selection" "normal_mode" ];
-        space.s.a = "surround_add";
-        space.s.r = "surround_replace";
-        space.s.d = "surround_delete";
+        "/" = "select_regex";
+        s.a = "surround_add";
+        s.r = "surround_replace";
+        s.d = "surround_delete";
         space.g.c = "toggle_comments";
         K = [
           "goto_line_end"
