@@ -6,7 +6,7 @@
     baseIndex = 1;
     prefix = "C-a";
     mouse = true;
-    plugins = with pkgs; [{ plugin = tmuxPlugins.vim-tmux-navigator; }];
+    # plugins = with pkgs; [{ plugin = tmuxPlugins.vim-tmux-navigator; }];
 
     extraConfig = ''
       set -g default-terminal "tmux-256color"

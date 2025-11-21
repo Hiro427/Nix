@@ -4,11 +4,8 @@ CHT_DIR="$HOME/coding/resources/"
 
 selected=$(fd . "$CHT_DIR" -t f -e md --exec basename {} \; | fzf)
 
-
 if [ -n "$TMUX" ]; then
-    tmux split-window -h "glow --pager \"$CHT_DIR$selected\"" # use ';read' to keep pane open upon quit
+	tmux new-window "glow --pager \"$CHT_DIR$selected\"" # use ';read' to keep pane open upon quit
 else
-    glow --pager "$CHT_DIR$selected"
+	glow --pager "$CHT_DIR$selected"
 fi
-
-

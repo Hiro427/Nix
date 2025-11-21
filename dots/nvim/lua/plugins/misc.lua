@@ -1,6 +1,27 @@
 return {
 	{ "nvim-tree/nvim-web-devicons", lazy = true },
 	{
+		-- lazy.nvim
+		{
+			"chrisgrieser/nvim-origami",
+			event = "VeryLazy",
+			opts = {}, -- needed even when using default config
+
+			-- recommended: disable vim's auto-folding
+			init = function()
+				vim.opt.foldlevel = 99
+				vim.opt.foldlevelstart = 99
+			end,
+			config = function()
+				require("origami").setup({
+					foldKeymaps = {
+						setup = false,
+					},
+				})
+			end,
+		},
+	},
+	{
 		"NeogitOrg/neogit",
 		lazy = true,
 		dependencies = {
@@ -13,24 +34,6 @@ return {
 		cmd = "Neogit",
 		keys = {
 			{ "<leader>gg", "<cmd>Neogit<cr>", desc = "Show Neogit UI" },
-		},
-	},
-	{
-		"christoomey/vim-tmux-navigator",
-		cmd = {
-			"TmuxNavigateLeft",
-			"TmuxNavigateDown",
-			"TmuxNavigateUp",
-			"TmuxNavigateRight",
-			"TmuxNavigatePrevious",
-			"TmuxNavigatorProcessList",
-		},
-		keys = {
-			{ "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
-			{ "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
-			{ "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
-			{ "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
-			{ "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
 		},
 	},
 	{

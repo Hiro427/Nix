@@ -94,5 +94,6 @@ with pkgs; [
   pinentry-all
   python3Packages.adblock
   pastel
+  mpvpaper
 ]
 

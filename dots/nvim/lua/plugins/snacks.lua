@@ -163,13 +163,13 @@ return {
 				end,
 				desc = "Explorer",
 			},
-			{
-				"<leader>lg",
-				function()
-					Snacks.lazygit()
-				end,
-				desc = "Toggle Terminal",
-			},
+			-- {
+			-- 	"<leader>lg",
+			-- 	function()
+			-- 		Snacks.lazygit()
+			-- 	end,
+			-- 	desc = "Toggle Terminal",
+			-- },
 			{
 				"<leader>t",
 				function()
