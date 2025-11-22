@@ -38,6 +38,7 @@ vim.keymap.set("n", "<leader>k", ":bprevious<CR>", { desc = "Buffer Previous", s
 vim.keymap.set("n", "<leader>j", ":bnext<CR>", { desc = "Buffer Next", silent = true })
 
 vim.keymap.set("n", "<leader>nh", ":nohlsearch<CR>", { desc = "Buffer Next", silent = true })
+vim.keymap.set("n", "<leader>ft", ":TodoQuickFix<CR>", { desc = "Buffer Next", silent = true })
 
 vim.keymap.set("n", "dm", function()
 	local key = vim.fn.getchar()

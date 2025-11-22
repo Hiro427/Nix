@@ -119,12 +119,12 @@
       };
       modes = {
         resize = {
-          j = "resize grow height 10 px or 10 ppt";
+          j = "resize grow height 20 px or 20 ppt";
           Escape = "mode default";
-          h = "resize shrink width 10 px or 10 ppt";
+          h = "resize shrink width 20 px or 20 ppt";
           Return = "mode default";
-          l = "resize grow width 10 px or 10 ppt";
-          k = "resize shrink height 10 px or 10 ppt";
+          l = "resize grow width 20 px or 20 ppt";
+          k = "resize shrink height 20 px or 20 ppt";
         };
       };
       gaps = {
@@ -140,11 +140,13 @@
           { class = "zen"; } # XWayland fallback
         ];
         "2" = [
-          { app_id = "org.wezfurlong.wezterm"; }
-          { app_id = "kitty"; }
-          { app_id = "foot"; }
-          { app_id = "com.mitchellh.ghostty"; }
-          { class = "org.wezfurlong.wezterm"; } # Fallback for XWayland
+          # { app_id = "org.wezfurlong.wezterm"; }
+          # { app_id = "kitty"; }
+          {
+            app_id = "foot";
+          }
+          # { app_id = "com.mitchellh.ghostty"; }
+          # { class = "org.wezfurlong.wezterm"; } # Fallback for XWayland
         ];
         "3" = [
           { app_id = "spotify-qt"; }

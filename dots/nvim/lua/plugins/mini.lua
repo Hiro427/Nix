@@ -3,6 +3,18 @@ return {
 		"echasnovski/mini.nvim",
 		version = false,
 		config = function()
+			-- https://nvim-mini.org/mini.nvim/doc/mini-pick.html
+			local pick_win_config = function()
+				local height = math.floor(0.618 * vim.o.lines)
+				local width = math.floor(0.618 * vim.o.columns)
+				return {
+					anchor = "NW",
+					height = height,
+					width = width,
+					row = math.floor(0.5 * (vim.o.lines - height)),
+					col = math.floor(0.5 * (vim.o.columns - width)),
+				}
+			end
 			require("mini.pairs").setup({})
 			require("mini.surround").setup({})
 			require("mini.cursorword").setup({})
@@ -10,6 +22,19 @@ return {
 			-- require("mini.tabline").setup({})
 			require("mini.git").setup({})
 			require("mini.ai").setup({})
+			require("mini.splitjoin").setup({})
+			require("mini.pick").setup({
+				mappings = {
+					move_down = "<Tab>",
+					move_up = "<S-Tab>",
+					toggle_info = "<C-k>",
+					toggle_preview = "<C-p>",
+				},
+				source = {
+					show = require("mini.pick").default_show,
+				},
+				window = { config = pick_win_config, border = "double" },
+			})
 			-- require("mini.indentscope").setup({ draw = { delay = 200 } })
 			require("mini.extra").setup({})
 			-- Would like some more sources here, path and cmdline completions are a must for me.
@@ -26,7 +51,6 @@ return {
 					right = "<S-l>",
 					down = "<S-j>",
 					up = "<S-k>",
-
 					-- Move current line in Normal mode
 					line_left = "<S-h>",
 					line_right = "<S-l>",
@@ -36,4 +60,53 @@ return {
 			})
 		end,
 	},
+	vim.keymap.set("n", "<leader><space>", ":Pick files<CR>", { desc = "Find Files (mini)", silent = true }),
+	vim.keymap.set("n", "<leader>ff", ":Pick oldfiles<CR>", { desc = "Find Recent Files (mini)", silent = true }),
+	vim.keymap.set("n", "<leader>fm", ":Pick marks<CR>", { desc = "Find Marks (mini)", silent = true }),
+	vim.keymap.set("n", "<leader>fc", ":Pick commands<CR>", { desc = "Find Commands (mini)", silent = true }),
+	vim.keymap.set(
+		"n",
+		"<leader>fb",
+		":Pick buffers include_current=false<CR>",
+		{ desc = "Find Buffers (mini)", silent = true }
+	),
+	vim.keymap.set("n", "<leader>fd", ":Pick diagnostic<CR>", { desc = "Find Symbols (mini)", silent = true }),
+	vim.keymap.set("n", "<leader>fk", ":Pick keymaps<CR>", { desc = "Find Symbols (mini)", silent = true }),
+	vim.keymap.set(
+		"n",
+		"<leader>fq",
+		":Pick list scope='quickfix'<CR>",
+		{ desc = "Search Quickfix List (mini)", silent = true }
+	),
+	vim.keymap.set("n", "<leader>fg", ":Pick grep<CR>", { desc = "Grep (mini)", silent = true }),
+	vim.keymap.set(
+		"n",
+		"<leader>fl",
+		":Pick buf_lines scope='current'<CR>",
+		{ desc = "Find Lines (mini)", silent = true }
+	),
+	vim.keymap.set(
+		"n",
+		"<leader>fs",
+		":Pick lsp scope='document_symbol'<CR>",
+		{ desc = "Find Symbols (mini)", silent = true }
+	),
+	vim.keymap.set(
+		"n",
+		"<leader>fS",
+		":Pick lsp scope='workspace_symbol'<CR>",
+		{ desc = "Find Symbols (mini)", silent = true }
+	),
+
+	-- vim.keymap.set("n", "<leader>e", function()
+	-- 	MiniFiles.open()
+	-- end, { desc = "Mini Files", silent = true }),
+
+	-- vim.keymap.set("n", "<leader>ft", function()
+	-- 	require("mini.pick").builtin.grep({
+	-- 		pattern = "TODO|FIXME|HACK|NOTE",
+	-- 		command = { "rg", "--no-heading", "--line-number", "--column" },
+	-- 		prompt = "Find TODOs > ",
+	-- 	})
+	-- end, { desc = "Find TODO comments (mini)", silent = true }),
 }
