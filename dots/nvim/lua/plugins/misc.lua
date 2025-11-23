@@ -1,6 +1,16 @@
 return {
 	{ "nvim-tree/nvim-web-devicons", lazy = true },
 	{
+		"MeanderingProgrammer/render-markdown.nvim",
+		dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-mini/mini.icons" }, -- if you use standalone mini plugins
+		---@module 'render-markdown'
+		---@type render.md.UserConfig
+		opts = {},
+		config = function()
+			require("render-markdown").setup({})
+		end,
+	},
+	{
 		-- lazy.nvim
 		{
 			"chrisgrieser/nvim-origami",
@@ -14,9 +24,9 @@ return {
 			end,
 			config = function()
 				require("origami").setup({
-					foldKeymaps = {
-						setup = false,
-					},
+					foldKeymaps = { setup = false },
+					autoFold = { enabled = false },
+					foldtext = { lineCount = { template = " %d lines", hlgroup = "SpecialComment" } },
 				})
 			end,
 		},

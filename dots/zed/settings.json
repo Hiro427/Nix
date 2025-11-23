@@ -74,7 +74,7 @@
     "metrics": false
   },
   "theme": {
-    "dark": "Nord Dark",
+    "dark": "Gruvbox Dark",
     "light": "Catppuccin Latte",
     "mode": "dark"
   },

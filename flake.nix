@@ -6,7 +6,6 @@
     catppuccin.url = "github:catppuccin/nix";
     spicetify-nix.url = "github:gerg-l/spicetify-nix";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
-
     stylix.url = "github:danth/stylix";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";

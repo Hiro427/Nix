@@ -89,7 +89,7 @@
             firefox = " ";
           };
           status-icons = { paused = "󰏤"; };
-          ignored-players = [ "firefox" "vlc" "mpv" ];
+          ignored-players = [ "vlc" "mpv" ];
         };
 
         cava = {
