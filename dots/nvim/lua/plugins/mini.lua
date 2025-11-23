@@ -5,8 +5,9 @@ return {
 		config = function()
 			-- https://nvim-mini.org/mini.nvim/doc/mini-pick.html
 			local pick_win_config = function()
-				local height = math.floor(0.618 * vim.o.lines)
-				local width = math.floor(0.618 * vim.o.columns)
+				local height = math.floor(0.6 * vim.o.lines)
+				-- local height = math.floor(0.618 * vim.o.lines)
+				local width = math.floor(0.6 * vim.o.columns)
 				return {
 					anchor = "NW",
 					height = height,
@@ -17,9 +18,10 @@ return {
 			end
 			require("mini.pairs").setup({})
 			require("mini.surround").setup({})
-			require("mini.cursorword").setup({})
+			-- require("mini.cursorword").setup({})
 			require("mini.diff").setup({})
 			-- require("mini.tabline").setup({})
+			-- require("mini.statusline").setup({})
 			require("mini.git").setup({})
 			require("mini.ai").setup({})
 			require("mini.splitjoin").setup({})

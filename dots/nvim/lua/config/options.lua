@@ -20,6 +20,7 @@ vim.opt.swapfile = false
 -- Hide StatusLine Completely
 -- NOTE: Some commands probably redundant
 vim.cmd("set laststatus=0")
+-- vim.cmd("set laststatus=2")
 vim.cmd("set noru")
 vim.opt.statusline = ""
 vim.cmd("set statusline=%{repeat('─',winwidth('.'))}")

@@ -1,0 +1,73 @@
+-- return {
+-- 	{
+-- 		"olimorris/onedarkpro.nvim",
+-- 		config = function()
+-- 			require("onedarkpro").setup({
+-- 				options = {
+-- 					transparency = true,
+-- 				},
+-- 			})
+-- 		end,
+-- 	},
+-- 	{
+-- 		"catppuccin/nvim",
+-- 		name = "catppuccin",
+-- 		priority = 1000,
+-- 		config = function()
+-- 			require("catppuccin").setup({
+-- 				integrations = {
+-- 					cmp = true,
+-- 					gitsigns = true,
+-- 					nvimtree = true,
+-- 					treesitter = true,
+-- 					notify = false,
+-- 					mini = {
+-- 						enabled = true,
+-- 						indentscope_color = "",
+-- 					},
+-- 				},
+-- 			})
+-- 		end,
+-- 	},
+-- 	{
+-- 		"neanias/everforest-nvim",
+-- 		version = false,
+-- 		lazy = false,
+-- 		priority = 1000, -- make sure to load this before all the other start plugins
+-- 		-- Optional; default configuration will be used if setup isn't called.
+-- 		config = function()
+-- 			require("everforest").setup({
+-- 				-- Your config here
+-- 				background = "hard",
+-- 				italics = true,
+-- 			})
+-- 		end,
+-- 	},
+-- 	{
+-- 		"rebelot/kanagawa.nvim",
+-- 		priority = 1000,
+-- 		config = function()
+-- 			require("kanagawa").setup({
+-- 				colors = {
+-- 					theme = {
+-- 						all = {
+-- 							ui = {
+-- 								bg_gutter = "none",
+-- 							},
+-- 						},
+-- 					},
+-- 				},
+-- 			})
+-- 		end,
+-- 	},
+-- 	{
+-- 		"gbprod/nord.nvim",
+-- 		lazy = false,
+-- 		priority = 1000,
+-- 		config = function()
+-- 			require("nord").setup({
+-- 				transparent = true,
+-- 			})
+-- 		end,
+-- 	},
+-- }
