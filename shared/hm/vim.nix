@@ -4,20 +4,18 @@
     extraConfig = ''
       set tabstop=4
       set softtabstop=4
-      set shiftwidth=4
       set expandtab
       set backspace=indent,eol,start
+      set shiftwidth=4
       set hlsearch
       set signcolumn=yes 
       set splitbelow
-      set number
-      set relativenumber
+      set number 
+      set relativenumber 
       set termguicolors 
       set encoding=UTF-8
       set t_RV=
       set ttymouse=xterm2
-      set laststatus=2
-      set noshowmode
       set noswapfile
       set re=0
       set guicursor=n-v-c:block,i-ci:ver25,r-cr:hor20,o:hor50
@@ -28,10 +26,20 @@
       let mapleader = "\<Space>"
       let &t_ut=""
 
+      set laststatus=0
+      set noshowmode 
+      set noru
+
+
+
+      let g:sneak#label = 1
+      let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyz'
+
       let g:ycm_auto_trigger = 1
       let g:ycm_global_ycm_extra_conf = expand('~/.ycm_extra_conf.py')
       let g:ycm_confirm_extra_conf = 0
       let g:python_highlight_space_errors = 0
+
 
       let g:go_highlight_types = 1
       let g:go_highlight_fields = 1
@@ -46,6 +54,29 @@
       let g:go_highlight_variable_assignments = 1
       let g:go_highlight_function_calls = 1   
 
+      map f <Plug>Sneak_f
+      map F <Plug>Sneak_F
+      map t <Plug>Sneak_t
+      map T <Plug>Sneak_T
+
+      nmap <CR> <Plug>(easymotion-w)
+
+      inoremap <expr> <Tab> pumvisible() ? "\<C-n>" :
+      \ getline('.')[col('.')-1] =~ '[)}\]"' ? "\<Right>" : "\<Tab>"
+
+      nnoremap <silent><Leader>e :NERDTreeToggle<CR> 
+
+
+
+      nnoremap <silent> <leader>ff :Files<CR>
+      nnoremap <silent> <leader>fb :Buffers<CR>
+      nnoremap <silent> <leader>fg :RG<CR>
+      nnoremap <silent> <leader>fM :Marks<CR>
+      nnoremap <silent> <leader>fm :BMarks<CR>
+      nnoremap <silent> <leader>fl :BLines<CR>
+      nnoremap <silent> <leader>fk :Maps<CR>
+      nnoremap <silent> <leader>fc :Commands<CR>
+
 
 
 
@@ -56,12 +87,16 @@
       vim-commentary
       vim-surround
       zig-vim
+      rust-vim
       nerdtree
       vim-devicons
       fzf-vim
       vim-go
       vim-polyglot
+      auto-pairs
       YouCompleteMe
+      vim-easymotion
+
     ];
 
   };

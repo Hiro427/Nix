@@ -4,9 +4,7 @@ set nocompatible  " be iMproved, required
 filetype on                  " required
 
 call plug#begin()
-
-Plug 'jiangmiao/auto-pairs'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'jiangmiao/auto-pairs' Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-commentary'
 Plug 'rust-lang/rust.vim'
