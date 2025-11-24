@@ -1,8 +1,9 @@
 return {
 	{ "nvim-tree/nvim-web-devicons", lazy = true },
+	{ "HiPhish/rainbow-delimiters.nvim" },
 	{
 		"MeanderingProgrammer/render-markdown.nvim",
-		dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-mini/mini.icons" }, -- if you use standalone mini plugins
+		dependencies = { "nvim-treesitter/nvim-treesitter" }, -- if you use standalone mini plugins
 		---@module 'render-markdown'
 		---@type render.md.UserConfig
 		opts = {},

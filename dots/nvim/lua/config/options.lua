@@ -42,3 +42,13 @@ vim.o.guifont = "JetbrainsMono Nerd Font:h12"
 -- 	update_in_insert = true,
 -- 	wrap = true,
 -- })
+vim.api.nvim_create_autocmd("ModeChanged", {
+	pattern = { "n:i", "i:n" },
+	callback = function(args)
+		if args.match == "n:i" then
+			vim.opt.relativenumber = false
+		elseif args.match == "i:n" then
+			vim.opt.relativenumber = true
+		end
+	end,
+})

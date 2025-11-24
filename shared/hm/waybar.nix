@@ -79,7 +79,8 @@
         mpris = {
           format = "{player_icon} {title} - {artist}";
           format-paused = "{status_icon} {title} - {artist}";
-          title-len = 20;
+          title-len = 35;
+          artist-len = 20;
           player-icons = {
             default = "▶";
             mpv = " ";
