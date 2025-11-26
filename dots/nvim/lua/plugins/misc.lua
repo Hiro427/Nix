@@ -1,6 +1,16 @@
 return {
 	{ "nvim-tree/nvim-web-devicons", lazy = true },
+
 	{ "HiPhish/rainbow-delimiters.nvim" },
+	{
+		"nvim-tree/nvim-tree.lua",
+		config = function()
+			require("nvim-tree").setup({
+				view = { width = 26, signcolumn = "no" },
+			})
+		end,
+		vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "Toggle Neotree", silent = true }),
+	},
 	{
 		"MeanderingProgrammer/render-markdown.nvim",
 		dependencies = { "nvim-treesitter/nvim-treesitter" }, -- if you use standalone mini plugins

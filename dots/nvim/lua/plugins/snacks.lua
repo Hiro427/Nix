@@ -156,13 +156,13 @@ return {
 			},
 		},
 		keys = {
-			{
-				"<leader>e",
-				function()
-					Snacks.explorer()
-				end,
-				desc = "Explorer",
-			},
+			-- {
+			-- 	"<leader>e",
+			-- 	function()
+			-- 		Snacks.explorer()
+			-- 	end,
+			-- 	desc = "Explorer",
+			-- },
 			-- {
 			-- 	"<leader>lg",
 			-- 	function()

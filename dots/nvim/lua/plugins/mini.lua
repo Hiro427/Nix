@@ -4,6 +4,22 @@ return {
 		version = false,
 		config = function()
 			-- https://nvim-mini.org/mini.nvim/doc/mini-pick.html
+			-- require("mini.tabline").setup({})
+			-- require("mini.statusline").setup({})
+			-- require("mini.cursorword").setup({})
+			-- require("mini.indentscope").setup({ draw = { delay = 200 } })
+			-- require("mini.snippets").setup({})
+			-- require("mini.completion").setup({})
+			require("mini.bracketed").setup({})
+			require("mini.pairs").setup({})
+			require("mini.surround").setup({})
+			require("mini.diff").setup({})
+			require("mini.git").setup({})
+			require("mini.ai").setup({})
+			require("mini.splitjoin").setup({})
+			require("mini.extra").setup({})
+			require("mini.icons").setup({})
+			require("mini.jump").setup({})
 			local pick_win_config = function()
 				local height = math.floor(0.6 * vim.o.lines)
 				-- local height = math.floor(0.618 * vim.o.lines)
@@ -16,15 +32,6 @@ return {
 					col = math.floor(0.5 * (vim.o.columns - width)),
 				}
 			end
-			require("mini.pairs").setup({})
-			require("mini.surround").setup({})
-			-- require("mini.cursorword").setup({})
-			require("mini.diff").setup({})
-			-- require("mini.tabline").setup({})
-			-- require("mini.statusline").setup({})
-			require("mini.git").setup({})
-			require("mini.ai").setup({})
-			require("mini.splitjoin").setup({})
 			require("mini.pick").setup({
 				mappings = {
 					move_down = "<Tab>",
@@ -37,15 +44,14 @@ return {
 				},
 				window = { config = pick_win_config, border = "double" },
 			})
-			-- require("mini.indentscope").setup({ draw = { delay = 200 } })
-			require("mini.extra").setup({})
-			-- Would like some more sources here, path and cmdline completions are a must for me.
-			-- Otherwise this would be the ideal plugin for completions for my setup
-			-- require("mini.snippets").setup({})
-			-- require("mini.completion").setup({})
-			require("mini.icons").setup({})
-			-- require("mini.jump").setup({})
-			-- require("mini.jump2d").setup({ view = { dim = true, n_steps_ahead = 10 } })
+			local jump2d = require("mini.jump2d")
+			local jump_line_start = jump2d.builtin_opts.word_start
+			jump2d.setup({
+				spotter = jump_line_start.spotter,
+				view = { dim = true, n_steps_ahead = 2 },
+				silent = true,
+			})
+
 			require("mini.move").setup({
 				mappings = {
 					-- Move visual selection in Visual mode. Defaults are Alt (Meta) + hjkl.
@@ -71,6 +77,7 @@ return {
 		"<leader>fb",
 		":Pick buffers include_current=false<CR>",
 		{ desc = "Find Buffers (mini)", silent = true }
+		--
 	),
 	vim.keymap.set("n", "<leader>fd", ":Pick diagnostic<CR>", { desc = "Find Symbols (mini)", silent = true }),
 	vim.keymap.set("n", "<leader>fk", ":Pick keymaps<CR>", { desc = "Find Symbols (mini)", silent = true }),

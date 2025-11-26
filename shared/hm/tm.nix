@@ -32,6 +32,11 @@
       bind -n M-k resize-pane -D 5
       bind -n M-j resize-pane -U 5
 
+      bind -n C-j select-pane -D
+      bind -n C-k select-pane -U
+      bind -n C-h select-pane -L
+      bind -n C-l select-pane -R
+
       bind -n C-t new-window
       bind-key "m" run-shell tsm
       unbind C-w
@@ -62,9 +67,5 @@
       run-shell ~/Nix/dots/tmux/plugins/dotbar.tmux
 
     '';
-    # bind -n C-j select-pane -D
-    # bind -n C-k select-pane -U
-    # bind -n C-h select-pane -L
-    # bind -n C-l select-pane -R
   };
 }

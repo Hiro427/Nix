@@ -34,8 +34,9 @@ vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "increase vertical s
 vim.keymap.set("n", "<leader>u", ":update<CR> :source<CR>", { desc = "reload config", silent = true })
 vim.keymap.set("n", "<leader>qc", ":cexpr []<CR>", { desc = "Clear QuickFix List", silent = true })
 
-vim.keymap.set("n", "<leader>k", ":bprevious<CR>", { desc = "Buffer Previous", silent = true })
-vim.keymap.set("n", "<leader>j", ":bnext<CR>", { desc = "Buffer Next", silent = true })
+-- Buffers
+-- vim.keymap.set("n", "<leader>k", ":bprevious<CR>", { desc = "Buffer Previous", silent = true })
+-- vim.keymap.set("n", "<leader>j", ":bnext<CR>", { desc = "Buffer Next", silent = true })
 
 vim.keymap.set("n", "<leader>nh", ":nohlsearch<CR>", { desc = "Buffer Next", silent = true })
 vim.keymap.set("n", "<leader>ft", ":TodoQuickFix<CR>", { desc = "Buffer Next", silent = true })
