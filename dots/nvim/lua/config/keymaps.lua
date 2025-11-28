@@ -5,8 +5,8 @@ vim.keymap.set("n", "<leader>hs", ":split<CR>", { desc = "increase vertical spli
 -- Resizing Splits
 vim.keymap.set("n", "<leader>vd", ":vertical resize -15<CR>", { desc = "decrease vertical split", silent = true })
 vim.keymap.set("n", "<leader>vi", ":vertical resize +15<CR>", { desc = "increase vertical split size", silent = true })
-vim.keymap.set("n", "<leader>hd", ":resize -5<CR>", { desc = "decrease vertical split", silent = true })
-vim.keymap.set("n", "<leader>hi", ":resize +5<CR>", { desc = "increase vertical split size", silent = true })
+vim.keymap.set("n", "<leader>hd", ":resize -15<CR>", { desc = "decrease vertical split", silent = true })
+vim.keymap.set("n", "<leader>hi", ":resize +15<CR>", { desc = "increase vertical split size", silent = true })
 
 -- Move Splits
 vim.keymap.set("n", "<leader>sh", "<C-w>H", { desc = "Move Split to Left", silent = true }) -- move to far left
