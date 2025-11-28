@@ -87,7 +87,7 @@ return {
 		":Pick list scope='quickfix'<CR>",
 		{ desc = "Search Quickfix List (mini)", silent = true }
 	),
-	vim.keymap.set("n", "<leader>fg", ":Pick grep<CR>", { desc = "Grep (mini)", silent = true }),
+	vim.keymap.set("n", "<leader>fg", ":Pick grep_live<CR>", { desc = "Find Grep Match (mini)", silent = true }),
 	vim.keymap.set(
 		"n",
 		"<leader>fl",
@@ -107,9 +107,9 @@ return {
 		{ desc = "Find Symbols (mini)", silent = true }
 	),
 
-	-- vim.keymap.set("n", "<leader>e", function()
-	-- 	MiniFiles.open()
-	-- end, { desc = "Mini Files", silent = true }),
+	vim.keymap.set("n", "<leader>e", function()
+		MiniFiles.open()
+	end, { desc = "Mini Files", silent = true }),
 
 	-- vim.keymap.set("n", "<leader>ft", function()
 	-- 	require("mini.pick").builtin.grep({

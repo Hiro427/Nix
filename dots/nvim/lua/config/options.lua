@@ -7,6 +7,9 @@ vim.cmd("set conceallevel=1")
 vim.cmd("colorscheme gruvbox")
 vim.o.background = "dark"
 
+vim.o.ignorecase = true -- Ignore casing when searching
+vim.o.smartcase = true -- Turn off Ignore case when a capital letter is detected
+
 vim.o.number = true
 vim.o.relativenumber = true
 vim.g.mapleader = " "
