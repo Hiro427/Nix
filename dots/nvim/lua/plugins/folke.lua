@@ -1,5 +1,4 @@
 return {
-	-- Lua
 	{
 		"folke/lazydev.nvim",
 		ft = "lua", -- only load on lua files
@@ -14,6 +13,7 @@ return {
 		event = "VeryLazy",
 		opts = {
 			preset = "helix",
+			delay = 400,
 		},
 	},
 	{

@@ -25,12 +25,9 @@
       let &t_EI = "\e[2 q"
       let mapleader = "\<Space>"
       let &t_ut=""
-
       set laststatus=0
       set noshowmode 
       set noru
-
-
 
       let g:sneak#label = 1
       let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyz'
@@ -65,21 +62,31 @@
       \ getline('.')[col('.')-1] =~ '[)}\]"' ? "\<Right>" : "\<Tab>"
 
       nnoremap <silent><Leader>e :NERDTreeToggle<CR> 
-
-
-
-      nnoremap <silent> <leader>ff :Files<CR>
-      nnoremap <silent> <leader>fb :Buffers<CR>
-      nnoremap <silent> <leader>fg :RG<CR>
+      nnoremap <silent> <leader>ff :w<CR> :Files<CR>
+      nnoremap <silent> <leader>fb :w<CR> :Buffers<CR>
+      nnoremap <silent> <leader>fg :w<CR> :RG<CR>
       nnoremap <silent> <leader>fM :Marks<CR>
       nnoremap <silent> <leader>fm :BMarks<CR>
       nnoremap <silent> <leader>fl :BLines<CR>
       nnoremap <silent> <leader>fk :Maps<CR>
       nnoremap <silent> <leader>fc :Commands<CR>
 
+      nnoremap <silent> <leader>wl <C-w>l<CR>
+      nnoremap <silent> <leader>wh <C-w>h<CR>
+      nnoremap <silent> <leader>wj <C-w>j<CR>
+      nnoremap <silent> <leader>wk <C-w>k<CR>
 
+      nnoremap <silent> <leader>vs :vsplit<CR>
+      nnoremap <silent> <leader>hs :split<CR>
 
+      nnoremap <silent> <leader>j :w<CR> :bnext<CR>
+      nnoremap <silent> <leader>k :w<CR> :bprev<CR>
 
+      nnoremap <silent> <leader>hi :resize +15<CR>
+      nnoremap <silent> <leader>hd :resize -15<CR>
+
+      nnoremap <silent> <leader>vi :vertical resize +15 <CR>
+      nnoremap <silent> <leader>vd :vertical resize -15<CR>
     '';
 
     plugins = with pkgs.vimPlugins; [
@@ -89,6 +96,7 @@
       zig-vim
       rust-vim
       nerdtree
+      vim-startify
       vim-devicons
       fzf-vim
       vim-go
@@ -96,7 +104,6 @@
       auto-pairs
       YouCompleteMe
       vim-easymotion
-
     ];
 
   };
