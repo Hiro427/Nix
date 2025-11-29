@@ -10,6 +10,7 @@ in {
   home.username = "jacobrambarran";
   home.homeDirectory = "/home/jacobrambarran";
   home.sessionVariables = {
+    # HOME = "/home/jacobrambarran/";
     GOPATH = "$HOME/.go";
     GPUI_X11_SCALING_FACTOR = "1";
   };
@@ -152,6 +153,7 @@ in {
   #         source = ../dots/wezterm/.wezterm.lua;
   #     };
   # };
+  home.file = { ".gitconfig" = { source = ../dots/git/.gitconfig; }; };
 
   home.stateVersion = "24.11";
 }

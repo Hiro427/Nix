@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 PROJECT="$HOME/Nix/dots/assets/gm.json"
-REMOTE="https://github.com/Hiro427/"
+# REMOTE="https://github.com/Hiro427/"
+REMOTE="git@github.com:Hiro427/"
 LAVENDER="#b4befe"
 GREEN="#a6e3a1"
 RED="#f38ba8"
@@ -10,152 +11,152 @@ RED="#f38ba8"
 # TODO: Determine dotfiles & project locations on the system
 
 ct() {
-    local header_color="$1"
-    local header="$2"
+	local header_color="$1"
+	local header="$2"
 
-    a_r=$((16#${header_color:1:2}))
-    a_g=$((16#${header_color:3:2}))
-    a_b=$((16#${header_color:5:2}))
+	a_r=$((16#${header_color:1:2}))
+	a_g=$((16#${header_color:3:2}))
+	a_b=$((16#${header_color:5:2}))
 
-    echo -e "\e[38;2;${a_r};${a_g};${a_b}m${header}\e[0m"
+	echo -e "\e[38;2;${a_r};${a_g};${a_b}m${header}\e[0m"
 }
 
 status() {
-    local name
-    local path
-    local projects
-    local count
-    local status
+	local name
+	local path
+	local projects
+	local count
+	local status
 
-    mapfile -t projects < <(jq -r '.projects[].path' "$PROJECT")
+	mapfile -t projects < <(jq -r '.projects[].path' "$PROJECT")
 
-    count=0
-    for i in "${projects[@]}"; do
+	count=0
+	for i in "${projects[@]}"; do
 
-        path=$i
-        name=$(jq -r ".projects[$count].name" "$PROJECT")
+		path=$i
+		name=$(jq -r ".projects[$count].name" "$PROJECT")
 
-        if [[ ! -d "$HOME/$path" ]]; then
-            git clone "$REMOTE/${name}.git" "$HOME/${path}"
-        fi
+		if [[ ! -d "$HOME/$path" ]]; then
+			git clone "$REMOTE/${name}.git" "$HOME/${path}"
+		fi
 
-        cd "$HOME/$path" || echo "error in path: ${path}"
+		cd "$HOME/$path" || echo "error in path: ${path}"
 
-        status=$(git status -s)
+		status=$(git status -s)
 
-        if [[ -n "$status" ]]; then
-            ct "$RED" "$(basename "$HOME/$path")"
-        else
-            ct "$GREEN" "$(basename "$HOME/$path")"
-        fi
-        ((count++))
-    done
+		if [[ -n "$status" ]]; then
+			ct "$RED" "$(basename "$HOME/$path")"
+		else
+			ct "$GREEN" "$(basename "$HOME/$path")"
+		fi
+		((count++))
+	done
 }
 
 list() {
-    local name
-    local projects_names
+	local name
+	local projects_names
 
-    mapfile -t projects_names < <(jq -r '.projects[].name' "$PROJECT")
+	mapfile -t projects_names < <(jq -r '.projects[].name' "$PROJECT")
 
-    for i in "${projects_names[@]}"; do
-        name=$(ct "$LAVENDER" "$i")
+	for i in "${projects_names[@]}"; do
+		name=$(ct "$LAVENDER" "$i")
 
-        echo "$name"
+		echo "$name"
 
-        ((count++))
-    done
+		((count++))
+	done
 }
 
 update() {
 
-    local name
-    local path
-    local projects
-    local count
-    local status
+	local name
+	local path
+	local projects
+	local count
+	local status
 
-    mapfile -t projects < <(jq -r '.projects[].path' "$PROJECT")
+	mapfile -t projects < <(jq -r '.projects[].path' "$PROJECT")
 
-    count=0
-    for i in "${projects[@]}"; do
+	count=0
+	for i in "${projects[@]}"; do
 
-        path=$i
-        name=$(jq -r ".projects[$count].name" "$PROJECT")
+		path=$i
+		name=$(jq -r ".projects[$count].name" "$PROJECT")
 
-        if [[ ! -d "$HOME/$path" ]]; then
-            git clone "$REMOTE/${name}.git" "$HOME/${path}"
-        fi
+		if [[ ! -d "$HOME/$path" ]]; then
+			git clone "$REMOTE/${name}.git" "$HOME/${path}"
+		fi
 
-        cd "$HOME/$path" || echo "error in path: ${path}"
+		cd "$HOME/$path" || echo "error in path: ${path}"
 
-        status=$(git status -s)
+		status=$(git status -s)
 
-        if [[ -n "$status" ]]; then
-            ct "$RED" "Check: $(basename "$HOME/$path")"
-        else
-            if git pull | grep -q "Already up to date"; then
-                ct "$LAVENDER" "Up-to-Date: ${name}" | column -t -s ":"
-            else
-                ct "$GREEN" "Changes Pulled: ${name}" | column -t -s ":"
-            fi
+		if [[ -n "$status" ]]; then
+			ct "$RED" "Check: $(basename "$HOME/$path")"
+		else
+			if git pull | grep -q "Already up to date"; then
+				ct "$LAVENDER" "Up-to-Date: ${name}" | column -t -s ":"
+			else
+				ct "$GREEN" "Changes Pulled: ${name}" | column -t -s ":"
+			fi
 
-        fi
-        ((count++))
-    done
+		fi
+		((count++))
+	done
 }
 
 use_lazygit() {
-    local name
-    local path
-    local projects
-    local count
-    local status
+	local name
+	local path
+	local projects
+	local count
+	local status
 
-    mapfile -t projects < <(jq -r '.projects[].path' "$PROJECT")
+	mapfile -t projects < <(jq -r '.projects[].path' "$PROJECT")
 
-    count=0
-    for i in "${projects[@]}"; do
+	count=0
+	for i in "${projects[@]}"; do
 
-        path=$i
-        name=$(jq -r ".projects[$count].name" "$PROJECT")
+		path=$i
+		name=$(jq -r ".projects[$count].name" "$PROJECT")
 
-        if [[ ! -d "$HOME/$path" ]]; then
-            git clone "$REMOTE/${name}.git" "$HOME/${path}"
-        fi
+		if [[ ! -d "$HOME/$path" ]]; then
+			git clone "$REMOTE/${name}.git" "$HOME/${path}"
+		fi
 
-        cd "$HOME/$path" || echo "error in path: ${path}"
+		cd "$HOME/$path" || echo "error in path: ${path}"
 
-        status=$(git status -s)
+		status=$(git status -s)
 
-        if [[ -n "$status" ]]; then
-            lazygit
-        fi
-        ((count++))
-    done
+		if [[ -n "$status" ]]; then
+			lazygit
+		fi
+		((count++))
+	done
 
 }
 
 initialize_remote_repo() {
 
-    local dir
+	local dir
 
-    dir=$(basename "$(pwd)")
+	dir=$(basename "$(pwd)")
 
-    gh repo create "$dir" --private --source=. --remote=origin
-    git branch -M main
+	gh repo create "$dir" --private --source=. --remote=origin
+	git branch -M main
 
 }
 
 open_remote() {
-    local url
+	local url
 
-    url=$(git config --get remote.origin.url)
-    xdg-open "$url"
+	url=$(git config --get remote.origin.url)
+	xdg-open "$url"
 }
 
 show_help() {
-    cat <<EOF | column -t -s "="
+	cat <<EOF | column -t -s "="
 --update/-u=Pull Changes for every repo 
 --open-remote/-or=Opens repo on github.com
 --initialize_remote_repo/-ir=Initialize a repo on github.com using 'gh'
@@ -166,13 +167,13 @@ EOF
 }
 
 editorconfig() {
-    local template
-    local ignores
+	local template
+	local ignores
 
-    ignores=("build/" "target/" "release/" ".pycache" "__pycache__")
+	ignores=("build/" "target/" "release/" ".pycache" "__pycache__")
 
-    template=$(
-        cat <<EOF
+	template=$(
+		cat <<EOF
 # EditorConfig is awesome: https://editorconfig.org
 
 # top-most EditorConfig file
@@ -211,83 +212,83 @@ indent_style = tab
 # indent_style = space
 # indent_size = 2     
 EOF
-    )
+	)
 
-    echo "$template" >".editorconfig"
-    git init
+	echo "$template" >".editorconfig"
+	git init
 
-    for i in "${ignores[@]}"; do
-        echo "$i" >>.gitignore
-    done
+	for i in "${ignores[@]}"; do
+		echo "$i" >>.gitignore
+	done
 
 }
 
 new_project() {
-    local prompt
-    local module
-    local viteapp
+	local prompt
+	local module
+	local viteapp
 
-    read -r -p "Enter type of a project(rust/python/go/c/lua/java/bash): " prompt
+	read -r -p "Enter type of a project(rust/python/go/c/lua/java/bash): " prompt
 
-    case "$prompt" in
-    rust)
-        cargo init
-        editorconfig
-        ;;
-    go)
-        read -r -p "enter go module name: " module
-        go mod init "$module"
-        editorconfig
-        ;;
-    lua | c | java)
-        editorconfig
-        ;;
-    python)
-        uv init
-        editorconfig
-        ;;
-    npm)
-        read -r -p "enter vite app name: " viteapp
-        npm init vite "$viteapp"
-        ;;
-    *)
-        echo "not a valid option"
-        ;;
-    esac
+	case "$prompt" in
+	rust)
+		cargo init
+		editorconfig
+		;;
+	go)
+		read -r -p "enter go module name: " module
+		go mod init "$module"
+		editorconfig
+		;;
+	lua | c | java)
+		editorconfig
+		;;
+	python)
+		uv init
+		editorconfig
+		;;
+	npm)
+		read -r -p "enter vite app name: " viteapp
+		npm init vite "$viteapp"
+		;;
+	*)
+		echo "not a valid option"
+		;;
+	esac
 
 }
 
 main() {
-    if [[ ! -f "$PROJECT" ]]; then
-        echo "no config file found at ~/Nix/dots/assets/gm.json" && exit
-    fi
+	if [[ ! -f "$PROJECT" ]]; then
+		echo "no config file found at ~/Nix/dots/assets/gm.json" && exit
+	fi
 
-    case "$1" in
-    --update | -u)
-        update
-        ;;
-    --new-project | -np)
-        new_project
-        ;;
-    --status | -s)
-        status
-        ;;
-    --open-remote | -or)
-        open_remote
-        ;;
-    --initialize_remote | -ir)
-        initialize_remote_repo
-        ;;
-    --list | -l)
-        list
-        ;;
-    --lazygit | -lg)
-        use_lazygit
-        ;;
-    *)
-        show_help
-        ;;
-    esac
+	case "$1" in
+	--update | -u)
+		update
+		;;
+	--new-project | -np)
+		new_project
+		;;
+	--status | -s)
+		status
+		;;
+	--open-remote | -or)
+		open_remote
+		;;
+	--initialize_remote | -ir)
+		initialize_remote_repo
+		;;
+	--list | -l)
+		list
+		;;
+	--lazygit | -lg)
+		use_lazygit
+		;;
+	*)
+		show_help
+		;;
+	esac
 }
 
 main "$1"
