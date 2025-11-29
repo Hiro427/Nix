@@ -35,8 +35,8 @@ vim.keymap.set("n", "<leader>u", ":update<CR> :source<CR>", { desc = "reload con
 vim.keymap.set("n", "<leader>qc", ":cexpr []<CR>", { desc = "Clear QuickFix List", silent = true })
 
 -- Buffers
--- vim.keymap.set("n", "<leader>k", ":bprevious<CR>", { desc = "Buffer Previous", silent = true })
--- vim.keymap.set("n", "<leader>j", ":bnext<CR>", { desc = "Buffer Next", silent = true })
+vim.keymap.set("n", "<leader>k", ":bprevious<CR>", { desc = "Buffer Previous", silent = true })
+vim.keymap.set("n", "<leader>j", ":bnext<CR>", { desc = "Buffer Next", silent = true })
 
 vim.keymap.set("n", "<leader>nh", ":nohlsearch<CR>", { desc = "Buffer Next", silent = true })
 vim.keymap.set("n", "<leader>ft", ":TodoQuickFix<CR>", { desc = "Buffer Next", silent = true })
@@ -46,3 +46,5 @@ vim.keymap.set("n", "dm", function()
 	local char = type(key) == "number" and vim.fn.nr2char(key) or key
 	vim.cmd("delmarks " .. char)
 end, { desc = "Delete a single mark" })
+
+vim.keymap.set("n", "<leader>dm", ":delm! | delm A-Z0-9<CR>", { desc = "Clear All Extra Marks", silent = true })

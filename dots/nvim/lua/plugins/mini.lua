@@ -4,7 +4,7 @@ return {
 		version = false,
 		config = function()
 			-- https://nvim-mini.org/mini.nvim/doc/mini-pick.html
-			-- require("mini.tabline").setup({})
+			require("mini.tabline").setup({})
 			-- require("mini.statusline").setup({})
 			-- require("mini.cursorword").setup({})
 			-- require("mini.indentscope").setup({ draw = { delay = 200 } })
