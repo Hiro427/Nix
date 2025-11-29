@@ -10,6 +10,31 @@ RED="#f38ba8"
 # TODO: Map out what features I want in this version
 # TODO: Determine dotfiles & project locations on the system
 
+set_ssh() {
+	local name
+	local path
+	local projects
+	local status
+	local count
+
+	mapfile -t projects < <(jq -r '.projects[].path' "$PROJECT")
+	count=0
+	for i in "${projects[@]}"; do
+
+		path=$i
+		name=$(jq -r ".projects[$count].name" "$PROJECT")
+
+		if [[ ! -d "$HOME/$path" ]]; then
+			git clone "$REMOTE/${name}.git" "$HOME/${path}"
+		fi
+
+		cd "$HOME/$path" || echo "error in path: ${path}"
+
+		git remote set-url origin "$REMOTE${name}.git"
+		((count++))
+	done
+}
+
 ct() {
 	local header_color="$1"
 	local header="$2"
@@ -163,6 +188,8 @@ show_help() {
 --list/-l=list all tracked repos 
 --lazygit/-lg=use lazygit to update all tracked repos
 --new-project/-np=create a new project
+--conv-remote/-cr=convert remote urls to ssh
+
 EOF
 }
 
@@ -264,6 +291,9 @@ main() {
 	fi
 
 	case "$1" in
+	--conv-remote | -cr)
+		set_ssh
+		;;
 	--update | -u)
 		update
 		;;
