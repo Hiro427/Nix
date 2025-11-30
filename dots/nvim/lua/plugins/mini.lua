@@ -3,8 +3,7 @@ return {
 		"echasnovski/mini.nvim",
 		version = false,
 		config = function()
-			-- https://nvim-mini.org/mini.nvim/doc/mini-pick.html
-			require("mini.tabline").setup({})
+			-- require("mini.tabline").setup({})
 			-- require("mini.statusline").setup({})
 			-- require("mini.cursorword").setup({})
 			-- require("mini.indentscope").setup({ draw = { delay = 200 } })
@@ -20,6 +19,7 @@ return {
 			require("mini.extra").setup({})
 			require("mini.icons").setup({})
 			require("mini.jump").setup({})
+			-- NOTE: https://nvim-mini.org/mini.nvim/doc/mini-pick.html
 			local pick_win_config = function()
 				local height = math.floor(0.6 * vim.o.lines)
 				-- local height = math.floor(0.618 * vim.o.lines)
@@ -69,7 +69,7 @@ return {
 		end,
 	},
 	vim.keymap.set("n", "<leader><space>", ":Pick files<CR>", { desc = "Find Files (mini)", silent = true }),
-	vim.keymap.set("n", "<leader>ff", ":Pick oldfiles<CR>", { desc = "Find Recent Files (mini)", silent = true }),
+	vim.keymap.set("n", "<leader>fr", ":Pick oldfiles<CR>", { desc = "Find Recent Files (mini)", silent = true }),
 	vim.keymap.set("n", "<leader>fm", ":Pick marks<CR>", { desc = "Find Marks (mini)", silent = true }),
 	vim.keymap.set("n", "<leader>fc", ":Pick commands<CR>", { desc = "Find Commands (mini)", silent = true }),
 	vim.keymap.set(
@@ -100,6 +100,8 @@ return {
 		":Pick lsp scope='document_symbol'<CR>",
 		{ desc = "Find Symbols (mini)", silent = true }
 	),
+	vim.keymap.set("n", "<leader>gb", ":Pick git_branches<CR>", { desc = "Find Git Branches (mini)", silent = true }),
+	vim.keymap.set("n", "<leader>gc", ":Pick git_commits<CR>", { desc = "Find Git Commits (mini)", silent = true }),
 	vim.keymap.set(
 		"n",
 		"<leader>fS",

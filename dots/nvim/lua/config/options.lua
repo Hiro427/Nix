@@ -20,20 +20,6 @@ vim.opt.foldenable = true -- Enable folding by default
 vim.opt.foldlevel = 99 -- Start with all folds open
 vim.opt.swapfile = false
 
--- Hide StatusLine Completely
--- NOTE: Some commands probably redundant
-vim.cmd("set laststatus=0")
--- vim.cmd("set laststatus=2")
-vim.cmd("set noru")
-vim.opt.statusline = ""
-vim.cmd("set statusline=%{repeat('─',winwidth('.'))}")
-vim.cmd("set noshowcmd")
-vim.api.nvim_set_hl(0, "Statusline", { link = "Normal" })
-vim.api.nvim_set_hl(0, "StatuslineNC", { link = "Normal" })
-vim.opt.showmode = false
-vim.opt.winbar = ""
-vim.opt_local.winbar = ""
-
 -- GUI Settings
 -- vim.g.neovide_opacity = 0.2
 vim.o.guifont = "JetbrainsMono Nerd Font:h12"

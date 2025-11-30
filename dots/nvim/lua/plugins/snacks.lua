@@ -95,13 +95,13 @@ return {
 							icon = " ",
 							key = "f",
 							desc = "Find File",
-							action = ":lua Snacks.dashboard.pick('files')",
+							action = ":Pick files",
 						},
 						{
 							icon = " ",
 							key = "r",
 							desc = "Recent Files",
-							action = ":lua Snacks.dashboard.pick('oldfiles')",
+							action = ":Pick oldfiles",
 						},
 						{
 							icon = "󰒲 ",
@@ -170,6 +170,14 @@ return {
 			-- 	end,
 			-- 	desc = "Toggle Terminal",
 			-- },
+			--
+			{
+				"<leader>zz",
+				function()
+					Snacks.zen()
+				end,
+				desc = "Toggle Terminal",
+			},
 			{
 				"<leader>t",
 				function()

@@ -1,7 +1,22 @@
 return {
 	{ "nvim-tree/nvim-web-devicons", lazy = true },
-
 	{ "HiPhish/rainbow-delimiters.nvim" },
+	{
+		"leath-dub/snipe.nvim",
+		keys = {
+			{
+				"<leader>l",
+				function()
+					require("snipe").open_buffer_menu()
+				end,
+				desc = "Open Snipe buffer menu",
+			},
+		},
+		opts = {
+			ui = { position = "cursor" },
+			-- vsplit = V, split = H, close = D
+		},
+	},
 	{
 		"nvim-tree/nvim-tree.lua",
 		config = function()
