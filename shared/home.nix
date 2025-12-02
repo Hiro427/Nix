@@ -141,7 +141,7 @@ in {
   };
   services.vicinae = {
     enable = true; # default: true
-    autoStart = true; # default: true
+    # autoStart = true; # default: true
     # settings = {
     #   font.size = 12;
     #   theme.name = "github_dark_high_contrast";

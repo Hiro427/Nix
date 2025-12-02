@@ -41,6 +41,7 @@ return {
 				"nim_langserver",
 				"ols",
 				"tinymist",
+				"tailwindcss",
 				"asm_lsp",
 				"cmake",
 				"kotlin_language_server",
