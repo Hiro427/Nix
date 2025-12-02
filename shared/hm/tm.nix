@@ -61,7 +61,7 @@
       set -g @tmux-dotbar-fg-session "${theme.tmuxBarColors.dotbar-fg-session}"
       set -g @tmux-dotbar-fg-prefix "${theme.tmuxBarColors.dotbar-fg-prefix}"            
       set -g @tmux-dotbar-right "true"
-      set -g @tmux-dotbar-bold-current-window true
+      # set -g @tmux-dotbar-bold-current-window false
       set -g @tmux-dotbar-bold-status false
 
       run-shell ~/Nix/dots/tmux/plugins/dotbar.tmux
