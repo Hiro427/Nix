@@ -83,9 +83,7 @@ body,
 }/* not my stylesheet. see link to author: https://github.com/sameerasw/my-internet/tree/main */
 
 
-:root {
-  --main-bg-color: #191724;
-}
+
 
 /* gh-transparency */
 html,
@@ -543,9 +541,6 @@ body:has(header > .search-expanded) .application-main {
 }/* not my stylesheet. see link to author: https://github.com/sameerasw/my-internet/tree/main */
 
 
-:root {
-  --main-bg-color: #191724;
-}
 
 /* transparency */
 html,
@@ -581,9 +576,7 @@ footer {
 }/* not my stylesheet. see link to author: https://github.com/sameerasw/my-internet/tree/main */
 
 
-:root {
-  --main-bg-color: #191724;
-}
+
 
 /* reddit-transparency */
 #subreddit-right-rail__partial aside,
@@ -699,9 +692,7 @@ shreddit-ad-post {
 }/* not my stylesheet. see link to author: https://github.com/sameerasw/my-internet/tree/main */
 
 
-:root {
-  --main-bg-color: #191724;
-}
+
 
 /* transparency */
 html,
@@ -740,9 +731,7 @@ span:has(a[href="/terms-of-service"]),
   display: none !important;
 }/* not my stylesheet. see link to author: https://github.com/sameerasw/my-internet/tree/main */
 
-:root {
-  --main-bg-color: #191724;
-}
+
 
 
 /* todoist-transparency */
@@ -909,10 +898,6 @@ mfe-footer-pharos-footer,
   display: none !important;
 }/* not my stylesheet. see link to author: https://github.com/sameerasw/my-internet/tree/main */
 
-
-:root {
-  --main-bg-color: #191724;
-}
 
 /* yt-Transparency */
 html[dark],
