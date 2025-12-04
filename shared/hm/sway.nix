@@ -158,26 +158,25 @@
           { class = "vesktop"; }
           { class = "discord"; }
         ];
-        # "5" = [ { app_id = "mpv"; } { class = "mpv"; } ];
         "5" = [ { app_id = "steam"; } { class = "steam"; } ];
+        "6" = [ { app_id = "mpv"; } { class = "mpv"; } ];
       };
       window = {
         border = 0;
-        commands = [
-          {
-            criteria = {
-              title = "Picture-in-Picture";
-              app_id = "zen-beta";
-            };
-            command =
-              "floating enable, sticky enable, move absolute position 1450px 50px";
-          }
-          {
-            criteria = { app_id = "mpv"; };
-            command =
-              "floating enable, sticky enable, resize set 420 250, move absolute position 1600px 0px";
-          }
-        ];
+        commands = [{
+          criteria = {
+            title = "Picture-in-Picture";
+            app_id = "zen-beta";
+          };
+          command =
+            "floating enable, sticky enable, move absolute position 1450px 50px";
+        }
+        # {
+        #   criteria = { app_id = "mpv"; };
+        #   command =
+        #     "floating enable, sticky enable, resize set 420 250, move absolute position 1600px 0px";
+        # }
+          ];
         titlebar = false;
       };
       floating = {
