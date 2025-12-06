@@ -2,52 +2,52 @@
 
 find_dirs() {
 
-    find "$HOME/coding/" -mindepth 1 -maxdepth 3 -type d \( \
-        -name ".venv" -o -name "__pycache__" -o -name ".git" -o -name ".gitignore" -o -name "target" -o -name "release" -o -name "node_modules" \
-        \) -prune -o -type d -print
+	find "$HOME/coding/" -mindepth 1 -maxdepth 5 -type d \( \
+		-name ".venv" -o -name "__pycache__" -o -name ".git" -o -name ".gitignore" -o -name "target" -o -name "release" -o -name "node_modules" -o -name "assets" \
+		\) -prune -o -type d -print
 }
 
 main() {
-    local directories=()
-    local fzf_args
+	local directories=()
+	local fzf_args
 
-    fzf_args=(
-      --reverse
-      --highlight-line
-      --border='double'
-      --border-label='New Project'
-      --border-label-pos=2
-    )
-      # --preview='eza --tree --color=always --icons {}'
-      # --preview-window='right'
-      # --preview-border='double'
+	fzf_args=(
+		--reverse
+		--highlight-line
+		--border='double'
+		--border-label='New Project'
+		--border-label-pos=2
+	)
+	# --preview='eza --tree --color=always --icons {}'
+	# --preview-window='right'
+	# --preview-border='double'
 
-    mapfile -t directories < <(find_dirs)
-    directories+=("/home/jacobrambarran/Nix")
+	mapfile -t directories < <(find_dirs)
+	directories+=("/home/jacobrambarran/Nix")
 
-    if [ -n "$TMUX" ]; then
-      sel_dir=$(printf '%s\n' "${directories[@]}" 2>/dev/null | fzf-tmux -p50%,30% "${fzf_args[@]}" 2>/dev/null)
-    else
-      sel_dir=$(printf '%s\n' "${directories[@]}" 2>/dev/null | fzf --height 30% "${fzf_args[@]}" 2>/dev/null)
+	if [ -n "$TMUX" ]; then
+		sel_dir=$(printf '%s\n' "${directories[@]}" 2>/dev/null | fzf-tmux -p50%,30% "${fzf_args[@]}" 2>/dev/null)
+	else
+		sel_dir=$(printf '%s\n' "${directories[@]}" 2>/dev/null | fzf --height 30% "${fzf_args[@]}" 2>/dev/null)
 
-    fi 
+	fi
 
-    if [[ "$sel_dir" == "" ]]; then
-        exit
-    fi
+	if [[ "$sel_dir" == "" ]]; then
+		exit
+	fi
 
-    name="$(basename "$sel_dir")"
-    if ! tmux has-session -t "${name}:" 2>/dev/null; then
-      tmux new-session -d -s "$name" -c "$sel_dir" 2>/dev/null || {
-        echo "failed to create session $name" >&2
-        exit 1
-      }
-    fi
-    if [ -n "$TMUX" ]; then
-      tmux switch-client -t "$name"
-    else
-      tmux attach -t "$name"
-    fi
+	name="$(basename "$sel_dir")"
+	if ! tmux has-session -t "${name}:" 2>/dev/null; then
+		tmux new-session -d -s "$name" -c "$sel_dir" 2>/dev/null || {
+			echo "failed to create session $name" >&2
+			exit 1
+		}
+	fi
+	if [ -n "$TMUX" ]; then
+		tmux switch-client -t "$name"
+	else
+		tmux attach -t "$name"
+	fi
 }
 
 main
