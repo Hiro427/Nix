@@ -19,6 +19,7 @@ return {
 			require("mini.extra").setup({})
 			require("mini.icons").setup({})
 			require("mini.jump").setup({})
+			require("mini.files").setup({})
 			local hipatterns = require("mini.hipatterns")
 			hipatterns.setup({
 				highlighters = {
@@ -50,11 +51,11 @@ return {
 					move_down = "<Tab>",
 					move_up = "<S-Tab>",
 					toggle_info = "<C-k>",
-					toggle_preview = "<C-p>",
+					toggle_preview = "<C-f>",
 				},
-				source = {
-					show = require("mini.pick").default_show,
-				},
+				-- source = {
+				-- 	show = require("mini.pick").default_show,
+				-- },
 				window = { config = pick_win_config, border = "double" },
 			})
 			local jump2d = require("mini.jump2d")
@@ -81,50 +82,46 @@ return {
 			})
 		end,
 	},
-	-- vim.keymap.set("n", "<leader><space>", ":Pick files<CR>", { desc = "Find Files (mini)", silent = true }),
-	-- vim.keymap.set("n", "<leader>fr", ":Pick oldfiles<CR>", { desc = "Find Recent Files (mini)", silent = true }),
-	-- vim.keymap.set("n", "<leader>fm", ":Pick marks<CR>", { desc = "Find Marks (mini)", silent = true }),
-	-- vim.keymap.set("n", "<leader>fc", ":Pick commands<CR>", { desc = "Find Commands (mini)", silent = true }),
-	-- vim.keymap.set(
-	-- 	"n",
-	-- 	"<leader>fb",
-	-- 	":Pick buffers include_current=false<CR>",
-	-- 	{ desc = "Find Buffers (mini)", silent = true }
-	-- 	--
-	-- ),
-	-- vim.keymap.set("n", "<leader>fd", ":Pick diagnostic<CR>", { desc = "Find Symbols (mini)", silent = true }),
-	-- vim.keymap.set("n", "<leader>fk", ":Pick keymaps<CR>", { desc = "Find Symbols (mini)", silent = true }),
-	-- vim.keymap.set(
-	-- 	"n",
-	-- 	"<leader>fq",
-	-- 	":Pick list scope='quickfix'<CR>",
-	-- 	{ desc = "Search Quickfix List (mini)", silent = true }
-	-- ),
-	-- vim.keymap.set("n", "<leader>fg", ":Pick grep_live<CR>", { desc = "Find Grep Match (mini)", silent = true }),
-	-- vim.keymap.set(
-	-- 	"n",
-	-- 	"<leader>fl",
-	-- 	":Pick buf_lines scope='current'<CR>",
-	-- 	{ desc = "Find Lines (mini)", silent = true }
-	-- ),
-	-- vim.keymap.set(
-	-- 	"n",
-	-- 	"<leader>fs",
-	-- 	":Pick lsp scope='document_symbol'<CR>",
-	-- 	{ desc = "Find Symbols (mini)", silent = true }
-	-- ),
-	-- vim.keymap.set("n", "<leader>gb", ":Pick git_branches<CR>", { desc = "Find Git Branches (mini)", silent = true }),
-	-- vim.keymap.set("n", "<leader>gc", ":Pick git_commits<CR>", { desc = "Find Git Commits (mini)", silent = true }),
-	-- vim.keymap.set(
-	-- 	"n",
-	-- 	"<leader>fS",
-	-- 	":Pick lsp scope='workspace_symbol'<CR>",
-	-- 	{ desc = "Find Symbols (mini)", silent = true }
-	-- ),
-
-	-- vim.keymap.set("n", "<leader>e", function()
-	-- 	MiniFiles.open()
-	-- end, { desc = "Mini Files", silent = true }),
+	vim.keymap.set("n", "<leader><space>", ":Pick files<CR>", { desc = "Find Files (mini)", silent = true }),
+	vim.keymap.set("n", "<leader>fr", ":Pick oldfiles<CR>", { desc = "Find Recent Files (mini)", silent = true }),
+	vim.keymap.set("n", "<leader>fm", ":Pick marks<CR>", { desc = "Find Marks (mini)", silent = true }),
+	vim.keymap.set("n", "<leader>fc", ":Pick commands<CR>", { desc = "Find Commands (mini)", silent = true }),
+	vim.keymap.set(
+		"n",
+		"<leader>fb",
+		":Pick buffers include_current=false<CR>",
+		{ desc = "Find Buffers (mini)", silent = true }
+		--
+	),
+	vim.keymap.set("n", "<leader>fd", ":Pick diagnostic<CR>", { desc = "Find Symbols (mini)", silent = true }),
+	vim.keymap.set("n", "<leader>fk", ":Pick keymaps<CR>", { desc = "Find Symbols (mini)", silent = true }),
+	vim.keymap.set(
+		"n",
+		"<leader>fq",
+		":Pick list scope='quickfix'<CR>",
+		{ desc = "Search Quickfix List (mini)", silent = true }
+	),
+	vim.keymap.set("n", "<leader>fg", ":Pick grep_live<CR>", { desc = "Find Grep Match (mini)", silent = true }),
+	vim.keymap.set(
+		"n",
+		"<leader>fl",
+		":Pick buf_lines scope='current'<CR>",
+		{ desc = "Find Lines (mini)", silent = true }
+	),
+	vim.keymap.set(
+		"n",
+		"<leader>fs",
+		":Pick lsp scope='document_symbol'<CR>",
+		{ desc = "Find Symbols (mini)", silent = true }
+	),
+	vim.keymap.set("n", "<leader>gb", ":Pick git_branches<CR>", { desc = "Find Git Branches (mini)", silent = true }),
+	vim.keymap.set("n", "<leader>gc", ":Pick git_commits<CR>", { desc = "Find Git Commits (mini)", silent = true }),
+	vim.keymap.set(
+		"n",
+		"<leader>fS",
+		":Pick lsp scope='workspace_symbol'<CR>",
+		{ desc = "Find Symbols (mini)", silent = true }
+	),
 
 	-- vim.keymap.set("n", "<leader>ft", function()
 	-- 	require("mini.pick").builtin.grep({
@@ -133,4 +130,6 @@ return {
 	-- 		prompt = "Find TODOs > ",
 	-- 	})
 	-- end, { desc = "Find TODO comments (mini)", silent = true }),
+
+	vim.keymap.set("n", "<leader>e", ":lua MiniFiles.open()<CR>", { desc = "Toggle Mini Files", silent = true }),
 }

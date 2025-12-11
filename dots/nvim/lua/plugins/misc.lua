@@ -2,31 +2,6 @@ return {
 	{ "nvim-tree/nvim-web-devicons", lazy = true },
 	{ "HiPhish/rainbow-delimiters.nvim" },
 	{
-		"leath-dub/snipe.nvim",
-		keys = {
-			{
-				"<leader>l",
-				function()
-					require("snipe").open_buffer_menu()
-				end,
-				desc = "Open Snipe buffer menu",
-			},
-		},
-		opts = {
-			ui = { position = "cursor" },
-			-- vsplit = V, split = H, close = D
-		},
-	},
-	{
-		"nvim-tree/nvim-tree.lua",
-		config = function()
-			require("nvim-tree").setup({
-				view = { width = 26, signcolumn = "no" },
-			})
-		end,
-		vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "Toggle Neotree", silent = true }),
-	},
-	{
 		"MeanderingProgrammer/render-markdown.nvim",
 		dependencies = { "nvim-treesitter/nvim-treesitter" }, -- if you use standalone mini plugins
 		---@module 'render-markdown'
@@ -35,27 +10,6 @@ return {
 		config = function()
 			require("render-markdown").setup({})
 		end,
-	},
-	{
-		-- lazy.nvim
-		{
-			"chrisgrieser/nvim-origami",
-			event = "VeryLazy",
-			opts = {}, -- needed even when using default config
-
-			-- recommended: disable vim's auto-folding
-			init = function()
-				vim.opt.foldlevel = 99
-				vim.opt.foldlevelstart = 99
-			end,
-			config = function()
-				require("origami").setup({
-					foldKeymaps = { setup = false },
-					autoFold = { enabled = false },
-					foldtext = { lineCount = { template = " %d lines", hlgroup = "SpecialComment" } },
-				})
-			end,
-		},
 	},
 	{
 		"NeogitOrg/neogit",

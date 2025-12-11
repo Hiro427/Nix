@@ -28,7 +28,7 @@ vim.keymap.set("t", "<C-w>t", "<C-\\><C-n>", { desc = "Temporarily exit Terminal
 vim.keymap.set("i", "<C-p>", "<C-x><C-f>", { noremap = true, silent = true })
 
 vim.keymap.set({ "n", "v" }, "<leader>c", "gcc", { remap = true, desc = "Comment Line (remap)", silent = true })
-vim.keymap.set({ "n" }, "<leader>z", "za", { remap = true, desc = "Toggle Fold Under Cursor", silent = true })
+-- vim.keymap.set({ "n" }, "<leader>z", "za", { remap = true, desc = "Toggle Fold Under Cursor", silent = true })
 
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "increase vertical split size", silent = true })
 vim.keymap.set("n", "<leader>u", ":update<CR> :source<CR>", { desc = "reload config", silent = true })
