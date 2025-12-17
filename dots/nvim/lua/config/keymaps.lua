@@ -32,7 +32,7 @@ vim.keymap.set({ "n", "v" }, "<leader>c", "gcc", { remap = true, desc = "Comment
 
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "increase vertical split size", silent = true })
 vim.keymap.set("n", "<leader>u", ":update<CR> :source<CR>", { desc = "reload config", silent = true })
-vim.keymap.set("n", "<leader>qc", ":cexpr []<CR>", { desc = "Clear QuickFix List", silent = true })
+vim.keymap.set("n", "<leader>dq", ":cexpr []<CR>", { desc = "Clear QuickFix List", silent = true })
 
 -- Buffers
 vim.keymap.set("n", "<leader>k", ":bprevious<CR>", { desc = "Buffer Previous", silent = true })
@@ -47,4 +47,4 @@ vim.keymap.set("n", "dm", function()
 	vim.cmd("delmarks " .. char)
 end, { desc = "Delete a single mark" })
 
-vim.keymap.set("n", "<leader>dm", ":delm! | delm A-Z0-9<CR>", { desc = "Clear All Extra Marks", silent = true })
+vim.keymap.set("n", "<leader>dm", ":delm! | delm A-Z0-9<CR>", { desc = "Clear Marks", silent = true })

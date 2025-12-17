@@ -75,7 +75,6 @@
         space.k = ":buffer-previous";
         space.w.b = ":write-buffer-close";
         space.h.s = ":hsplit";
-
         space.v.s = ":vsplit";
         space.l.i = ":toggle lsp.display-inlay-hints";
         space.l.r = "rename_symbol";
