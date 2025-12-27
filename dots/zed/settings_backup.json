@@ -37,7 +37,7 @@
   "autosave": "on_focus_change",
   "buffer_font_family": "JetBrainsMono Nerd Font",
   "confirm_quit": true,
-  "relative_line_numbers": "enabled",
+  "relative_line_numbers": true,
   "features": {
     "edit_prediction_provider": "none"
   },

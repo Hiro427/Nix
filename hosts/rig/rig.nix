@@ -17,10 +17,6 @@
       rocmPackages.rocm-smi
     ];
   };
-  services.ollama = {
-    enable = true;
-    acceleration = "rocm";
-  };
 
   # Steam and Gamescope
   programs.steam = {

@@ -37,7 +37,6 @@ with pkgs; [
   mesa-demos
   lshw
   vnstat
-  ollama
   openvpn
   tty-clock
   is-fast
