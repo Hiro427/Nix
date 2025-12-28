@@ -21,7 +21,7 @@
       editor = {
         line-number = "relative";
         true-color = true;
-        # bufferline = "always";
+        bufferline = "always";
         preview-completion-insert = true;
         completion-trigger-len = 1;
         # completion-replace = false;

@@ -59,7 +59,10 @@
           always = true;
         }
         { command = "swaync"; }
-        { command = "pkill nm-applet; nm-applet"; }
+        {
+          command = "pkill nm-applet; nm-applet";
+          always = true;
+        }
         { command = "autotiling"; }
         { command = "waybar"; }
       ];

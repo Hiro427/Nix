@@ -11,26 +11,25 @@ return {
 					"node_modules",
 					"assets",
 				},
-				layout_config = {
-					prompt_position = "bottom",
-				},
+				layout_config = {},
+				prompt_position = "top",
 				-- color_devicons = false,
-				sorting_strategy = "descending",
+				sorting_strategy = "ascending",
 				mappings = {
 					i = {
 						["<C-p>"] = require("telescope.actions.layout").toggle_preview,
 						["<C-e>"] = { "<esc>", type = "command" },
 						["<esc>"] = require("telescope.actions").close,
-						["<S-Tab>"] = require("telescope.actions").move_selection_next,
-						["<Tab>"] = require("telescope.actions").move_selection_previous,
+						["<Tab>"] = require("telescope.actions").move_selection_next,
+						["<S-Tab>"] = require("telescope.actions").move_selection_previous,
 						["<C-l>"] = require("telescope.actions").toggle_selection,
 					},
 					n = {
 						["<C-p>"] = require("telescope.actions.layout").toggle_preview,
 						["<C-e>"] = { "<esc>", type = "command" },
 						["<esc>"] = require("telescope.actions").close,
-						["<S-Tab>"] = require("telescope.actions").move_selection_next,
-						["<Tab>"] = require("telescope.actions").move_selection_previous,
+						["<Tab>"] = require("telescope.actions").move_selection_next,
+						["<S-Tab>"] = require("telescope.actions").move_selection_previous,
 						["<C-l>"] = require("telescope.actions").toggle_selection,
 					},
 				},
@@ -47,42 +46,28 @@ return {
 				},
 				current_buffer_fuzzy_find = {
 					theme = "dropdown",
-					layout_config = {
-						prompt_position = "top",
-					},
 				},
 				commands = {
 					theme = "dropdown",
-					layout_config = {
-						prompt_position = "top",
-					},
 				},
 				lsp_document_symbols = {
 					theme = "dropdown",
-					layout_config = {
-						prompt_position = "top",
-					},
 				},
 				lsp_dynamic_workspace_symbols = {
 					theme = "dropdown",
-					layout_config = {
-						prompt_position = "top",
-					},
 				},
 				keymaps = {
 					theme = "dropdown",
-					layout_config = {
-						prompt_position = "top",
-					},
 				},
 				buffers = {
 					theme = "dropdown",
-					layout_config = {
-						prompt_position = "top",
-					},
+					-- layout_config = {
+					-- 	prompt_position = "top",
+					-- },
 				},
 				oldfiles = {
 					-- theme = "ivy",
+					previewer = true,
 					disable_devicons = false,
 				},
 				find_files = {
@@ -91,7 +76,11 @@ return {
 					-- find_command = { "fd", "--type", "f", "--color", "never", "--no-require-git" },
 					-- hidden = true,
 					-- disable_devicons = true,
-					previewer = false,
+					layout_config = {
+						prompt_position = "top",
+					},
+					--
+					previewer = true,
 				},
 			},
 			extensions = {
