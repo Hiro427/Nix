@@ -43,12 +43,12 @@
         snippets = true;
         enable = true;
         display-messages = true;
-        display-inlay-hints = false;
+        display-inlay-hints = true;
       };
       editor.statusline = {
         left = [ "version-control" "spinner" ];
-        center = [ "workspace-diagnostics" "file-modification-indicator" ];
-        right = [ "file-base-name" "read-only-indicator" ];
+        center = [ "file-modification-indicator" "file-base-name" ];
+        right = [ "workspace-diagnostics" "read-only-indicator" ];
         separator = "│";
       };
       keys.normal = {
@@ -87,7 +87,8 @@
         space.h.c = ":open %sh{~/Nix/dots/scripts/marks.sh --file 3}";
         space.h.v = ":open %sh{~/Nix/dots/scripts/marks.sh --file 4}";
         space.h.b = ":open %sh{~/Nix/dots/scripts/marks.sh --file 5}";
-        s.m = [ "select_mode" "match_brackets" ];
+        s.m.b = [ "select_mode" "match_brackets" ];
+        m.b = [ "match_brackets" ];
 
         space.e = [
           ":sh rm -f /tmp/unique-file"
