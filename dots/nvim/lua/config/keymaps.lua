@@ -48,3 +48,9 @@ vim.keymap.set("n", "dm", function()
 end, { desc = "Delete a single mark" })
 
 vim.keymap.set("n", "<leader>dm", ":delm! | delm A-Z0-9<CR>", { desc = "Clear Marks", silent = true })
+
+local imap_expr = function(lhs, rhs)
+	vim.keymap.set("i", lhs, rhs, { expr = true })
+end
+imap_expr("<Tab>", [[pumvisible() ? "\<C-n>" : "\<Tab>"]])
+imap_expr("<S-Tab>", [[pumvisible() ? "\<C-p>" : "\<S-Tab>"]])

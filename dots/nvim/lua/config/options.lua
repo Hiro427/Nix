@@ -4,6 +4,7 @@ vim.cmd("set softtabstop=4")
 vim.cmd("set shiftwidth=4")
 vim.cmd("set cursorline")
 vim.cmd("set conceallevel=1")
+vim.cmd("set pumheight=8")
 vim.cmd("colorscheme rose-pine")
 vim.o.background = "dark"
 

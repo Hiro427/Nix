@@ -87,6 +87,8 @@
         space.h.c = ":open %sh{~/Nix/dots/scripts/marks.sh --file 3}";
         space.h.v = ":open %sh{~/Nix/dots/scripts/marks.sh --file 4}";
         space.h.b = ":open %sh{~/Nix/dots/scripts/marks.sh --file 5}";
+        space.t = ''
+          :sh if [ -n "$TMUX" ]; then tmux split-pane -v; tmux resize-pane -D 5; fi '';
         s.m.b = [ "select_mode" "match_brackets" ];
         m.b = [ "match_brackets" ];
 

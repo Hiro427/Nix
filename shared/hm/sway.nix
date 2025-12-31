@@ -94,9 +94,9 @@
           "exec rofi-rbw --action copy --selector fuzzel --target password --selector-args '--width 50 --dpi-aware=no' --clear-after 60";
         "Mod4+minus" = "move scratchpad";
         "Mod4+Shift+minus" = "scratchpad show";
-        # "Mod4+space" = "exec vicinae toggle";
+        "Mod4+space" = "exec vicinae toggle";
         # "Mod4+space" = "exec rofi -show drun";
-        "Mod4+space" = "exec fuzzel --dpi-aware=no";
+        # "Mod4+space" = "exec fuzzel --dpi-aware=no";
         "Mod4+Shift+r" = "exec swaymsg reload";
         "Mod4+Shift+s" = "mode resize";
         "Mod4+1" = "workspace number 1";

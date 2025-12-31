@@ -5,16 +5,16 @@ return {
 		lazy = false,
 		opts = {
 			statuscolumn = {
-				enabled = true,
+				enabled = false,
 			},
-			notifier = {
-				enabled = true,
-				timeout = 2000,
-				border = "rounded",
-				width = { min = 20, max = 0.4 },
-			},
+			-- notifier = {
+			-- 	enabled = true,
+			-- 	timeout = 2000,
+			-- 	border = "rounded",
+			-- 	width = { min = 20, max = 0.4 },
+			-- },
 			dashboard = {
-				enabled = true,
+				enabled = false,
 				width = 35,
 				formats = {},
 				header = { "%s", align = "center" },
@@ -120,11 +120,11 @@ return {
 					{ section = "startup" },
 				},
 			},
-			explorer = { enabled = true },
-			indent = { enabled = true },
-			input = { enabled = true },
+			explorer = { enabled = false },
+			indent = { enabled = false },
+			input = { enabled = false },
 			terminal = {
-				enabled = true,
+				enabled = false,
 				win = {
 					wo = {
 						winbar = "",
@@ -132,7 +132,7 @@ return {
 				},
 			},
 			picker = {
-				enabled = true,
+				enabled = false,
 				win = {
 					style = {
 						blend = 10,

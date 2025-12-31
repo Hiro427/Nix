@@ -1,6 +1,30 @@
 return {
 	{ "nvim-tree/nvim-web-devicons", lazy = true },
-	{ "HiPhish/rainbow-delimiters.nvim" },
+	{ "HiPhish/rainbow-delimiters.nvim", lazy = true, event = "BufEnter" },
+	{
+		"rachartier/tiny-inline-diagnostic.nvim",
+		event = "LspAttach", -- Or `LspAttach` `VeryLazy`
+		priority = 1000, -- needs to be loaded in first
+		config = function()
+			require("tiny-inline-diagnostic").setup({
+				preset = "amongus",
+				options = { show_source = true, throttle = 20, enable_on_insert = true, multilines = true },
+				overflow = { mode = "wrap" },
+				break_line = { enabled = true, after = 20 },
+			})
+		end,
+	},
+
+	{
+		"folke/lazydev.nvim",
+		ft = "lua", -- only load on lua files
+		opts = {
+			library = {
+				{ path = "${3rd}/luv/library", words = { "vim%.uv" } },
+			},
+		},
+	},
+
 	{
 		"MeanderingProgrammer/render-markdown.nvim",
 		dependencies = { "nvim-treesitter/nvim-treesitter" }, -- if you use standalone mini plugins
@@ -47,19 +71,5 @@ return {
 			})
 		end,
 		vim.keymap.set("n", "<leader>pt", ":TypstPreview<CR>", { desc = "Open Typst Preview" }),
-	},
-	{
-		"abecodes/tabout.nvim",
-		lazy = false,
-		config = function()
-			require("tabout").setup({
-				completion = true, -- if the tabkey is used in a completion pum
-				ignore_beginning = true, --[[ if the cursor is at the beginning of a filled element it will rather tab out than shift the content ]]
-			})
-		end,
-		dependencies = { "nvim-treesitter/nvim-treesitter" }, --optional
-		opt = true, -- Set this to true if the plugin is optional
-		event = "InsertCharPre", -- Set the event to 'InsertCharPre' for better compatibility
-		priority = 1000,
 	},
 }

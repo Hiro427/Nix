@@ -23,6 +23,7 @@
       let &t_SI = "\e[6 q" 
       let &t_SR = "\e[4 q" 
       let &t_EI = "\e[2 q"
+      set eob = " " 
       let mapleader = "\<Space>"
       let &t_ut=""
       set laststatus=0
