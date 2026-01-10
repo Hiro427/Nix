@@ -9,12 +9,12 @@
     stylix.url = "github:danth/stylix";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    vicinae.url = "github:vicinaehq/vicinae";
+    # vicinae.url = "github:vicinaehq/vicinae";
     lobster.url = "github:justchokingaround/lobster";
   };
 
   outputs = { self, stylix, nixpkgs, home-manager, spicetify-nix, catppuccin
-    , zen-browser, vicinae, lobster, ... }@inputs: {
+    , zen-browser, lobster, ... }@inputs: {
 
       nixosConfigurations = {
 
@@ -39,7 +39,6 @@
                   spicetify-nix.homeManagerModules.default
                   catppuccin.homeModules.catppuccin
                   stylix.homeModules.stylix
-                  vicinae.homeManagerModules.default
                   ./shared/home.nix
                 ];
               };
@@ -67,7 +66,6 @@
                 imports = [
                   spicetify-nix.homeManagerModules.default
                   catppuccin.homeModules.catppuccin
-                  vicinae.homeManagerModules.default
 
                   ./shared/home.nix
                   stylix.homeModules.stylix
@@ -98,7 +96,7 @@
 
                 imports = [
                   spicetify-nix.homeManagerModules.default
-                  vicinae.homeManagerModules.default
+                  # vicinae.homeManagerModules.default
                   catppuccin.homeModules.catppuccin
                   ./shared/home.nix
                   stylix.homeModules.stylix

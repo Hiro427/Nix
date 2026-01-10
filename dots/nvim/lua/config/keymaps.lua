@@ -54,3 +54,60 @@ local imap_expr = function(lhs, rhs)
 end
 imap_expr("<Tab>", [[pumvisible() ? "\<C-n>" : "\<Tab>"]])
 imap_expr("<S-Tab>", [[pumvisible() ? "\<C-p>" : "\<S-Tab>"]])
+
+vim.keymap.set("n", "<leader><space>", ":Pick files<CR>", { desc = "Find Files (mini)", silent = true })
+vim.keymap.set("n", "<leader>fr", ":Pick oldfiles<CR>", { desc = "Find Recent Files (mini)", silent = true })
+vim.keymap.set("n", "<leader>fm", ":Pick marks<CR>", { desc = "Find Marks (mini)", silent = true })
+vim.keymap.set("n", "<leader>fc", ":Pick commands<CR>", { desc = "Find Commands (mini)", silent = true })
+vim.keymap.set(
+	"n",
+	"<leader>fb",
+	":Pick buffers include_current=false<CR>",
+	{ desc = "Find Buffers (mini)", silent = true }
+	--
+)
+vim.keymap.set("n", "<leader>fd", ":Pick diagnostic<CR>", { desc = "Find Symbols (mini)", silent = true })
+vim.keymap.set("n", "<leader>fk", ":Pick keymaps<CR>", { desc = "Find Symbols (mini)", silent = true })
+vim.keymap.set("n", "<leader>fh", ":Pick help<CR>", { desc = "Find help (mini)", silent = true })
+vim.keymap.set(
+	"n",
+	"<leader>fq",
+	":Pick list scope='quickfix'<CR>",
+	{ desc = "Search Quickfix List (mini)", silent = true }
+)
+vim.keymap.set("n", "<leader>fg", ":Pick grep_live<CR>", { desc = "Find Grep Match (mini)", silent = true })
+vim.keymap.set("n", "<leader>fl", ":Pick buf_lines scope='current'<CR>", { desc = "Find Lines (mini)", silent = true })
+vim.keymap.set(
+	"n",
+	"<leader>fs",
+	":Pick lsp scope='document_symbol'<CR>",
+	{ desc = "Find Symbols (mini)", silent = true }
+)
+vim.keymap.set("n", "<leader>gb", ":Pick git_branches<CR>", { desc = "Find Git Branches (mini)", silent = true })
+vim.keymap.set("n", "<leader>gc", ":Pick git_commits<CR>", { desc = "Find Git Commits (mini)", silent = true })
+vim.keymap.set(
+	"n",
+	"<leader>fS",
+	":Pick lsp scope='workspace_symbol'<CR>",
+	{ desc = "Find Symbols (mini)", silent = true }
+)
+
+vim.keymap.set("n", "<leader>ft", function()
+	require("mini.pick").builtin.grep({
+		pattern = "TODO|FIXME|HACK|NOTE",
+		command = { "rg", "--no-heading", "--line-number", "--column" },
+		prompt = "Find TODOs > ",
+	})
+end, { desc = "Find TODO comments (mini)", silent = true })
+
+vim.keymap.set("n", "<leader>e", ":lua MiniFiles.open()<CR>", { desc = "Toggle Mini Files", silent = true })
+
+-- Mini Move Mappings
+vim.keymap.set("v", ":<S-h>", ":lua MiniMove.move_selection('left')<CR>", { desc = "Move Selection (left)" })
+vim.keymap.set("v", ":<S-l>", ":lua MiniMove.move_selection('right')<CR>", { desc = "Move Selection (right)" })
+vim.keymap.set("v", ":<S-k>", ":lua MiniMove.move_selection('up')<CR>", { desc = "Move Selection (up)" })
+vim.keymap.set("v", ":<S-j>", ":lua MiniMove.move_selection('down')<CR>", { desc = "Move Selection (down)" })
+vim.keymap.set("v", ":<S-h>", ":lua MiniMove.move_line('left')<CR>", { desc = "Move line (left)" })
+vim.keymap.set("v", ":<S-l>", ":lua MiniMove.move_line('right')<CR>", { desc = "Move line (right)" })
+vim.keymap.set("v", ":<S-k>", ":lua MiniMove.move_line('up')<CR>", { desc = "Move line (up)" })
+vim.keymap.set("v", ":<S-j>", ":lua MiniMove.move_line('down')<CR>", { desc = "Move line (down)" })

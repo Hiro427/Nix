@@ -94,5 +94,6 @@ with pkgs; [
   python3Packages.adblock
   pastel
   mpvpaper
+  vicinae
 ]
 

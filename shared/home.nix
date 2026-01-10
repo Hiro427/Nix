@@ -139,9 +139,12 @@ in {
     # you can also override background alpha instead:
     # settings.colors.background = lib.mkOverride 60 "#1e1e2ecc";
   };
-  services.vicinae = {
+  programs.vicinae = {
     enable = true; # default: true
-    # autoStart = true; # default: true
+    systemd = {
+      enable = true;
+      autoStart = true;
+    };
     # settings = {
     #   font.size = 12;
     #   theme.name = "github_dark_high_contrast";

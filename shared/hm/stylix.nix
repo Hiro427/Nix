@@ -19,6 +19,7 @@
       helix.enable = false;
       zed.enable = false;
       sway.enable = false;
+      vicinae.enable = true;
       # foot.enable = false;
       # waybar.enable = false;
     };

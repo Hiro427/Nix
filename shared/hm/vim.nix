@@ -1,4 +1,16 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+let
+  fuzzbox = pkgs.vimUtils.buildVimPlugin {
+    name = "vim-fuzzbox";
+    src = pkgs.fetchFromGitHub {
+      owner = "vim-fuzzbox";
+      repo = "fuzzbox.vim";
+      rev = "6345ff5a3b0770271315a8809d6bfbad34c0b851";
+      hash = "sha256-5zJ5uHOPZCCZYbcs9AaAKJugUwRkGWlVBUGVkGoxss0=";
+    };
+  };
+in {
+
   programs.vim = {
     enable = true;
     extraConfig = ''
@@ -23,8 +35,9 @@
       let &t_SI = "\e[6 q" 
       let &t_SR = "\e[4 q" 
       let &t_EI = "\e[2 q"
-      set eob = " " 
-      let mapleader = "\<Space>"
+      set fillchars+=eob:\ 
+      let mapleader = " "
+      let maplocalleader = "\\"
       let &t_ut=""
       set laststatus=0
       set noshowmode 
@@ -52,6 +65,8 @@
       let g:go_highlight_variable_assignments = 1
       let g:go_highlight_function_calls = 1   
 
+      let g:fuzzbox_mappings = 0
+
       map f <Plug>Sneak_f
       map F <Plug>Sneak_F
       map t <Plug>Sneak_t
@@ -59,18 +74,8 @@
 
       nmap <CR> <Plug>(easymotion-w)
 
-      inoremap <expr> <Tab> pumvisible() ? "\<C-n>" :
-      \ getline('.')[col('.')-1] =~ '[)}\]"' ? "\<Right>" : "\<Tab>"
-
-      nnoremap <silent><Leader>e :NERDTreeToggle<CR> 
-      nnoremap <silent> <leader>ff :w<CR> :Files<CR>
-      nnoremap <silent> <leader>fb :w<CR> :Buffers<CR>
-      nnoremap <silent> <leader>fg :w<CR> :RG<CR>
-      nnoremap <silent> <leader>fM :Marks<CR>
-      nnoremap <silent> <leader>fm :BMarks<CR>
-      nnoremap <silent> <leader>fl :BLines<CR>
-      nnoremap <silent> <leader>fk :Maps<CR>
-      nnoremap <silent> <leader>fc :Commands<CR>
+      nnoremap <silent><Leader>e :NERDTreeToggle<CR>
+      nnoremap <silent> <leader><leader> :FuzzyFiles<CR>
 
       nnoremap <silent> <leader>wl <C-w>l<CR>
       nnoremap <silent> <leader>wh <C-w>h<CR>
@@ -96,15 +101,15 @@
       vim-surround
       zig-vim
       rust-vim
-      nerdtree
-      vim-startify
-      vim-devicons
-      fzf-vim
       vim-go
+      nerdtree
+      vim-devicons
       vim-polyglot
       auto-pairs
       YouCompleteMe
       vim-easymotion
+      fuzzbox
+      vim-gitgutter
     ];
 
   };

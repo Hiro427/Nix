@@ -22,18 +22,24 @@
         line-number = "relative";
         true-color = true;
         bufferline = "always";
+        #disable auto_completion
         preview-completion-insert = true;
         completion-trigger-len = 1;
         # completion-replace = false;
         auto-format = true;
-        end-of-line-diagnostics = "hint";
+        auto-completion = true;
+        auto-info = false;
+        end-of-line-diagnostics = "disable"; # hint, warning, error, disable
       };
       editor.cursor-shape = {
         insert = "bar";
         normal = "block";
         select = "underline";
       };
-      editor.inline-diagnostics = { cursor-line = "warning"; };
+      editor.inline-diagnostics = {
+        cursor-line = "hint";
+        other-lines = "disable";
+      };
       editor.indent-guides = {
         render = true;
         # rainbow-option = "dim";
@@ -43,12 +49,16 @@
         snippets = true;
         enable = true;
         display-messages = true;
-        display-inlay-hints = true;
+        display-inlay-hints = false;
       };
       editor.statusline = {
         left = [ "version-control" "spinner" ];
-        center = [ "file-modification-indicator" "file-base-name" ];
-        right = [ "workspace-diagnostics" "read-only-indicator" ];
+        center = [ "workspace-diagnostics" ];
+        right = [
+          "file-modification-indicator"
+          "file-base-name"
+          "read-only-indicator"
+        ];
         separator = "│";
       };
       keys.normal = {
@@ -56,8 +66,6 @@
         C-r = [ ":earlier" ];
         space.q = [ ":lsp-stop" ":write-quit-all" ];
         space.r = "repeat_last_motion";
-
-        space.d = "hover";
 
         space.y.y = ":clipboard-yank";
         space.f.j = "jumplist_picker";
@@ -76,7 +84,10 @@
         space.w.b = ":write-buffer-close";
         space.h.s = ":hsplit";
         space.v.s = ":vsplit";
-        space.l.i = ":toggle lsp.display-inlay-hints";
+        space.t.i = ":toggle lsp.display-inlay-hints";
+        space.t.c = ":toggle auto-completion";
+        space.t.k = ":toggle auto-info";
+        space.l.d = "hover";
         space.l.r = "rename_symbol";
         space.h.a =
           ":sh ~/Nix/dots/scripts/marks.sh --add-file '%sh{pwd}/%{buffer_name}' ";
@@ -87,7 +98,7 @@
         space.h.c = ":open %sh{~/Nix/dots/scripts/marks.sh --file 3}";
         space.h.v = ":open %sh{~/Nix/dots/scripts/marks.sh --file 4}";
         space.h.b = ":open %sh{~/Nix/dots/scripts/marks.sh --file 5}";
-        space.t = ''
+        space.t.t = ''
           :sh if [ -n "$TMUX" ]; then tmux split-pane -v; tmux resize-pane -D 5; fi '';
         s.m.b = [ "select_mode" "match_brackets" ];
         m.b = [ "match_brackets" ];
