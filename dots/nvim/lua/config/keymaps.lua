@@ -49,11 +49,11 @@ end, { desc = "Delete a single mark" })
 
 vim.keymap.set("n", "<leader>dm", ":delm! | delm A-Z0-9<CR>", { desc = "Clear Marks", silent = true })
 
-local imap_expr = function(lhs, rhs)
-	vim.keymap.set("i", lhs, rhs, { expr = true })
-end
-imap_expr("<Tab>", [[pumvisible() ? "\<C-n>" : "\<Tab>"]])
-imap_expr("<S-Tab>", [[pumvisible() ? "\<C-p>" : "\<S-Tab>"]])
+-- local imap_expr = function(lhs, rhs)
+-- 	vim.keymap.set("i", lhs, rhs, { expr = true })
+-- end
+-- imap_expr("<Tab>", [[pumvisible() ? "\<C-n>" : "\<Tab>"]])
+-- imap_expr("<S-Tab>", [[pumvisible() ? "\<C-p>" : "\<S-Tab>"]])
 
 vim.keymap.set("n", "<leader><space>", ":Pick files<CR>", { desc = "Find Files (mini)", silent = true })
 vim.keymap.set("n", "<leader>fr", ":Pick oldfiles<CR>", { desc = "Find Recent Files (mini)", silent = true })
@@ -101,13 +101,3 @@ vim.keymap.set("n", "<leader>ft", function()
 end, { desc = "Find TODO comments (mini)", silent = true })
 
 vim.keymap.set("n", "<leader>e", ":lua MiniFiles.open()<CR>", { desc = "Toggle Mini Files", silent = true })
-
--- Mini Move Mappings
-vim.keymap.set("v", ":<S-h>", ":lua MiniMove.move_selection('left')<CR>", { desc = "Move Selection (left)" })
-vim.keymap.set("v", ":<S-l>", ":lua MiniMove.move_selection('right')<CR>", { desc = "Move Selection (right)" })
-vim.keymap.set("v", ":<S-k>", ":lua MiniMove.move_selection('up')<CR>", { desc = "Move Selection (up)" })
-vim.keymap.set("v", ":<S-j>", ":lua MiniMove.move_selection('down')<CR>", { desc = "Move Selection (down)" })
-vim.keymap.set("v", ":<S-h>", ":lua MiniMove.move_line('left')<CR>", { desc = "Move line (left)" })
-vim.keymap.set("v", ":<S-l>", ":lua MiniMove.move_line('right')<CR>", { desc = "Move line (right)" })
-vim.keymap.set("v", ":<S-k>", ":lua MiniMove.move_line('up')<CR>", { desc = "Move line (up)" })
-vim.keymap.set("v", ":<S-j>", ":lua MiniMove.move_line('down')<CR>", { desc = "Move line (down)" })

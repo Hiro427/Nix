@@ -70,7 +70,7 @@
       keybindings = {
         #Applications
         "Mod4+Return" = "exec foot, workspace 2";
-        "Mod4+f" = "exec nautilus";
+        "Mod4+f" = "exec pcmanfm";
         "Mod4+b" = "exec zen-beta, workspace 1";
         "Ctrl+space" = "exec flameshot gui";
         # "Mod4+s" = "exec kitty --class spt spotify_player, workspace 3";

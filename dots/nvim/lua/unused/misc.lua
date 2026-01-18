@@ -9,7 +9,7 @@ return {
 	},
 	{
 		"abecodes/tabout.nvim",
-		lazy = false,
+		lazy = true,
 		config = function()
 			require("tabout").setup({
 				completion = false, -- if the tabkey is used in a completion pum

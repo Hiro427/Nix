@@ -56,7 +56,6 @@ with pkgs; [
   nix-index
   lazydocker
   awscli
-  gemini-cli
   asciiquarium
   exercism
   pipx
@@ -78,7 +77,7 @@ with pkgs; [
   youtube-tui
   ani-cli
   posting
-  electron-chromedriver_37
+  chromedriver
   chromium
   xwinwrap
   gifsicle

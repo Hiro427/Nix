@@ -4,8 +4,8 @@ return {
 		lazy = false,
 		config = function()
 			local capabilities = vim.lsp.protocol.make_client_capabilities()
-
-			-- capabilities = require("blink.cmp").get_lsp_capabilities(capabilities)
+			capabilities = require("blink.cmp").get_lsp_capabilities(capabilities)
+			-- capabilities = require("mini.completion").get_lsp_capabilities(capabilities)
 			capabilities.textDocument.completion.completionItem.snippetSupport = true
 			capabilities.textDocument.completion.completionItem.resolveSupport = {
 				properties = { "documentation", "detail" },
@@ -46,6 +46,11 @@ return {
 				"cmake",
 				"kotlin_language_server",
 			})
+			-- vim.lsp.config.luals = {
+			-- 	diagnostics = {
+			-- 		globals = { "vim" },
+			-- 	},
+			-- }
 		end,
 	},
 	vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "LSP Rename Symbol" }),

@@ -1,6 +1,18 @@
 return {
-	{ "nvim-tree/nvim-web-devicons", lazy = true },
-
+	{
+		"catgoose/nvim-colorizer.lua",
+		event = "BufReadPre",
+		opts = { -- set to setup table
+		},
+		config = function()
+			require("colorizer").setup({
+				user_default_options = {
+					tailwind = true,
+					-- virtualtext_inline = true,
+				},
+			})
+		end,
+	},
 	{
 		"folke/lazydev.nvim",
 		ft = "lua", -- only load on lua files
@@ -10,7 +22,6 @@ return {
 			},
 		},
 	},
-
 	{
 		"MeanderingProgrammer/render-markdown.nvim",
 		opts = {},
