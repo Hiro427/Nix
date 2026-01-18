@@ -23,7 +23,7 @@ main() {
 	# --preview-border='double'
 
 	mapfile -t directories < <(find_dirs)
-	directories+=("/home/jacobrambarran/Nix")
+	directories+=("/home/jacob/Nix")
 
 	if [ -n "$TMUX" ]; then
 		sel_dir=$(printf '%s\n' "${directories[@]}" 2>/dev/null | fzf-tmux -p50%,30% "${fzf_args[@]}" 2>/dev/null)

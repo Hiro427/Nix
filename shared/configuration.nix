@@ -16,7 +16,7 @@
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  nix.settings.trusted-users = [ "root" "jacobrambarran" ];
+  nix.settings.trusted-users = [ "root" "jacob" ];
 
   # Enable networking
 
@@ -95,9 +95,16 @@
   hardware.enableAllFirmware = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.jacobrambarran = {
+  users.users.jacob = {
     isNormalUser = true;
-    description = "Jacob Rambarran";
+    description = "Jacob";
+    shell = pkgs.zsh;
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
+  };
+
+  users.users.guest = {
+    isNormalUser = true;
+    description = "Guest";
     shell = pkgs.zsh;
     extraGroups = [ "networkmanager" "wheel" "docker" ];
   };

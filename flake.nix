@@ -32,7 +32,7 @@
             ({ config, ... }: {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.jacobrambarran = { pkgs, ... }: {
+              home-manager.users.jacob = { pkgs, ... }: {
                 _module.args = { inherit inputs; };
 
                 imports = [
@@ -61,7 +61,7 @@
             ({ config, ... }: {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.jacobrambarran = { pkgs, ... }: {
+              home-manager.users.jacob = { pkgs, ... }: {
                 _module.args = { inherit inputs; };
                 imports = [
                   spicetify-nix.homeManagerModules.default
@@ -91,7 +91,7 @@
             ({ config, ... }: {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.jacobrambarran = { pkgs, ... }: {
+              home-manager.users.jacob = { pkgs, ... }: {
                 _module.args = { inherit inputs; };
 
                 imports = [

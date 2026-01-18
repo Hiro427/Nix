@@ -7,10 +7,9 @@ let
 in {
   _module.args.theme = theme;
 
-  home.username = "jacobrambarran";
-  home.homeDirectory = "/home/jacobrambarran";
+  home.username = "jacob";
+  home.homeDirectory = "/home/jacob";
   home.sessionVariables = {
-    # HOME = "/home/jacobrambarran/";
     GOPATH = "$HOME/.go";
     GPUI_X11_SCALING_FACTOR = "1";
   };
