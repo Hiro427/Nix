@@ -54,7 +54,7 @@ config.pane_select_font_size = 24
 --
 -- config.webgpu_force_fallback_adapter = true
 
--- File = "/home/jacobrambarran/wallpapers/cat-vibin.png"
+-- File = "/home/jacob/wallpapers/cat-vibin.png"
 -- config.window_background_image = File
 -- config.window_background_image_hsb = {
 -- 	brightness = 0.3,

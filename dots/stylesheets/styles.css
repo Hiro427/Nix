@@ -2,8 +2,8 @@
 
 
 :root {
-  /* --main-bg-color: #191724; */
-  --main-bg-color: #282828;
+  --main-bg-color: #191724;
+  /* --main-bg-color: #282828; */
 }
 
 /* transparency */
@@ -80,7 +80,9 @@ body,
 /* no footer */
 .footer[data-v-0165744a] {
   display: none !important;
-}/* not my stylesheet. see link to author: https://github.com/sameerasw/my-internet/tree/main */
+}
+
+/* not my stylesheet. see link to author: https://github.com/sameerasw/my-internet/tree/main */
 
 
 
@@ -538,7 +540,9 @@ body:has(header > .search-expanded) .application-main {
 }
 }
 }
-}/* not my stylesheet. see link to author: https://github.com/sameerasw/my-internet/tree/main */
+}
+
+/* not my stylesheet. see link to author: https://github.com/sameerasw/my-internet/tree/main */
 
 
 
@@ -573,7 +577,9 @@ section,
 /* no footer */
 footer {
   display: none !important;
-}/* not my stylesheet. see link to author: https://github.com/sameerasw/my-internet/tree/main */
+}
+
+/* not my stylesheet. see link to author: https://github.com/sameerasw/my-internet/tree/main */
 
 
 
@@ -689,7 +695,9 @@ shreddit-comment[depth="0"] {
 /* no ads */
 shreddit-ad-post {
   display: none !important;
-}/* not my stylesheet. see link to author: https://github.com/sameerasw/my-internet/tree/main */
+}
+
+/* not my stylesheet. see link to author: https://github.com/sameerasw/my-internet/tree/main */
 
 
 
@@ -729,7 +737,9 @@ span:has(a[href="/terms-of-service"]),
 [style="clip-path: inset(0px 12px 0px 0px);"],
 .fixed.right-0.top-0 .ease-snappy svg {
   display: none !important;
-}/* not my stylesheet. see link to author: https://github.com/sameerasw/my-internet/tree/main */
+}
+
+/* not my stylesheet. see link to author: https://github.com/sameerasw/my-internet/tree/main */
 
 
 
@@ -896,7 +906,9 @@ mfe-footer-pharos-footer,
 .footer,
 #footer {
   display: none !important;
-}/* not my stylesheet. see link to author: https://github.com/sameerasw/my-internet/tree/main */
+}
+
+/* not my stylesheet. see link to author: https://github.com/sameerasw/my-internet/tree/main */
 
 
 /* yt-Transparency */
