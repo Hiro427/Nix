@@ -102,12 +102,6 @@
     extraGroups = [ "networkmanager" "wheel" "docker" ];
   };
 
-  users.users.guest = {
-    isNormalUser = true;
-    description = "Guest";
-    shell = pkgs.zsh;
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
-  };
   boot.extraModprobeConfig = ''
     options hid_apple fnmode=1
   '';
