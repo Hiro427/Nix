@@ -95,6 +95,5 @@ with pkgs; [
   mpvpaper
   vicinae
   mediawriter
-  kvantum
 ]
 
