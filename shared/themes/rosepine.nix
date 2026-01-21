@@ -7,21 +7,21 @@
   helixTheme = "rose_pine";
   i3statusTheme = "${config.home.homeDirectory}/Nix/dots/assets/rosepine.toml";
   i3Colors = {
-    background = "#191724"; # base
+    background = "#191724";
     inactiveWorkspace = {
-      background = "#1f1d2e"; # surface
-      border = "#1f1d2e"; # surface
-      text = "#6e6a86"; # muted
+      background = "#1f1d2e";
+      border = "#1f1d2e";
+      text = "#6e6a86";
     };
     focusedWorkspace = {
-      background = "#ebbcba"; # pine
-      border = "#ebbcba"; # foam
-      text = "#26233a"; # text
+      background = "#ebbcba";
+      border = "#ebbcba";
+      text = "#26233a";
     };
     urgentWorkspace = {
-      background = "#eb6f92"; # love
-      border = "#eb6f92"; # love
-      text = "#191724"; # base
+      background = "#eb6f92";
+      border = "#eb6f92";
+      text = "#191724";
     };
   };
 

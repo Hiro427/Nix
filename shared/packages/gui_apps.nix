@@ -30,4 +30,5 @@ with pkgs; [
   maestral-gui
   obsidian
   figma-linux
+  kdePackages.okular
 ]

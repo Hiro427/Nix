@@ -141,6 +141,7 @@
         "1" = [
           { app_id = "zen-beta"; } # Native Wayland
           { class = "zen"; } # XWayland fallback
+          { app_id = "brave-browser"; }
         ];
         "2" = [
           # { app_id = "org.wezfurlong.wezterm"; }
