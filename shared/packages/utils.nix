@@ -94,5 +94,7 @@ with pkgs; [
   pastel
   mpvpaper
   vicinae
+  mediawriter
+  kvantum
 ]
 
