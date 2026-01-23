@@ -64,7 +64,8 @@ status() {
 		name=$(jq -r ".projects[$count].name" "$PROJECT")
 
 		if [[ ! -d "$HOME/$path" ]]; then
-			git clone "$REMOTE/${name}.git" "$HOME/${path}"
+			mkdir -p "$HOME/$path"
+			git clone "git@github.com:Hiro427${name}.git" "$HOME${path}"
 		fi
 
 		cd "$HOME/$path" || echo "error in path: ${path}"
@@ -112,7 +113,7 @@ update() {
 		name=$(jq -r ".projects[$count].name" "$PROJECT")
 
 		if [[ ! -d "$HOME/$path" ]]; then
-			git clone "$REMOTE/${name}.git" "$HOME/${path}"
+			git clone "$REMOTE${name}.git" "$HOME/${path}"
 		fi
 
 		cd "$HOME/$path" || echo "error in path: ${path}"
