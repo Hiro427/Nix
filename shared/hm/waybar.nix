@@ -4,8 +4,7 @@
     settings = {
       mainBar = {
         layer = "top";
-        position = "top";
-        height = 40;
+        position = "bottom";
         modules-left = [ "sway/workspaces" ];
         modules-center = [ "clock" "mpris" ];
         modules-right = [
@@ -237,9 +236,15 @@
     #   padding: 0;
     # }
 
+    # .modules-left, .modules-right, .modules-center {
+    #   background-color: @base00; 
+    #   border-radius: 10px;
+    #   margin: 3px;
+    #   border: none;
+    # }
     style = ''
       * {
-        font-size: 14px;           
+        font-size: 12px;           
         padding: 0;
         margin: 0;
       }
@@ -248,14 +253,13 @@
         border: none;
         padding: 0;
         color: @base05;
-        background-color: transparent;
       }
 
 
 
       window#waybar #window {
         border: none;
-        padding: 2px;
+        padding: 0px;
         color: @base09;
       }
 
@@ -268,9 +272,6 @@
 
       .modules-left, .modules-right, .modules-center {
         background-color: @base00; 
-        border-radius: 10px;
-        margin: 3px;
-        border: none;
       }
 
       .modules-left #workspaces button.urgent {

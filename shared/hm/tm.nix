@@ -13,7 +13,7 @@
       set-option -g allow-passthrough on
 
       set -ga terminal-overrides ",xterm-256color:Tc"
-      set -g status-position bottom
+      # set -g status-position top
 
       set -s escape-time 0
       unbind %
@@ -59,7 +59,8 @@
       set -g @tmux-dotbar-bg "${theme.tmuxBarColors.dotbar-bg}"
       set -g @tmux-dotbar-fg-current "${theme.tmuxBarColors.dotbar-fg-current}"
       set -g @tmux-dotbar-fg-session "${theme.tmuxBarColors.dotbar-fg-session}"
-      set -g @tmux-dotbar-fg-prefix "${theme.tmuxBarColors.dotbar-fg-prefix}"            
+      set -g @tmux-dotbar-fg-prefix "${theme.tmuxBarColors.dotbar-fg-prefix}"
+      set -g @tmux-dotbar-position "bottom"            
       set -g @tmux-dotbar-right "true"
       # set -g @tmux-dotbar-bold-current-window false
       set -g @tmux-dotbar-bold-status false

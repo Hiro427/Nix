@@ -7,7 +7,7 @@
     autoEnable = true;
     iconTheme = {
       enable = true;
-      package = pkgs.papirus-icon-theme; # or your preferred icon theme package
+      package = pkgs.papirus-icon-theme;
       dark = "Papirus-Dark";
       light = "Papirus-Dark";
     };
