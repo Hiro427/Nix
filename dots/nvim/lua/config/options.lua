@@ -5,7 +5,7 @@ vim.cmd("set shiftwidth=4")
 vim.cmd("set cursorline")
 vim.cmd("set conceallevel=1")
 vim.cmd("set pumheight=8")
-vim.cmd("colorscheme tokyonight-storm")
+vim.cmd("colorscheme catppuccin-mocha")
 vim.o.background = "dark"
 
 vim.o.ignorecase = true -- Ignore casing when searching

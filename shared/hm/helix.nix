@@ -210,7 +210,7 @@
         }
         {
           name = "python";
-          language-servers = [ "ruff" "pylsp" ];
+          language-servers = [ "ruff" "pylsp" "uwu_colors" ];
           auto-format = true;
         }
         {

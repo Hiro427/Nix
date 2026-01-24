@@ -30,12 +30,12 @@
   swaycolors = {
     uborder = "#6e6a86";
     border = "#31748f";
-    bg = "#191724";
+    bg = "#1e1e2e";
     fg = "#908caa";
   };
   tmuxBarColors = {
     dotbar-fg = "#313244";
-    dotbar-bg = "#11111b";
+    dotbar-bg = "#1e1e2e";
     dotbar-fg-current = "#cdd6f4";
     dotbar-fg-session = "";
     dotbar-fg-prefix = "#f7768e";

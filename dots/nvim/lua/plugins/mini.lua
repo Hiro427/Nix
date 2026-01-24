@@ -5,7 +5,7 @@ return {
 		config = function()
 			require("mini.indentscope").setup({ draw = { delay = 50 }, symbol = "│" })
 			require("mini.pairs").setup()
-			require("mini.splitjoin").setup()
+			require("mini.ai").setup()
 			require("mini.surround").setup()
 			require("mini.diff").setup()
 			require("mini.git").setup()
