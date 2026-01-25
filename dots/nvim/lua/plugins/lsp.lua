@@ -53,6 +53,6 @@ return {
 			-- }
 		end,
 	},
-	vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "LSP Rename Symbol" }),
+	vim.keymap.set("n", "<leader>lr", vim.lsp.buf.rename, { desc = "LSP Rename Symbol" }),
 	vim.keymap.set("n", "<leader>ld", vim.lsp.buf.hover, { desc = "LSP Hover/Show Docs" }),
 }
