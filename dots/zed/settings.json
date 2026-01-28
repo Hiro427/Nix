@@ -67,7 +67,7 @@
     "metrics": false
   },
   "theme": {
-    "dark": "Tokyo Night Storm",
+    "dark": "Catppuccin Mocha",
     "light": "Catppuccin Latte",
     "mode": "dark"
   },

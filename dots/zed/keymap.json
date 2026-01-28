@@ -114,13 +114,6 @@
     "context": "Terminal"
   },
   {
-    "bindings": {
-      "shift-tab": "editor::Tab",
-      "tab": "editor::MoveRight"
-    },
-    "context": "Editor && vim_mode == insert"
-  },
-  {
     "context": "(FileFinder || FileFinder > Picker  > Editor)",
     "bindings": {
       "ctrl-s": "file_finder::ToggleSplitMenu"
@@ -142,5 +135,13 @@
         }
       ]
     }
-  }
+  },
+    {
+    "context": "Editor && vim_mode == insert && !in_snippet && !showing_completions",
+"bindings": {
+  "tab": "editor::MoveToEndOfLargerSyntaxNode",
+  "shift-tab": "editor::Tab"
+},
+}
+
 ]

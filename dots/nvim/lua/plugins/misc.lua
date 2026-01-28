@@ -1,5 +1,12 @@
 return {
 	{
+		"kawre/neotab.nvim",
+		event = "InsertEnter",
+		opts = {
+			-- configuration goes here
+		},
+	},
+	{
 		"catgoose/nvim-colorizer.lua",
 		event = "BufReadPre",
 		opts = { -- set to setup table
