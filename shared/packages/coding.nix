@@ -14,6 +14,7 @@ with pkgs; [
   python312Packages.nuitka
   basedpyright
   python313Packages.python-lsp-server
+  python313Packages.black
   pyright
   nodejs_22
   lua
@@ -134,4 +135,6 @@ with pkgs; [
   elixir-ls
   elixir
   uwu-colors # lsp to get hex colors etc in documents (for helix)
+  vue
+  vue-language-server
 ]

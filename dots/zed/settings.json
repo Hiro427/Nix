@@ -13,6 +13,7 @@
     "dockerfile": true,
     "env": true,
     "golangci-lint": true,
+        "haskell": true,
     "java": true,
     "lua": true,
     "make": true,
@@ -27,6 +28,7 @@
     "toml": true,
     "xml": true,
     "zig": true,
+    "vue": true,
     "svelte": true,
     "svelte snippets": true,
     "go snippets": true,
@@ -37,6 +39,7 @@
   "autosave": "on_focus_change",
   "buffer_font_family": "JetBrainsMono Nerd Font",
   "confirm_quit": true,
+    "disable_ai": true,
   "relative_line_numbers": "enabled",
   "features": {
     "edit_prediction_provider": "none"
