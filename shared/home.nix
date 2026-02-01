@@ -1,6 +1,6 @@
 { config, pkgs, catppuccin, lib, ... }:
 let
-  theme = import ./themes/catppuccin.nix {
+  theme = import ./themes/gruvbox.nix {
     inherit pkgs;
     inherit config;
   };

@@ -21,7 +21,7 @@
       editor = {
         line-number = "relative";
         true-color = true;
-        bufferline = "always";
+        # bufferline = "always";
         #disable auto_completion
         preview-completion-insert = true;
         completion-trigger-len = 1;
@@ -29,7 +29,7 @@
         auto-format = true;
         auto-completion = true;
         auto-info = false;
-        end-of-line-diagnostics = "disable"; # hint, warning, error, disable
+        end-of-line-diagnostics = "error"; # hint, warning, error, disable
       };
       editor.cursor-shape = {
         insert = "bar";
@@ -38,7 +38,7 @@
       };
       editor.inline-diagnostics = {
         cursor-line = "hint";
-        other-lines = "disable";
+        other-lines = "error";
       };
       editor.indent-guides = {
         render = true;

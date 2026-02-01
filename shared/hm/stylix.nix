@@ -5,7 +5,7 @@
     # base16Scheme = "${pkgs."base16-schemes"}/share/themes/catppuccin-mocha.yaml";
     base16Scheme = theme.base16Scheme;
     autoEnable = true;
-    iconTheme = {
+    icons = {
       enable = true;
       package = pkgs.papirus-icon-theme;
       dark = "Papirus-Dark";

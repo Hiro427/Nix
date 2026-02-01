@@ -109,7 +109,7 @@ with pkgs; [
   prometheus-php-fpm-exporter
   symfony-cli
   ncurses
-  nixfmt-classic
+  nixfmt
   prettierd
   nim
   nimble

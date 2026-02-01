@@ -56,7 +56,7 @@
       c = "cd ..";
       e = "exit";
       h = "hx .";
-      ns = "";
+      ns = "nix-shell --run $SHELL";
       activate = "source .venv/bin/activate";
       s = "cd - >> /dev/null";
       v = "nvim";

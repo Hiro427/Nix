@@ -6,7 +6,10 @@
         layer = "top";
         position = "bottom";
         modules-left = [ "sway/workspaces" ];
-        modules-center = [ "clock" "mpris" ];
+        modules-center = [
+          "clock"
+          # "mpris"
+        ];
         modules-right = [
           "temperature"
           "cpu"
