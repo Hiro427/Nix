@@ -22,7 +22,7 @@
       "space e": "project_panel::ToggleFocus",
       "space g": "git_panel::ToggleFocus",
       "space h": "workspace::NewFileSplitHorizontal",
-      "space l": "workspace::ToggleLeftDock",
+      // "space l": "workspace::ToggleLeftDock",
       "space o": "workspace::OpenFiles",
       "space q": "pane::CloseActiveItem",
       "space o p": [
@@ -32,7 +32,7 @@
           "reveal_target": "center"
         }
       ],
-      "space f l": "buffer_search::Deploy",
+      // "space l": "buffer_search::Deploy",
       "space r": "editor::Rename",
       "space s": "outline::Toggle",
       "space space": "file_finder::Toggle",
@@ -41,11 +41,11 @@
       "space j": "pane::ActivateNextItem",
       "space k": "pane::ActivatePreviousItem",
       "space v": "workspace::NewFileSplitVertical",
-      "space f r": "projects::OpenRecent",
-      "space f s": "outline::Toggle",
-      "space f d": "diagnostics::Deploy",
-      "space f g": "pane::DeploySearch",
-      "space f b": "tab_switcher::ToggleAll",
+      "space r": "projects::OpenRecent",
+      "space s": "outline::Toggle",
+      "space d": "diagnostics::Deploy",
+      "space g": "pane::DeploySearch",
+      "space b": "tab_switcher::ToggleAll",
       "space g b": "git::CheckoutBranch",
       "g j": "editor::GoToDiagnostic",
       "g k": "editor::GoToPreviousDiagnostic",
@@ -136,12 +136,11 @@
       ]
     }
   },
-    {
+  {
     "context": "Editor && vim_mode == insert && !in_snippet && !showing_completions",
-"bindings": {
-  "tab": "editor::MoveToEndOfLargerSyntaxNode",
-  "shift-tab": "editor::Tab"
-},
-}
-
+    "bindings": {
+      "tab": "editor::MoveToEndOfLargerSyntaxNode",
+      "shift-tab": "editor::Tab"
+    },
+  }
 ]

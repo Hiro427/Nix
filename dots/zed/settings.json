@@ -1,19 +1,22 @@
 {
   "terminal": {
-    "dock": "bottom"
+    "dock": "bottom",
+    "font_family": "JetBrainsMono Nerd Font",
+    "button": false
   },
   "auto_install_extensions": {
     "air": true,
     "catppuccin": true,
     "catppuccin icons": true,
     "csv": true,
+    "colored zed icons theme dark": true,
     "discord presence": true,
     "docker-compose": true,
     "git-firefly": true,
     "dockerfile": true,
     "env": true,
     "golangci-lint": true,
-        "haskell": true,
+    "haskell": true,
     "java": true,
     "lua": true,
     "make": true,
@@ -36,10 +39,38 @@
     "python snippets": true,
     "rosé pine": true
   },
+  "global_lsp_settings": {
+    "button": false
+  },
+  "chat_panel": {
+    "button": "never"
+  },
+  "outline_panel": {
+    "button": false
+  },
+  "project_panel": {
+    "button": false
+  },
+  "collaboration_panel": {
+    "button": false
+  },
+  "notification_panel": {
+    "button": false
+  },
+  "git_panel": {
+    "button": false
+  },
+  "search": {
+    "button": false
+  },
+  "debugger": {
+    "button": false
+  },
   "autosave": "on_focus_change",
   "buffer_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_size": 14,
   "confirm_quit": true,
-    "disable_ai": true,
+  "disable_ai": true,
   "relative_line_numbers": "enabled",
   "features": {
     "edit_prediction_provider": "none"
@@ -49,7 +80,7 @@
   },
   "format_on_save": "on",
   "formatter": "language_server",
-  "icon_theme": "Catppuccin Mocha",
+  "icon_theme": "Colored Zed Icons Theme Dark",
   "inlay_hints": {
     "enabled": false,
     "show_parameter_hints": false
@@ -70,14 +101,16 @@
     "metrics": false
   },
   "theme": {
-    "dark": "Catppuccin Mocha",
+    "dark": "Gruvbox Dark",
     "light": "Catppuccin Latte",
     "mode": "dark"
   },
   "ui_font_family": "JetBrainsMono Nerd Font",
+  "ui_font_size": 14,
   "use_auto_surround": true,
   "vim_mode": true,
   "diagnostics": {
+    "button": false,
     "inline": {
       "enabled": true
     }
