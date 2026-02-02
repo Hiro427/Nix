@@ -55,7 +55,7 @@ return {
 		"ellisonleao/gruvbox.nvim",
 		config = function()
 			require("gruvbox").setup({
-				transparent_mode = false,
+				transparent_mode = true,
 				inverse = false,
 			})
 		end,
