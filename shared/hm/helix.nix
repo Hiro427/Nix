@@ -84,11 +84,11 @@
         space.w.b = ":write-buffer-close";
         space.h.s = ":hsplit";
         space.v.s = ":vsplit";
-        space.t.i = ":toggle lsp.display-inlay-hints";
-        space.t.c = ":toggle auto-completion";
-        space.t.k = ":toggle auto-info";
+        space.l.c = ":toggle auto-completion";
+        space.l.k = ":toggle auto-info";
         space.l.d = "hover";
         space.l.r = "rename_symbol";
+        space.l.i = ":toggle lsp.display-inlay-hints";
         space.h.a =
           ":sh ~/Nix/dots/scripts/marks.sh --add-file '%sh{pwd}/%{buffer_name}' ";
         space.h.o = ":open /tmp/hxmarks";
@@ -98,7 +98,7 @@
         space.h.c = ":open %sh{~/Nix/dots/scripts/marks.sh --file 3}";
         space.h.v = ":open %sh{~/Nix/dots/scripts/marks.sh --file 4}";
         space.h.b = ":open %sh{~/Nix/dots/scripts/marks.sh --file 5}";
-        space.t.t = ''
+        space.t = ''
           :sh if [ -n "$TMUX" ]; then tmux split-pane -v; tmux resize-pane -D 5; fi '';
         s.m.b = [ "select_mode" "match_brackets" ];
         m.b = [ "match_brackets" ];
