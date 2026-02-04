@@ -95,5 +95,6 @@ with pkgs; [
   mpvpaper
   vicinae
   mediawriter
+  lsof
 ]
 
