@@ -96,5 +96,6 @@ with pkgs; [
   vicinae
   mediawriter
   lsof
+  nitch
 ]
 
