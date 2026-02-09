@@ -31,4 +31,5 @@ with pkgs; [
   obsidian
   figma-linux
   kdePackages.okular
+  retroarch-free
 ]
