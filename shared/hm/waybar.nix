@@ -6,10 +6,7 @@
         layer = "top";
         position = "bottom";
         modules-left = [ "sway/workspaces" ];
-        modules-center = [
-          "clock"
-          # "mpris"
-        ];
+        modules-center = [ "clock" "mpris" ];
         modules-right = [
           "temperature"
           "cpu"
@@ -92,7 +89,7 @@
             firefox = " ";
           };
           status-icons = { paused = "󰏤"; };
-          ignored-players = [ "vlc" "mpv" ];
+          ignored-players = [ "vlc" "mpv" "firefox" ];
         };
 
         cava = {
