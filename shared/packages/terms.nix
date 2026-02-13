@@ -1,10 +1,11 @@
-{pkgs, ...}: with pkgs; 
-[
-    wezterm 
-    kitty 
-    ghostty
-    xterm
-    zellij 
-    zsh 
-    starship
+{ pkgs, ... }:
+with pkgs; [
+  wezterm
+  kitty
+  ghostty
+  xterm
+  zellij
+  zsh
+  starship
+  cool-retro-term
 ]

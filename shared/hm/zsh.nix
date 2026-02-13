@@ -30,8 +30,7 @@
 
        export PATH="$HOME"/.nimble/bin:$PATH
 
-
-
+       colorscript -e suckless
     '';
     history = {
       append = true;
