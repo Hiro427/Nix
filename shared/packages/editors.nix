@@ -4,4 +4,5 @@ with pkgs; [
   neovim
   evil-helix
   xclip # for nvim
+  flow-control
 ]
