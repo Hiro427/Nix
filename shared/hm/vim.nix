@@ -42,9 +42,11 @@ in {
       set laststatus=0
       set noshowmode 
       set noru
+      set background=dark
+
+      colorscheme gruvbox
 
       let g:sneak#label = 1
-      let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyz'
 
       let g:ycm_auto_trigger = 1
       let g:ycm_global_ycm_extra_conf = expand('~/.ycm_extra_conf.py')
@@ -72,8 +74,6 @@ in {
       map t <Plug>Sneak_t
       map T <Plug>Sneak_T
 
-      nmap <CR> <Plug>(easymotion-w)
-
       nnoremap <silent><Leader>e :NERDTreeToggle<CR>
       nnoremap <silent> <leader><leader> :FuzzyFiles<CR>
 
@@ -93,6 +93,14 @@ in {
 
       nnoremap <silent> <leader>vi :vertical resize +15 <CR>
       nnoremap <silent> <leader>vd :vertical resize -15<CR>
+
+      nnoremap <silent> <leader><leader> :FuzzyFiles<CR>
+      nnoremap <silent> <leader>g :FuzzyInBuffer<CR>
+      nnoremap <silent> <leader>G :FuzzyGrep<CR>
+      nnoremap <silent> <leader>m :FuzzyMarks<CR>
+      nnoremap <silent> <leader>c :FuzzyCommands<CR>
+      nnoremap <silent> <leader>C :FuzzyColors<CR>
+      nnoremap <silent> <leader>d :YcmDiags<CR>
     '';
 
     plugins = with pkgs.vimPlugins; [
@@ -107,9 +115,9 @@ in {
       vim-polyglot
       auto-pairs
       YouCompleteMe
-      vim-easymotion
       fuzzbox
       vim-gitgutter
+      gruvbox
     ];
 
   };
