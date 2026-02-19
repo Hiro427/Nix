@@ -1,77 +1,67 @@
-set nocompatible  " be iMproved, required
-
-" Enable filetype detection and plugins
-filetype on                  " required
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
 call plug#begin()
-Plug 'jiangmiao/auto-pairs' Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-sensible'
+Plug 'justinmk/vim-sneak'
 Plug 'tpope/vim-commentary'
-Plug 'rust-lang/rust.vim'
-Plug 'tpope/vim-fugitive'
-Plug 'sheerun/vim-polyglot'
-Plug 'fatih/vim-go'
-Plug 'catppuccin/vim' 
-Plug 'mhinz/vim-tree'
-Plug 'ryanoasis/vim-devicons'
-Plug 'kien/ctrlp.vim'
-Plug 'tpope/vim-dadbod'
-Plug 'kristijanhusak/vim-dadbod-ui'
-Plug 'kristijanhusak/vim-dadbod-completion' "Optional
-Plug 'itchyny/lightline.vim'
-Plug 'lilydjwg/colorizer'
-Plug 'liuchengxu/vim-clap' Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-surround'
-Plug 'mattn/vim-lsp-settings'
-Plug 'prabirshrestha/vim-lsp'
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'fatih/vim-go'
 Plug 'preservim/nerdtree'
-Plug 'luochen1990/rainbow'
-Plug 'tpope/vim-vinegar'
-call plug#end() 
- 
-
-syntax enable 
+Plug 'ryanoasis/vim-devicons'
+Plug 'sheerun/vim-polyglot'
+Plug 'jiangmiao/auto-pairs'
+Plug 'easymotion/vim-easymotion'
+Plug 'vim-fuzzbox/fuzzbox.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'rose-pine/vim'
+call plug#end()
 
 set tabstop=4
 set softtabstop=4
-set shiftwidth=4
 set expandtab
 set backspace=indent,eol,start
+set shiftwidth=4
 set hlsearch
-set signcolumn=no 
+set signcolumn=yes 
 set splitbelow
-set number
-set relativenumber
+set number 
+set relativenumber 
 set termguicolors 
 set encoding=UTF-8
 set t_RV=
 set ttymouse=xterm2
-set laststatus=2
-set noshowmode
+set noswapfile
 set re=0
+set guicursor=n-v-c:block,i-ci:ver25,r-cr:hor20,o:hor50
+set encoding=utf-8
+let &t_SI = "\e[6 q" 
+let &t_SR = "\e[4 q" 
+let &t_EI = "\e[2 q"
+set fillchars+=eob:\ 
+let mapleader = " "
+let maplocalleader = "\\"
+let &t_ut=""
+set laststatus=0
+set noshowmode 
+set noru
 
-colorscheme catppuccin_mocha
 
-let g:rainbow_active = 1 
-let &t_SI = "\e[6 q"  "Blinking beam cursor in insert mode
-let &t_SR = "\e[4 q" " Underline cursor in replace mode
-let &t_EI = "\e[2 q" "Block cursor in normal mode
-let mapleader = "\<Space>"
-let &t_ut=''
-let g:lightline = {
-            \ 'colorscheme': 'catppuccin_mocha',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'FugitiveHead'
-      \ },
-      \ }
+set background=dark
+colorscheme rosepine
 
-"vim-go syntax highlighting
+let g:sneak#label = 1
+let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyz'
+
+let g:ycm_auto_trigger = 1
+let g:ycm_global_ycm_extra_conf = expand('~/.ycm_extra_conf.py')
+let g:ycm_confirm_extra_conf = 0
+let g:python_highlight_space_errors = 0
+
+
 let g:go_highlight_types = 1
 let g:go_highlight_fields = 1
 let g:go_highlight_functions = 1
@@ -84,43 +74,32 @@ let g:go_highlight_generate_tags = 1
 let g:go_highlight_variable_declarations = 1 
 let g:go_highlight_variable_assignments = 1
 let g:go_highlight_function_calls = 1   
-let g:tmux_navigator_no_mappings = 1
 
-"Functions
-function! MoveRightOrInsertTab()
-    let l:char = getline('.')[col('.')-1]
-    if l:char == ')' || l:char == '}' || l:char == ']' || l:char == '"' || l:char == "'" || l:char == ">" || l:char == "`"
-        return "\<Right>"
-    else
-        return "\<Tab>"
-    endif
-endfunction
+let g:fuzzbox_mappings = 0
 
-command! -nargs=* FindFile call fzf#run(fzf#wrap({
-      \ 'source': 'find ~/coding ~/.dotfiles -type d \( -name .git -o -name .venv -o -name __pycache__ -o -name build -o -name dist -o -name .whl \) -prune -o -type f -print',
-      \ 'sink': 'e',
-      \ }))
+map f <Plug>Sneak_f
+map F <Plug>Sneak_F
+map t <Plug>Sneak_t
+map T <Plug>Sneak_T
 
+nmap <CR> <Plug>(easymotion-w)
 
-nnoremap <leader>r :execute "!run " . expand('%')<CR>
-"Keymaps 
+nnoremap <silent><Leader>e :NERDTreeToggle<CR>
+nnoremap <silent> <leader><space> :FuzzyFiles<CR>
 
-nnoremap <silent> <C-h> :<C-U>TmuxNavigateLeft<cr>
-nnoremap <silent> <C-j> :<C-U>TmuxNavigateDown<cr>
-nnoremap <silent> <C-k> :<C-U>TmuxNavigateUp<cr>
-nnoremap <silent> <C-l> :<C-U>TmuxNavigateRight<cr>
-" nnoremap <silent> {Previous-Mapping} :<C-U>TmuxNavigatePrevious<cr>
+nnoremap <silent> <leader>wl <C-w>l<CR>
+nnoremap <silent> <leader>wh <C-w>h<CR>
+nnoremap <silent> <leader>wj <C-w>j<CR>
+nnoremap <silent> <leader>wk <C-w>k<CR>
 
-inoremap <expr> <C-J>     pumvisible() ? "\<C-n>" : "\<C-J>"
-inoremap <expr> <C-K>   pumvisible() ? "\<C-p>" : "\<C-K>"
+nnoremap <silent> <leader>vs :vsplit<CR>
+nnoremap <silent> <leader>hs :split<CR>
 
-nnoremap <silent> <leader>f :Files<CR>
-nnoremap <silent> <leader>l :Lines<CR>
-nnoremap <silent> <leader>g :Rg<CR>
-nnoremap <silent> <leader>e :NERDTreeToggle<CR>
-inoremap <expr> <Tab> MoveRightOrInsertTab()
-nnoremap <silent> <Leader>w <C-w>w
-nnoremap <silent> <C-w>w <Nop>
-nnoremap <silent> <leader>q :stop<CR>
-nnoremap <silent> <leader>s :source ~/.vimrc<CR>
-nnoremap <silent> <leader><leader> :FindFile<CR>
+nnoremap <silent> <leader>j :w<CR> :bnext<CR>
+nnoremap <silent> <leader>k :w<CR> :bprev<CR>
+
+nnoremap <silent> <leader>hi :resize +15<CR>
+nnoremap <silent> <leader>hd :resize -15<CR>
+
+nnoremap <silent> <leader>vi :vertical resize +15 <CR>
+nnoremap <silent> <leader>vd :vertical resize -15<CR>

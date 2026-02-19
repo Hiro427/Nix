@@ -5,7 +5,7 @@
     process = git-lfs filter-process
 [user]
 	name = Jacob R.
-    email = jacobrambarran@gmail.com
+    email = 168807821+Hiro427@users.noreply.github.com
 [core]
     autocrlf = input
     pager = delta 

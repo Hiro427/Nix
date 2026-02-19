@@ -23,34 +23,13 @@ in {
   home.packages = [
     (pkgs.writeShellScriptBin "gm" (builtins.readFile ../dots/scripts/gm))
     (pkgs.writeShellScriptBin "rw" (builtins.readFile ../dots/scripts/rw))
-    (pkgs.writeShellScriptBin "run" (builtins.readFile ../dots/scripts/run))
     (pkgs.writeShellScriptBin "tsm" (builtins.readFile ../dots/scripts/tsm))
-    (pkgs.writeShellScriptBin "sel_audio"
-      (builtins.readFile ../dots/scripts/sel_audio))
 
     (pkgs.writeShellScriptBin "doom" ''
       #!/bin/sh
-      # Execute the actual Doom Emacs binary
       exec "$HOME/.config/emacs/bin/doom" "$@"
     '')
-    # (pkgs.appimageTools.wrapType2 {
-    #   pname = "upnote";
-    #   version = "2025.11";
-    #   src = pkgs.fetchurl {
-    #     url = "https://download.getupnote.com/app/UpNote.AppImage";
-    #     sha256 = "sha256-P3EAh9+XFLzNvkAuSRhjc/X4/AbzPPLRyfvwOUtxwQ8=";
-    #   };
-    # })
   ];
-  # xdg.desktopEntries.upnote = {
-  #   name = "UpNote";
-  #   genericName = "Note Taking App";
-  #   exec = "upnote";
-  #   icon = "${config.home.homeDirectory}/Nix/dots/assets/AppIcons/upnote.jpg";
-  #   comment = "Beautiful note-taking app that syncs everywhere";
-  #   categories = [ "Office" "Utility" ];
-  #   terminal = false;
-  # };
 
   imports = [
     ./hm/freetube.nix

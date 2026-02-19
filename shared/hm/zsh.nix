@@ -16,7 +16,7 @@
        zle -N _yazi
        zle -N _update_repos
        
-       bindkey -M viins '^I' autosuggest-accept    
+       # bindkey -M viins '^I' autosuggest-accept    
        bindkey '^N' fzf-file-widget
        bindkey '^X' _tsm
        bindkey '^Z' res

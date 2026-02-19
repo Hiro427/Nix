@@ -6,7 +6,7 @@
     baseIndex = 1;
     prefix = "C-a";
     mouse = true;
-    # plugins = with pkgs; [{ plugin = tmuxPlugins.vim-tmux-navigator; }];
+    plugins = with pkgs; [{ plugin = tmuxPlugins.dotbar; }];
 
     extraConfig = ''
       set -g default-terminal "tmux-256color"
@@ -60,12 +60,12 @@
       set -g @tmux-dotbar-fg-current "${theme.tmuxBarColors.dotbar-fg-current}"
       set -g @tmux-dotbar-fg-session "${theme.tmuxBarColors.dotbar-fg-session}"
       set -g @tmux-dotbar-fg-prefix "${theme.tmuxBarColors.dotbar-fg-prefix}"
+
       set -g @tmux-dotbar-position "bottom"            
       set -g @tmux-dotbar-right "true"
       # set -g @tmux-dotbar-bold-current-window false
       set -g @tmux-dotbar-bold-status false
 
-      run-shell ~/Nix/dots/tmux/plugins/dotbar.tmux
 
     '';
   };
