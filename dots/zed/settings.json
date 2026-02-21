@@ -34,6 +34,7 @@
     "vue": true,
     "svelte": true,
     "svelte snippets": true,
+    "carbonfox": true,
     "go snippets": true,
     "go sum highlighting": true,
     "python snippets": true,
@@ -101,7 +102,7 @@
     "metrics": false
   },
   "theme": {
-    "dark": "Gruvbox Dark",
+    "dark": "Carbonfox",
     "light": "Catppuccin Latte",
     "mode": "dark"
   },

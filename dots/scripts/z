@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+echo "$1"
+DIRECTORY=$(zoxide query "$1")
+
+cd "$DIRECTORY" || exit
+
+if [ -f "shell.nix" ]; then
+  nix-shell --run "$SHELL"
+fi
+

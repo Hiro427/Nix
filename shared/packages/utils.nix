@@ -97,5 +97,6 @@ with pkgs; [
   mediawriter
   lsof
   nitch
+  cloc
 ]
 

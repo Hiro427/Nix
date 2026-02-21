@@ -1,6 +1,6 @@
 { config, pkgs, catppuccin, lib, ... }:
 let
-  theme = import ./themes/gruvbox.nix {
+  theme = import ./themes/oxocarbon.nix {
     inherit pkgs;
     inherit config;
   };
