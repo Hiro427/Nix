@@ -24,6 +24,8 @@ in {
     (pkgs.writeShellScriptBin "gm" (builtins.readFile ../dots/scripts/gm))
     (pkgs.writeShellScriptBin "rw" (builtins.readFile ../dots/scripts/rw))
     (pkgs.writeShellScriptBin "tsm" (builtins.readFile ../dots/scripts/tsm))
+    (pkgs.writeShellScriptBin "theme"
+      (builtins.readFile ../dots/scripts/stylix))
 
     (pkgs.writeShellScriptBin "doom" ''
       #!/bin/sh

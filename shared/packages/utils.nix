@@ -98,5 +98,6 @@ with pkgs; [
   lsof
   nitch
   cloc
+  ytermusic
 ]
 

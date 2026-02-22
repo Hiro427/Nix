@@ -3,6 +3,7 @@
     enable = true;
     package = pkgs.evil-helix;
     themes = {
+      muted = (builtins.readFile ../../dots/helix/themes/muted.toml);
       transparent = {
         inherits = theme.helixTheme;
         "ui.background" = { };
@@ -11,13 +12,13 @@
         "ui.popup" = { };
         "ui.statusline" = { };
         "ui.statusline.inactive" = { };
-
       };
+
     };
 
     settings = {
-      theme = "transparent";
-      # theme = theme.helixTheme;
+      # theme = "muted2";
+      theme = theme.helixTheme;
       editor = {
         line-number = "relative";
         true-color = true;

@@ -1,0 +1,168 @@
+# Syntax highlighting
+
+"attribute" = { fg = "base04", modifiers = ["italic"] }
+
+"type" = { fg = "base06", modifiers = ["italic"] }
+"type.builtin" = { fg = "base06", modifiers = ["bold"] }
+"type.enum.variant" = "base05"
+
+"constructor" = { fg = "base09", modifiers = ["bold"] }
+
+"constant" = "base0C"
+"constant.builtin" = { fg = "base0C", modifiers = ["bold"] }
+"constant.character" = "base04"
+"constant.character.escape" = "base04"
+"constant.numeric" = "base0C"
+
+"string" = { fg = "base0B"}
+"string.regexp" = "base0C"
+"string.special" = "base06"
+"string.special.symbol" = "base0C"
+"string.special.url" = { fg = "base0C", modifiers = ["underlined"] }
+
+"comment" = { fg = "base03", modifiers = ["italic"] }
+"comment.block.documentation" = { fg = "base03", modifiers = ["italic"] }
+"comment.line.documentation" = { fg = "base03", modifiers = ["italic"] }
+
+"variable" = "base06"
+"variable.builtin" = { fg = "base04", modifiers = ["bold"] }
+"variable.parameter" = { fg = "base0C", modifiers = ["italic"] }
+"variable.other.member" = { fg = "base04", modifiers = ["italic"] }
+
+"label" = { fg = "base0D", modifiers = ["italic"] }
+
+"punctuation" = "base0C"
+"punctuation.special" = "base0A"
+"punctuation.bracket" = "base04"
+"punctuation.delimiter" = "base0F"
+
+"keyword" = { fg = "base0C", modifiers = ["bold"] }
+"keyword.control" = { fg = "base0B", modifiers = ["bold"] }
+"keyword.control.conditional" = { fg = "base0E", modifiers = ["bold"] }
+"keyword.control.repeat" = { fg = "base0D", modifiers = ["bold"] }
+"keyword.control.import" = { fg = "base05", modifiers = ["bold"] }
+"keyword.control.return" = { fg = "base0A", modifiers = ["bold"] }
+"keyword.control.exception" = { fg = "base09", modifiers = ["bold"] }
+"keyword.operator" = "base0B"
+"keyword.function" = { fg = "base05", modifiers = ["bold", "italic"] }
+"keyword.storage" = { fg = "base05", modifiers = ["bold"] }
+"keyword.storage.modifier" = { fg = "base0F", modifiers = ["italic"] }
+
+"operator" = "base0A"
+
+"function" = { fg = "base05", modifiers = ["bold"] }
+"function.builtin" = { fg = "base05", modifiers = ["bold"] }
+"function.method" = { fg = "base05", modifiers = ["bold"] }
+# "function.macro" = { fg = "purple30", modifiers = ["bold", "italic"] }
+
+"tag" = "base0C"
+"tag.builtin" = { fg = "base0B", modifiers = ["bold"] }
+
+"namespace" = { fg = "base0C", modifiers = ["italic"] }
+
+"special" = "base0B"
+
+# Markup
+# "markup.heading" = { fg = "blue50", modifiers = ["bold"] }
+# "markup.heading.marker" = { fg = "gray60", modifiers = ["bold"] }
+# "markup.heading.1" = { fg = "blue40", modifiers = ["bold"] }
+# "markup.heading.2" = { fg = "cyan40", modifiers = ["bold"] }
+# "markup.heading.3" = { fg = "teal40", modifiers = ["bold"] }
+# "markup.heading.4" = { fg = "green40", modifiers = ["bold"] }
+# "markup.heading.5" = { fg = "purple40", modifiers = ["bold"] }
+# "markup.heading.6" = { fg = "magenta40", modifiers = ["bold"] }
+# "markup.list" = "blue30"
+# "markup.bold" = { modifiers = ["bold"] }
+# "markup.italic" = { modifiers = ["italic"] }
+# "markup.link.url" = { fg = "blue30", modifiers = ["underlined"] }
+# "markup.link.text" = "cyan30"
+# "markup.quote" = { fg = "green30", modifiers = ["italic"] }
+# "markup.raw" = "teal30"
+
+# Diff
+"diff.plus" = "base0B"
+"diff.minus" = "base08"
+"diff.delta" = "base0C"
+"diff.delta.moved" = "base07"
+
+# UI Elements
+"ui.background" = { fg = "base05", bg = "base00" }
+"ui.background.separator" = { fg = "base0D" }
+
+"ui.cursor" = { fg = "base07", bg = "base07" }
+"ui.cursor.normal" = { fg = "base05", bg = "base00" }
+"ui.cursor.insert" = { fg = "base07", bg = "base00" }
+"ui.cursor.select" = { fg = "base03", bg = "base05" }
+"ui.cursor.match" = { fg = "base07", bg = "base04" }
+
+"ui.cursor.primary" = { fg = "base01", bg = "base04" }
+"ui.cursor.primary.normal" = { fg = "base01", bg = "base04" }
+"ui.cursor.primary.insert" = { fg = "base01", bg = "base04" }
+"ui.cursor.primary.select" = { fg = "base01", bg = "base0C" }
+
+"ui.linenr" = { fg = "base03" }
+"ui.linenr.selected" = { fg ="base04" }
+
+"ui.statusline" = { fg = "base07", bg = "base00" }
+"ui.statusline.inactive" = { fg = "base04", bg = "base00" }
+"ui.statusline.normal" = { fg = "base07", bg = "base00", modifiers = ["bold"] }
+"ui.statusline.insert" = { fg = "base07", bg = "base00", modifiers = ["bold"] }
+"ui.statusline.select" = { fg = "base07", bg = "base00", modifiers = ["bold"] }
+
+"ui.popup" = { fg = "base07", bg = "base00" }
+"ui.popup.info" = { fg = "base07", bg = "base00" }
+"ui.window" = { fg = "base07" }
+"ui.help" = { fg = "base05", bg = "base00" }
+
+"ui.text" = { fg = "base05"}
+"ui.text.focus" = { fg = "base04", bg = "base03", modifiers = ["bold"] }
+"ui.text.inactive" = { fg = "base02" }
+"ui.text.info" = { fg = "base04" }
+
+"ui.virtual.ruler" = { bg = "base04" }
+"ui.virtual.whitespace" = "base04"
+"ui.virtual.indent-guide" = "base04"
+"ui.virtual.inlay-hint" = { fg = "base03", bg = "base04" }
+"ui.virtual.jump-label" = { fg = "base03", bg = "base04" }
+
+"ui.selection" = { bg = "base03" }
+"ui.selection.primary" = { bg = "base03" }
+"ui.cursorline.primary" = { bg = "base04" }
+
+"ui.highlight" = { bg = "base05", modifiers = ["bold"] }
+"ui.highlight.frameline" = { bg = "base0E" }
+
+"ui.menu" = { fg = "base07", bg = "base00" }
+"ui.menu.selected" = { fg = "base02", bg = "base05", modifiers = ["bold"] }
+"ui.menu.scroll" = { fg = "base07", bg = "base00" }
+
+# Diagnostics
+"diagnostic" = { fg = "base04" }
+"diagnostic.error" = { underline = { color = "base08", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "base09", style = "curl" } }
+"diagnostic.info" = { underline = { color = "base0C", style = "curl" } }
+"diagnostic.hint" = { underline = { color = "base0D", style = "curl" } }
+
+"error" = "base08"
+"warning" = "base0A"
+"info" = "base0D"
+"hint" = "base0C"
+
+[palette]
+
+base00 = "#121212" #background
+base01 = "#1c1b1b" 
+base02 = "#2e2d2d"
+base03 = "#4a4848"
+base04 = "#b8b6b6"
+base05 = "#f5eded"
+base06 = "#fcfcfc"
+base07 = "#ffffff" #white
+base08 = "#c48786" #red 
+base09 = "#bd8b51" #orange
+base0A = "#e8ebb0" #yello
+base0B = "#9dd1a4" #green
+base0C = "#7dc7b8" #cyan 
+base0D = "#86aac4" #blue
+base0E = "#e4c3fa" #magenta
+base0F = "#8c705b" #unknown*
