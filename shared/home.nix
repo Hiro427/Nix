@@ -1,6 +1,6 @@
 { config, pkgs, catppuccin, lib, ... }:
 let
-  theme = import ./themes/oxocarbon.nix {
+  theme = import ./themes/muted.nix {
     inherit pkgs;
     inherit config;
   };
@@ -137,6 +137,7 @@ in {
   #     };
   # };
   home.file = { ".gitconfig" = { source = ../dots/git/.gitconfig; }; };
+  xdg.configFile."vivid".source = ../dots/vivid;
 
   home.stateVersion = "24.11";
 }

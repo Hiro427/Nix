@@ -1,0 +1,151 @@
+colors:
+    base00 : "121212"
+    base01 : "1c1b1b"
+    base02 : "2e2d2d"
+    base03 : "4a4848"
+    base04 : "b8b6b6"
+    base05 : "f5eded"
+    base06 : "fcfcfc"
+    base07 : "ffffff"
+    base08 : "c48786"
+    base09 : "bd8b51"
+    base0A : "e8ebb0"
+    base0B : "9dd1a4"
+    base0C : "7dc7b8"
+    base0D : "86aac4"
+    base0E : "e4c3fa"
+ 
+core:
+  normal_text:
+    foreground: base06
+    background: base00
+
+  regular_file:
+    foreground: base06
+    background: base00
+
+  reset_to_normal: {}
+
+  directory:
+    foreground: base0D
+
+  symlink:
+    foreground: base0C
+    font-style: italic
+
+  multi_hard_link:
+    font-style: bold
+
+  fifo:
+    foreground: base0E
+
+  socket:
+    foreground: base0E
+    font-style: bold
+
+  door:
+    foreground: base0E
+    font-style: bold
+
+  block_device:
+    foreground: base0A
+    font-style: bold
+
+  character_device:
+    foreground: base09
+    font-style: italic
+
+  broken_symlink:
+    foreground: base08
+    font-style: italic
+
+  missing_symlink_target:
+    foreground: base06
+    background: base08
+
+  setuid:
+    foreground: base06
+    background: base08
+
+  setgid:
+    foreground: base00
+    background: base09
+
+  file_with_capability:
+    foreground: base00
+    background: base08
+
+  sticky_other_writable:
+    foreground: base06
+    background: base0D
+    font-style: italic
+
+  other_writable:
+    foreground: base0A
+    font-style: bold
+
+  sticky:
+    foreground: base06
+    background: base0D
+
+  executable_file:
+    foreground: base0B
+    font-style: bold
+
+text:
+  special:
+    foreground: base0A
+    font-style: bold
+
+  todo:
+    foreground: base0B
+
+  licenses:
+    foreground: base05
+    font-style: italic
+
+  configuration:
+    foreground: base0A
+
+  other:
+    foreground: base06
+
+markup:
+  foreground: base0A
+
+programming:
+  source:
+    foreground: base0B
+
+  tooling:
+    foreground: base0C
+    font-style: italic
+
+    continuous-integration:
+      foreground: base0E
+
+media:
+  foreground: base0C
+
+  video:
+    foreground: base0E
+    font-style: bold
+
+office:
+  foreground: base0C
+  font-style: bold
+
+archives:
+  foreground: base09
+
+  images:
+    foreground: base04
+    font-style: bold
+
+executable:
+  foreground: base0B
+  font-style: bold
+
+unimportant:
+  foreground: base03
+  font-style: italic
