@@ -7,9 +7,9 @@
     base01 = "#1c1b1b";
     base02 = "#2e2d2d";
     base03 = "#4a4848";
-    base04 = "#b8b6b6";
-    base05 = "#f5eded";
-    base06 = "#fcfcfc";
+    base04 = "#636161";
+    base05 = "#898585";
+    base06 = "#b7b2b2";
     base07 = "#ffffff"; # white
     base08 = "#c48786"; # red
     base09 = "#bd8b51"; # orange
