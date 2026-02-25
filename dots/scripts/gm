@@ -10,7 +10,7 @@ RED="#f38ba8"
 # TODO: Map out what features I want in this version
 # TODO: Determine dotfiles & project locations on the system
 # TODO: Add option to print editorconfig as standalone action away from repo initalization
-# NOTE: Consider rewrite in lua
+# NOTE: Consider rewrite in python
 
 set_ssh() {
 	local name
