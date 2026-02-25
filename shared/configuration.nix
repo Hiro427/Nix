@@ -50,6 +50,12 @@
     # package = pkgs.swayfx;
   };
 
+  nixpkgs.overlays = [
+    (final: prev: {
+      qutebrowser = prev.qutebrowser.override { enableWideVine = true; };
+    })
+  ];
+
   services.xserver.windowManager.i3.enable = true;
   security.pam.services.i3lock.enableGnomeKeyring = true;
   security.pam.services.swaylock.enableGnomeKeyring = true;

@@ -75,14 +75,15 @@ in {
       c.tabs.show = "never"
       c.statusbar.show = "in-mode" 
       c.scrolling.smooth = True  
-      c.url.searchengines = {"DEFAULT": "https://search.brave.com/search?q={}"}
-      c.url.start_pages = "https://search.brave.com"
+      # c.url.searchengines = {"DEFAULT": "https://search.brave.com/search?q={}"}
+      c.url.searchengines = {"DEFAULT": "https://duckduckgo.com/?q={}"}
+      c.url.start_pages = "https://duckduckgo.com"
       c.window.transparent = True
       c.colors.webpage.darkmode.enabled = True
-      config.set(
-        "content.user_stylesheets",
-        ["~/Nix/dots/stylesheets/styles.css"],
-      )
+      # config.set(
+      #   "content.user_stylesheets",
+      #   ["~/Nix/dots/stylesheets/styles.css"],
+      # )
 
     '';
   };

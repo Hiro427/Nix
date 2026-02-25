@@ -71,7 +71,8 @@
         #Applications
         "Mod4+Return" = "exec foot, workspace 2";
         "Mod4+f" = "exec pcmanfm";
-        "Mod4+b" = "exec zen-beta, workspace 1";
+        # "Mod4+b" = "exec zen-beta, workspace 1";
+        "Mod4+b" = "exec qutebrowser, workspace 1";
         "Ctrl+space" = "exec flameshot gui";
         # "Mod4+s" = "exec kitty --class spt spotify_player, workspace 3";
         "Mod4+s" = "exec spotify, workspace 3";
@@ -139,8 +140,9 @@
       focus.followMouse = false;
       assigns = {
         "1" = [
-          { app_id = "zen-beta"; } # Native Wayland
-          { class = "zen"; } # XWayland fallback
+          { app_id = "zen-beta"; }
+          { app_id = "org.qutebrowser.qutebrowser"; }
+          { class = "zen"; }
           { app_id = "brave-browser"; }
         ];
         "2" = [

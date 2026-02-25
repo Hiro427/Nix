@@ -4,914 +4,12 @@
 :root {
   /* --main-bg-color: #191724; */
   /* --main-bg-color: #1a1b26; */
-  --main-bg-color: #282828;
+  /* --main-bg-color: #282828; */
+  --main-bg-color: #121212;
 }
 
-/* transparency */
-body,
-.nav,
-.header:not(.el-dialog__body > .header),
-.result-col,
-.list-preview,
-.markdown-editor,
-.media-preview[data-v-796abd11],
-.nav-wrap[data-v-1cc2919e],
-.favourites-wrap[data-v-ddf96a3c],
-.stats-wrap[data-v-5c30286e],
-.theme-switch[data-v-0567dd85],
-.medialist.table .list-section,
-.bar-chart-wrap[data-v-46edc0ca],
-.pie-chart[data-v-26dc9635],
-.line-chart-wrap[data-v-84e71bc6],
-.footer[data-v-0165744a],
-.input,
-.search[data-v-219025ae],
-.recommendation-pair-card[data-v-20967985],
-.content[data-v-48560ace],
-.input[data-v-c574a71c] .el-textarea__inner,
-.search-input>.el-input__inner,
-.search-input:has(.el-input__inner),
-.entry-filter>.el-input__inner,
-.entry-filter:has(.el-input__inner),
-.stat-card[data-v-686e8358],
-.relations-wrap[data-v-686e8358],
-.wrap[data-v-04d66030],
-.thread-card[data-v-550f7194],
-.review-card[data-v-0369a0cf],
-.list-stats[data-v-815ccddc],
-.footer[data-v-815ccddc],
-.app-section[data-v-4ab65192],
-.comment-wrap[data-v-20438142],
-.body[data-v-3f00779d],
-.rating[data-v-5ca094da],
-.body[data-v-5ca094da],
-.role-card[data-v-f92815d6],
-.follow[data-v-69b91520],
-.time[data-v-04d66030],
-.load-more[data-v-6f203cf2],
-.ranking[data-v-a6e466b2],
-.no-threads[data-v-19b948c8],
-.external-link[data-v-c1b7ee7c],
-.markdown .markdown-spoiler.spoiler-visible span,
-.landing,
-.media-card,
-.stats-graph,
-.media-score-distribution,
-.status-distribution[data-v-e2bbc000],
-.about .content-wrap[data-v-5c30286e],
-.overview[data-v-5c30286e] .content-wrap,
-.hohTable,
-.hohNotification {
-  background-color: var(--main-bg-color) !important;
-  background: var(--main-bg-color) !important;
-  border: none !important;
-  box-shadow: none !important;
-  transition:
-    background-color 0.5s ease-in-out,
-    background 0.5s ease-in-out,
-    border 0.5s ease-in-out,
-    box-shadow 0.5s ease-in-out !important;
-}
-
-/* darkreader */
-:root {
-  --darkreader-background-ffffff: transparent !important;
-}
-
-/* no footer */
-.footer[data-v-0165744a] {
-  display: none !important;
-}
-
-/* not my stylesheet. see link to author: https://github.com/sameerasw/my-internet/tree/main */
-
-
-
-
-/* gh-transparency */
-html,
-body,
-header,
-.color-bg-default,
-.feed-background,
-.session-authentication,
-.auth-form-body,
-[aria-labelledby="folders-and-files"] .bgColor-muted,
-nav,
-.dxnHPp,
-.kcVpNH,
-.discussion-timeline-actions,
-.TimelineItem-break,
-.gh-header,
-.PageLayout-pane,
-.bSTcOH,
-.gOhIYN,
-#blob-edit-side-panel-id,
-#repository-container-header,
-.empty-cell,
-.FleZw,
-.MarkdownInput-module__textArea--QjIwG,
-.notifications-list-item,
-.notifications-list-item.notification-read,
-.search-results-page,
-.application-main>div>div,
-#memex-root,
-[aria-label="Project"],
-#memex-project-view-root>div,
-[aria-label="Formatting tools"],
-.slicer-items-module__SlicerPanel--nSeK0,
-.jyoUVC,
-.Box-sc-g0xbh4-0[role="grid"],
-[role="row"],
-.eqCHeb,
-[data-testid="chat-layout"],
-aside>div,
-[data-testid="chat-layout"]>div>div>div,
-[data-testid="chat-layout"]>div>aside,
-.ContentPreview-module__tabsContainer--bNywg::after,
-.snippet-clipboard-content>.notranslate,
-.IssueViewer-module__contentArea--mHr61,
-.SubscriptionSection-module__button--WSUPv,
-.IssueViewer-module__contentArea--IpMnd,
-section[aria-label="Events"]>div>div>[data-timeline-event-id] {
-  background-color: var(--main-bg-color) !important;
-  background: var(--main-bg-color) !important;
-  border: none !important;
-  box-shadow: none !important;
-  transition:
-    background-color 0.5s ease-in-out,
-    background 0.5s ease-in-out,
-    border 0.5s ease-in-out,
-    box-shadow 0.5s ease-in-out !important;
-}
-
-button[role="tab"] {
-  &[aria-selected="true"] {
-    border-radius: 0.5em !important;
-  }
-}
-
-.MarkdownEditor-module__viewSwitchBorder--zeiDB,
-.js-comment-container::before,
-.js-comment-container .TimelineItem::before {
-  display: none !important;
-}
-
-[aria-label="Copilot badge"]+div>.js-snippet-clipboard-copy-unpositioned:has(h3) {
-  padding: 1em !important;
-}
-
-/* gh-transparent lists $ Make the files, issues and other lists transparent */
-.PageLayout-content .Box:not(.Popover-message),
-.PageLayout-content .Box-row,
-#repo-content-turbo-frame .Box.Box:not(.Popover-message) {
-  background-color: var(--main-bg-color) !important;
-  background: var(--main-bg-color) !important;
-  border: none !important;
-  box-shadow: none !important;
-}
-
-/* gh-no footer */
-footer:has(h2),
-div.px-2:nth-child(3) {
-  opacity: 0 !important;
-}
-
-/* gh-hover $ Make the left and right sidebars show on hover */
-.feed-left-sidebar,
-.feed-right-sidebar {
-  opacity: 0 !important;
-  transition: all 0.3s ease-in-out !important;
-
-  &:hover {
-    opacity: 1 !important;
-  }
-}
-
-/* gh-border mods */
-table,
-.eIKYQa,
-div.border-bottom,
-td {
-  border: none !important;
-}
-
-.dJnomT,
-.jPdcfu,
-.gOHzTT,
-.eBevHz,
-.Box-header,
-#repos-sticky-header>div,
-.jbBkdO,
-.file-header,
-.TabNav-item {
-  border-radius: 0.5em !important;
-}
-
-[data-selector="repos-split-pane-content"] {
-
-  section,
-  .NWhVB,
-  .cm-gutters,
-  [data-testid="codemirror-editor"],
-  [data-testid="codemirror-editor"] .cm-content,
-  .llKfAj {
-    background: var(--main-bg-color) !important;
-    box-shadow: none !important;
-  }
-}
-
-#user-profile-frame .Box,
-.mgKNn,
-.fGELhp,
-.timeline-comment,
-.empty-diff-line,
-.Diff-module__diffHeaderWrapper--rsdD4::before {
-  background: var(--main-bg-color) !important;
-  box-shadow: none !important;
-}
-
-.feed-item-content,
-.color-bg-subtle,
-.ajax-pagination-btn,
-action-graph .color-bg-inset,
-[data-testid="comment-header"] .Box-sc-g0xbh4-0,
-.copilotPreview__suggestionButton:not(:hover) {
-  background-color: var(--main-bg-color) !important;
-  background: var(--main-bg-color) !important;
-  box-shadow: none !important;
-}
-
-/* gh-overlay fixes $ Fix some transparent overlays and menus */
-modal-dialog .search-suggestions,
-details-dialog.Box,
-.Box-sc-g0xbh4-0.gOHzTT.js-notification-shelf-offset-top.color-bg-default,
-.Popover-message,
-.HeaderMetadata-module__stickyContainer--xk69x {
-  background-color: var(--bgColor-inset) !important;
-  transition: background-color 0.3s ease-in-out !important;
-  border-radius: 1em !important;
-}
-
-/* gh-glass effect */
-.prc-Button-ButtonBase-c50BI,
-.MergeabilityIcon-module__mergeabilityIcon--GOu7M,
-.range-editor,
-.TableHead.prc-DataTable-TableHead-eOrJU,
-.Table.prc-DataTable-Table-qYfrL,
-.tabnav-tab.selected,
-.TabNav__TabNavLink-sc-pwdi4r-3.selected,
-.timeline-comment-header,
-.Metadata-module__container--tL6Q3,
-.CodeBlock-module__header--RMUQr,
-.CodeBlock-module__codeContainer--dAEis,
-.ChatMessage-module__actions--Jllb6,
-.ContentPreviewTab-module__tabContent--zNIXv:hover,
-.cm-gutters,
-.cm-editor.ͼ1.ͼ2.ͼ5nc.ͼ5fa.hide-help.js-codemirror-editor,
-.FilePreview-module__toolbar--toYCM,
-.cm-content,
-.FileBlock-module__container--zWu5c,
-.ChatMessage-module__content--MYneF,
-.Layout-module__previewPane--vF1ZO.Layout-module__active--nDCtU,
-.ChatInput-module__container--NFzCy,
-#settings-frame .Box,
-.form-select,
-.edit_user button,
-.Box-sc-g0xbh4-0 .gxwXUv,
-.Box-sc-g0xbh4-0.fXxPgR,
-.Box-sc-62in7e-0.BranchInfoBar-module__Box--NhDLA.BranchInfoBar-module__BranchInfoBarContainer--vaFVP,
-#file-tree-filter-field,
-.highlight pre,
-.ListItem-module__listItem--kHali:hover,
-.Box-sc-g0xbh4-0 .gpHFJV,
-.Box-row.Box-row--focus-gray.p-0.mt-0.js-navigation-item.js-issue-row.navigation-focus,
-.d-flex.flex-column.border.rounded-2.mb-3.pl-1,
-.form-group .form-control,
-.Box-sc-g0xbh4-0 .erfCwp,
-.Box-sc-g0xbh4-0 .eHDvEW,
-.Box-sc-g0xbh4-0 .ldkMIO,
-.Box-sc-g0xbh4-0 .eWEbRA:hover,
-.react-directory-row:hover,
-.tabnav-tab[aria-selected="true"],
-.snippet-clipboard-content.notranslate.position-relative.overflow-auto,
-.Shared-module__CommentBox--x3rre,
-.Box-sc-g0xbh4-0 .crArEc,
-.copilotPreview,
-.MarkdownEditor-module__inputWrapper--MtV0d,
-.TextInput-wrapper,
-.AppHeader-search-whenRegular,
-turbo-frame>article>div.feed-item-content,
-#feed-filter-menu summary,
-.pagehead-actions button,
-.pagehead-actions details summary,
-.tabnav-tab:hover,
-#fork-button,
-.BtnGroup button,
-.BtnGroup details summary,
-input[value="Follow"],
-.Button--secondary,
-#dashboard-repos-filter-left,
-.react-directory-remove-file-icon button,
-#branch-picker-repos-header-ref-selector,
-.FilterInputWrapper-module__Box_1--vewob,
-.FilterInputWrapper-module__Box_1--vewob button,
-.SearchBarActions-module__buttons--N7M2V a,
-#\:rbo\:-list-view-container,
-table[aria-labelledby="folders-and-files"],
-#\:r1a\:-list-view-container,
-[aria-label="Issues"][data-issue-and-pr-hovercards-enabled],
-#js-issues-search,
-.QueryBuilder [data-target="query-builder.styledInput"],
-.Box-body,
-a[aria-label="Add file"],
-button[aria-label="Search this repository"],
-[data-testid="issue-body"],
-#\:rc\:-list-view-container,
-.container:has(#repos-sticky-header),
-.UnderlineNav-item:hover,
-.TabNav__TabNavLink-sc-pwdi4r-3:hover,
-.notifications-list,
-.notifications-list-item.notification-unread,
-.Box-header,
-.Box-sc-g0xbh4-0.iwUbcA,
-#type-options summary,
-#language-options summary,
-#sort-options summary,
-.Box-sc-g0xbh4-0.NWhVB,
-[data-selector="repos-split-pane-content"] .Box-sc-g0xbh4-0.NWhVB,
-.react-issue-comment,
-.MergeBox-module__mergePartialContainer--N4i3Z,
-.MarkdownEditor-module__previewWrapper--UHhTL,
-.FormControl-input,
-.btn.btn-block.js-profile-editable-edit-button,
-.btn.js-quick-submit-alternative,
-#your-repos-filter {
-  box-shadow:
-    rgba(0, 0, 0, 0.05) 0px -36px 30px 0px inset,
-    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset !important;
-  background-color: light-dark(#fff8, #0005) !important;
-  border-radius: 0.5em !important;
-}
-
-.avatar-upload div.position-absolute {
-  box-shadow:
-    rgba(0, 0, 0, 0.5) 0px -36px 30px 0px inset,
-    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset !important;
-}
-
-.TabNav__TabNavTabList-sc-pwdi4r-1.DvNYj,
-.tabnav-tabs.d-flex.overflow-auto,
-.fLXEGX {
-  gap: 8px !important;
-}
-
-.CommentBox-container,
-.CommentBox-comment {
-  background-color: light-dark(#fff8, #0005) !important;
-  border-radius: 0 0 10px 10px !important;
-  border: none !important;
-  margin: 0px !important;
-}
-
-#new_comment_field,
-.CommentBox-comment {
-  box-shadow: none !important;
-}
-
-.tabnav.CommentBox-header {
-  border: none !important;
-  background-color: light-dark(#fff8, #0005) !important;
-}
-
-.timeline-comment-group .timeline-comment {
-  box-shadow:
-    rgba(0, 0, 0, 0.05) 0px -36px 30px 0px inset,
-    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset !important;
-  background-color: light-dark(#fff8, #0005) !important;
-  border-radius: 0.5em !important;
-}
-
-.row-module__timelineBodyRowContainer--ml7YX {
-  padding: 0.5em !important;
-}
-
-/* no tab text $ Make repository tabs only got icons and show text only on hover */
-.UnderlineNav-item {
-  span:not([class="Counter"]) {
-    opacity: 0 !important;
-    width: 0em !important;
-    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.2) !important;
-  }
-
-  &:hover {
-    span:not([class="Counter"]) {
-      width: 6em !important;
-      opacity: 1 !important;
-    }
-  }
-}
-
-.UnderlineNav-item:hover .Counter {
-  margin-left: var(--control-medium-gap) !important;
-}
-
-.AppHeader-localBar .Counter {
-  margin-left: 0px !important;
-  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.2) !important;
-}
-
-/* repo sidebar hover $ Revel more info on repository description and below sidebar content on hover */
-.Layout-sidebar {
-  .BorderGrid-cell {
-
-    .mt-2,
-    ul,
-    div:not(.hide-sm.hide-md, .flex-items-center, .my-3, .f6) {
-      height: 0 !important;
-      opacity: 0 !important;
-      margin: 0 !important;
-      transition: all 0.5s ease-out !important;
-    }
-  }
-
-  &:hover {
-    .BorderGrid-cell {
-
-      .mt-2,
-      ul,
-      div:not(.hide-sm.hide-md, .flex-items-center, .my-3, .f6) {
-        height: 100% !important;
-        opacity: 1 !important;
-        margin: 0.5em !important;
-      }
-    }
-  }
-}
-
-/* immersive search $ Blur and zoom in with search */
-.application-main {
-  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.35) !important;
-}
-
-body:has(header > .search-expanded) .application-main {
-  filter: blur(20px) !important;
-  scale: 1.05 !important;
-}
-
-/* Hide Separator in toolbar */
-.AppHeader .AppHeader-globalBar .AppHeader-actions::before {
-  display: none !important;
-}
-
-/* better vertical timeline icon bg */
-[data-testid="issue-viewer-container"],
-#repo-content-turbo-frame {
-
-  .TimelineItem-badge,
-  .prc-Timeline-TimelineBadge-BqMiN {
-    background-color: light-dark(#fff8, #00000054) !important;
-    border: solid var(--borderWidth-thin) #3d444d !important;
-  }
-}
-
-/* gh-better chip margin */
-.OverviewContent-module__Button--MDoYP {
-  margin-right: 8px !important;
-}
-
-#global-copilot-menu-button {
-  margin-left: 8px !important;
-}
-
-/* gh-remove borders */
-.prc-Button-ButtonBase-c50BI,
-.BtnGroup-item,
-.Button--secondary,
-.TextInput__StyledTextInput-sc-ttxlvl-0,
-.Box-sc-62in7e-0.BranchInfoBar-module__Box--NhDLA.BranchInfoBar-module__BranchInfoBarContainer--vaFVP {
-  border: none !important;
-}
-
-#fork-button,
-.BtnGroup-parent {
-  margin-right: 3px !important;
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-
-/* not my stylesheet. see link to author: https://github.com/sameerasw/my-internet/tree/main */
-
-
-
-/* transparency */
-html,
-body,
-nav,
-header,
-.app-root,
-#pass-sidebar,
-#main,
-#content,
-section,
-.navbar-inner,
-.nav a {
-  background-color: var(--main-bg-color) !important;
-  background: var(--main-bg-color) !important;
-  border: none !important;
-  box-shadow: none !important;
-  transition:
-    background-color 0.5s ease-in-out,
-    background 0.5s ease-in-out,
-    border 0.5s ease-in-out,
-    box-shadow 0.5s ease-in-out !important;
-}
-
-/* darkreader */
-:root {
-  --darkreader-background-ffffff: transparent !important;
-}
-
-/* no footer */
-footer {
-  display: none !important;
-}
-
-/* not my stylesheet. see link to author: https://github.com/sameerasw/my-internet/tree/main */
-
-
-
-
-/* reddit-transparency */
-#subreddit-right-rail__partial aside,
-header,
-.grid-container,
-comment-body-header,
-shreddit-comment-tree,
-#left-sidebar,
-#flex-left-nav-container,
-.toolbar-container,
-.threadline,
-#pdp-credit-bar {
-  background-color: var(--main-bg-color) !important;
-  border: none !important;
-}
-
-shreddit-comments-sort-dropdown,
-shreddit-comment {
-  --color-neutral-background: var(--main-bg-color) !important;
-}
-
-shreddit-comment>div {
-  --color-neutral-background: light-dark(#ffffff, #0b1416) !important;
-}
-
-shreddit-app,
-body,
-html {
-  background-color: var(--main-bg-color) !important;
-}
-
-/* reddit-no chat feed */
-[source="chat_module_home"] {
-  display: none !important;
-}
-
-/* no recent posts */
-div aside recent-posts {
-  display: none !important;
-}
-
-/* reddit-hide elements */
-hr {
-  display: none !important;
-}
-
-nav.z-\[2\]>nav:nth-child(18),
-div.visible {
-  display: none !important;
-}
-
-hr.w-100.my-sm.border-neutral-border-weak {
-  display: none !important;
-}
-
-/* reddit-other changes */
-.overflow-visible>div:nth-child(32),
-faceplate-dropdown-menu {
-  border-radius: 1em 1em 0 0 !important;
-}
-
-shreddit-comment {
-  --color-tone-4: light-dark(#000, #fff) !important;
-}
-
-/* reddit-hover */
-[expanded="0"] #flex-left-nav-container,
-#flex-nav-buttons,
-#left-nav-drawer.rpl-dialog *,
-#hovercard {
-  background-color: light-dark(#fff, #000) !important;
-  border-radius: 1em !important;
-}
-
-#flex-left-nav-container,
-#right-sidebar-container {
-  transition: opacity 0.3s ease-in-out !important;
-  opacity: 0 !important;
-
-  &:hover {
-    opacity: 1 !important;
-  }
-}
-
-/* glass effect */
-shreddit-post {
-  padding: 1em !important;
-  margin-bottom: 1em;
-}
-
-shreddit-comment {
-  border-radius: 1em !important;
-  padding: 0.5em !important;
-}
-
-article shreddit-post,
-shreddit-post,
-[source="comment_composer"] button,
-shreddit-comment[depth="0"] {
-  box-shadow:
-    rgba(0, 0, 0, 0.05) 0px -36px 30px 0px inset,
-    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
-    rgba(0, 0, 0, 0.06) 0px 2px 1px,
-    rgba(0, 0, 0, 0.09) 0px 4px 2px,
-    rgba(0, 0, 0, 0.09) 0px 8px 4px,
-    rgba(0, 0, 0, 0.09) 0px 16px 8px;
-  background-color: light-dark(#fff8, #0005) !important;
-}
-
-/* no ads */
-shreddit-ad-post {
-  display: none !important;
-}
-
-/* not my stylesheet. see link to author: https://github.com/sameerasw/my-internet/tree/main */
-
-
-
-
-/* transparency */
-html,
-body,
-nav,
-header,
-.app-root,
-#pass-sidebar,
-#main,
-#content,
-section,
-.border-r,
-.group\/sidebar-wrapper>div,
-.dark\:bg-sidebar>div,
-main>div,
-.to-transparent,
-.bg-noise,
-.bg-gradient-noise-top {
-  background-color: var(--main-bg-color) !important;
-  background: var(--main-bg-color) !important;
-  border: none !important;
-  box-shadow: none !important;
-  transition:
-    background-color 0.5s ease-in-out,
-    background 0.5s ease-in-out,
-    border 0.5s ease-in-out,
-    box-shadow 0.5s ease-in-out !important;
-}
-
-/* hidden */
-footer,
-span:has(a[href="/terms-of-service"]),
-.prose:has(a[href="/terms-of-service"]),
-[style="clip-path: inset(0px 12px 0px 0px);"],
-.fixed.right-0.top-0 .ease-snappy svg {
-  display: none !important;
-}
-
-/* not my stylesheet. see link to author: https://github.com/sameerasw/my-internet/tree/main */
-
-
-
-
-/* todoist-transparency */
-html,
-body,
-nav,
-#nav,
-.nav,
-navbar,
-.navbar,
-#navbar,
-header,
-#header,
-.header,
-app,
-#app,
-.sidebar-wrap,
-section,
-#__next,
-#root,
-.app,
-.AppContainer,
-.app-root,
-#wrapper,
-body[data-theme="dark"],
-body[data-theme="light"],
-#pass-sidebar,
-.side-bar,
-#main,
-.sidebar,
-main,
-.header-top,
-#content,
-#cu-identity,
-section,
-.l-root,
-#__next,
-.landing-hero,
-loading_screen,
-#navigation-wrapper,
-#global-navbar,
-.layout__content-wrapper,
-.head.notfixed,
-.main-container,
-#app>div,
-.btm-nav>a,
-.oc-content--main,
-body.dark_mode,
-body.light_mode,
-text-div>textarea,
-#todoist_app>div:has(> .app-sidebar-container),
-#todoist_app>div>div.app-sidebar-container>div>nav,
-#todoist_app>div>div.app-sidebar-container>div>nav>div,
-#todoist_app>div>div:has(> #content),
-header>div,
-.task_list_item,
-.task_list_item:hover .task_list_item__actions,
-.task_list_item .task_list_item__actions__active,
-.theme_dark .task_list_item:hover .task_list_item__actions,
-.theme_dark .task_list_item__actions__active,
-.section,
-.loading_screen,
-.task_editor__editing_area,
-.task_editor__description_field,
-.rbc-calendar>div,
-div[data-expansion-panel-header="true"] {
-  background-color: var(--main-bg-color) !important;
-  background-image: none !important;
-}
-
-header>div {
-  border-color: var(--main-bg-color) !important;
-}
-
-.task_editor {
-  background: rgba(50, 50, 50, 0.44) !important;
-}
-
-li:not(.current)>div[data-sidebar-list-item="true"]>div:hover {
-  background-color: #5f5f5f70 !important;
-}
-
-li.current>div[data-sidebar-list-item="true"]>div {
-  background-color: #d04a4a40 !important;
-}
-
-:root {
-  --product-library-selectable-secondary-selected-fill: #d04a4a40 !important;
-}
-
-div[data-expansion-panel-header="true"]:has(* button[aria-expanded="false"]) {
-  position: unset !important;
-}
-
-div#week-view-container>div:first-child>div:first-child>div:first-child {
-  backdrop-filter: blur(5px) !important;
-  background-color: var(--main-bg-color) !important;
-}
-
-div[data-column-date]>div:first-child>div,
-div[data-column-date]~div {
-  background: rgba(50, 50, 50, 0.44) !important;
-  backdrop-filter: blur(2px) grayscale() !important;
-}
-
-div[data-column-date]>div {
-  border-bottom: none !important;
-}
-
-/* todoist-sidebar hover */
-.app-sidebar-container>div:has(> nav > div > div > div > button[aria-expanded="true"]) {
-  min-width: 24px !important;
-  overflow: hidden !important;
-  transition:
-    min-width 0.3s,
-    width 0.3s,
-    margin 0.3s !important;
-}
-
-.app-sidebar-container>div:not(:hover):has(> nav > div > div > div > button[aria-expanded="true"]) {
-  width: 24px !important;
-  margin: 5px !important;
-}
-
-.app-sidebar-container>div:has(> nav > div > div > div > button[aria-expanded="true"]) * {
-  transition:
-    margin 0.3s,
-    padding 0.3s !important;
-}
-
-.app-sidebar-container>div:not(:hover):has(> nav > div > div > div > button[aria-expanded="true"]) * {
-  margin: 0px !important;
-  padding: 0px !important;
-}
-
-.app-sidebar-container>div:has(> nav > div > div > div > button[aria-expanded="true"]) div[data-expansion-panel-header="true"] {
-  transition: height 0.3s !important;
-  overflow: hidden !important;
-}
-
-.app-sidebar-container>div:not(:hover):has(> nav > div > div > div > button[aria-expanded="true"]) div[data-expansion-panel-header="true"] {
-  height: 0 !important;
-}
-
-.app-sidebar-container>div:not(:hover):has(> nav > div > div > div > button[aria-expanded="true"])>nav>div>div>div:has(> button[aria-controls="sidebar"]) {
-  display: none !important;
-}
-
-.app-sidebar-container>div:not(:hover):has(> nav > div > div > div > button[aria-expanded="true"]) button[aria-label="Settings"] svg {
-  opacity: 0 !important;
-  transition: opactiy 0.3s !important;
-}
-
-/* darkreader */
-:root {
-  --darkreader-background-ffffff: transparent !important;
-}
-
-/* no footer */
-footer,
-mfe-footer-pharos-footer,
-.footer,
-#footer {
-  display: none !important;
-}
-
-/* not my stylesheet. see link to author: https://github.com/sameerasw/my-internet/tree/main */
-
 
+/* Youtube */
 /* yt-Transparency */
 html[dark],
 html,
@@ -935,7 +33,8 @@ ytd-item-section-renderer[page-subtype="playlist"] #header.ytd-item-section-rend
   background: var(--main-bg-color) !important;
 }
 
-body::-webkit-scrollbar {
+body::-webkit-scrollbar,
+ytd-guide-signin-promo-renderer {
   display: none;
 }
 
@@ -953,8 +52,8 @@ tp-yt-app-drawer>#contentContainer,
 #guide-content,
 ytd-mini-guide-renderer,
 ytd-mini-guide-entry-renderer {
-  background-color: var(--main-bg-color) !important;
-  background: var(--main-bg-color) !important;
+  background-color: #00000000 !important;
+  background: none !important;
 }
 
 .ytLrPromoShelfRendererPreviewBackground {
@@ -1055,7 +154,7 @@ body:not(:has([mini-guide-visible=""])) {
   }
 
   ytd-app:not([guide-persistent-and-visible=""]) tp-yt-app-drawer>#contentContainer {
-    background: transparent !important;
+    background: var(--main-bg-color) !important;
   }
 }
 
@@ -1193,8 +292,8 @@ ytd-merch-shelf-renderer,
 #player-full-bleed-container,
 #full-bleed-container,
 ytlr-player {
-  background-color: #0000000 !important;
-  background: transparent !important;
+  background-color: var(--main-bg-color) !important;
+  background: var(--main-bg-color) !important;
 }
 
 #cinematics {
@@ -1333,6 +432,10 @@ ytd-two-column-browse-results-renderer:has(.ytd-playlist-video-renderer) {
   padding: 1em !important;
   box-shadow: #0008 0 0 20px !important;
   width: fit-content !important;
+}
+
+.ytp-caption-segment {
+  background: none !important;
 }
 
 /* yt-Keep player shadow $ Remove the shadow around the player when disabled */
@@ -1539,16 +642,1009 @@ ytlr-compact-link-renderer {
   .ytp-prev-button,
   .ytp-next-button {
     backdrop-filter: blur(5px) !important;
-    background-color: #0001 !important;
+    background-color: var(--main-bg-color) !important;
   }
 }
 
-.ytp-right-controls {
+.ytp-right-controls,
+.ytp-time-wrapper {
   backdrop-filter: blur(5px) !important;
-  background-color: #0001 !important;
+  background-color: var(--main-bg-color) !important;
 }
 
 .ytp-popup {
   backdrop-filter: blur(10px) !important;
-  background-color: #0007 !important;
+  background-color: var(--main-bg-color) !important;
+
+}
+
+
+/* Reddit */
+
+/* reddit-transparency */
+#subreddit-right-rail__partial aside,
+header,
+.grid-container,
+comment-body-header,
+shreddit-comment-tree,
+#left-sidebar,
+#flex-left-nav-container,
+.toolbar-container,
+.threadline,
+#pdp-credit-bar {
+  background-color: var(--main-bg-color) !important;
+  border: none !important;
+}
+
+shreddit-comments-sort-dropdown,
+shreddit-comment {
+  --color-neutral-background: transparent !important;
+}
+
+shreddit-comment>div {
+  --color-neutral-background: light-dark(#ffffff, #0b1416) !important;
+}
+
+shreddit-app,
+body,
+html {
+  background-color: var(--main-bg-color) !important;
+}
+
+/* reddit-no chat feed */
+[source="chat_module_home"] {
+  display: none !important;
+}
+
+/* no recent posts */
+div aside recent-posts {
+  display: none !important;
+}
+
+/* reddit-hide elements */
+hr {
+  display: none !important;
+}
+
+nav.z-\[2\]>nav:nth-child(18),
+div.visible {
+  display: none !important;
+}
+
+hr.w-100.my-sm.border-neutral-border-weak {
+  display: none !important;
+}
+
+/* reddit-other changes */
+.overflow-visible>div:nth-child(32),
+faceplate-dropdown-menu {
+  border-radius: 1em 1em 0 0 !important;
+}
+
+shreddit-comment {
+  --color-tone-4: light-dark(#000, #fff) !important;
+}
+
+/* reddit-hover */
+[expanded="0"] #flex-left-nav-container,
+#flex-nav-buttons,
+#left-nav-drawer.rpl-dialog *,
+#hovercard {
+  background-color: light-dark(#fff, var(--main-bg-color)) !important;
+  border-radius: 1em !important;
+}
+
+#flex-left-nav-container,
+#right-sidebar-container {
+  transition: opacity 0.3s ease-in-out !important;
+  opacity: 0 !important;
+
+  &:hover {
+    opacity: 1 !important;
+  }
+}
+
+/* glass effect */
+shreddit-post {
+  padding: 1em !important;
+  margin-bottom: 1em;
+}
+
+shreddit-comment {
+  border-radius: 1em !important;
+  padding: 0.5em !important;
+}
+
+article shreddit-post,
+shreddit-post,
+[source="comment_composer"] button,
+shreddit-comment[depth="0"] {
+  box-shadow:
+    rgba(0, 0, 0, 0.05) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+    rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px;
+  background-color: light-dark(#fff8, #0005) !important;
+}
+
+/* no ads */
+shreddit-ad-post {
+  display: none !important;
+}
+
+
+/* Github */
+
+
+
+/* gh-transparency */
+html,
+body,
+header,
+.color-bg-default,
+.feed-background,
+.session-authentication,
+.auth-form-body,
+[aria-labelledby="folders-and-files"] .bgColor-muted,
+nav,
+.dxnHPp,
+.kcVpNH,
+.discussion-timeline-actions,
+.TimelineItem-break,
+.gh-header,
+.PageLayout-pane,
+.bSTcOH,
+.gOhIYN,
+.IssueViewer-module__contentArea__NVsYRb_,
+#blob-edit-side-panel-id,
+#repository-container-header,
+.empty-cell,
+.FleZw,
+.MarkdownInput-module__textArea--QjIwG,
+.notifications-list-item,
+.notifications-list-item.notification-read,
+.search-results-page,
+.application-main>div>div,
+#memex-root,
+[aria-label="Project"],
+#memex-project-view-root>div,
+[aria-label="Formatting tools"],
+.slicer-items-module__SlicerPanel--nSeK0,
+.jyoUVC,
+.Box-sc-g0xbh4-0[role="grid"],
+[role="row"],
+.eqCHeb,
+[data-testid="chat-layout"],
+aside>div,
+[data-testid="chat-layout"]>div>div>div,
+[data-testid="chat-layout"]>div>aside,
+.ContentPreview-module__tabsContainer--bNywg::after,
+.snippet-clipboard-content>.notranslate,
+.IssueViewer-module__contentArea--mHr61,
+.SubscriptionSection-module__button--WSUPv,
+.IssueViewer-module__contentArea--IpMnd,
+section[aria-label="Events"]>div>div>[data-timeline-event-id],
+.IssueViewer-module__contentArea__ChMIU {
+  background-color: var(--main-bg-color) !important;
+  background: var(--main-bg-color) !important;
+  border: var(--main-bg-color) !important;
+  box-shadow: none !important;
+  transition:
+    background-color 0.5s ease-in-out,
+    background 0.5s ease-in-out,
+    border 0.5s ease-in-out,
+    box-shadow 0.5s ease-in-out !important;
+}
+
+button[role="tab"] {
+  &[aria-selected="true"] {
+    border-radius: 0.5em !important;
+  }
+}
+
+.MarkdownEditor-module__viewSwitchBorder--zeiDB,
+.js-comment-container::before,
+.js-comment-container .TimelineItem::before {
+  display: none !important;
+}
+
+[aria-label="Copilot badge"]+div>.js-snippet-clipboard-copy-unpositioned:has(h3) {
+  padding: 1em !important;
+}
+
+/* gh-transparent lists $ Make the files, issues and other lists transparent */
+.PageLayout-content .Box:not(.Popover-message),
+.PageLayout-content .Box-row,
+#repo-content-turbo-frame .Box.Box:not(.Popover-message) {
+  background-color: var(--main-bg-color) !important;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* gh-no footer */
+footer:has(h2) {
+  opacity: 0 !important;
+}
+
+/* gh-hover $ Make the left and right sidebars show on hover */
+.feed-left-sidebar,
+.feed-right-column {
+  opacity: 0 !important;
+  transition: all 0.3s ease-in-out !important;
+
+  &:hover {
+    opacity: 1 !important;
+  }
+}
+
+/* gh-border mods */
+table,
+.eIKYQa,
+div.border-bottom,
+td {
+  border: none !important;
+}
+
+.dJnomT,
+.jPdcfu,
+.gOHzTT,
+.eBevHz,
+.Box-header,
+#repos-sticky-header>div,
+.jbBkdO,
+.file-header,
+.TabNav-item {
+  border-radius: 0.5em !important;
+}
+
+[data-selector="repos-split-pane-content"] {
+
+  section,
+  .NWhVB,
+  .cm-gutters,
+  [data-testid="codemirror-editor"],
+  [data-testid="codemirror-editor"] .cm-content,
+  .llKfAj {
+    background: none !important;
+    box-shadow: none !important;
+  }
+}
+
+#user-profile-frame .Box,
+.mgKNn,
+.fGELhp,
+.timeline-comment,
+.empty-diff-line,
+.Diff-module__diffHeaderWrapper--rsdD4::before {
+  background: none !important;
+  box-shadow: none !important;
+}
+
+.feed-item-content,
+.color-bg-subtle,
+.ajax-pagination-btn,
+action-graph .color-bg-inset,
+[data-testid="comment-header"] .Box-sc-g0xbh4-0,
+.copilotPreview__suggestionButton:not(:hover) {
+  background-color: var(--main-bg-color) !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+
+/* gh-overlay fixes $ Fix some transparent overlays and menus */
+modal-dialog .search-suggestions,
+details-dialog.Box,
+.Box-sc-g0xbh4-0.gOHzTT.js-notification-shelf-offset-top.color-bg-default,
+.Popover-message,
+.HeaderMetadata-module__stickyContainer--xk69x {
+  background-color: var(--bgColor-inset) !important;
+  transition: background-color 0.3s ease-in-out !important;
+  border-radius: 1em !important;
+}
+
+/* gh-glass effect */
+.prc-Button-ButtonBase-c50BI:not([data-variant="primary"],
+  .Toolbar-module__group--dOhAD > button[data-component="IconButton"],
+  button[data-component="IconButton"].ToolbarButton-module__iconButton--o0jFl),
+.MergeabilityIcon-module__mergeabilityIcon--GOu7M,
+.range-editor,
+.TableHead.prc-DataTable-TableHead-eOrJU,
+.Table.prc-DataTable-Table-qYfrL,
+.tabnav-tab.selected,
+.TabNav__TabNavLink-sc-pwdi4r-3.selected,
+.timeline-comment-header,
+.Metadata-module__container--tL6Q3,
+.CodeBlock-module__header--RMUQr,
+.CodeBlock-module__codeContainer--dAEis,
+.ChatMessage-module__actions--Jllb6,
+.ContentPreviewTab-module__tabContent--zNIXv:hover,
+.cm-gutters,
+.cm-editor.ͼ1.ͼ2.ͼ5nc.ͼ5fa.hide-help.js-codemirror-editor,
+.FilePreview-module__toolbar--toYCM,
+.cm-content,
+.FileBlock-module__container--zWu5c,
+.ChatMessage-module__content--MYneF,
+.Layout-module__previewPane--vF1ZO.Layout-module__active--nDCtU,
+.ChatInput-module__container--NFzCy,
+#settings-frame .Box,
+.form-select,
+.edit_user button,
+.Box-sc-g0xbh4-0 .gxwXUv,
+.Box-sc-g0xbh4-0.fXxPgR,
+.Box-sc-62in7e-0.BranchInfoBar-module__Box--NhDLA.BranchInfoBar-module__BranchInfoBarContainer--vaFVP,
+#file-tree-filter-field,
+.highlight pre,
+.ListItem-module__listItem--kHali:hover,
+.Box-sc-g0xbh4-0 .gpHFJV,
+.Box-row.Box-row--focus-gray.p-0.mt-0.js-navigation-item.js-issue-row.navigation-focus,
+.d-flex.flex-column.border.rounded-2.mb-3.pl-1,
+.form-group .form-control,
+.Box-sc-g0xbh4-0 .erfCwp,
+.Box-sc-g0xbh4-0 .eHDvEW,
+.Box-sc-g0xbh4-0 .ldkMIO,
+.Box-sc-g0xbh4-0 .eWEbRA:hover,
+.react-directory-row:hover,
+.tabnav-tab[aria-selected="true"],
+.snippet-clipboard-content.notranslate.position-relative.overflow-auto,
+.Shared-module__CommentBox--x3rre,
+.Box-sc-g0xbh4-0 .crArEc,
+.copilotPreview,
+.MarkdownEditor-module__inputWrapper--MtV0d,
+.TextInput-wrapper,
+.AppHeader-search-whenRegular,
+turbo-frame>article>div.feed-item-content,
+#feed-filter-menu summary,
+.pagehead-actions button,
+.pagehead-actions details summary,
+.tabnav-tab:hover,
+#fork-button,
+.BtnGroup button,
+.BtnGroup details summary,
+input[value="Follow"],
+.Button--secondary,
+#dashboard-repos-filter-left,
+.react-directory-remove-file-icon button,
+#branch-picker-repos-header-ref-selector,
+.FilterInputWrapper-module__Box_1--vewob,
+.FilterInputWrapper-module__Box_1--vewob button,
+.SearchBarActions-module__buttons--N7M2V a,
+#\:rbo\:-list-view-container,
+table[aria-labelledby="folders-and-files"],
+#\:r1a\:-list-view-container,
+[aria-label="Issues"][data-issue-and-pr-hovercards-enabled],
+#js-issues-search,
+.QueryBuilder [data-target="query-builder.styledInput"],
+.Box-body,
+a[aria-label="Add file"],
+button[aria-label="Search this repository"],
+[data-testid="issue-body"],
+#\:rc\:-list-view-container,
+.container:has(#repos-sticky-header),
+.UnderlineNav-item:hover,
+.TabNav__TabNavLink-sc-pwdi4r-3:hover,
+.notifications-list,
+.notifications-list-item.notification-unread,
+.Box-header,
+.Box-sc-g0xbh4-0.iwUbcA,
+#type-options summary,
+#language-options summary,
+#sort-options summary,
+.Box-sc-g0xbh4-0.NWhVB,
+[data-selector="repos-split-pane-content"] .Box-sc-g0xbh4-0.NWhVB,
+.react-issue-comment,
+.MergeBox-module__mergePartialContainer--N4i3Z,
+.MarkdownEditor-module__previewWrapper--UHhTL,
+.FormControl-input,
+.btn.btn-block.js-profile-editable-edit-button,
+.btn.js-quick-submit-alternative,
+#your-repos-filter {
+  box-shadow:
+    rgba(0, 0, 0, 0.05) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset !important;
+  background-color: light-dark(#fff8, #0005) !important;
+  border-radius: 0.5em !important;
+}
+
+.avatar-upload div.position-absolute {
+  box-shadow:
+    rgba(0, 0, 0, 0.5) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset !important;
+}
+
+.TabNav__TabNavTabList-sc-pwdi4r-1.DvNYj,
+.tabnav-tabs.d-flex.overflow-auto,
+.fLXEGX {
+  gap: 8px !important;
+}
+
+.CommentBox-container,
+.CommentBox-comment {
+  background-color: light-dark(#fff8, #0005) !important;
+  border-radius: 0 0 10px 10px !important;
+  border: none !important;
+  margin: 0px !important;
+}
+
+a.rgh-own-conversation,
+a.rgh-own-conversation:hover {
+  border-radius: 4px 4px 10px;
+}
+
+#new_comment_field,
+.CommentBox-comment {
+  box-shadow: none !important;
+}
+
+.tabnav.CommentBox-header {
+  border: none !important;
+  background-color: light-dark(#fff8, #0005) !important;
+}
+
+.timeline-comment-group .timeline-comment {
+  box-shadow:
+    rgba(0, 0, 0, 0.05) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset !important;
+  background-color: light-dark(#fff8, #0005) !important;
+  border-radius: 0.5em !important;
+}
+
+.row-module__timelineBodyRowContainer--ml7YX {
+  padding: 0.5em !important;
+}
+
+/* no tab text $ Make repository tabs only got icons and show text only on hover */
+nav[aria-label="Repository"]>ul>li>a {
+  span[data-component="text"] {
+    opacity: 0 !important;
+    width: 0em !important;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.2) !important;
+  }
+
+  &:hover {
+    span[data-component="text"] {
+      width: 6em !important;
+      opacity: 1 !important;
+    }
+  }
+}
+
+.UnderlineNav-item:hover .Counter {
+  margin-left: var(--control-medium-gap) !important;
+}
+
+.AppHeader-localBar .Counter {
+  margin-left: 0px !important;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.2) !important;
+}
+
+/* repo sidebar hover $ Revel more info on repository description and below sidebar content on hover */
+.Layout-sidebar {
+  .BorderGrid-cell {
+
+    .mt-2,
+    ul,
+    div:not(.hide-sm.hide-md, .flex-items-center, .my-3, .f6) {
+      height: 0 !important;
+      opacity: 0 !important;
+      margin: 0 !important;
+      transition: all 0.5s ease-out !important;
+    }
+  }
+
+  &:hover {
+    .BorderGrid-cell {
+
+      .mt-2,
+      ul,
+      div:not(.hide-sm.hide-md, .flex-items-center, .my-3, .f6) {
+        height: 100% !important;
+        opacity: 1 !important;
+        margin: 0.5em !important;
+      }
+    }
+  }
+}
+
+/* immersive search $ Blur and zoom in with search */
+.application-main {
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.35) !important;
+}
+
+body:has(header > .search-expanded) .application-main {
+  filter: blur(20px) !important;
+  scale: 1.05 !important;
+}
+
+/* Hide Separator in toolbar */
+.AppHeader .AppHeader-globalBar .AppHeader-actions::before {
+  display: none !important;
+}
+
+/* better vertical timeline icon bg */
+[data-testid="issue-viewer-container"],
+#repo-content-turbo-frame {
+
+  .TimelineItem-badge,
+  .prc-Timeline-TimelineBadge-BqMiN {
+    background-color: light-dark(#fff8, #00000054) !important;
+    border: solid var(--borderWidth-thin) #3d444d !important;
+  }
+}
+
+/* gh-better chip margin */
+.OverviewContent-module__Button--MDoYP {
+  margin-right: 8px !important;
+}
+
+#global-copilot-menu-button {
+  margin-left: 8px !important;
+}
+
+/* gh-remove borders */
+.prc-Button-ButtonBase-c50BI:not(.ReactionButton-module__reactionToggleButtonReacted--TgLue),
+.BtnGroup-item,
+.Button--secondary,
+.TextInput__StyledTextInput-sc-ttxlvl-0,
+.Box-sc-62in7e-0.BranchInfoBar-module__Box--NhDLA.BranchInfoBar-module__BranchInfoBarContainer--vaFVP {
+  border: none !important;
+}
+
+#fork-button,
+.BtnGroup-parent {
+  margin-right: 3px !important;
+}
+
+/* Feedly */
+
+/* feedly-Transparency */
+html,
+body,
+nav,
+header,
+.FeedlyChrome,
+#feedlyFrame,
+#headerBarFX,
+.TopHeaderBar,
+.LeftnavEmptySpace {
+  background-color: var(--main-bg-color) !important;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  transition:
+    background-color 0.5s ease-in-out,
+    background 0.5s ease-in-out,
+    border 0.5s ease-in-out,
+    box-shadow 0.5s ease-in-out !important;
+}
+
+/* feedly-No thanks */
+.TZCVJGAQJfvz8bV8MrrA {
+  display: none !important;
+}
+
+/* feedly-Article view background */
+.home.theme--dark .InlineArticle.InlineArticle--fullArticle {
+  border-color: transparent !important;
+  background-color: #0005 !important;
+  box-shadow:
+    rgba(0, 0, 0, 0.05) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+    rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px !important;
+}
+
+.home.theme--light .InlineArticle.InlineArticle--fullArticle {
+  border-color: transparent !important;
+  background-color: #fff8 !important;
+  box-shadow:
+    rgba(0, 0, 0, 0.05) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+    rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px !important;
+}
+
+/* feedly-Active element */
+.home.theme--dark {
+  --semanticColorBackgroundStatesLightActive: #0005 !important;
+  color-scheme: dark !important;
+}
+
+.home.theme--light {
+  --semanticColorBackgroundStatesLightActive: #fff8 !important;
+  color-scheme: light !important;
+}
+
+/* Google News */
+
+
+/* news-transparency */
+html,
+body,
+nav,
+header,
+c-wiz,
+.dm7YTc .isdDAc,
+.KDoq1,
+hr,
+.dSBEqc,
+.qN9IM,
+[aria-label="Scroll chips forward"],
+[aria-label="Scroll chips backward"],
+.dm7YTc .nTN4Wc,
+[jsname="fjw8sb"],
+div.nTN4Wc,
+.Z2kkN {
+  background-color: var(--main-bg-color) !important;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  transition:
+    background-color 0.5s ease-in-out,
+    background 0.5s ease-in-out,
+    border 0.5s ease-in-out,
+    box-shadow 0.5s ease-in-out !important;
+}
+
+.dm7YTc .Ly25Ed,
+.dm7YTc .Z2kkN,
+.sQBzPb,
+.ryo59b,
+.i0Zvib,
+.ndIcDe,
+.Ly25Ed,
+.isdDAc {
+  background-color: transparent !important;
+  border: solid light-dark(#000, #fff) 1px !important;
+}
+
+[role="menubar"] {
+  background-color: light-dark(#fff, #444) !important;
+
+  div:not([aria-selected="true"]) a {
+    color: light-dark(#000, #fff) !important;
+  }
+
+  border-radius: 5em;
+  margin-top: 0 !important;
+}
+
+/* news-weather fix */
+[jsname="sYlLx"]:has([aria-hidden="true"]) {
+  opacity: 0 !important;
+}
+
+/* Youtube Music */
+
+
+/* transparency */
+:root {
+  --ts-body-color: var(--main-bg-color) !important;
+}
+
+body {
+  background-color: transparent !important;
+  transition: background-color 0.5s ease-in-out !important;
+}
+
+ytmusic-player-expanding-menu {
+  background-color: var(--main-bg-color) !important;
+  border-radius: 1em !important;
+}
+
+/* Hover */
+.ytmusic-guide-renderer,
+ytmusic-nav-bar {
+  opacity: 0.01 !important;
+  transition: opacity 0.5s ease-in-out !important;
+}
+
+.ytmusic-guide-renderer:hover,
+ytmusic-nav-bar:hover {
+  opacity: 1 !important;
+}
+
+ytmusic-app[is-bauhaus-sidenav-enabled] #guide-wrapper.ytmusic-app {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+/* Hide elements */
+#nav-bar-divider,
+#browse-page>#background {
+  display: none !important;
+}
+
+ytmusic-chip-cloud-renderer.style-scope.ytmusic-section-list-renderer {
+  opacity: 0 !important;
+  height: fit-content !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  transition: all 0.3s ease-in-out !important;
+}
+
+ytmusic-chip-cloud-renderer.style-scope.ytmusic-section-list-renderer:hover {
+  opacity: 1 !important;
+}
+
+/* Player sidebar */
+#side-panel {
+  width: 40em !important;
+  height: 80vh !important;
+  padding: 0 2em !important;
+  right: -30em !important;
+  top: 10vh !important;
+  opacity: 0 !important;
+  position: absolute !important;
+  transition: all 0.3s ease-in-out !important;
+  backdrop-filter: blur(20px) !important;
+  border-radius: 2em 0 0 2em !important;
+  background-color: #0005 !important;
+  box-shadow:
+    rgba(0, 0, 0, 0.15) 0px -36px 30px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px inset,
+    rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px !important;
+}
+
+#side-panel tp-yt-paper-tabs {
+  transition: height 0.3s ease-in-out !important;
+  height: 0 !important;
+}
+
+#side-panel:hover {
+  right: 0 !important;
+  opacity: 1 !important;
+}
+
+#side-panel:hover tp-yt-paper-tabs {
+  height: 4em !important;
+}
+
+#side-panel:has(ytmusic-tab-renderer[page-type="MUSIC_PAGE_TYPE_TRACK_LYRICS"]):not(:has(ytmusic-message-renderer:not([style="display: none;"]))) {
+  right: 0 !important;
+  opacity: 1 !important;
+}
+
+#side-panel {
+  min-width: auto !important;
+}
+
+div.ytmusic-player-queue#contents {
+  margin-bottom: 0 !important;
+  /* @ margin no longer needed as sidebar is above player */
+}
+
+/* Centered player */
+ytmusic-app-layout:not([player-ui-state="FULLSCREEN"]) #main-panel {
+  position: absolute !important;
+  height: 70vh !important;
+  max-width: 70vw !important;
+  aspect-ratio: 1 !important;
+  top: 50vh !important;
+  left: 50vw !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+/* Nav background removal */
+#nav-bar-background,
+#mini-guide-background {
+  border: none !important;
+  height: 0 !important;
+  width: 0 !important;
+}
+
+#guide,
+ytmusic-nav-bar,
+.background-gradient {
+  background-color: var(--ts-body-color) !important;
+  background-image: none !important;
+  background-repeat: no-repeat !important;
+}
+
+#player-page {
+  padding: 0 !important;
+  margin: 0 !important;
+  left: 0 !important;
+  top: 0 !important;
+  height: 100% !important;
+  width: 100% !important;
+}
+
+/* @ fix overlapping of nav bar and guide */
+.content {
+  --ytmusic-player-page-vertical-padding: var(--ytmusic-nav-bar-height);
+  --ytmusic-player-page-horizontal-padding: calc(var(--ytmusic-guide-width) + 20px);
+}
+
+div.ytmusic-player-queue#contents {
+  margin-bottom: calc(var(--ytmusic-player-bar-height) + 10px);
+  /* @ otherwise user can't reach the final song of the queue as its covered by player bar */
+}
+
+/* Player bar styling */
+ytmusic-player-bar,
+#player-bar-background {
+  margin: 1vw !important;
+  width: 98vw !important;
+  border-radius: 1em !important;
+  overflow: hidden !important;
+  transition: all 0.5s ease-in-out !important;
+  background-color: #0002 !important;
+  box-shadow:
+    rgba(0, 0, 0, 0.15) 0px -36px 30px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px inset,
+    rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px !important;
+}
+
+#layout:not([player-ui-state="PLAYER_PAGE_OPEN"]) #player-bar-background {
+  background-color: #0005 !important;
+}
+
+/* Mini player tweaks */
+#main-panel:has(ytmusic-player[player-ui-state="MINIPLAYER"]) {
+  position: fixed !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  top: -100vh !important;
+  left: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  transform: none !important;
+  max-width: 100vw !important;
+}
+
+ytmusic-player[player-ui-state="MINIPLAYER"] {
+  position: fixed !important;
+  bottom: calc(100vh + 120px) !important;
+  right: 30px !important;
+  width: 350px !important;
+  height: fit-content !important;
+}
+
+#av-id:has(ytmusic-av-toggle) {
+  position: absolute !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  top: -4em !important;
+  opacity: 0 !important;
+  transition: all 0.3s ease-in-out !important;
+}
+
+#av-id:has(ytmusic-av-toggle):hover {
+  opacity: 1 !important;
+}
+
+#player[player-ui-state="MINIPLAYER"] {
+  display: none !important;
+}
+
+/* Show mini player */
+#player[player-ui-state="MINIPLAYER"] {
+  display: initial !important;
+}
+
+/* Immersive player */
+#content {
+  transition: opacity 0.5s ease-in-out !important;
+}
+
+#player,
+#song-image #thumbnail {
+  border-radius: 2em !important;
+  overflow: hidden !important;
+  box-shadow: #0006 0 0 50px !important;
+}
+
+#player-page {
+  background-color: transparent !important;
+  background: none !important;
+}
+
+ytmusic-app-layout>#content {
+  height: calc(100vh - 205px) !important;
+  overflow: scroll !important;
+}
+
+/* Centered player bar*/
+#left-controls {
+  position: absolute !important;
+  left: 49vw !important;
+  bottom: 15px !important;
+  transform: translateX(-50%) !important;
+  width: fit-content !important;
+  order: 1 !important;
+}
+
+.time-info {
+  position: absolute !important;
+  bottom: -10px !important;
+  width: 100% !important;
+  text-align: center !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.middle-controls {
+  position: absolute !important;
+  left: 1vw !important;
+  bottom: 15px !important;
+  max-width: 30vw !important;
+  order: 0 !important;
+}
+
+/* Addon : timed comments pop-up */
+.__youtube-timestamps__stamp {
+  scale: 3 !important;
+  border-radius: 1.5px !important;
+  transition: all 0.3s ease-in-out !important;
+  z-index: 10000000000000 !important;
+
+  &:hover {
+    scale: 5 !important;
+  }
+}
+
+.__youtube-timestamps__preview-wrapper {
+  scale: 1.2 !important;
+  transform: translateX(16%) !important;
+
+  .__youtube-timestamps__preview {
+    border-radius: 1em !important;
+    backdrop-filter: blur(20px) !important;
+    background-color: var(--main-bg-color) !important;
+    border: solid 2px gray !important;
+
+    .__youtube-timestamps__preview__avatar {
+      height: 2.5em !important;
+      width: 2.5em !important;
+      border-radius: 0.5em !important;
+    }
+
+    .__youtube-timestamps__preview__text-stamp {
+      background-color: #ffaaaa !important;
+      padding: 0.1em 0.3em !important;
+      border-radius: 0.5em !important;
+      color: var(--main-bg-color) !important;
+    }
+
+    .__youtube-timestamps__preview__name,
+    .__youtube-timestamps__preview__text {
+      color: #ffffff !important;
+    }
+  }
+}
+
+.comments-container {
+  div.wrapper {
+    background-color: var(--main-bg-color) !important;
+  }
+
+  div.clickable-comment,
+  div.replies {
+    background-color: var(--main-bg-color) !important;
+    backdrop-filter: blur(20px) !important;
+    padding: 1em !important;
+    margin-bottom: 1em !important;
+    border-radius: 1em !important;
+    max-width: 40em !important;
+    transition: all 0.4s ease-in-out !important;
+
+    .likes-and-replies {
+      opacity: 0.3 !important;
+    }
+  }
 }

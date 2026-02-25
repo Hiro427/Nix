@@ -11,4 +11,5 @@ with pkgs; [
   chess-tui
   solitaire-tui
   stockfish
+  widevine-cdm
 ]
