@@ -75,7 +75,6 @@ with pkgs; [
   gpick
   bk
   youtube-tui
-  ani-cli
   posting
   chromedriver
   chromium

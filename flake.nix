@@ -10,11 +10,10 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     # vicinae.url = "github:vicinaehq/vicinae";
-    lobster.url = "github:justchokingaround/lobster";
   };
 
   outputs = { self, stylix, nixpkgs, home-manager, spicetify-nix, catppuccin
-    , zen-browser, lobster, ... }@inputs: {
+    , zen-browser, ... }@inputs: {
 
       nixosConfigurations = {
 
