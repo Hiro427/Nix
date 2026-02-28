@@ -18,7 +18,6 @@ with pkgs; [
   darktable
   gimp3
   inkscape
-  emacs
   libreoffice
   slack
   evolution
@@ -30,6 +29,7 @@ with pkgs; [
   maestral-gui
   obsidian
   figma-linux
-  kdePackages.okular
-  retroarch-free
+  pinta
+  ytui-music
+  ytmdesktop
 ]

@@ -72,8 +72,12 @@ in {
   programs.qutebrowser.enable = true;
   programs.qutebrowser = {
     extraConfig = ''
-      c.tabs.show = "never"
-      c.statusbar.show = "in-mode" 
+      c.tabs.show = "switching"
+      c.tabs.show_switching_delay = 1000
+      c.tabs.position = "bottom"
+      c.statusbar.show = "in-mode"
+      c.auto_save.session = True
+      c.colors.webpage.preferred_color_scheme = "dark"
       c.scrolling.smooth = True  
       # c.url.searchengines = {"DEFAULT": "https://search.brave.com/search?q={}"}
       c.url.searchengines = {"DEFAULT": "https://duckduckgo.com/?q={}"}
