@@ -144,6 +144,7 @@
           { app_id = "org.qutebrowser.qutebrowser"; }
           { class = "zen"; }
           { app_id = "brave-browser"; }
+          { title = "yazi-flt"; }
         ];
         "2" = [
           # { app_id = "org.wezfurlong.wezterm"; }
@@ -169,20 +170,25 @@
       };
       window = {
         border = 0;
-        commands = [{
-          criteria = {
-            title = "Picture-in-Picture";
-            app_id = "zen-beta";
-          };
-          command =
-            "floating enable, sticky enable, move absolute position 1450px 50px";
-        }
-        # {
-        #   criteria = { app_id = "mpv"; };
-        #   command =
-        #     "floating enable, sticky enable, resize set 420 250, move absolute position 1600px 0px";
-        # }
-          ];
+        commands = [
+          {
+            criteria = {
+              title = "Picture-in-Picture";
+              app_id = "zen-beta";
+            };
+            command =
+              "floating enable, sticky enable, move absolute position 1450px 50px";
+          }
+          # {
+          #   criteria = { app_id = "mpv"; };
+          #   command =
+          #     "floating enable, sticky enable, resize set 420 250, move absolute position 1600px 0px";
+          # }
+          {
+            criteria = { title = "yazi-flt"; };
+            command = "floating enable";
+          }
+        ];
         titlebar = false;
       };
       floating = {

@@ -12,6 +12,7 @@ in {
   home.sessionVariables = {
     GOPATH = "$HOME/.go";
     GPUI_X11_SCALING_FACTOR = "1";
+    # LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";
   };
 
   # home.sessionPath = [
@@ -88,6 +89,18 @@ in {
       #   "content.user_stylesheets",
       #   ["~/Nix/dots/stylesheets/styles.css"],
       # )
+      c.fileselect.handler = "external"
+      yazi_chooser = [
+        "foot",
+        "--title",
+        "yazi-flt",
+        "yazi",
+        "--chooser-file",
+        "{}",
+      ]
+      c.fileselect.single_file.command = yazi_chooser
+      c.fileselect.multiple_files.command = yazi_chooser
+      c.fileselect.folder.command = yazi_chooser
 
     '';
   };

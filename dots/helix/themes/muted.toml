@@ -61,7 +61,7 @@
 
 "namespace" = { fg = "base06", modifiers = ["italic"] }
 
-"special" = "base07"
+"special" = "base0B"
 
 # Markup
 # "markup.heading" = { fg = "blue50", modifiers = ["bold"] }
