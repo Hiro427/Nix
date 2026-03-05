@@ -14,10 +14,10 @@ Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 Plug 'sheerun/vim-polyglot'
 Plug 'jiangmiao/auto-pairs'
-Plug 'easymotion/vim-easymotion'
 Plug 'vim-fuzzbox/fuzzbox.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'rose-pine/vim'
+Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'npm ci'}
 call plug#end()
 
 set tabstop=4
@@ -48,18 +48,13 @@ let &t_ut=""
 set laststatus=0
 set noshowmode 
 set noru
-
-
 set background=dark
-colorscheme rosepine
+
+colorscheme retrobox
+
+let g:coc_global_extensions = [ 'coc-json', 'coc-git',  'coc-java',  'coc-go', 'coc-rust-analyzer', 'coc-sh', 'coc-sql', 'coc-html', 'coc-lua', 'coc-nix', 'coc-tailwindcss', 'coc-zig', 'coc-clangd' ]
 
 let g:sneak#label = 1
-let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyz'
-
-let g:ycm_auto_trigger = 1
-let g:ycm_global_ycm_extra_conf = expand('~/.ycm_extra_conf.py')
-let g:ycm_confirm_extra_conf = 0
-let g:python_highlight_space_errors = 0
 
 
 let g:go_highlight_types = 1
@@ -82,10 +77,8 @@ map F <Plug>Sneak_F
 map t <Plug>Sneak_t
 map T <Plug>Sneak_T
 
-nmap <CR> <Plug>(easymotion-w)
-
 nnoremap <silent><Leader>e :NERDTreeToggle<CR>
-nnoremap <silent> <leader><space> :FuzzyFiles<CR>
+nnoremap <silent> <leader><leader> :FuzzyFiles<CR>
 
 nnoremap <silent> <leader>wl <C-w>l<CR>
 nnoremap <silent> <leader>wh <C-w>h<CR>
@@ -103,3 +96,11 @@ nnoremap <silent> <leader>hd :resize -15<CR>
 
 nnoremap <silent> <leader>vi :vertical resize +15 <CR>
 nnoremap <silent> <leader>vd :vertical resize -15<CR>
+
+nnoremap <silent> <leader><leader> :FuzzyFiles<CR>
+nnoremap <silent> <leader>g :FuzzyInBuffer<CR>
+nnoremap <silent> <leader>G :FuzzyGrep<CR>
+nnoremap <silent> <leader>m :FuzzyMarks<CR>
+nnoremap <silent> <leader>c :FuzzyCommands<CR>
+nnoremap <silent> <leader>C :FuzzyColors<CR>
+

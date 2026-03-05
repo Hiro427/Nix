@@ -230,7 +230,7 @@
           language-servers = [ "nixd" "uwu_colors" ];
           file-types = [ "nix" ];
 
-          formatter = { command = "${pkgs.nixfmt-classic}/bin/nixfmt"; };
+          formatter = { command = "${pkgs.nixfmt}/bin/nixfmt"; };
         }
         {
           name = "go";

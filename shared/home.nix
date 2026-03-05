@@ -1,10 +1,17 @@
-{ config, pkgs, catppuccin, lib, ... }:
+{
+  config,
+  pkgs,
+  catppuccin,
+  lib,
+  ...
+}:
 let
   theme = import ./themes/muted.nix {
     inherit pkgs;
     inherit config;
   };
-in {
+in
+{
   _module.args.theme = theme;
 
   home.username = "jacob";
@@ -25,8 +32,7 @@ in {
     (pkgs.writeShellScriptBin "gm" (builtins.readFile ../dots/scripts/gm))
     (pkgs.writeShellScriptBin "rw" (builtins.readFile ../dots/scripts/rw))
     (pkgs.writeShellScriptBin "tsm" (builtins.readFile ../dots/scripts/tsm))
-    (pkgs.writeShellScriptBin "theme"
-      (builtins.readFile ../dots/scripts/stylix))
+    (pkgs.writeShellScriptBin "theme" (builtins.readFile ../dots/scripts/stylix))
 
     (pkgs.writeShellScriptBin "doom" ''
       #!/bin/sh
@@ -64,46 +70,15 @@ in {
     ./hm/sway.nix
     ./hm/waybar.nix
     ./hm/gnome.nix
+    ./hm/qutebrowser.nix
   ];
   programs.zed-editor.enable = true;
 
   programs.ncspot.enable = true;
-  programs.lapce = { enable = true; };
-  qt.enable = true;
-  programs.qutebrowser.enable = true;
-  programs.qutebrowser = {
-    extraConfig = ''
-      c.tabs.show = "switching"
-      c.tabs.show_switching_delay = 1000
-      c.tabs.position = "bottom"
-      c.statusbar.show = "in-mode"
-      c.auto_save.session = True
-      c.colors.webpage.preferred_color_scheme = "dark"
-      c.scrolling.smooth = True  
-      # c.url.searchengines = {"DEFAULT": "https://search.brave.com/search?q={}"}
-      c.url.searchengines = {"DEFAULT": "https://duckduckgo.com/?q={}"}
-      c.url.start_pages = "https://duckduckgo.com"
-      c.window.transparent = True
-      c.colors.webpage.darkmode.enabled = True
-      # config.set(
-      #   "content.user_stylesheets",
-      #   ["~/Nix/dots/stylesheets/styles.css"],
-      # )
-      c.fileselect.handler = "external"
-      yazi_chooser = [
-        "foot",
-        "--title",
-        "yazi-flt",
-        "yazi",
-        "--chooser-file",
-        "{}",
-      ]
-      c.fileselect.single_file.command = yazi_chooser
-      c.fileselect.multiple_files.command = yazi_chooser
-      c.fileselect.folder.command = yazi_chooser
-
-    '';
+  programs.lapce = {
+    enable = true;
   };
+  qt.enable = true;
   services.flameshot = {
     enable = true;
     settings = {
@@ -118,7 +93,9 @@ in {
 
   };
 
-  programs.mullvad-vpn = { enable = true; };
+  programs.mullvad-vpn = {
+    enable = true;
+  };
 
   programs.fuzzel.enable = true;
   programs.micro.enable = true;
@@ -128,7 +105,9 @@ in {
     enable = true;
     # settings.colors.alpha = lib.mkOverride 60 0.85;
     settings = {
-      main = { pad = "10x10"; };
+      main = {
+        pad = "10x10";
+      };
       cursor = {
         style = "beam";
         blink = "yes";
@@ -154,7 +133,16 @@ in {
   #         source = ../dots/wezterm/.wezterm.lua;
   #     };
   # };
-  home.file = { ".gitconfig" = { source = ../dots/git/.gitconfig; }; };
+  home.file = {
+    ".gitconfig" = {
+      source = ../dots/git/.gitconfig;
+    };
+  };
+  home.file = {
+    ".vimrc" = {
+      source = ../dots/vim/.vimrc;
+    };
+  };
   xdg.configFile."vivid".source = ../dots/vivid;
 
   home.stateVersion = "24.11";

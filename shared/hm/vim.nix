@@ -9,10 +9,11 @@ let
       hash = "sha256-5zJ5uHOPZCCZYbcs9AaAKJugUwRkGWlVBUGVkGoxss0=";
     };
   };
-in {
+in
+{
 
   programs.vim = {
-    enable = true;
+    enable = false;
     extraConfig = ''
       set tabstop=4
       set softtabstop=4
