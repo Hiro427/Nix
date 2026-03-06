@@ -1,10 +1,16 @@
-{ config, pkgs, theme, ... }: {
+{
+  config,
+  pkgs,
+  theme,
+  ...
+}:
+{
 
   programs.qutebrowser.enable = true;
   programs.qutebrowser = {
     extraConfig = ''
-      c.tabs.show = "switching"
-      c.tabs.show_switching_delay = 1000
+      c.tabs.show = "never" #switching
+      # c.tabs.show_switching_delay = 1000
       c.tabs.position = "top"
       c.statusbar.show = "in-mode"
       c.auto_save.session = True
