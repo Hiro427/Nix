@@ -1,4 +1,9 @@
-{ pkgs, config, theme, ... }:
+{
+  pkgs,
+  config,
+  theme,
+  ...
+}:
 
 {
   programs.tmux = {
@@ -6,7 +11,7 @@
     baseIndex = 1;
     prefix = "C-a";
     mouse = true;
-    plugins = with pkgs; [{ plugin = tmuxPlugins.dotbar; }];
+    plugins = with pkgs; [ { plugin = tmuxPlugins.dotbar; } ];
 
     extraConfig = ''
       set -g default-terminal "tmux-256color"
@@ -48,6 +53,10 @@
       bind-key "K" swap-pane -U
       bind-key n switch-client -n  
       bind-key p switch-client -p  # previous session
+
+      set-option -g status-interval 5
+      set-option -g automatic-rename on
+      set-option -g automatic-rename-format '#{b:pane_current_path}'
 
       bind v split-window -h -c "#{pane_current_path}"
       bind h split-window -v -c "#{pane_current_path}"
